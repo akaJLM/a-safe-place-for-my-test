@@ -24,7 +24,7 @@ foreach ($phpdoc as $key => $value)
 
 	if(!empty($functions_excluded))
 	{
-		$inc_func = !in_array($value['name'], $functions_excluded);
+		$inc_func =  isset($value['name']) ? !in_array($value['name'], $functions_excluded) : false;
 	}
 
 	if(!empty($value['params'][0]) && !preg_match('/::/', $key) && $inc_obs && $inc_func)

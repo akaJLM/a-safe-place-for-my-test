@@ -57,14 +57,27 @@
  * And away we go...
  *
  */
+$time_start = microtime(true);
 
 if($generate === true)
 {
 	require_once ROOTPATH.'core/codeGenerator.php';
+
+	$time_end = microtime(true);
+
+	$time = $time_end - $time_start;
+
+	echo '<div style="position:absolute;top:0;right:0;left:0;background:green;color:white;padding:10px">Did it in '.$time.' seconds</div>';
 }
 else
 {
 	include_once(ROOTPATH.'aliases.php');
+
+	$time_end = microtime(true);
+
+	$time = $time_end - $time_start;
+
+	echo '<div style="position:absolute;top:0;right:0;left:0;background:green;color:white;padding:10px">Did it in '.$time.' seconds</div>';
 }
 
 
