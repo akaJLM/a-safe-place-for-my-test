@@ -278,7 +278,7 @@ if(!function_exists('__autoloadThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $number    La valeur numérique à traiter
+ * @param mixed    $number    La valeur numérique à traiter
  *
  * @return number	La valeur absolue du nombre number. Si le nombre est un nombre à virgule flottante (float), le type retourné est aussi un nombre à virgule flottante (float), sinon, c'est un entier (entier).
  *
@@ -976,7 +976,7 @@ if(!function_exists('asortThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $assertion    L'assertion.
+ * @param mixed    $assertion    L'assertion.
  * @param string   $description    Une description optionnelle, qui sera incluse dans le message d'échec si l'assertion échoue.
  *
  * @return bool	FALSE si l'assertion est fausse, TRUE sinon.
@@ -1004,7 +1004,7 @@ if(!function_exists('assertThis'))
  * @version PHP 5
  *
  * @param int      $what
- * @param mixed     $value    Une nouvelle valeur, optionnelle, pour l'option.
+ * @param mixed    $value    Une nouvelle valeur, optionnelle, pour l'option.
  *
  * @return mixed	Retourne la valeur originale de l'option, ou bien FALSE en cas d'erreur.
  *
@@ -1600,7 +1600,7 @@ if(!function_exists('bindtextdomainThis'))
  *
  * @version PHP 5 >= 5.5.0
  *
- * @param mixed     $var    La valeur scalaire qui sera convertie en booléen.
+ * @param mixed    $var    La valeur scalaire qui sera convertie en booléen.
  *
  * @return boolean	La valeur booléenne du paramètre var.
  *
@@ -1998,9 +1998,9 @@ if(!function_exists('cal_to_jdThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param callable     $callback    La fonction de rappel à appeler.
- * @param mixed     $parameter    0 ou plus de paramètres à passer à la fonction de rappel.
- * @param mixed     $item
+ * @param callable $callback    La fonction de rappel à appeler.
+ * @param mixed    $parameter    0 ou plus de paramètres à passer à la fonction de rappel.
+ * @param mixed    $item
  *
  * @return mixed	Retourne la valeur retournée par la fonction de rappel, ou FALSE si une erreur survient.
  *
@@ -2026,7 +2026,7 @@ if(!function_exists('call_user_funcThis'))
  * @version PHP 4 >= 4.0.4
  * @version PHP 5
  *
- * @param callable     $callback    La fonction de rappel à appeler.
+ * @param callable $callback    La fonction de rappel à appeler.
  * @param array    $param_arr    Les paramètres à passer à la fonction de rappel, sous la forme d'un tableau indexé.
  *
  * @return mixed	Retourne la valeur retournée par la fonction de rappel, ou FALSE si une erreur survient.
@@ -2160,7 +2160,7 @@ if(!function_exists('checkdnsrrThis'))
  * @version PHP 5
  *
  * @param string   $filename    Chemin vers le fichier.
- * @param mixed     $group    Un nom ou un numéro de groupe.
+ * @param mixed    $group    Un nom ou un numéro de groupe.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -2213,7 +2213,7 @@ if(!function_exists('chmodThis'))
  * @version PHP 5
  *
  * @param string   $filename    Chemin vers le fichier.
- * @param mixed     $user    Un nom ou un numéro d'utilisateur.
+ * @param mixed    $user    Un nom ou un numéro d'utilisateur.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -2371,7 +2371,7 @@ if(!function_exists('class_existsThis'))
  *
  * @version PHP 5 >= 5.1.0
  *
- * @param mixed     $class    Un objet (instance) ou une chaîne de caractères (nom de la classe).
+ * @param mixed    $class    Un objet (instance) ou une chaîne de caractères (nom de la classe).
  * @param bool     $autoload    Si TRUE, autorise cette fonction à charger la classe automatiquement grâce à la méthode magique __autoload().
  *
  * @return array	Retourne un tableau ou FALSE en cas d'erreur.
@@ -2397,7 +2397,7 @@ if(!function_exists('class_implementsThis'))
  *
  * @version PHP 5 >= 5.1.0
  *
- * @param mixed     $class    Un objet (instance) ou une chaîne de caractères (nom de la classe).
+ * @param mixed    $class    Un objet (instance) ou une chaîne de caractères (nom de la classe).
  * @param bool     $autoload    Si TRUE, autorise cette fonction à charger la classe automatiquement grâce à la méthode magique __autoload().
  *
  * @return array	Retourne un tableau ou FALSE en cas d'erreur.
@@ -2423,7 +2423,7 @@ if(!function_exists('class_parentsThis'))
  *
  * @version PHP 5 >= 5.4.0
  *
- * @param mixed     $class    Un objet ou un nom de classe sous forme de chaine.
+ * @param mixed    $class    Un objet ou un nom de classe sous forme de chaine.
  * @param bool     $autoload    Si oui ou non l'auto-chargement __autoload() doit être déclenché.
  *
  * @return array	Un tableau en cas de succès, FALSE sinon.
@@ -2584,7 +2584,7 @@ if(!function_exists('com_create_guidThis'))
  *
  * @param variant  $comobject
  * @param object   $sinkobject    sinkobject devra être une instance de la classe avec des noms de méthodes suivant le dispinterface désiré ; vous devriez utiliser com_print_typeinfo() pour l'aide à la génération d'un gabarit de classe pour cela.
- * @param mixed     $sinkinterface    PHP devrait être capable d'utiliser le type par défaut de dispinterface spécifié par la Typelib associée avec l'objet comobject, mais vous pouvez changer cela en spécifiant dans le paramètre sinkinterface le dispinterface que vous souhaitez utiliser.
+ * @param mixed    $sinkinterface    PHP devrait être capable d'utiliser le type par défaut de dispinterface spécifié par la Typelib associée avec l'objet comobject, mais vous pouvez changer cela en spécifiant dans le paramètre sinkinterface le dispinterface que vous souhaitez utiliser.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -2637,7 +2637,7 @@ if(!function_exists('com_get_active_objectThis'))
  *
  * @param resource $com_object
  * @param string   $function_name
- * @param mixed     $function_parameters
+ * @param mixed    $function_parameters
  *
  */
 if(!function_exists('com_invokeThis'))
@@ -2742,8 +2742,8 @@ if(!function_exists('com_print_typeinfoThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $varname    compact() accepte différents paramètres varname. Les paramètres peuvent être des variables contenant des chaînes, ou un tableau de chaînes, qui peut contenir d'autres tableaux de noms de variables, que compact() traitera récursivement.
- * @param mixed     $item
+ * @param mixed    $varname    compact() accepte différents paramètres varname. Les paramètres peuvent être des variables contenant des chaînes, ou un tableau de chaînes, qui peut contenir d'autres tableaux de noms de variables, que compact() traitera récursivement.
+ * @param mixed    $item
  *
  * @return array	Retourne le tableau de sortie contenant toutes les variables ajoutées.
  *
@@ -3008,7 +3008,7 @@ if(!function_exists('coshThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    Le tableau ou l'objet
+ * @param mixed    $var    Le tableau ou l'objet
  * @param int      $mode    Si le paramètre optionnel mode vaut COUNT_RECURSIVE (ou 1), count() va compter récursivement les tableaux. C'est particulièrement pratique pour compter le nombre d'éléments d'un tableau.
  *
  * @return int	Retourne le nombre d'éléments dans var. Si le paramètre var n'est ni un objet, ni un tableau, 1 sera retourné. Il y a néanmoins une exception : si le paramètre var vaut NULL, 0 sera retourné.
@@ -3842,7 +3842,7 @@ if(!function_exists('curl_multi_selectThis'))
  *
  * @param resource $mh
  * @param int      $option    Une des constantes CURLMOPT_*.
- * @param mixed     $value
+ * @param mixed    $value
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -3944,7 +3944,7 @@ if(!function_exists('curl_resetThis'))
  *
  * @param resource $ch    Un gestionnaire cURL retourné par la fonction curl_init().
  * @param int      $option    L'option CURLOPT_XXX à définir.
- * @param mixed     $value    La valeur à définir pour option. value doit être un bool pour les valeurs suivantes du paramètre option : value doit être un integer pour les valeurs suivantes du paramètres option : value doit être une chaîne pour les valeurs suivantes du paramètres option : value doit être un tableau pour les valeurs suivantes du paramètres option : value doit être une ressource (utilisant fopen(), par exemple) pour les valeurs suivantes du paramètre option : value doit être le nom d'une fonction ou d'une Closure valide pour les valeurs suivantes du paramètres option :
+ * @param mixed    $value    La valeur à définir pour option. value doit être un bool pour les valeurs suivantes du paramètre option : value doit être un integer pour les valeurs suivantes du paramètres option : value doit être une chaîne pour les valeurs suivantes du paramètres option : value doit être un tableau pour les valeurs suivantes du paramètres option : value doit être une ressource (utilisant fopen(), par exemple) pour les valeurs suivantes du paramètre option : value doit être le nom d'une fonction ou d'une Closure valide pour les valeurs suivantes du paramètres option :
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -4567,7 +4567,7 @@ if(!function_exists('dba_insertThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $key    La clé sous forme de chaîne de caractères.
+ * @param mixed    $key    La clé sous forme de chaîne de caractères.
  *
  * @return mixed	Retourne un tableau sous la forme array(0 => group, 1 => nom_valeur). Cette fonction retourne FALSE si key vaut NULL ou FALSE.
  *
@@ -4639,7 +4639,7 @@ if(!function_exists('dba_nextkeyThis'))
  * @param string   $path    Chemin sur votre système de fichiers.
  * @param string   $mode    Il vaut r pour lecture seule, w pour lecture/écriture, c pour lecture/écriture, et création si la base n'existe pas, et n pour création, écrasement et accès en lecture/écriture. La base de données est créée en mode BTree ; les autres modes (comme Hash ou Queue) ne sont pas supportés. De plus, vous pouvez choisir la méthode de verrouillage de la base avec le caractère suivant. Utilisez l pour verrouiller la base avec un fichier .lck, ou d pour verrouiller la base elle-même. Il est important que vos application utilisent ces options de manière cohérente. Si vous voulez tester la possibilité d'accès, et ne pas attendre la disponibilité du verrou, vous pouvez ajouter la lettre t comme troisième caractère. Lorsque vous êtes absolument certain que votre base ne requière pas de verrou, vous pouvez utiliser le tiret - à la place de l ou d. Lorsque vous n'utilisez ni d, ni l ni -, dba va verrouiller en mode d.
  * @param string   $handler    Le nom du gestionnaire qui doit être utilisé pour accéder à path. C'est passé à tous les paramètres facultatifs donnés à dba_open() et peut agir au nom d'eux.
- * @param mixed     $item
+ * @param mixed    $item
  *
  * @return resource	Retourne un gestionnaire positif en cas de succès ou FALSE si une erreur survient.
  *
@@ -4694,7 +4694,7 @@ if(!function_exists('dba_optimizeThis'))
  * @param string   $path    Chemin sur votre système de fichiers.
  * @param string   $mode    Il vaut r pour lecture seule, w pour lecture/écriture, c pour lecture/écriture, et création si la base n'existe pas, et n pour création, écrasement, et accès en lecture/écriture.
  * @param string   $handler    Le nom du gestionnaire qui doit être utilisé pour accéder à path. Le gestionnaire reçoit tous les paramètres supplémentaires passés à la fonction dba_popen().
- * @param mixed     $item
+ * @param mixed    $item
  *
  * @return resource	Retourne un gestionnaire positif en cas de succès ou FALSE si une erreur survient.
  *
@@ -5231,8 +5231,8 @@ if(!function_exists('debug_print_backtraceThis'))
  * @version PHP 4 >= 4.2.0
  * @version PHP 5
  *
- * @param mixed     $variable    La variable à évaluer.
- * @param mixed     $item
+ * @param mixed    $variable    La variable à évaluer.
+ * @param mixed    $item
  *
  * @return void	Aucune valeur n'est retournée.
  *
@@ -5333,7 +5333,7 @@ if(!function_exists('decoctThis'))
  * @version PHP 5
  *
  * @param string   $name    Le nom de la constante.
- * @param mixed     $value    La valeur de la constante ; seuls les scalaires et les valeurs NULL sont autorisées. Les valeurs scalaires sont les valeurs entier, nombre décimal, chaîne de caractères ou booléen. Il est techniquement possible de définir des constantes de type ressource, mais cela est fortement déconseillé, et peut causer des comportements inattendus.
+ * @param mixed    $value    La valeur de la constante ; seuls les scalaires et les valeurs NULL sont autorisées. Les valeurs scalaires sont les valeurs entier, nombre décimal, chaîne de caractères ou booléen. Il est techniquement possible de définir des constantes de type ressource, mais cela est fortement déconseillé, et peut causer des comportements inattendus.
  * @param bool     $case_insensitive    S'il vaut TRUE, le nom de la constante sera insensible à la casse : CONSTANT et Constant représentent des valeurs identiques.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -5485,7 +5485,7 @@ if(!function_exists('dio_closeThis'))
  *
  * @param resource $fd    La ressource de fichier retournée par dio_open().
  * @param int      $cmd    Peut être une de ces opérations suivantes :
- * @param mixed     $args    args est un tableau associatif lorsque cmd vaut F_SETLK ou F_SETLLW, avec les entrées suivantes :
+ * @param mixed    $args    args est un tableau associatif lorsque cmd vaut F_SETLK ou F_SETLLW, avec les entrées suivantes :
  *
  * @return mixed	Retourne le résultat d'un appel en C.
  *
@@ -8066,7 +8066,7 @@ if(!function_exists('fbsql_read_clobThis'))
  *
  * @param resource $result    Un identifiant de résultat retourné par la fonction fbsql_query() ou la fonction fbsql_db_query().
  * @param int      $row
- * @param mixed     $field    Peut être la position du champ ou le nom du champ, ou le nom de la table, suivi d'un point, suivi du nom du champ (tablename.fieldname). Si vous n'utilisez pas d'alias ('select foo as bar from...'), utilisez plutôt le nom de la colonne.
+ * @param mixed    $field    Peut être la position du champ ou le nom du champ, ou le nom de la table, suivi d'un point, suivi du nom du champ (tablename.fieldname). Si vous n'utilisez pas d'alias ('select foo as bar from...'), utilisez plutôt le nom de la colonne.
  *
  */
 if(!function_exists('fbsql_resultThis'))
@@ -8546,8 +8546,8 @@ if(!function_exists('fdf_createThis'))
  * @version PHP 5
  *
  * @param resource $fdf_document
- * @param callable     $function
- * @param mixed     $userdata
+ * @param callable $function
+ * @param mixed    $userdata
  *
  */
 if(!function_exists('fdf_enum_valuesThis'))
@@ -9335,7 +9335,7 @@ if(!function_exists('fdf_set_target_frameThis'))
  *
  * @param resource $fdf_document    Le gestionnaire de document FDF, retourné par la fonction fdf_create(), la fonction fdf_open() ou la fonction fdf_open_string().
  * @param string   $fieldname    Nom du champ FDF, sous la forme d'une chaîne de caractères.
- * @param mixed     $value    Ce paramètre devra être stocké comme une chaîne de caractères même si c'est un tableau. Dans ce cas, tous les éléments du tableau seront stockés comme un tableau de valeur.
+ * @param mixed    $value    Ce paramètre devra être stocké comme une chaîne de caractères même si c'est un tableau. Dans ce cas, tous les éléments du tableau seront stockés comme un tableau de valeur.
  * @param int      $isName
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -9642,7 +9642,7 @@ if(!function_exists('file_get_contentsThis'))
  * @version PHP 5
  *
  * @param string   $filename    Chemin vers le fichier dans lequel on doit écrire les données.
- * @param mixed     $data    Les données à écrire. Peut être soit une chaîne de caractères, un tableau ou une ressource de flux (explication plus bas). Si data est une ressource de type stream, le buffer restant de ce flux sera copié dans le fichier spécifié. Cela revient à utiliser la fonction stream_copy_to_stream(). Vous pouvez également spécifier le paramètre data en tant qu'un tableau à une seule dimension. C'est l'équivalent à file_put_contents($filename, implode('', $array)).
+ * @param mixed    $data    Les données à écrire. Peut être soit une chaîne de caractères, un tableau ou une ressource de flux (explication plus bas). Si data est une ressource de type stream, le buffer restant de ce flux sera copié dans le fichier spécifié. Cela revient à utiliser la fonction stream_copy_to_stream(). Vous pouvez également spécifier le paramètre data en tant qu'un tableau à une seule dimension. C'est l'équivalent à file_put_contents($filename, implode('', $array)).
  * @param int      $flags    La valeur du paramètre flags peut être n'importe quelle combinaison des drapeaux suivants, liés par l'opérateur binaire OU (|).
  * @param resource $context    Une ressource de contexte valide créée avec la fonction stream_context_create().
  *
@@ -10116,7 +10116,7 @@ if(!function_exists('filter_idThis'))
  * @param int      $type    Une constante parmi INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER ou INPUT_ENV.
  * @param string   $variable_name    Nom de la variable à récupérer.
  * @param int      $filter    L'ID du filtre à appliquer. La Types de filtres page du manuel liste tous les filtres disponibles.
- * @param mixed     $options    Tableau associatif d'options ou des drapeaux. Si le filtre accepte les options, les drapeaux peuvent être fournis dans le champ "flags" du tableau.
+ * @param mixed    $options    Tableau associatif d'options ou des drapeaux. Si le filtre accepte les options, les drapeaux peuvent être fournis dans le champ "flags" du tableau.
  *
  * @return mixed	Valeur de la variable demandée en cas de succès, FALSE si le filtre échoue, ou NULL si la variable variable_name n'est pas définie. Si le drapeau FILTER_NULL_ON_FAILURE est utilisé, la fonction retournera FALSE si la variable n'est pas définie et NULL si le filtre échoue.
  *
@@ -10143,7 +10143,7 @@ if(!function_exists('filter_inputThis'))
  * @version PHP 5 >= 5.2.0
  *
  * @param int      $type    Une constante parmi INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER ou INPUT_ENV.
- * @param mixed     $definition    Un tableau définissant les arguments. Une clé valide est une chaîne de caractères contenant le nom de la variable et une valeur valide est soit le type d'un filtre, soit un tableau spécifiant le filtre, les drapeaux et les options. Si la valeur est un tableau, les clés valides sont filter qui spécifie le type du filtre, flags qui spécifie tous les drapeaux à appliquer au filtre, et options qui spécifie toutes les options à appliquer au filtre. Voir l'exemple ci-dessous pour une meilleure compréhension. Ce paramètre peut également être un entier contenant une constante de filtre. Ensuite, toutes les valeurs du tableau d'entrée seront filtrées par ce filtre.
+ * @param mixed    $definition    Un tableau définissant les arguments. Une clé valide est une chaîne de caractères contenant le nom de la variable et une valeur valide est soit le type d'un filtre, soit un tableau spécifiant le filtre, les drapeaux et les options. Si la valeur est un tableau, les clés valides sont filter qui spécifie le type du filtre, flags qui spécifie tous les drapeaux à appliquer au filtre, et options qui spécifie toutes les options à appliquer au filtre. Voir l'exemple ci-dessous pour une meilleure compréhension. Ce paramètre peut également être un entier contenant une constante de filtre. Ensuite, toutes les valeurs du tableau d'entrée seront filtrées par ce filtre.
  * @param bool     $add_empty    Ajout des clés manquantes à la valeur NULL dans la valeur retournée.
  *
  * @return mixed	Un tableau contenant les valeurs des variables demandées en cas de succès, ou FALSE si une erreur survient. Un tableau de valeurs peut valoir FALSE si le filtre échoue, ou NULL si la variable n'est pas définie. Ou, si le drapeau FILTER_NULL_ON_FAILURE est utilisé, la fonction retournera FALSE si la variable n'est pas définie et NULL si le filtre échoue.
@@ -10189,9 +10189,9 @@ if(!function_exists('filter_listThis'))
  *
  * @version PHP 5 >= 5.2.0
  *
- * @param mixed     $variable    Valeur à filtrer.
+ * @param mixed    $variable    Valeur à filtrer.
  * @param int      $filter    L'ID du filtre à appliquer. La page Types de filtres du manuel liste tous les filtres disponibles.
- * @param mixed     $options    Tableau associatif d'options ou des drapeaux. Si le filtre accepte les options, les drapeaux peuvent être fournis dans le champ "flags" du tableau. Pour les fonctions de rappel, le type callable devra être passé. La fonction de rappel doit accepter un seul argument ; la valeur à filtrer et retournera la valeur, une fois le filtre appliqué.
+ * @param mixed    $options    Tableau associatif d'options ou des drapeaux. Si le filtre accepte les options, les drapeaux peuvent être fournis dans le champ "flags" du tableau. Pour les fonctions de rappel, le type callable devra être passé. La fonction de rappel doit accepter un seul argument ; la valeur à filtrer et retournera la valeur, une fois le filtre appliqué.
  *
  * @return mixed	Retourne les données filtrées, ou FALSE si le filtre échoue.
  *
@@ -10217,7 +10217,7 @@ if(!function_exists('filter_varThis'))
  * @version PHP 5 >= 5.2.0
  *
  * @param array    $data    Un tableau avec les clés contenant les données à filtrer.
- * @param mixed     $definition    Un tableau définissant les arguments. Une clé valide est une chaîne de caractères contenant le nom de la variable et une valeur valide est soit le type d'un filtre, soit un tableau spécifiant le filtre, les drapeaux et les options. Si la valeur est un tableau, les clés valides sont filter qui spécifie le type du filtre, flags qui spécifie tous les drapeaux à appliquer au filtre, et options qui spécifie toutes les options à appliquer au filtre. Voir l'exemple ci-dessous pour une meilleure compréhension. Ce paramètre peut également être un entier contenant une constante de filtre. Ensuite, toutes les valeurs du tableau d'entrée seront filtrées par ce filtre.
+ * @param mixed    $definition    Un tableau définissant les arguments. Une clé valide est une chaîne de caractères contenant le nom de la variable et une valeur valide est soit le type d'un filtre, soit un tableau spécifiant le filtre, les drapeaux et les options. Si la valeur est un tableau, les clés valides sont filter qui spécifie le type du filtre, flags qui spécifie tous les drapeaux à appliquer au filtre, et options qui spécifie toutes les options à appliquer au filtre. Voir l'exemple ci-dessous pour une meilleure compréhension. Ce paramètre peut également être un entier contenant une constante de filtre. Ensuite, toutes les valeurs du tableau d'entrée seront filtrées par ce filtre.
  * @param bool     $add_empty    Ajout des clés manquantes à la valeur NULL dans la valeur retournée.
  *
  * @return mixed	Un tableau contenant les valeurs des variables demandées en cas de succès, ou FALSE si une erreur survient. Un tableau de valeurs peut valoir FALSE si le filtre échoue, ou NULL si la variable n'est pas définie.
@@ -10245,7 +10245,7 @@ if(!function_exists('filter_var_arrayThis'))
  * @version PHP 4 >= 4.2.0
  * @version PHP 5
  *
- * @param mixed     $var    Peut être de n'importe quel type scalaire. floatval() ne doit pas être utilisé sur les objets ; si tel est le cas, une alerte de niveau E_NOTICE sera émise et la fonction retournera 1.
+ * @param mixed    $var    Peut être de n'importe quel type scalaire. floatval() ne doit pas être utilisé sur les objets ; si tel est le cas, une alerte de niveau E_NOTICE sera émise et la fonction retournera 1.
  *
  * @return float	La valeur flottante de la variable donnée. Un tableau vide retourne 0, alors qu'un tableau non-vide retourne 1.
  *
@@ -10429,9 +10429,9 @@ if(!function_exists('fopenThis'))
  *
  * @version PHP 5 >= 5.3.0
  *
- * @param callable     $function    La fonction ou la méthode appelée. Ce paramètre peut être un tableau, avec le nom de la classe et de la méthode, ou une chaîne, avec le nom de la fonction.
- * @param mixed     $parameter    Zéro ou plusieurs paramètres à passer à la fonction.
- * @param mixed     $item
+ * @param callable $function    La fonction ou la méthode appelée. Ce paramètre peut être un tableau, avec le nom de la classe et de la méthode, ou une chaîne, avec le nom de la fonction.
+ * @param mixed    $parameter    Zéro ou plusieurs paramètres à passer à la fonction.
+ * @param mixed    $item
  *
  * @return mixed	Retourne le résultat de la fonction, ou bien FALSE en cas d'erreur.
  *
@@ -10456,7 +10456,7 @@ if(!function_exists('forward_static_callThis'))
  *
  * @version PHP 5 >= 5.3.0
  *
- * @param callable     $function    La fonction ou la méthode appelée. Ce paramètre peut être un tableau, avec le nom de la classe et de la méthode, ou une chaîne, avec le nom de la fonction.
+ * @param callable $function    La fonction ou la méthode appelée. Ce paramètre peut être un tableau, avec le nom de la classe et de la méthode, ou une chaîne, avec le nom de la fonction.
  * @param array    $parameters    Un paramètre, rassemblant tous les paramètres dans un tableau.
  *
  * @return mixed	Retourne le résultat de la fonction, et FALSE en cas d'erreur.
@@ -10509,8 +10509,8 @@ if(!function_exists('fpassthruThis'))
  *
  * @param resource $handle    Un pointeur de système de fichiers de type resource qui est habituellement créé en utilisant la fonction fopen().
  * @param string   $format    Voir la documentation sur la fonction sprintf() pour une description du paramètre format.
- * @param mixed     $args
- * @param mixed     $item
+ * @param mixed    $args
+ * @param mixed    $item
  *
  * @return int	Retourne la longueur de la chaîne écrite.
  *
@@ -10596,7 +10596,7 @@ if(!function_exists('freadThis'))
  *
  * @param resource $handle    Un pointeur de système de fichiers de type resource qui est habituellement créé en utilisant la fonction fopen().
  * @param string   $format    Le format spécifié, tel que décrit dans la documentation de la fonction sprintf().
- * @param mixed     &$item    Les valeurs optionnelles à assigner.
+ * @param mixed    &$item    Les valeurs optionnelles à assigner.
  *
  * @return mixed	Si seulement 2 paramètres sont passés à la fonction, la valeur analysée sera retourné sous la forme d'un tableau. Si des paramètres optionnels sont passés, la fonction retournera le nombre de valeurs assignées. Les paramètres optionnels doivent être passés par référence.
  *
@@ -11568,7 +11568,7 @@ if(!function_exists('ftp_rmdirThis'))
  *
  * @param resource $ftp_stream    L'identifiant du lien de connexion FTP.
  * @param int      $option    Actuellement, les options suivantes sont supportées :
- * @param mixed     $value    Ce paramètre dépend de l'option option que l'on veut modifier.
+ * @param mixed    $value    Ce paramètre dépend de l'option option que l'on veut modifier.
  *
  * @return bool	Retourne TRUE si l'option a pû être modifiée, FALSE sinon. Un message d'alerte sera envoyé si option n'est pas supportée ou bien si la valeur value ne correspond pas à la valeur attendue pour l'option option donnée.
  *
@@ -12040,7 +12040,7 @@ if(!function_exists('get_classThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $class_name    Le nom de la classe ou une instance d'objet
+ * @param mixed    $class_name    Le nom de la classe ou une instance d'objet
  *
  * @return array	Retourne un tableau contenant les noms des méthodes de la classe class_name. En cas d'erreur, NULL est retourné.
  *
@@ -12467,7 +12467,7 @@ if(!function_exists('get_object_varsThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $object    L'objet ou le nom de la classe testé
+ * @param mixed    $object    L'objet ou le nom de la classe testé
  *
  * @return string	Retourne le nom de la classe parente dont object est une instance ou le nom.
  *
@@ -13108,7 +13108,7 @@ if(!function_exists('gettimeofdayThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    La variable à analyser.
+ * @param mixed    $var    La variable à analyser.
  *
  * @return string	Les chaînes de caractères que peut retourner la fonction sont les suivantes :
  *
@@ -13495,7 +13495,7 @@ if(!function_exists('gmp_divexactThis'))
  * @version PHP 4 >= 4.0.4
  * @version PHP 5
  *
- * @param mixed     $a    Le nombre factoriel. Il peut être soit une ressource GMP, soit une chaîne numérique qu'il est possible de convertir plus tard en un nombre.
+ * @param mixed    $a    Le nombre factoriel. Il peut être soit une ressource GMP, soit une chaîne numérique qu'il est possible de convertir plus tard en un nombre.
  *
  * @return resource	Une ressource GMP.
  *
@@ -13600,7 +13600,7 @@ if(!function_exists('gmp_hamdistThis'))
  * @version PHP 4 >= 4.0.4
  * @version PHP 5
  *
- * @param mixed     $number    Un entier ou une chaîne de caractères. La chaîne peut être une représentation décimale, hexadécimale ou octale.
+ * @param mixed    $number    Un entier ou une chaîne de caractères. La chaîne peut être une représentation décimale, hexadécimale ou octale.
  * @param int      $base    La base. La base peut varier de 2 à 36. Si la base vaut 0 (valeur par défaut), la base actuelle est déterminée depuis les derniers caractères ; si les deux premiers caractères sont 0x ou 0X, on suppose que c'est de l'hexadécimal, sinon, si le premier caractère est "0", on suppose que c'est de l'octal, sinon, on suppose que c'est de la décimale.
  *
  * @return resource	Une ressource GMP.
@@ -14914,7 +14914,7 @@ if(!function_exists('headerThis'))
  * @version No version information available
  * @version might only be in SVN
  *
- * @param callable     $callback    La fonction à appeler juste avant que les en-têtes ne soient envoyés. Elle n'accepte aucun paramètre et sa valeur de retour est ignorée.
+ * @param callable $callback    La fonction à appeler juste avant que les en-têtes ne soient envoyés. Elle n'accepte aucun paramètre et sa valeur de retour est ignorée.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -15282,7 +15282,7 @@ if(!function_exists('htmlspecialchars_decodeThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $query_data    Peut être un tableau ou un objet contenant des propriétés. Si query_data est un tableau, alors ce peut être un tableau à une ou plusieurs dimensions. Si query_data est un objet, alors seuls les attributs publics seront utilisés dans le résultat.
+ * @param mixed    $query_data    Peut être un tableau ou un objet contenant des propriétés. Si query_data est un tableau, alors ce peut être un tableau à une ou plusieurs dimensions. Si query_data est un objet, alors seuls les attributs publics seront utilisés dans le résultat.
  * @param string   $numeric_prefix    Si des indices numériques sont utilisés dans le tableau de base et que numeric_prefix est fourni, il sera utilisé pour préfixer les noms des index pour les éléments du tableau de base seulement. Cela permet de générer des noms de variables valides, si les données sont ensuite décodées par PHP ou une application CGI.
  * @param string   $arg_separator    arg_separator.output est utilisée pour séparer les arguments tant que le paramètre arg_separator n'est pas fourni.
  * @param int      $enc_type    Par défaut, vaut PHP_QUERY_RFC1738. Si enc_type vaut PHP_QUERY_RFC1738, alors l'encodage est effectué conformément à la » RFC 1738 et les espaces du type de média application/x-www-form-urlencoded, qui est impacté par ce choix, seront encodés sous la forme d'un signe plus (+). Si enc_type vaut PHP_QUERY_RFC3986, alors l'encodage est effectué conformément à la » RFC 3986, et les espaces seront encodés en signe pourcent (%20).
@@ -15949,7 +15949,7 @@ if(!function_exists('hw_GetChildDocCollObjThis'))
  * @version PHP 4
  *
  * @param int      $connection    L'identifiant de connexion.
- * @param mixed     $objectID    L'idenfitiant de l'objet, ou un tableau d'identifiants.
+ * @param mixed    $objectID    L'idenfitiant de l'objet, ou un tableau d'identifiants.
  * @param string   $query    La requête a la syntaxe suivante :
  *
  * @return mixed	Retourne un objet record pour l'identifiant d'objet donné, si le second paramètre est un entier.
@@ -16198,7 +16198,7 @@ if(!function_exists('hw_GetSrcByDestObjThis'))
  *
  * @param int      $connection    L'identifiant de connexion.
  * @param int      $objectID    L'identifiant de l'objet.
- * @param mixed     $rootID/prefix    L'option rootID/prefix peut être une chaîne ou un entier. Si c'est un entier, il détermine la méthode d'insertion des liens dans le document. Par défaut, il vaut 0 et les liens seront construits en fonction du nom de l'objet cible. Cela sert beaucoup dans les applications web. Si un lien pointe sur un objet avec le nom 'film_internet' le lien HTML sera <A HREF="/film_internet">. La position réelle de la source et de la cible dans la hiérarchie seront ignorés. Vous devrez modificer votre site web pour qu'il réécrive les URL, comme '/mon_script.php3/film_internet'. 'mon_script.php3' devra analyser $PATH_INFO et savoir rechercher le document '/mon_script.php3/film_internet'. Si vous ne voulez pas de ce comportement, vous pouvez affecter à rootID/prefix n'importe quel prefixe. Dans ce cas, ce sera une chaîne. Si rootID/prefix est un entier différent de 0 le lien sera construit avec tous les noms de la hiérarchie, en commençant à l'objet d'identifiant rootID/prefix, et séparé par des slash. Si, par exemple, le document 'film_internet' est situé à 'a-b-c-film_internet' et '-' qui sert de séparateur hiérarchique de niveau sur le serveur Hyperwave et le document source est situé dans 'a-b-d-source' alors, le lien HTML sera : <A HREF="../c/film_internet">. Cela est très pratique si vous voulez télécharger tout le contenu d'un serveur sur un disque, et faire une carte du système sur votre disque.
+ * @param mixed    $rootID/prefix    L'option rootID/prefix peut être une chaîne ou un entier. Si c'est un entier, il détermine la méthode d'insertion des liens dans le document. Par défaut, il vaut 0 et les liens seront construits en fonction du nom de l'objet cible. Cela sert beaucoup dans les applications web. Si un lien pointe sur un objet avec le nom 'film_internet' le lien HTML sera <A HREF="/film_internet">. La position réelle de la source et de la cible dans la hiérarchie seront ignorés. Vous devrez modificer votre site web pour qu'il réécrive les URL, comme '/mon_script.php3/film_internet'. 'mon_script.php3' devra analyser $PATH_INFO et savoir rechercher le document '/mon_script.php3/film_internet'. Si vous ne voulez pas de ce comportement, vous pouvez affecter à rootID/prefix n'importe quel prefixe. Dans ce cas, ce sera une chaîne. Si rootID/prefix est un entier différent de 0 le lien sera construit avec tous les noms de la hiérarchie, en commençant à l'objet d'identifiant rootID/prefix, et séparé par des slash. Si, par exemple, le document 'film_internet' est situé à 'a-b-c-film_internet' et '-' qui sert de séparateur hiérarchique de niveau sur le serveur Hyperwave et le document source est situé dans 'a-b-d-source' alors, le lien HTML sera : <A HREF="../c/film_internet">. Cela est très pratique si vous voulez télécharger tout le contenu d'un serveur sur un disque, et faire une carte du système sur votre disque.
  *
  * @return int	Retourne le document texte.
  *
@@ -17577,8 +17577,8 @@ if(!function_exists('ibase_errmsgThis'))
  * @version PHP 5
  *
  * @param resource $query    Une requête InterBase, préparée avec la fonction ibase_prepare().
- * @param mixed     $bind_arg
- * @param mixed     $item
+ * @param mixed    $bind_arg
+ * @param mixed    $item
  *
  * @return resource	Si la requête émet une erreur, la fonction retournera FALSE. Si la requête réussie, et qu'il y a un jeu de résultats (pouvant être vide), la fonction retourne un identifiant de résultats. Si la requête réussie et qu'il n'y a pas de résultat, la fonction retourne TRUE.
  *
@@ -18213,7 +18213,7 @@ if(!function_exists('ibase_service_detachThis'))
  *
  * @version PHP 5
  *
- * @param callable     $event_handler    Fonction de rappel appelée avec le nom de l'événement et la ressource de connexion en tant qu'arguments dès qu'un événement spécifié est posté dans la base de données. La fonction de rappel event_handler doit retourner FALSE si le gestionnaire doit être annulé. Toute autre valeur de retour est ignorée. Cette fonction accepte jusqu'à 15 arguments d'événement.
+ * @param callable $event_handler    Fonction de rappel appelée avec le nom de l'événement et la ressource de connexion en tant qu'arguments dès qu'un événement spécifié est posté dans la base de données. La fonction de rappel event_handler doit retourner FALSE si le gestionnaire doit être annulé. Toute autre valeur de retour est ignorée. Cette fonction accepte jusqu'à 15 arguments d'événement.
  * @param string   $event_name1    Le nom de l'événement.
  * @param string   $event_name2    15 événements tout au plus sont autorisés.
  * @param string   $item
@@ -18887,7 +18887,7 @@ if(!function_exists('ifx_errormsgThis'))
  * @version PHP <=5.2.0
  *
  * @param resource $result_id    result_id est un identifiant valide de résultat, retourné par ifx_query() ou ifx_prepare() (Requêtes SELECT seulement !).
- * @param mixed     $position    position est un paramètre optionnel, pour une opération de lecture d'informations sur un pointeur de type "scroll": NEXT, PREVIOUS, CURRENT, FIRST, LAST ou encore un nombre. Si vous spécifiez un nombre, la ligne d'index absolu sera retournée. Ce paramètre est optionnel, et ne fonctionne qu'avec les pointeurs de type "scroll".
+ * @param mixed    $position    position est un paramètre optionnel, pour une opération de lecture d'informations sur un pointeur de type "scroll": NEXT, PREVIOUS, CURRENT, FIRST, LAST ou encore un nombre. Si vous spécifiez un nombre, la ligne d'index absolu sera retournée. Ce paramètre est optionnel, et ne fonctionne qu'avec les pointeurs de type "scroll".
  *
  * @return array	retourne un tableau associatif qui contient la ligne retournée ou FALSE s'il ne reste plus de lignes à lire, ou s'il a eu une erreur.
  *
@@ -19246,7 +19246,7 @@ if(!function_exists('ifx_pconnectThis'))
  * @param string   $query    La requête.
  * @param resource $link_identifier    L'identifiant du lien.
  * @param int      $cursor_def    Ce paramètre optionnel permet de choisir le type de pointeur : scroll et/ou hold. Les valeurs peuvent être combinées ensemble (IFX_SCROLL, IFX_HOLD).
- * @param mixed     $blobidarray    Si vous avez une colonne de type BLOB (BYTE ou TEXT) dans une requête de modification, vous pouvez passer un paramètre blobidarray qui contiendra les identifiants des BLOB à modifier, et vous devrez remplacer cette colonne par un point d'interrogation (?) dans la requête.
+ * @param mixed    $blobidarray    Si vous avez une colonne de type BLOB (BYTE ou TEXT) dans une requête de modification, vous pouvez passer un paramètre blobidarray qui contiendra les identifiants des BLOB à modifier, et vous devrez remplacer cette colonne par un point d'interrogation (?) dans la requête.
  *
  * @return resource	Retourne un identifiant de résultats pour une utilisation ultérieure avec la fonction ifx_do(), ou FALSE si une erreur survient.
  *
@@ -19276,7 +19276,7 @@ if(!function_exists('ifx_prepareThis'))
  * @param string   $query    La requête, sous la forme d'une chaîne de caractères.
  * @param resource $link_identifier    L'identifiant du lien.
  * @param int      $cursor_type    Ce paramètre optionnel vous permet de choisir le type de curseur, scroll et/ou hold. C'est un masque qui peut être soit IFX_SCROLL, soit IFX_HOLD, ou les deux. Si vous ne fournissez pas ce paramètre, le curseur est un curseur normal séquentiel.
- * @param mixed     $blobidarray    Si vous avez une colonne de type BLOB (BYTE ou TEXT) dans une requête de modification, vous pouvez passer un paramètre blobidarray qui contiendra les identifiants des BLOB à modifier, et vous devrez remplacer cette colonne par un point d'interrogation (?) dans la requête.
+ * @param mixed    $blobidarray    Si vous avez une colonne de type BLOB (BYTE ou TEXT) dans une requête de modification, vous pouvez passer un paramètre blobidarray qui contiendra les identifiants des BLOB à modifier, et vous devrez remplacer cette colonne par un point d'interrogation (?) dans la requête.
  *
  * @return resource	Retourne un identifiant de résultats Informix en cas de succès, ou FALSE si une erreur survient.
  *
@@ -19751,7 +19751,7 @@ if(!function_exists('imageaffinematrixconcatThis'))
  * @version PHP 5 >= 5.5.0
  *
  * @param int      $type    One of IMG_AFFINE_* constants.
- * @param mixed     $options
+ * @param mixed    $options
  *
  * @return array	Array with keys 0 to 5 and float values ou FALSE si une erreur survient.
  *
@@ -24150,7 +24150,7 @@ if(!function_exists('imap_rfc822_write_addressThis'))
  * @version PHP 5 >= 5.1.3
  *
  * @param resource $imap_stream    Un flux IMAP retourné par la fonction imap_open().
- * @param mixed     $file    Le chemin vers le fichier de sauvegarde, sous la forme d'une chaîne de caractères ou un descripteur de fichier valide retourné par la fonction fopen().
+ * @param mixed    $file    Le chemin vers le fichier de sauvegarde, sous la forme d'une chaîne de caractères ou un descripteur de fichier valide retourné par la fonction fopen().
  * @param int      $msg_number    Le numéro du message
  * @param string   $part_number    Le numéro de la section. C'est une chaîne de caractères d'entiers, délimités par une virgule qui correspondent à l'index dans la liste des sections du corps, tel que prévu par la spécification IMAP4.
  * @param int      $options    Un masque qui contient une ou plusieurs des valeurs suivantes :
@@ -24661,7 +24661,7 @@ if(!function_exists('import_request_variablesThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $needle    La valeur recherchée.
+ * @param mixed    $needle    La valeur recherchée.
  * @param array    $haystack    Le tableau.
  * @param bool     $strict    Le troisième paramètre strict est optionnel. S'il vaut TRUE alors in_array() vérifiera aussi que le type du paramètre needle correspond au type de la valeur trouvée dans haystack.
  *
@@ -24899,7 +24899,7 @@ if(!function_exists('interface_existsThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    La valeur scalaire à être convertie en entier
+ * @param mixed    $var    La valeur scalaire à être convertie en entier
  * @param int      $base    La base pour la conversion
  *
  * @return int	Une valeur de type entier de var en cas de succès ou 0 en cas d'échec. Les tableaux vides retournent 0, les tableaux non vides retournent 1.
@@ -25034,7 +25034,7 @@ if(!function_exists('is_aThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    La variable à évaluer.
+ * @param mixed    $var    La variable à évaluer.
  *
  * @return bool	Retourne TRUE si var est un array, FALSE sinon.
  *
@@ -25058,7 +25058,7 @@ if(!function_exists('is_arrayThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    La variable à évaluer.
+ * @param mixed    $var    La variable à évaluer.
  *
  * @return bool	Retourne TRUE si var est un booléen, FALSE sinon.
  *
@@ -25082,7 +25082,7 @@ if(!function_exists('is_boolThis'))
  * @version PHP 4 >= 4.0.6
  * @version PHP 5
  *
- * @param callable     $name    La fonction de rappel à vérifier.
+ * @param callable $name    La fonction de rappel à vérifier.
  * @param bool     $syntax_only    Si l'argument syntax_only vaut TRUE, la fonction ne va vérifier que si name peut être une fonction ou une méthode. Il va simplement rejeter les variables qui ne sont pas des chaînes, ou des tableaux qui n'ont pas la bonne structure pour être utilisés comme fonction de rappel. Les tableaux valides sont supposés n'avoir que deux entrées, le premier étant un objet ou une chaîne, et le second une chaîne.
  * @param string   &$callable_name    L'argument callable_name reçoit le nom à utiliser. Dans l'exemple ci-dessous, il vaut "someClass::someMethod". Notez que, bien que someClass::someMethod() puisse être appelée sous forme statique, ce n'est pas le cas.
  *
@@ -25211,7 +25211,7 @@ if(!function_exists('is_finiteThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    La variable à évaluer.
+ * @param mixed    $var    La variable à évaluer.
  *
  * @return bool	Retourne TRUE si var est un nombre décimal, FALSE sinon.
  *
@@ -25260,7 +25260,7 @@ if(!function_exists('is_infiniteThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    La variable à évaluer.
+ * @param mixed    $var    La variable à évaluer.
  *
  * @return bool	Retourne TRUE si var est un entier, FALSE sinon.
  *
@@ -25334,7 +25334,7 @@ if(!function_exists('is_nanThis'))
  * @version PHP 4 >= 4.0.4
  * @version PHP 5
  *
- * @param mixed     $var    La variable à évaluer.
+ * @param mixed    $var    La variable à évaluer.
  *
  * @return bool	Retourne TRUE si var est NULL, FALSE sinon.
  *
@@ -25358,7 +25358,7 @@ if(!function_exists('is_nullThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    La variable à évaluer.
+ * @param mixed    $var    La variable à évaluer.
  *
  * @return bool	Retourne TRUE si var est un nombre ou une chaîne numérique, FALSE sinon.
  *
@@ -25382,7 +25382,7 @@ if(!function_exists('is_numericThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    La variable à évaluer.
+ * @param mixed    $var    La variable à évaluer.
  *
  * @return bool	Retourne TRUE si var est un objet, FALSE sinon.
  *
@@ -25431,7 +25431,7 @@ if(!function_exists('is_readableThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    La variable à évaluer.
+ * @param mixed    $var    La variable à évaluer.
  *
  * @return bool	Retourne TRUE si var est une ressource, FALSE autrement.
  *
@@ -25455,7 +25455,7 @@ if(!function_exists('is_resourceThis'))
  * @version PHP 4 >= 4.0.5
  * @version PHP 5
  *
- * @param mixed     $var    La variable à évaluer.
+ * @param mixed    $var    La variable à évaluer.
  *
  * @return bool	Retourne TRUE si var est un scalaire, FALSE autrement.
  *
@@ -25478,7 +25478,7 @@ if(!function_exists('is_scalarThis'))
  *
  * @version Unknown
  *
- * @param mixed     $object    L'objet à tester.
+ * @param mixed    $object    L'objet à tester.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -25502,7 +25502,7 @@ if(!function_exists('is_soap_faultThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    La variable à évaluer.
+ * @param mixed    $var    La variable à évaluer.
  *
  * @return bool	Retourne TRUE si var est une chaîne de caractères, FALSE sinon.
  *
@@ -25526,7 +25526,7 @@ if(!function_exists('is_stringThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $object    Un nom de classe ou une instance d'un objet
+ * @param mixed    $object    Un nom de classe ou une instance d'un objet
  * @param string   $class_name    Le nom de la classe
  * @param bool     $allow_string    Si ce paramètre est défini à FALSE, un nom de classe sous forme de chaîne de caractères dans le paramètre object n'est pas autorisé. Ceci permet d'éviter d'appeler l'autoloader si la classe n'existe pas.
  *
@@ -25605,7 +25605,7 @@ if(!function_exists('is_writableThis'))
  * @version PHP 5 >= 5.1.0
  *
  * @param Traversable     $iterator    La classe à itérer.
- * @param callable     $function    La fonction à appeler à chaque élément.
+ * @param callable $function    La fonction à appeler à chaque élément.
  * @param array    $args    Les arguments à passer à la fonction de rappel.
  *
  * @return int	Retourne le nombre d'itération.
@@ -25944,7 +25944,7 @@ if(!function_exists('lcg_valueThis'))
  * @version PHP 5 >= 5.1.2
  *
  * @param string   $filename    chemin vers le lien symbolique.
- * @param mixed     $group    Le groupe, spécifié par son nom ou son numéro.
+ * @param mixed    $group    Le groupe, spécifié par son nom ou son numéro.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -25969,7 +25969,7 @@ if(!function_exists('lchgrpThis'))
  * @version PHP 5 >= 5.1.2
  *
  * @param string   $filename    Chemin vers le fichier.
- * @param mixed     $user    L'utilisateur, par son nom ou son numéro.
+ * @param mixed    $user    L'utilisateur, par son nom ou son numéro.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -26101,7 +26101,7 @@ if(!function_exists('libxml_get_last_errorThis'))
  *
  * @version PHP 5 >= 5.4.0
  *
- * @param callable     $resolver_function    Une callable qui accepte trois arguments. Deux chaines, l'id public et l'id système, et un contexte (un tableau avec quatre clés) comme troisième argument. Cette callback doit retourner une ressource, une chaine servant à ouvrir une ressource ou NULL.
+ * @param callable $resolver_function    Une callable qui accepte trois arguments. Deux chaines, l'id public et l'id système, et un contexte (un tableau avec quatre clés) comme troisième argument. Cette callback doit retourner une ressource, une chaine servant à ouvrir une ressource ou NULL.
  *
  * @return void	Aucune valeur n'est retournée.
  *
@@ -26541,7 +26541,7 @@ if(!function_exists('mb_convert_caseThis'))
  *
  * @param string   $str    La chaîne à encoder.
  * @param string   $to_encoding    Le type d'encodage utilisé pour la conversion de la chaîne str.
- * @param mixed     $from_encoding    Spécifié par le nom de code des caractères, avant la conversion. Il est soit un tableau, ou une liste séparée par une virgule. Si from_encoding n'est pas spécifié, l'encodage interne sera utilisé. Voir les encodages supportés.
+ * @param mixed    $from_encoding    Spécifié par le nom de code des caractères, avant la conversion. Il est soit un tableau, ou une liste séparée par une virgule. Si from_encoding n'est pas spécifié, l'encodage interne sera utilisé. Voir les encodages supportés.
  *
  * @return string	La chaîne encodée.
  *
@@ -26597,9 +26597,9 @@ if(!function_exists('mb_convert_kanaThis'))
  * @version PHP 5
  *
  * @param string   $to_encoding    L'encodage dans lequel la chaîne doit être convertie.
- * @param mixed     $from_encoding    from-encoding est une liste d'encodages possibles pour les variables vars, fourni sous forme d'un tableau ou d'une liste d'encodages, séparés par des virgules. Si from_encoding est omis, les encodages fournis dans mb_detect_order() sont utilisés.
- * @param mixed     &$vars    vars est une référence sur une variable à convertir. Les chaînes, tableaux et objets sont aussi supportés. mb_convert_variables() prend tous ces paramètres avec le même encodage.
- * @param mixed     &$item    Variables additionnelles.
+ * @param mixed    $from_encoding    from-encoding est une liste d'encodages possibles pour les variables vars, fourni sous forme d'un tableau ou d'une liste d'encodages, séparés par des virgules. Si from_encoding est omis, les encodages fournis dans mb_detect_order() sont utilisés.
+ * @param mixed    &$vars    vars est une référence sur une variable à convertir. Les chaînes, tableaux et objets sont aussi supportés. mb_convert_variables() prend tous ces paramètres avec le même encodage.
+ * @param mixed    &$item    Variables additionnelles.
  *
  * @return string	L'encodage avant conversion en cas de succès, ou FALSE si une erreur survient.
  *
@@ -26681,7 +26681,7 @@ if(!function_exists('mb_decode_numericentityThis'))
  * @version PHP 5
  *
  * @param string   $str    La chaîne à analyser.
- * @param mixed     $encoding_list    encoding_list est une liste d'encodages, sous forme de tableau, ou bien de chaîne, les valeurs étant séparées par des virgules. Si encoding_list est omis, l'ordre spécifié par mb_detect_order() est utilisé.
+ * @param mixed    $encoding_list    encoding_list est une liste d'encodages, sous forme de tableau, ou bien de chaîne, les valeurs étant séparées par des virgules. Si encoding_list est omis, l'ordre spécifié par mb_detect_order() est utilisé.
  * @param bool     $strict    strict spécifie si l'on doit utiliser une détection de l'encodage strict ou non. Par défaut, vaut FALSE.
  *
  * @return string	L'encodage détecté ou FALSE si l'encodage ne peut être détecté pour la chaîne de caractères donnée.
@@ -26709,7 +26709,7 @@ if(!function_exists('mb_detect_encodingThis'))
  * @version PHP 4 >= 4.0.6
  * @version PHP 5
  *
- * @param mixed     $encoding_list    encoding_list est un tableau, ou une liste d'encodages séparés par une virgule. Voir les encodages supportés. Si encoding_list est omis, mb_detect_order() retourne l'ordre de détection courant des encodages dans un tableau. Ce paramétrage affecte les fonctions mb_detect_encoding() et mb_send_mail(). Actuellement, mbstring supporte les filtres de détections ci-dessous. Si une séquence d'octets est invalide pour l'un des filtres suivants, la détection échouera. Pour ISO-8859-*, mbstring détecte toujours ISO-8859-*. Pour UTF-16, UTF-32, UCS2 et UCS4 la détection échouera toujours.
+ * @param mixed    $encoding_list    encoding_list est un tableau, ou une liste d'encodages séparés par une virgule. Voir les encodages supportés. Si encoding_list est omis, mb_detect_order() retourne l'ordre de détection courant des encodages dans un tableau. Ce paramétrage affecte les fonctions mb_detect_encoding() et mb_send_mail(). Actuellement, mbstring supporte les filtres de détections ci-dessous. Si une séquence d'octets est invalide pour l'un des filtres suivants, la détection échouera. Pour ISO-8859-*, mbstring détecte toujours ISO-8859-*. Pour UTF-16, UTF-32, UCS2 et UCS4 la détection échouera toujours.
  *
  * @return mixed	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -26910,7 +26910,7 @@ if(!function_exists('mb_ereg_replaceThis'))
  * @version PHP 5 >= 5.4.1
  *
  * @param string   $pattern    L'expression régulière. Les caractères multi octets peuvent être utilisé dans le pattern.
- * @param callable     $callback    Un callback qui sera appelé et lui sera passé un tableau d'éléments correspondants dans la chaine de caractère subject. Le callback doit retourné la chaîne remplacée. Vous aurez souvent besoin de la fonction callback pour mb_ereg_replace_callback() juste une fois. Dans ce cas vous pouvez utiliser les fonctions anonymes (depuis PHP 5.3.0) ou create_function() pour déclarer une fonction anonyme comme callback dans l'appel de mb_ereg_replace_callback(). En faisait cela de cette manière vous avez toutes les informations nécessaires à l'appel de la fonction en un seul endroit, ce qui permet d'éviter d'encombrer l'espace de nom des fonctions avec un callback de fonction qui n'est pas utilisé ailleur.
+ * @param callable $callback    Un callback qui sera appelé et lui sera passé un tableau d'éléments correspondants dans la chaine de caractère subject. Le callback doit retourné la chaîne remplacée. Vous aurez souvent besoin de la fonction callback pour mb_ereg_replace_callback() juste une fois. Dans ce cas vous pouvez utiliser les fonctions anonymes (depuis PHP 5.3.0) ou create_function() pour déclarer une fonction anonyme comme callback dans l'appel de mb_ereg_replace_callback(). En faisait cela de cette manière vous avez toutes les informations nécessaires à l'appel de la fonction en un seul endroit, ce qui permet d'éviter d'encombrer l'espace de nom des fonctions avec un callback de fonction qui n'est pas utilisé ailleur.
  * @param string   $string    La string qui doit être vérifiée.
  * @param string   $option    Matching condition can be set by option parameter. If i is specified for this parameter, the case will be ignored. If x is specified, white space will be ignored. If m is specified, match will be executed in multiline mode and line break will be included in '.'. If p is specified, match will be executed in POSIX mode, line break will be considered as normal character. Note that e cannot be used for mb_ereg_replace_callback().
  *
@@ -27924,7 +27924,7 @@ if(!function_exists('mb_strwidthThis'))
  * @version PHP 4 >= 4.0.6
  * @version PHP 5
  *
- * @param mixed     $substrchar    Spécifie une valeur Unicode sous la forme d'un entier, ou bien une chaîne sous ces formes :
+ * @param mixed    $substrchar    Spécifie une valeur Unicode sous la forme d'un entier, ou bien une chaîne sous ces formes :
  *
  * @return mixed	Si substchar est fourni, mb_substitute_character() retourne TRUE en cas de succès, et FALSE en cas d'erreur. Si substchar est omis, mb_substitute_character() retourne une valeur Unicode, ou bien "none"/"long".
  *
@@ -29100,7 +29100,7 @@ if(!function_exists('metaphoneThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $object    Une instance d'un objet ou le nom d'une classe
+ * @param mixed    $object    Une instance d'un objet ou le nom d'une classe
  * @param string   $method_name    Le nom de la méthode
  *
  * @return bool	Retourne TRUE si la méthode fournie par le paramètre method_name a été définie pour l'objet object, FALSE sinon.
@@ -29991,7 +29991,7 @@ if(!function_exists('msg_queue_existsThis'))
  * @param int      $desiredmsgtype    Si desiredmsgtype vaut 0, le premier message de la file est retourné. Si desiredmsgtype vaut plus que 0, alors le premier message de ce type sera retourné. Si desiredmsgtype vaut moins que 0, le premier message de la file ayant un type inférieur ou égal à la valeur absolue de desiredmsgtype sera retourné. Si aucun message ne correspond aux critères, votre script attendra la venue d'un tel message dans la file. Vous pouvez éviter ce blocage en précisant l'option MSG_IPC_NOWAIT dans le paramètre flags.
  * @param int      &$msgtype    Le type de message qui a été reçu sera stocké dans ce paramètre.
  * @param int      $maxsize    La taille maximale de message est fixée par maxsize ; si le message de la file est plus grand que cette taille, la fonction échouera (à moins que vous n'utilisiez une option flags, décrite ci-dessous).
- * @param mixed     &$message    Le message reçu sera stocké dans le paramètre message, à moins qu'il n'y ait eu des erreurs de réception du message.
+ * @param mixed    &$message    Le message reçu sera stocké dans le paramètre message, à moins qu'il n'y ait eu des erreurs de réception du message.
  * @param bool     $unserialize    Quand c'est le cas, le message est traité comme s'il avait été linéarisé avec le même mécanisme que le module de session. Le message sera alors délinéarisé, puis retourné au script. Cela vous permettra de recevoir facilement des tableaux ou des objets complexes dans votre script, émis par d'autres scripts PHP, ou, si vous utilisez WDDX, depuis n'importe quelle source compatible WDDX. Si unserialize vaut FALSE, le message sera retourné intact, et sans modifier les valeurs binaires.
  * @param int      $flags    Le paramètre flags permet de passer des options pour configurer les appels msgrcv. Par défaut, il vaut 0, mais vous pouvez spécifier une ou plusieurs options en les combinant avec l'opérateur OR).
  * @param int      &$errorcode    Si la fonction échoue, le paramètre optionnel errorcode sera défini à la valeur de la variable système errno.
@@ -30053,7 +30053,7 @@ if(!function_exists('msg_remove_queueThis'))
  *
  * @param resource $queue
  * @param int      $msgtype
- * @param mixed     $message
+ * @param mixed    $message
  * @param bool     $serialize    Le paramètre optionnel serialize contrôle la méthode d'envoi du message message. serialize vaut par défaut TRUE ce qui signifie que le message message sera linéarisé en utilisant le même mécanisme que celui qui est utilisé par les sessions, avant d'être envoyé à la file de message. Cela permet d'envoyer des tableaux et des objets complexes à d'autres scripts PHP, ou bien, si vous utilisez l'extension WDDX, d'échanger des messages avec des clients compatibles WDDX.
  * @param bool     $blocking    Si le message est trop grand pour être stocké par la file, votre script attendra jusqu'à ce qu'un autre processus lise dans la file un message, et libère assez de place pour votre message. C'est le mode bloquant : vous pouvez éviter ce mode en utilisant le paramètre blocking avec la valeur FALSE : dans ce cas, msg_send() retournera immédiatement FALSE si le message est trop gros pour la file. Il assignera alors au paramètre errorcode la valeur de MSG_EAGAIN, indiquant que vous devriez essayer d'envoyer à nouveau votre message, un peu plus tard.
  * @param int      &$errorcode
@@ -30819,7 +30819,7 @@ if(!function_exists('msql_queryThis'))
  *
  * @param resource $result    La ressource de résultat qui vient d'être évaluée. Ce résultat vient de l'appel à la fonction msql_query().
  * @param int      $row    L'offset de la ligne.
- * @param mixed     $field    Peut être l'offset du champ, ou le nom du champ, le nom de la table, suivi du nom du champ (tablename.fieldname.). Si le nom de la colonne est un alias ("select foo as bar from ..."), utilisez cet alias au lieu du nom de la colonne.
+ * @param mixed    $field    Peut être l'offset du champ, ou le nom du champ, le nom de la table, suivi du nom du champ (tablename.fieldname.). Si le nom de la colonne est un alias ("select foo as bar from ..."), utilisez cet alias au lieu du nom de la colonne.
  *
  * @return string	Retourne le contenu de la cellule se trouvant à la ligne et à la position spécifiées dans le jeu de résultats mSQL.
  *
@@ -31101,7 +31101,7 @@ if(!function_exists('mysql_data_seekThis'))
  *
  * @param resource $result    Le pointeur de résultat d'un appel de mysql_list_dbs().
  * @param int      $row    L'index à l'intérieur du jeu de résultats.
- * @param mixed     $field    Le nom du champ.
+ * @param mixed    $field    Le nom du champ.
  *
  * @return string	Retourne le nom de base de données en cas de succès et FALSE en cas d'échec. Si FALSE est retourné, utilisez mysql_error() pour déterminer la nature de l'erreur.
  *
@@ -32016,7 +32016,7 @@ if(!function_exists('mysql_real_escape_stringThis'))
  *
  * @param resource $result    La ressource de résultat qui vient d'être évaluée. Ce résultat vient de l'appel à la fonction mysql_query().
  * @param int      $row    Le numéro de la ligne à récupérer. Les numéros de lignes commencent à 0.
- * @param mixed     $field    Le nom ou la position du champ à récupérer. Il peut être la position du champ, le nom du champ ou le nom de la table suivi d'un point, suivi du nom du champ (tablename.fieldname). Si un alias a été utilisé pour le nom de la colonne ("selected foo as bar from..."), utilisez plutôt l'alias. Si ce paramètre n'est pas défini, le premier champ sera récupéré.
+ * @param mixed    $field    Le nom ou la position du champ à récupérer. Il peut être la position du champ, le nom du champ ou le nom de la table suivi d'un point, suivi du nom du champ (tablename.fieldname). Si un alias a été utilisé pour le nom de la colonne ("selected foo as bar from..."), utilisez plutôt l'alias. Si ce paramètre n'est pas défini, le premier champ sera récupéré.
  *
  * @return string	Le contenu d'un champ depuis un jeu de résultats MySQL en cas de succès, ou FALSE si une erreur survient.
  *
@@ -33087,7 +33087,7 @@ if(!function_exists('ob_list_handlersThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param callable     $output_callback    Une fonction optionnelle de rappel peut être spécifiée. Cette fonction prend une chaîne comme paramètre, et retourne une chaîne. Elle sera appelée lorsque le tampon sera envoyé ou supprimé (avec les fonctions ob_flush(), ob_clean() ou des fonctions similaires) ou lorsque le tampon sera envoyé au navigateur à la fin du script et recevra le contenu du tampon de sortie. Lorsque la fonction output_callback est appelée, elle doit retourner un nouveau contenu pour le tampon de sortie : celui-ci sera envoyé au navigateur. Si output_callback n'est pas une fonction accessible, la fonction retournera FALSE. Voici la signature de la fonction de rappel : Si output_callback retourne FALSE, l'entrée originale est envoyée au navigateur. Le paramètre output_callback peut être annulé en y passant la valeur NULL. ob_end_clean(), ob_end_flush(), ob_clean(), ob_flush() et ob_start() ne doivent pas être appelés depuis une fonction de rappel. Si vous les appelez depuis une fonction de rappel, le comportement ne sera pas défini. Si vous voulez effacer le contenu du tampon, retournez "" (une chaîne vide) comme fonction de rappel. Vous ne pourrez jamais appeler les fonctions utilisant la fonction de temporisation de sortie comme print_r($expression, true) ou highlight_file($filename, true) depuis une fonction de rappel.
+ * @param callable $output_callback    Une fonction optionnelle de rappel peut être spécifiée. Cette fonction prend une chaîne comme paramètre, et retourne une chaîne. Elle sera appelée lorsque le tampon sera envoyé ou supprimé (avec les fonctions ob_flush(), ob_clean() ou des fonctions similaires) ou lorsque le tampon sera envoyé au navigateur à la fin du script et recevra le contenu du tampon de sortie. Lorsque la fonction output_callback est appelée, elle doit retourner un nouveau contenu pour le tampon de sortie : celui-ci sera envoyé au navigateur. Si output_callback n'est pas une fonction accessible, la fonction retournera FALSE. Voici la signature de la fonction de rappel : Si output_callback retourne FALSE, l'entrée originale est envoyée au navigateur. Le paramètre output_callback peut être annulé en y passant la valeur NULL. ob_end_clean(), ob_end_flush(), ob_clean(), ob_flush() et ob_start() ne doivent pas être appelés depuis une fonction de rappel. Si vous les appelez depuis une fonction de rappel, le comportement ne sera pas défini. Si vous voulez effacer le contenu du tampon, retournez "" (une chaîne vide) comme fonction de rappel. Vous ne pourrez jamais appeler les fonctions utilisant la fonction de temporisation de sortie comme print_r($expression, true) ou highlight_file($filename, true) depuis une fonction de rappel.
  * @param int      $chunk_size
  * @param bool     $erase
  *
@@ -34122,7 +34122,7 @@ if(!function_exists('odbc_proceduresThis'))
  * @version PHP 5
  *
  * @param resource $result_id    Une ressource ODBC.
- * @param mixed     $field    Le nom du champ à récupérer. Peut être aussi bien un entier, contenant le numéro de colonne du champ, dans le résultat, ou bien une chaîne de caractères, qui représente le nom du champ.
+ * @param mixed    $field    Le nom du champ à récupérer. Peut être aussi bien un entier, contenant le numéro de colonne du champ, dans le résultat, ou bien une chaîne de caractères, qui représente le nom du champ.
  *
  * @return mixed	Retourne le contenu du champ, FALSE si une erreur survient, NULL pour les données NULL, ou TRUE pour des données binaires.
  *
@@ -34503,7 +34503,7 @@ if(!function_exists('openssl_csr_export_to_fileThis'))
  *
  * @version PHP 5 >= 5.2.0
  *
- * @param mixed     $csr
+ * @param mixed    $csr
  * @param bool     $use_shortnames
  *
  */
@@ -34527,7 +34527,7 @@ if(!function_exists('openssl_csr_get_public_keyThis'))
  *
  * @version PHP 5 >= 5.2.0
  *
- * @param mixed     $csr
+ * @param mixed    $csr
  * @param bool     $use_shortnames
  *
  */
@@ -34583,9 +34583,9 @@ if(!function_exists('openssl_csr_newThis'))
  * @version PHP 4 >= 4.2.0
  * @version PHP 5
  *
- * @param mixed     $csr    Une CSR générée précédemment par openssl_csr_new(). mais ce paramètre peut aussi être une Ca peut aussi être le chemin vers une CSR encodée au format PEM, et spécifiée avec file://path/to/csr ou une chaîne exportée par openssl_csr_export().
- * @param mixed     $cacert    Le certificat généré sera signé par le certificat cacert. Si cacert vaut NULL, le certificat généré sera autosigné.
- * @param mixed     $priv_key    priv_key est la clé privée qui correspond au certificat cacert.
+ * @param mixed    $csr    Une CSR générée précédemment par openssl_csr_new(). mais ce paramètre peut aussi être une Ca peut aussi être le chemin vers une CSR encodée au format PEM, et spécifiée avec file://path/to/csr ou une chaîne exportée par openssl_csr_export().
+ * @param mixed    $cacert    Le certificat généré sera signé par le certificat cacert. Si cacert vaut NULL, le certificat généré sera autosigné.
+ * @param mixed    $priv_key    priv_key est la clé privée qui correspond au certificat cacert.
  * @param int      $days    days spécifie la durée pour laquelle le certificat est valide, en nombre de jours.
  * @param array    $configargs    Vous pouvez affiner la signature CSR avec configargs. Voir la fonction openssl_csr_new() pour plus d'informations sur configargs.
  * @param int      $serial    Un numéro de série optionnel pour le certificat émis. S'il n'est pas spécifié, il vaudra 0.
@@ -34832,7 +34832,7 @@ if(!function_exists('openssl_get_md_methodsThis'))
  * @param string   $sealed_data
  * @param string   &$open_data    Si l'appel a réussi, les données ouvertes sont retournées dans ce paramètre.
  * @param string   $env_key
- * @param mixed     $priv_key_id
+ * @param mixed    $priv_key_id
  * @param string   $method
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -34893,9 +34893,9 @@ if(!function_exists('openssl_pbkdf2This'))
  *
  * @version PHP 5 >= 5.2.2
  *
- * @param mixed     $x509    Voir les paramètres clés/Certificats pour une liste de valeurs valides.
+ * @param mixed    $x509    Voir les paramètres clés/Certificats pour une liste de valeurs valides.
  * @param string   &$out    En cas de succès, cette variable contiendra le PKCS#12.
- * @param mixed     $priv_key    Clé privée du fichier PKCS#12.
+ * @param mixed    $priv_key    Clé privée du fichier PKCS#12.
  * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#12.
  * @param array    $args
  *
@@ -34925,9 +34925,9 @@ if(!function_exists('openssl_pkcs12_exportThis'))
  *
  * @version PHP 5 >= 5.2.2
  *
- * @param mixed     $x509    Voir les paramètres clés/Certificats pour une liste de valeurs valides.
+ * @param mixed    $x509    Voir les paramètres clés/Certificats pour une liste de valeurs valides.
  * @param string   $filename    Chemin vers le fichier de sortie.
- * @param mixed     $priv_key    Clé privée du fichier PKCS#12.
+ * @param mixed    $priv_key    Clé privée du fichier PKCS#12.
  * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#12.
  * @param array    $args
  *
@@ -34988,8 +34988,8 @@ if(!function_exists('openssl_pkcs12_readThis'))
  *
  * @param string   $infilename
  * @param string   $outfilename    Le message déchiffré est écrit dans le fichier spécifié par ce paramètre.
- * @param mixed     $recipcert
- * @param mixed     $recipkey
+ * @param mixed    $recipcert
+ * @param mixed    $recipkey
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -35018,7 +35018,7 @@ if(!function_exists('openssl_pkcs7_decryptThis'))
  *
  * @param string   $infile
  * @param string   $outfile
- * @param mixed     $recipcerts    Soit un certificat X.509, soit un tableau de certificats X.509.
+ * @param mixed    $recipcerts    Soit un certificat X.509, soit un tableau de certificats X.509.
  * @param array    $headers    headers est un tableau d'en-têtes qui seront ajoutés en tête de message, une fois que les données auront été chiffrées. headers peut être un tableau associatif, dont les clés sont les noms d'en-tête, ou bien un tableau indexé dont chaque ligne contient un en-tête complet.
  * @param int      $flags    flags peut être utilisé pour spécifier des options qui affecteront le chiffrement (voir les constantes PKCS7).
  * @param int      $cipherid    Une des constantes cipher.
@@ -35053,8 +35053,8 @@ if(!function_exists('openssl_pkcs7_encryptThis'))
  *
  * @param string   $infilename
  * @param string   $outfilename
- * @param mixed     $signcert
- * @param mixed     $privkey
+ * @param mixed    $signcert
+ * @param mixed    $privkey
  * @param array    $headers    headers est un tableau d'en-têtes qui seront ajoutés aux données chiffrées (voir la fonction openssl_pkcs7_encrypt() pour plus de détails sur le format du paramètre).
  * @param int      $flags    flags sert à modifier le message final. Voyez les constantes PKCS7.
  * @param string   $extracerts    extracerts spécifie le nom du fichier contenant un ensemble de certificats supplémentaires à inclure dans la signature, qui pourront aider le destinataire à vérifier les données que vous utilisez.
@@ -35123,7 +35123,7 @@ if(!function_exists('openssl_pkcs7_verifyThis'))
  * @version PHP 4 >= 4.2.0
  * @version PHP 5
  *
- * @param mixed     $key
+ * @param mixed    $key
  * @param string   &$out
  * @param string   $passphrase    La clé est éventuellement protégée par le mot de passe passphrase.
  * @param array    $configargs    configargs peut être utilisé pour calibrer le processus d'exportation en spécifiant ou remplaçant les options du fichier de configuration d'OpenSSl. Voyez openssl_csr_new() pour plus d'informations sur configargs.
@@ -35154,7 +35154,7 @@ if(!function_exists('openssl_pkey_exportThis'))
  * @version PHP 4 >= 4.2.0
  * @version PHP 5
  *
- * @param mixed     $key
+ * @param mixed    $key
  * @param string   $outfilename    Chemin du fichier de sortie.
  * @param string   $passphrase    La clé peut éventuellement être protégée par un mot de passe.
  * @param array    $configargs    configargs peut être utilisé pour calibrer le processus d'exportation en spécifiant ou remplaçant les options du fichier de configuration d'OpenSSl. Voyez openssl_csr_new() pour plus d'informations sur configargs.
@@ -35234,7 +35234,7 @@ if(!function_exists('openssl_pkey_get_detailsThis'))
  * @version PHP 4 >= 4.2.0
  * @version PHP 5
  *
- * @param mixed     $key    key peut être l'une des valeurs suivantes :
+ * @param mixed    $key    key peut être l'une des valeurs suivantes :
  * @param string   $passphrase    Le paramètre optionnel passphrase doit être utilisé si la clé spécifiée est chiffrée (protégée par un mot de passe).
  *
  * @return resource	Retourne une ressource positive représentant une clé en cas de succès, ou FALSE si une erreur survient.
@@ -35261,7 +35261,7 @@ if(!function_exists('openssl_pkey_get_privateThis'))
  * @version PHP 4 >= 4.2.0
  * @version PHP 5
  *
- * @param mixed     $certificate    certificate peut avoir l'une des valeurs suivantes :
+ * @param mixed    $certificate    certificate peut avoir l'une des valeurs suivantes :
  *
  * @return resource	Retourne une ressource positive, représentant une clé en cas de succès, ou FALSE si une erreur survient.
  *
@@ -35312,7 +35312,7 @@ if(!function_exists('openssl_pkey_newThis'))
  *
  * @param string   $data
  * @param string   &$decrypted
- * @param mixed     $key    key doit être la clé privée utilisée pour chiffrer les données.
+ * @param mixed    $key    key doit être la clé privée utilisée pour chiffrer les données.
  * @param int      $padding    padding peut être OPENSSL_PKCS1_PADDING, OPENSSL_SSLV23_PADDING, OPENSSL_PKCS1_OAEP_PADDING ou OPENSSL_NO_PADDING.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -35343,7 +35343,7 @@ if(!function_exists('openssl_private_decryptThis'))
  *
  * @param string   $data
  * @param string   &$crypted
- * @param mixed     $key
+ * @param mixed    $key
  * @param int      $padding    Le paramètre padding peut être OPENSSL_PKCS1_PADDING ou OPENSSL_NO_PADDING.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -35374,7 +35374,7 @@ if(!function_exists('openssl_private_encryptThis'))
  *
  * @param string   $data
  * @param string   &$decrypted
- * @param mixed     $key    key doit être la clé publique qui a été utilisée pour chiffrer les données.
+ * @param mixed    $key    key doit être la clé publique qui a été utilisée pour chiffrer les données.
  * @param int      $padding    padding peut être OPENSSL_PKCS1_PADDING ou OPENSSL_NO_PADDING.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -35405,7 +35405,7 @@ if(!function_exists('openssl_public_decryptThis'))
  *
  * @param string   $data
  * @param string   &$crypted    Contiendra le résultat du chiffrage.
- * @param mixed     $key    La clé publique.
+ * @param mixed    $key    La clé publique.
  * @param int      $padding    padding peut être OPENSSL_PKCS1_PADDING, OPENSSL_SSLV23_PADDING, OPENSSL_PKCS1_OAEP_PADDING ou OPENSSL_NO_PADDING.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -35495,7 +35495,7 @@ if(!function_exists('openssl_sealThis'))
  *
  * @param string   $data
  * @param string   &$signature    Si l'appel à la fonction est un succès, la signature sera retournée dans le paramètre signature.
- * @param mixed     $priv_key_id
+ * @param mixed    $priv_key_id
  * @param int      $signature_alg    Pour plus d'informations, reportez-vous à la liste des algorithmes de signature.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -35526,7 +35526,7 @@ if(!function_exists('openssl_signThis'))
  *
  * @param string   $data
  * @param string   $signature
- * @param mixed     $pub_key_id
+ * @param mixed    $pub_key_id
  * @param int      $signature_alg    Pour plus d'informations, reportez-vous à la liste des algorithmes de signature.
  *
  * @return int	Retourne 1 si la signature est correcte, 0 si elle est incorrecte et -1 si une erreur survient.
@@ -35555,8 +35555,8 @@ if(!function_exists('openssl_verifyThis'))
  * @version PHP 4 >= 4.2.0
  * @version PHP 5
  *
- * @param mixed     $cert    Le certificat.
- * @param mixed     $key    La clé privée.
+ * @param mixed    $cert    Le certificat.
+ * @param mixed    $key    La clé privée.
  *
  * @return bool	Retourne TRUE si key est la clé privée qui correspond à cert, ou FALSE sinon.
  *
@@ -35581,7 +35581,7 @@ if(!function_exists('openssl_x509_check_private_keyThis'))
  * @version PHP 4 >= 4.0.6
  * @version PHP 5
  *
- * @param mixed     $x509cert    Le certificat examiné.
+ * @param mixed    $x509cert    Le certificat examiné.
  * @param int      $purpose
  * @param array    $cainfo    cainfo doit être un tableau de dossiers/fichiers de CA de confiance comme décrit dans la Vérification des certificats.
  * @param string   $untrustedfile    Si spécifié, est le nom d'un fichier au format PEM contenant les certificats qui pourront aider lors de la vérification du certificat, même si une confiance limitée doit leur être portée.
@@ -35612,7 +35612,7 @@ if(!function_exists('openssl_x509_checkpurposeThis'))
  * @version PHP 4 >= 4.2.0
  * @version PHP 5
  *
- * @param mixed     $x509    Voir les paramètres clés/Certificats pour une liste de valeurs valides.
+ * @param mixed    $x509    Voir les paramètres clés/Certificats pour une liste de valeurs valides.
  * @param string   &$output    En cas de succès, contiendra le PEM.
  * @param bool     $notext    Le paramètre optionnel notext affecte le niveau verbeux de l'affichage ; s'il vaut FALSE, des informations humainement lisibles seront ajoutées dans l'affichage. Par défaut, le paramètre notext vaut TRUE.
  *
@@ -35641,7 +35641,7 @@ if(!function_exists('openssl_x509_exportThis'))
  * @version PHP 4 >= 4.2.0
  * @version PHP 5
  *
- * @param mixed     $x509    Voir les paramètres clés/Certificats pour une liste de valeurs valides.
+ * @param mixed    $x509    Voir les paramètres clés/Certificats pour une liste de valeurs valides.
  * @param string   $outfilename    Chemin du fichier de sortie.
  * @param bool     $notext    Le paramètre optionnel notext affecte le niveau verbeux de l'affichage ; s'il vaut FALSE, des informations humainement lisibles seront ajoutées dans l'affichage. Par défaut, le paramètre notext vaut TRUE.
  *
@@ -35695,7 +35695,7 @@ if(!function_exists('openssl_x509_freeThis'))
  * @version PHP 4 >= 4.0.6
  * @version PHP 5
  *
- * @param mixed     $x509cert
+ * @param mixed    $x509cert
  * @param bool     $shortnames    shortnames contrôle l'indexation des données dans le tableau : si shortnames vaut TRUE (valeur par défaut), alors les champs seront indexés avec la forme courte des noms, sinon, les noms longs seront utilisés. (par exemple, CN est le nom court de commonName).
  *
  * @return array	La structure des données retournées est (délibérément) non documentée, car elle est sujette à des changements sans préavis.
@@ -35722,7 +35722,7 @@ if(!function_exists('openssl_x509_parseThis'))
  * @version PHP 4 >= 4.0.6
  * @version PHP 5
  *
- * @param mixed     $x509certdata
+ * @param mixed    $x509certdata
  *
  * @return resource	Retourne une ressource en cas de succès ou FALSE si une erreur survient.
  *
@@ -36276,7 +36276,7 @@ if(!function_exists('ovrimos_prepareThis'))
  * @version PHP 5 <= 5.0.5
  *
  * @param int      $result_id    Un identifiant de résultat, retourné par la fonction ovrimos_execute() ou la fonction ovrimos_exec().
- * @param mixed     $field    Soit une chaîne de caractères représentant le nom du champ, soit son index (en commençant à 1).
+ * @param mixed    $field    Soit une chaîne de caractères représentant le nom du champ, soit son index (en commençant à 1).
  *
  * @return string	Retourne le nom de la colonne, sous la forme d'une chaîne de caractères, ou FALSE si une erreur survient.
  *
@@ -36354,8 +36354,8 @@ if(!function_exists('ovrimos_rollbackThis'))
  * @version PHP 5
  *
  * @param string   $format    La chaîne de caractères format consiste en des codes de format suivis par un argument répéteur optionnel. Le répéteur peut être soit une valeur entière, soit * pour une répétition jusqu'à la fin des données d'entrées. Pour a, A, h, H, le répéteur spécifie combien de caractères d'une donnée est pris, pour @, c'est la position absolue où l'on insère les prochaines données, pour tout le reste, le répéteur spécifie combien d'arguments de données sont consommés et compactés dans la chaîne binaire résultante. Les formats actuellement acceptés sont :
- * @param mixed     $args
- * @param mixed     $item
+ * @param mixed    $args
+ * @param mixed    $item
  *
  * @return string	Retourne une chaîne de caractères binaire contenant les données.
  *
@@ -36825,7 +36825,7 @@ if(!function_exists('pcntl_setpriorityThis'))
  * @version PHP 5
  *
  * @param int      $signo    Le numéro du signal.
- * @param callable     $handler    Le gestionnaire de signaux est affecté à handler qui peut être le nom d'une fonction utilisateur, ou bien l'une des deux constantes globales SIG_IGN et SIG_DFL.
+ * @param callable $handler    Le gestionnaire de signaux est affecté à handler qui peut être le nom d'une fonction utilisateur, ou bien l'une des deux constantes globales SIG_IGN et SIG_DFL.
  * @param bool     $restart_syscalls    Le paramètre optionnel restart_syscalls spécifie si l'appel système de redémarrage (restarting) doit être utilisé lorsque ce signal arrive.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -37866,7 +37866,7 @@ if(!function_exists('pg_fetch_objectThis'))
  *
  * @param resource $result    Ressource de résultat de requête PostgreSQL, retournée par pg_query(), pg_query_params() ou pg_execute() (entre autres).
  * @param int      $row    Numéro de la ligne à récupérer. Les lignes sont numérotées de 0 en montant. Si l'argument est omis, la ligne suivante est récupérée.
- * @param mixed     $field    Une chaîne de type string représentant le nom du champ (colonne) à récupérer, sinon un entier de type int représentant le numéro du champ à récupérer. Les champs sont numérotés de 0 en montant.
+ * @param mixed    $field    Une chaîne de type string représentant le nom du champ (colonne) à récupérer, sinon un entier de type int représentant le numéro du champ à récupérer. Les champs sont numérotés de 0 en montant.
  *
  * @return string	Les booléens sont retournés comme des "t" ou "f". Tous les autres types, y compris les tableaux, sont retournés sous forme de chaînes formatées, de la même manière que PostgreSQL vous les afficherait dans le client psql. Les valeurs NULL de la base de données sont retournées NULL.
  *
@@ -37921,7 +37921,7 @@ if(!function_exists('pg_fetch_rowThis'))
  *
  * @param resource $result    Ressource de résultat de requête PostgreSQL, retournée par pg_query(), pg_query_params() ou pg_execute() (entre autres).
  * @param int      $row    Numéro de la ligne à récupérer. Les lignes sont numérotées de 0 en montant. Si l'argument est omis, la ligne suivante est récupérée.
- * @param mixed     $field    Numéro du champ (commençant à 0) de type int ou le nom du champ de type string.
+ * @param mixed    $field    Numéro du champ (commençant à 0) de type int ou le nom du champ de type string.
  *
  * @return int	Retourne 1 si le champ de la ligne donnée est NULL, 0 s'il n'est pas NULL. FALSE est retournée si la ligne n'est pas dans le tableau ou tout autre erreur.
  *
@@ -38003,7 +38003,7 @@ if(!function_exists('pg_field_numThis'))
  *
  * @param resource $result    Ressource de résultat de requête PostgreSQL, retournée par pg_query(), pg_query_params() ou pg_execute() (entre autres).
  * @param int      $row_number    Numéro de la ligne dans le résultat. Les lignes sont numérotées à partir de 0 en montant. Si ce paramètre n'est pas fourni, la ligne en cours est récupérée.
- * @param mixed     $field_name_or_number
+ * @param mixed    $field_name_or_number
  *
  * @return int	Le nombre de caractères imprimés ou FALSE en cas d'erreur.
  *
@@ -38396,7 +38396,7 @@ if(!function_exists('pg_lo_closeThis'))
  * @version PHP 5
  *
  * @param resource $connection    La ressource de connexion de la base de données PostgreSQL. Lorsque connection n'est pas présent, la connexion par défaut est utilisée. La connexion par défaut est la dernière connexion faite par pg_connect() ou pg_pconnect().
- * @param mixed     $object_id    Si le paramètre object_id est fourni, la fonction essayera de créer un objet large avec cet identifiant, sinon, un identifiant d'objet disponible sera assigné par le serveur. Ce paramètre a été ajouté en PHP 5.3 et cette fonctionnalité est apparue avec PostgreSQL 8.1.
+ * @param mixed    $object_id    Si le paramètre object_id est fourni, la fonction essayera de créer un objet large avec cet identifiant, sinon, un identifiant d'objet disponible sera assigné par le serveur. Ce paramètre a été ajouté en PHP 5.3 et cette fonctionnalité est apparue avec PostgreSQL 8.1.
  *
  * @return int	Un objet large OID ou FALSE en cas d'erreur.
  *
@@ -38452,7 +38452,7 @@ if(!function_exists('pg_lo_exportThis'))
  *
  * @param resource $connection    La ressource de connexion de la base de données PostgreSQL. Lorsque connection n'est pas présent, la connexion par défaut est utilisée. La connexion par défaut est la dernière connexion faite par pg_connect() ou pg_pconnect().
  * @param string   $pathname    Le chemin d'accès complet ainsi que le fichier dans lequel il sera lu l'objet de grande taille sur le système du client.
- * @param mixed     $object_id    Si le paramètre object_id est fourni, la fonction essayera de créer un objet large avec cette identifiant, sinon, un identifiant d'objet disponible sera assigné par le serveur. Ce paramètre a été ajouté en PHP 5.3 et cette fonctionnalité est apparue avec PostgreSQL 8.1.
+ * @param mixed    $object_id    Si le paramètre object_id est fourni, la fonction essayera de créer un objet large avec cette identifiant, sinon, un identifiant d'objet disponible sera assigné par le serveur. Ce paramètre a été ajouté en PHP 5.3 et cette fonctionnalité est apparue avec PostgreSQL 8.1.
  *
  * @return int	Le OID du nouvel objet de grande taille créé ou FALSE en cas d'échec.
  *
@@ -40612,9 +40612,9 @@ if(!function_exists('powThis'))
  *
  * @version PHP 5 >= 5.3.0
  *
- * @param mixed     $pattern
- * @param mixed     $replacement
- * @param mixed     $subject
+ * @param mixed    $pattern
+ * @param mixed    $replacement
+ * @param mixed    $subject
  * @param int      $limit
  * @param int      &$count
  *
@@ -40786,9 +40786,9 @@ if(!function_exists('preg_quoteThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $pattern    Le masque à chercher. Il peut être une chaîne ou un tableau de chaînes. Plusieurs modificateurs PCRE sont également disponibles, incluant 'e' (PREG_REPLACE_EVAL), qui est spécifique à cette fonction.
- * @param mixed     $replacement    La chaîne ou un tableau de chaînes pour le remplacement. Si ce paramètre est une chaîne et le paramètre pattern est un tableau, tous les masques seront remplacés par cette chaîne. Si les paramètres pattern et replacement sont des tableaux, chaque pattern sera remplacé son replacement associé. Si replacement à moins d'éléments que pattern, alors une chaîne vide est utilisée pour le reste des valeurs. Pour utiliser les antislashs dans le masque, vous devez les doubler ("\\\\"). replacement peut contenir des références de la forme \\n ou, (depuis PHP 4.0.4) $n. Cette dernière forme est recommandée. Ces références seront remplacées par le texte capturé par la n-ième parenthèse capturante du masque. n peut prendre des valeurs de 0 à 99, et \\0 ou $0, correspondent au texte de qui satisfait le masque complet. Les parenthèses ouvrantes sont comptées de gauche à droite (en commençant à 1) pour déterminer le numéro de parenthèse capturante. Lorsque vous travaillez avec un masque de remplacement où une référence arrière est directement suivie par un nombre (i.e.: placer un nombre littéral immédiatement après une référence arrière), vous ne pouvez pas utiliser la syntaxe classique \\1 pour la référence arrière. \\11, par exemple, sera confus pour la fonction preg_replace() dans le sens où elle ne saura pas si vous désirez la référence arrière \\1 suivi du nombre 1 ou si vous désirez la référence arrière \\11 suivi de "rien". Dans ce cas, la solution est d'utiliser la syntaxe \${1}1. Cela créera une référence arrière isolée $1, suivi du nombre littéral 1. Lorsque vous utilisez l'option e, cette fonction échappe quelques caractères (', ", \ et NULL) dans la chaîne qui remplace les références arrières. Ce comportement se justifie afin d'assurer qu'aucune erreur de syntaxe ne survient lors de l'utilisation des références arrières avec des guillemets simples et doubles (e.g. 'strlen(\'$1\')+strlen("$2")'). Assurez-vous d'être familier avec la syntaxe des chaînes afin de savoir exactement à quoi la chaîne interprétée doit ressembler.
- * @param mixed     $subject    La chaîne ou le tableau contenant des chaînes à chercher et à remplacer. Si subject est un tableau, alors l'opération sera appliquée à chacun des éléments du tableau, et le tableau sera retourné.
+ * @param mixed    $pattern    Le masque à chercher. Il peut être une chaîne ou un tableau de chaînes. Plusieurs modificateurs PCRE sont également disponibles, incluant 'e' (PREG_REPLACE_EVAL), qui est spécifique à cette fonction.
+ * @param mixed    $replacement    La chaîne ou un tableau de chaînes pour le remplacement. Si ce paramètre est une chaîne et le paramètre pattern est un tableau, tous les masques seront remplacés par cette chaîne. Si les paramètres pattern et replacement sont des tableaux, chaque pattern sera remplacé son replacement associé. Si replacement à moins d'éléments que pattern, alors une chaîne vide est utilisée pour le reste des valeurs. Pour utiliser les antislashs dans le masque, vous devez les doubler ("\\\\"). replacement peut contenir des références de la forme \\n ou, (depuis PHP 4.0.4) $n. Cette dernière forme est recommandée. Ces références seront remplacées par le texte capturé par la n-ième parenthèse capturante du masque. n peut prendre des valeurs de 0 à 99, et \\0 ou $0, correspondent au texte de qui satisfait le masque complet. Les parenthèses ouvrantes sont comptées de gauche à droite (en commençant à 1) pour déterminer le numéro de parenthèse capturante. Lorsque vous travaillez avec un masque de remplacement où une référence arrière est directement suivie par un nombre (i.e.: placer un nombre littéral immédiatement après une référence arrière), vous ne pouvez pas utiliser la syntaxe classique \\1 pour la référence arrière. \\11, par exemple, sera confus pour la fonction preg_replace() dans le sens où elle ne saura pas si vous désirez la référence arrière \\1 suivi du nombre 1 ou si vous désirez la référence arrière \\11 suivi de "rien". Dans ce cas, la solution est d'utiliser la syntaxe \${1}1. Cela créera une référence arrière isolée $1, suivi du nombre littéral 1. Lorsque vous utilisez l'option e, cette fonction échappe quelques caractères (', ", \ et NULL) dans la chaîne qui remplace les références arrières. Ce comportement se justifie afin d'assurer qu'aucune erreur de syntaxe ne survient lors de l'utilisation des références arrières avec des guillemets simples et doubles (e.g. 'strlen(\'$1\')+strlen("$2")'). Assurez-vous d'être familier avec la syntaxe des chaînes afin de savoir exactement à quoi la chaîne interprétée doit ressembler.
+ * @param mixed    $subject    La chaîne ou le tableau contenant des chaînes à chercher et à remplacer. Si subject est un tableau, alors l'opération sera appliquée à chacun des éléments du tableau, et le tableau sera retourné.
  * @param int      $limit    Le nombre maximal de remplacement pour chaque masque dans chaque chaîne subject. Par défaut, vaut -1 (aucune limite).
  * @param int      &$count    Si fournie, cette variable contiendra le nombre de remplacements effectués.
  *
@@ -40819,9 +40819,9 @@ if(!function_exists('preg_replaceThis'))
  * @version PHP 4 >= 4.0.5
  * @version PHP 5
  *
- * @param mixed     $pattern    Le masque à chercher. Il peut être une chaîne de caractères ou un tableau contenant des chaînes.
- * @param callable     $callback    La fonction de rappel qui recevra le tableau d'éléments trouvés dans la chaîne subject. La fonction de rappel doit retourner la chaîne de remplacement. Voici la signature de la fonction de rappel : Vous aurez souvent besoin de la fonction callback avec preg_replace_callback() à un seul endroit. Dans ce cas, vous pouvez simplement utiliser une fonction anonyme (depuis PHP 5.3.0) ou la fonction create_function() pour déclarer une fonction anonyme comme fonction de rappel pour preg_replace_callback(). En faisant cela, vous concentrez toutes les routines liées à votre remplacement à un seul endroit, et nous ne polluez par votre espace de noms de fonctions avec des fonctions à usage unique.
- * @param mixed     $subject    La chaîne ou le tableau de chaînes à chercher et à remplacer.
+ * @param mixed    $pattern    Le masque à chercher. Il peut être une chaîne de caractères ou un tableau contenant des chaînes.
+ * @param callable $callback    La fonction de rappel qui recevra le tableau d'éléments trouvés dans la chaîne subject. La fonction de rappel doit retourner la chaîne de remplacement. Voici la signature de la fonction de rappel : Vous aurez souvent besoin de la fonction callback avec preg_replace_callback() à un seul endroit. Dans ce cas, vous pouvez simplement utiliser une fonction anonyme (depuis PHP 5.3.0) ou la fonction create_function() pour déclarer une fonction anonyme comme fonction de rappel pour preg_replace_callback(). En faisant cela, vous concentrez toutes les routines liées à votre remplacement à un seul endroit, et nous ne polluez par votre espace de noms de fonctions avec des fonctions à usage unique.
+ * @param mixed    $subject    La chaîne ou le tableau de chaînes à chercher et à remplacer.
  * @param int      $limit    Le nombre maximal de remplacement pour chaque masque dans chaque chaîne subject. Vaut par défaut -1 (aucune limite).
  * @param int      &$count    Si fournie, cette variable sera remplie avec le nombre de remplacements effectués.
  *
@@ -40908,7 +40908,7 @@ if(!function_exists('prevThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $expression    L'expression à afficher.
+ * @param mixed    $expression    L'expression à afficher.
  * @param bool     $return    Si vous voulez obtenir le résultat de print_r() dans une chaîne, utilisez le paramètre return. Lorsque ce paramètre vaut TRUE, print_r() retournera l'information plutôt que de l'afficher.
  *
  * @return mixed	Si une chaîne de caractères, un entier ou un nombre décimal est fournie, sa valeur sera affichée. Si un tableau est fourni, les valeurs seront affichées dans un format permettant de voir les clés et les éléments. Un format similaire sera également utilisé pour les objets.
@@ -40936,8 +40936,8 @@ if(!function_exists('print_rThis'))
  * @version PHP 5
  *
  * @param string   $format    Voir la documentation de la fonction sprintf() pour une description du paramètre format.
- * @param mixed     $args
- * @param mixed     $item
+ * @param mixed    $args
+ * @param mixed    $item
  *
  * @return int	Retourne la taille de la chaîne affichée.
  *
@@ -41096,7 +41096,7 @@ if(!function_exists('proc_terminateThis'))
  *
  * @version PHP 5 >= 5.1.0
  *
- * @param mixed     $class    Le nom de la classe ou un objet de la classe à tester
+ * @param mixed    $class    Le nom de la classe ou un objet de la classe à tester
  * @param string   $property    Le nom de la propriété
  *
  * @return bool	Retourne TRUE si la propriété existe, FALSE si elle n'existe pas et NULL si une erreur survient.
@@ -41832,8 +41832,8 @@ if(!function_exists('randThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $start    Première valeur de la séquence.
- * @param mixed     $end    La séquence se termine lorsque la valeur end est atteinte.
+ * @param mixed    $start    Première valeur de la séquence.
+ * @param mixed    $end    La séquence se termine lorsque la valeur end est atteinte.
  * @param number     $step    Si une valeur est donnée au paramètre step, il sera utilisé comme valeur incrémentale entre les éléments de la séquence. step doit être exprimé comme un nombre entier positif. S'il n'est pas spécifié, step vaut par défaut 1.
  *
  * @return array	Retourne un tableau d'éléments depuis start jusqu'à end, inclusif.
@@ -42042,7 +42042,7 @@ if(!function_exists('readline_add_historyThis'))
  * @version PHP 5 >= 5.1.0
  *
  * @param string   $prompt    Le message de prompt.
- * @param callable     $callback    La fonction callback prend un paramètre : l'entrée utilisateur retournée.
+ * @param callable $callback    La fonction callback prend un paramètre : l'entrée utilisateur retournée.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -42126,7 +42126,7 @@ if(!function_exists('readline_clear_historyThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param callable     $function    Vous devez fournir le nom d'une fonction qui accepte un nom partiel de commande, et retourne une liste de fonctions complète possibles.
+ * @param callable $function    Vous devez fournir le nom d'une fonction qui accepte un nom partiel de commande, et retourne une liste de fonctions complète possibles.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -42430,9 +42430,9 @@ if(!function_exists('recode_stringThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param callable     $callback    La fonction de rappel à enregistrer. La fonction de rappel est exécuté comme faisant parti de la requête, aussi, il est possible d'envoyer quelque à la sortie depuis cette dernière, puis d'accéder aux buffers de sortie.
- * @param mixed     $parameter    Il est possible de passer des paramètres aux fonctions d'extinction en configurant ces paramètres supplémentaires.
- * @param mixed     $item
+ * @param callable $callback    La fonction de rappel à enregistrer. La fonction de rappel est exécuté comme faisant parti de la requête, aussi, il est possible d'envoyer quelque à la sortie depuis cette dernière, puis d'accéder aux buffers de sortie.
+ * @param mixed    $parameter    Il est possible de passer des paramètres aux fonctions d'extinction en configurant ces paramètres supplémentaires.
+ * @param mixed    $item
  *
  * @return void	Aucune valeur n'est retournée.
  *
@@ -42458,9 +42458,9 @@ if(!function_exists('register_shutdown_functionThis'))
  * @version PHP 4 >= 4.0.3
  * @version PHP 5
  *
- * @param callable     $function    Le nom de la fonction, sous la forme d'une chaîne de caractères ou d'un tableau d'objets et de méthodes.
- * @param mixed     $arg
- * @param mixed     $item
+ * @param callable $function    Le nom de la fonction, sous la forme d'une chaîne de caractères ou d'un tableau d'objets et de méthodes.
+ * @param mixed    $arg
+ * @param mixed    $item
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -42891,7 +42891,7 @@ if(!function_exists('sem_removeThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $value    La valeur à linéariser. serialize() accepte tous les types sauf les ressources. Vous pouvez même linéariser un tableau qui contient des références sur lui-même. Les références cycliques dans des tableaux/objets seront également stockées. Toutes les autres références seront perdues. Lors de la linéarisation d'un objet, PHP tentera d'appeler la fonction membre __sleep() avant de linéariser. Cela permet à l'objet de faire un dernier nettoyage, etc. avant d'être linéarisé. De même, lorsque l'objet est restauré en utilisant unserialize(), la fonction membre __wakeup() est appelée.
+ * @param mixed    $value    La valeur à linéariser. serialize() accepte tous les types sauf les ressources. Vous pouvez même linéariser un tableau qui contient des références sur lui-même. Les références cycliques dans des tableaux/objets seront également stockées. Toutes les autres références seront perdues. Lors de la linéarisation d'un objet, PHP tentera d'appeler la fonction membre __sleep() avant de linéariser. Cela permet à l'objet de faire un dernier nettoyage, etc. avant d'être linéarisé. De même, lorsque l'objet est restauré en utilisant unserialize(), la fonction membre __wakeup() est appelée.
  *
  * @return string	Retourne une chaîne contenant une représentation linéaire de value, pour stockage.
  *
@@ -43175,8 +43175,8 @@ if(!function_exists('session_regenerate_idThis'))
  * @version PHP 4
  * @version PHP 5 < 5.4.0
  *
- * @param mixed     $name    Le nom de la variable ou du tableau contenant les noms des variables ou d'autres tableaux.
- * @param mixed     $item
+ * @param mixed    $name    Le nom de la variable ou du tableau contenant les noms des variables ou d'autres tableaux.
+ * @param mixed    $item
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -43278,12 +43278,12 @@ if(!function_exists('session_set_cookie_paramsThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param callable     $open    Une instance d'une classe implémentant l'interface SessionHandlerInterface, comme la classe SessionHandler, pour l'enregistrement comme gestionnaire de session. Depuis PHP 5.4 uniquement.
- * @param callable     $close    Enregistre la fonction session_write_close() comme fonction register_shutdown_function().
- * @param callable     $read    La fonction de rappel open fonctionne comme un constructeur dans une classe, et est exécutée lorsque la session s'ouvre. C'est la première fonction de rappel exécutée lorsque la session démarre automatiquement ou manuellement avec la fonction session_start(). La valeur retournée est TRUE en cas de succès ou FALSE si une erreur survient.
- * @param callable     $write    La fonction de rappel close fonctionne comme un destructeur dans une classe, et est exécutée une fois que la fonction de rappel write de la session a terminé de s'exécuter. Elle est également appelé lorsque la fonction session_write_close() est appelée. La valeur retournée est TRUE en cas de succès, ou FALSE si une erreur survient.
- * @param callable     $destroy    La fonction de rappel read doit toujours retournée une chaîne linéarisée contenant les données de session encodées ou une chaîne vide s'il n'y a aucune donnée à lire. Cette fonction de rappel est appelée en interne par PHP lorsque la session commence ou lorsque la fonction session_start() est appelée. Avant que cette fonction de rappel ne soit invoquée, PHP invoquera la fonction de rappel open. La valeur retournée par cette fonction de rappel doit être exactement du même format de linéarisation que celui passé pour le stockage à la fonction de rappel write. La valeur retournée sera délinéarisée automatiquement par PHP et utilisée pour peupler la variable superglobale $_SESSION. Malgré le fait que les données ressemblent fortement aux données issuées de la fonction serialize(), notez que c'est bien un format différent, qui est spécifié via l'option de configuration session.serialize_handler.
- * @param callable     $gc    La fonction de rappel write est appelée lorsque la session doit être sauvegardée et fermée. Cette fonction de rappel reçoit l'identifiant de la session courante ainsi qu'une version linéarisée du contenu de la variable superglobale $_SESSION. La méthode de linéarisation utilisée en interne par PHP est spécifiée via l'option de configuration session.serialize_handler. Les données de session linéarisées passées à cette fonction de rappel doivent être stockées en utilisant l'identifiant de session fournie. Lors de la récupération de ces données, la fonction de rappel read doit retourner la valeur exacte, originalement passée à la fonction de rappel write. Cette fonction de rappel est invoquée lorsque PHP s'arrête ou explicitement lorsque la fonction session_write_close() est appelée. Notez qu'après l'exécution de cette fonction, PHP exécutera en interne la fonction de rappel close.
+ * @param callable $open    Une instance d'une classe implémentant l'interface SessionHandlerInterface, comme la classe SessionHandler, pour l'enregistrement comme gestionnaire de session. Depuis PHP 5.4 uniquement.
+ * @param callable $close    Enregistre la fonction session_write_close() comme fonction register_shutdown_function().
+ * @param callable $read    La fonction de rappel open fonctionne comme un constructeur dans une classe, et est exécutée lorsque la session s'ouvre. C'est la première fonction de rappel exécutée lorsque la session démarre automatiquement ou manuellement avec la fonction session_start(). La valeur retournée est TRUE en cas de succès ou FALSE si une erreur survient.
+ * @param callable $write    La fonction de rappel close fonctionne comme un destructeur dans une classe, et est exécutée une fois que la fonction de rappel write de la session a terminé de s'exécuter. Elle est également appelé lorsque la fonction session_write_close() est appelée. La valeur retournée est TRUE en cas de succès, ou FALSE si une erreur survient.
+ * @param callable $destroy    La fonction de rappel read doit toujours retournée une chaîne linéarisée contenant les données de session encodées ou une chaîne vide s'il n'y a aucune donnée à lire. Cette fonction de rappel est appelée en interne par PHP lorsque la session commence ou lorsque la fonction session_start() est appelée. Avant que cette fonction de rappel ne soit invoquée, PHP invoquera la fonction de rappel open. La valeur retournée par cette fonction de rappel doit être exactement du même format de linéarisation que celui passé pour le stockage à la fonction de rappel write. La valeur retournée sera délinéarisée automatiquement par PHP et utilisée pour peupler la variable superglobale $_SESSION. Malgré le fait que les données ressemblent fortement aux données issuées de la fonction serialize(), notez que c'est bien un format différent, qui est spécifié via l'option de configuration session.serialize_handler.
+ * @param callable $gc    La fonction de rappel write est appelée lorsque la session doit être sauvegardée et fermée. Cette fonction de rappel reçoit l'identifiant de la session courante ainsi qu'une version linéarisée du contenu de la variable superglobale $_SESSION. La méthode de linéarisation utilisée en interne par PHP est spécifiée via l'option de configuration session.serialize_handler. Les données de session linéarisées passées à cette fonction de rappel doivent être stockées en utilisant l'identifiant de session fournie. Lors de la récupération de ces données, la fonction de rappel read doit retourner la valeur exacte, originalement passée à la fonction de rappel write. Cette fonction de rappel est invoquée lorsque PHP s'arrête ou explicitement lorsque la fonction session_write_close() est appelée. Notez qu'après l'exécution de cette fonction, PHP exécutera en interne la fonction de rappel close.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -43416,7 +43416,7 @@ if(!function_exists('session_write_closeThis'))
  * @version PHP 4 >= 4.0.1
  * @version PHP 5
  *
- * @param callable     $error_handler    Une fonction de rappel avec la signature suivante. NULL peut être passé à la place, pour ré-initialiser ce gestionnaire en son statut par défaut. Si la fonction retourne FALSE, alors le gestionnaire d'erreurs normal continue.
+ * @param callable $error_handler    Une fonction de rappel avec la signature suivante. NULL peut être passé à la place, pour ré-initialiser ce gestionnaire en son statut par défaut. Si la fonction retourne FALSE, alors le gestionnaire d'erreurs normal continue.
  * @param int      $error_types
  *
  * @return mixed	Retourne une chaîne contenant le dernier gestionnaire d'erreurs (s'il existe). Si le gestionnaire d'erreurs natif est utilisé, NULL est retourné. NULL est également retourné dans le cas d'une erreur, comme une fonction de rappel incorrecte. Si le gestionnaire d'erreurs précédent est une méthode d'une classe, cette fonction retournera un tableau indexé de la classe et du nom de la méthode.
@@ -43442,7 +43442,7 @@ if(!function_exists('set_error_handlerThis'))
  *
  * @version PHP 5
  *
- * @param callable     $exception_handler    Nom de la fonction à appeler lorsqu'une exception qui n'a pu être attrapée survient. Cette fonction doit être définie avant l'appel de la fonction set_exception_handler(). Ce gestionnaire doit accepter un paramètre qui sera l'objet représentant l'exception qui vient d'être lancée. C'est le gestionnaire de signature : NULL peut être passé à la place, pour ré-initialiser ce gestionnaire en son statut initial.
+ * @param callable $exception_handler    Nom de la fonction à appeler lorsqu'une exception qui n'a pu être attrapée survient. Cette fonction doit être définie avant l'appel de la fonction set_exception_handler(). Ce gestionnaire doit accepter un paramètre qui sera l'objet représentant l'exception qui vient d'être lancée. C'est le gestionnaire de signature : NULL peut être passé à la place, pour ré-initialiser ce gestionnaire en son statut initial.
  *
  * @return callable	Retourne le nom du gestionnaire précédemment défini ou NULL en cas d'erreur. Si aucun gestionnaire n'a été précédemment défini, NULL est également retourné.
  *
@@ -43644,7 +43644,7 @@ if(!function_exists('setrawcookieThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     &$var    La variable à convertir.
+ * @param mixed    &$var    La variable à convertir.
  * @param string   $type    Les valeurs possibles pour le paramètre type sont :
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -43859,7 +43859,7 @@ if(!function_exists('shm_has_varThis'))
  *
  * @param resource $shm_identifier    Une ressource, représentant la mémoire partagée, telle que retournée par la fonction shm_attach()
  * @param int      $variable_key    La clé de la variable.
- * @param mixed     $variable    La variable. Tous les types de variables supportés par la fonction serialize() peuvent être utilisés : cela signifie que tous les types, sauf les ressources et quelques objets internes, peuvent être linéarisés.
+ * @param mixed    $variable    La variable. Tous les types de variables supportés par la fonction serialize() peuvent être utilisés : cela signifie que tous les types, sauf les ressources et quelques objets internes, peuvent être linéarisés.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -44984,7 +44984,7 @@ if(!function_exists('snmprealwalkThis'))
  * @param string   $community    La communauté de lecture.
  * @param string   $object_id    L'identifiant de l'objet SNMP.
  * @param string   $type    Le MIB définit le type de chaque identifiant d'objets. Il doit être spécifié sous la forme d'un simple caractère depuis la liste suivante. Si la constante OPAQUE_SPECIAL_TYPES a été définie lors de la compilation de la bibliothèque SNMP, les caractères suivants seront également disponibles : La plupart de ces valeurs utilise le type ASN.1 correspondant. 's', 'x', 'd' et 'b' sont toutes des façons différentes de spécifier la valeur OCTET STRING et le type non-signé 'u' est également utilisé pour gérer les valeurs Gauge32. Si les fichiers MIB sont chargés dans l'arbre MIB avec "snmp_read_mib" ou en les spécifiant dans la configuration de libsnmp, '=' pourra être utilisé comme paramètre de type pour tous les identifiants d'objets, vu que le type peut automatiquement être lu depuis le MIB. Notez qu'il y a 2 façons de définir une variable de type BITS like i.e. "SYNTAX BITS {telnet(0), ftp(1), http(2), icmp(3), snmp(4), ssh(5), https(6)}": Reportez-vous à la section sur les exemples pour plus de détails.
- * @param mixed     $value    La nouvelle valeur.
+ * @param mixed    $value    La nouvelle valeur.
  * @param int      $timeout    Le nombre de microsecondes depuis le premier timeout.
  * @param int      $retries    Le nombre d'essais avant d'atteindre le délai maximal d'attente.
  *
@@ -45713,7 +45713,7 @@ if(!function_exists('socket_set_nonblockThis'))
  * @param resource $socket    Une ressource de socket valide, créée par la fonction socket_create() ou la fonction socket_accept().
  * @param int      $level    Le paramètre level spécifie la couche du protocole de l'option. Par exemple, pour modifier une option de la couche socket, un niveau égal à SOL_SOCKET va être utilisé. Les autres niveaux, comme TCP, peuvent être utilisés en spécifiant un numéro de protocole pour ce niveau. Les numéros de protocoles peuvent être utilisés en utilisant la fonction getprotobyname().
  * @param int      $optname    Les options disponibles sont les mêmes que pour la fonction socket_get_option().
- * @param mixed     $optval    La valeur de l'option.
+ * @param mixed    $optval    La valeur de l'option.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -45965,7 +45965,7 @@ if(!function_exists('spl_autoload_functionsThis'))
  *
  * @version PHP 5 >= 5.1.2
  *
- * @param callable     $autoload_function    La fonction __autoload() à enregistrer. Si aucun paramètre n'est fourni, alors, l'implémentation par défaut de la fonction spl_autoload() sera enregistrée.
+ * @param callable $autoload_function    La fonction __autoload() à enregistrer. Si aucun paramètre n'est fourni, alors, l'implémentation par défaut de la fonction spl_autoload() sera enregistrée.
  * @param bool     $throw    Ce paramètre spécifie si spl_autoload_register() doit lancer des exceptions lorsque le paramètre autoload_function n'a pu être enregistré.
  * @param bool     $prepend    Si ce paramètre vaut TRUE, spl_autoload_register() ajoutera la fonction au début de la pile de l'autoloader au lieu de l'ajouter à la fin de la pile.
  *
@@ -45993,7 +45993,7 @@ if(!function_exists('spl_autoload_registerThis'))
  *
  * @version PHP 5 >= 5.1.2
  *
- * @param mixed     $autoload_function    La fonction autoload à enregistrer.
+ * @param mixed    $autoload_function    La fonction autoload à enregistrer.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -46119,8 +46119,8 @@ if(!function_exists('splitiThis'))
  * @version PHP 5
  *
  * @param string   $format    La chaîne de format est composée de zéro, une ou plusieurs directives : les caractères ordinaires (à l'exception de %) qui sont copiés directement dans le résultat, et des spécifications de conversion, qui exploitent chacune un des arguments passés après la chaîne de format. Ces formats s'appliquent à sprintf() et printf(). Chaque spécification de conversion est constituée d'un signe de pourcentage (%), suivi d'un ou plusieurs des éléments suivants, dans cet ordre : La chaîne de format supporte le numérotage et l'échange d'arguments. Par exemple :
- * @param mixed     $args
- * @param mixed     $item
+ * @param mixed    $args
+ * @param mixed    $item
  *
  * @return string	Retourne une chaîne de caractères créée suivant le format format.
  *
@@ -46173,7 +46173,7 @@ if(!function_exists('sql_regcaseThis'))
  *
  * @param resource $dbhandle    La ressource de base de données SQLite; retournée par sqlite_open() lorsqu'utilisée de manière procédurale. Ce paramètre n'est pas requis si vous utilisez la méthode orientée objet.
  * @param string   $function_name    Le nom de la fonction utilisée dans les requêtes SQL.
- * @param callable     $callback    Fonction de procédure de rappel pour gérer les fonctions SQL définies.
+ * @param callable $callback    Fonction de procédure de rappel pour gérer les fonctions SQL définies.
  * @param int      $num_args    Conseil à l'analyseur SQLite si la fonction de procédure de rappel accepte un nombre prédéterminé d'arguments.
  *
  * @return void	Aucune valeur n'est retournée.
@@ -46503,7 +46503,7 @@ if(!function_exists('sqlsrv_commitThis'))
  * @version might only be in SVN
  *
  * @param string   $setting    Le nom de la configuration à définir. Les valeurs possibles sont "WarningsReturnAsErrors", "LogSubsystems", et "LogSeverity".
- * @param mixed     $value    La valeur de la configuration à définir. La table suivante montre les valeurs possibles :
+ * @param mixed    $value    La valeur de la configuration à définir. La table suivante montre les valeurs possibles :
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -47116,7 +47116,7 @@ if(!function_exists('srandThis'))
  *
  * @param string   $str    La chaîne à analyser.
  * @param string   $format    Le format interprété pour la chaîne str, qui est décrit dans la documentation de la fonction sprintf() avec les différences suivantes :
- * @param mixed     &$item    Optionnellement, vous pouvez passer des variables dans ce paramètre, par référence qui contiendront les valeurs de l'analyse.
+ * @param mixed    &$item    Optionnellement, vous pouvez passer des variables dans ce paramètre, par référence qui contiendront les valeurs de l'analyse.
  *
  * @return mixed	Si seulement deux paramètres sont fournis, les valeurs trouvées seront retournées sous forme de tableau. Sinon, si le paramètre optionnel sont fourni, la fonction retournera le nombre de valeurs assignées. Le paramètre optionnel doit être passé par référence.
  *
@@ -47194,9 +47194,9 @@ if(!function_exists('str_getcsvThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $search    La valeur à chercher, connue aussi sous le nom de needle. Un tableau peut être utilisé pour désigner plusieurs needles.
- * @param mixed     $replace    La valeur de remplacement utilisée pour chaque valeur trouvée dans search. Un tableau peut être utilisé pour désigner plusieurs remplacements.
- * @param mixed     $subject    Une chaîne de caractères ou un tableau dans lequel la recherche s'effectue, aussi connu sous le nom de haystack. Si subject est un tableau, le remplacement est effectué sur chacun des éléments du sujet subject, et la valeur retournée est aussi un tableau.
+ * @param mixed    $search    La valeur à chercher, connue aussi sous le nom de needle. Un tableau peut être utilisé pour désigner plusieurs needles.
+ * @param mixed    $replace    La valeur de remplacement utilisée pour chaque valeur trouvée dans search. Un tableau peut être utilisé pour désigner plusieurs remplacements.
+ * @param mixed    $subject    Une chaîne de caractères ou un tableau dans lequel la recherche s'effectue, aussi connu sous le nom de haystack. Si subject est un tableau, le remplacement est effectué sur chacun des éléments du sujet subject, et la valeur retournée est aussi un tableau.
  * @param int      &$count    Si fournie, cette variable contiendra le nombre de remplacements effectués.
  *
  * @return mixed	Retourne une chaîne ou un tableau de remplacement.
@@ -47283,9 +47283,9 @@ if(!function_exists('str_repeatThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $search    La valeur à chercher, autrement connue comme le masque. Un tableau peut être utilisé pour désigner plusieurs masques.
- * @param mixed     $replace    La valeur de remplacement à substituer aux valeurs trouvées. Un tableau peut être utilisé pour désigner plusieurs valeurs de remplacement.
- * @param mixed     $subject    La chaîne de caractères ou le tableau sur lequel on va effectuer la recherche et le remplacement, aussi connu sous le nom de haystack. Si subject est un tableau, alors le remplacement se fera sur chaque élément de celui-ci, et la valeur retournée sera aussi un tableau.
+ * @param mixed    $search    La valeur à chercher, autrement connue comme le masque. Un tableau peut être utilisé pour désigner plusieurs masques.
+ * @param mixed    $replace    La valeur de remplacement à substituer aux valeurs trouvées. Un tableau peut être utilisé pour désigner plusieurs valeurs de remplacement.
+ * @param mixed    $subject    La chaîne de caractères ou le tableau sur lequel on va effectuer la recherche et le remplacement, aussi connu sous le nom de haystack. Si subject est un tableau, alors le remplacement se fera sur chaque élément de celui-ci, et la valeur retournée sera aussi un tableau.
  * @param int      &$count    Si fournie, cette variable contiendra le nombre de remplacements effectués.
  *
  * @return mixed	Cette fonction retourne une chaîne, ou un tableau, contenant les valeurs remplacées.
@@ -47754,7 +47754,7 @@ if(!function_exists('stream_context_set_defaultThis'))
  * @param resource $stream_or_context    Le flux ou la ressource de contexte sur lequel on applique l'option.
  * @param string   $wrapper    L'option à définir au contexte par défaut.
  * @param string   $option
- * @param mixed     $value
+ * @param mixed    $value
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -47866,7 +47866,7 @@ if(!function_exists('stream_encodingThis'))
  * @param resource $stream    Le flux cible.
  * @param string   $filtername    Le nom du filtre.
  * @param int      $read_write    Par défaut, stream_filter_append() va ajouter le filtre à la liste de filtres de lecture si le fichier a été ouvert en mode lecture (r et/ou +). Le filtre sera aussi attaché à la liste des filtres de lecture si le fichier a été ouvert en mode lecture (w, a et/ou +). STREAM_FILTER_READ, STREAM_FILTER_WRITE, et/ou STREAM_FILTER_ALL peuvent aussi être utilisées dans le paramètre read_write pour contrôler ce comportement.
- * @param mixed     $params    Ce filtre sera ajouté avec les paramètres params à la fin de la liste des filtres, et sera ainsi appelé à la fin des opérations de filtres. Pour ajouter un filtre au début de la liste, utilisez la fonction stream_filter_prepend().
+ * @param mixed    $params    Ce filtre sera ajouté avec les paramètres params à la fin de la liste des filtres, et sera ainsi appelé à la fin des opérations de filtres. Pour ajouter un filtre au début de la liste, utilisez la fonction stream_filter_prepend().
  *
  * @return resource	Retourne une ressource qui peut être utilisez pour identifier ce filtre lors de l'effacement du filtre avec stream_filter_remove().
  *
@@ -47896,7 +47896,7 @@ if(!function_exists('stream_filter_appendThis'))
  * @param resource $stream    Le flux cible.
  * @param string   $filtername    Le nom du filtre.
  * @param int      $read_write    Par défaut, stream_filter_prepend() va attacher le filtre à la chaîne de filtre de lectures si le fichier a été ouvert en lecture (i.e. mode r, et/ou +). Le filtre va aussi être attaché à la chaîne de filtres d'écriture si le fichier a été ouvert en écriture (i.e. mode w, a, et/ou +). STREAM_FILTER_READ, STREAM_FILTER_WRITE, et/ou STREAM_FILTER_ALL peuvent aussi être passés dans le paramètre read_write pour imposer le comportement désiré. Voyez stream_filter_append() pour un exemple d'utilisation de ce paramètre.
- * @param mixed     $params    Le filtre sera ajouté avec les paramètres spécifiés dans params, au début de la liste, et sera ainsi appelé en premier dans les opérations du flux. Pour ajouter un filtre à la fin de la liste, utilisez stream_filter_append().
+ * @param mixed    $params    Le filtre sera ajouté avec les paramètres spécifiés dans params, au début de la liste, et sera ainsi appelé en premier dans les opérations du flux. Pour ajouter un filtre à la fin de la liste, utilisez stream_filter_append().
  *
  * @return resource	Retourne une ressource qui peut être utilisée pour faire référence à ce filtre, durant les opérations de stream_filter_remove().
  *
@@ -48110,7 +48110,7 @@ if(!function_exists('stream_get_wrappersThis'))
  *
  * @version PHP 5 >= 5.2.4
  *
- * @param mixed     $stream_or_url    La ressource de flux ou l'URL à vérifier.
+ * @param mixed    $stream_or_url    La ressource de flux ou l'URL à vérifier.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -48858,7 +48858,7 @@ if(!function_exists('stripslashesThis'))
  * @version PHP 5
  *
  * @param string   $haystack    La chaîne à chercher.
- * @param mixed     $needle    Si needle n'est pas une chaîne, elle sera convertie en entier, et utilisée comme code ASCII du caractère correspondant.
+ * @param mixed    $needle    Si needle n'est pas une chaîne, elle sera convertie en entier, et utilisée comme code ASCII du caractère correspondant.
  * @param bool     $before_needle    Si vaut TRUE, stristr() retourne la partie de haystack avant la première occurrence de needle (needle exclus).
  *
  * @return string	Retourne la partie de la chaîne correspondante. Si needle n'est pas trouvé, la fonction retourne FALSE.
@@ -49050,7 +49050,7 @@ if(!function_exists('strpbrkThis'))
  * @version PHP 5
  *
  * @param string   $haystack    La chaîne dans laquelle on doit chercher.
- * @param mixed     $needle    Si needle n'est pas une chaîne, il est converti en entier, et utilisé comme caractère de code ASCII correspondant.
+ * @param mixed    $needle    Si needle n'est pas une chaîne, il est converti en entier, et utilisé comme caractère de code ASCII correspondant.
  * @param int      $offset    Si spécifié, la recherche commencera à partir de ce nombre de caractères compté depuis le début de la chaîne. Contrairement aux fonctions strrpos() et strripos(), ce paramètre ne peut être négatif.
  *
  * @return int	Retourne la position numérique de l'occurrence relativement au début de la chaîne haystack (indépendamment de l'offset). Notez également que la position dans la chaîne commence à 0, et non pas à 1.
@@ -49105,7 +49105,7 @@ if(!function_exists('strptimeThis'))
  * @version PHP 5
  *
  * @param string   $haystack    La chaîne dans laquelle on doit chercher.
- * @param mixed     $needle    Si needle contient plus d'un caractère, seul le premier sera utilisé. Ce comportement est différent de celui de strchr(). Si needle n'est pas une chaîne, il est converti en entier, et utilisée comme caractère de code ASCII correspondant.
+ * @param mixed    $needle    Si needle contient plus d'un caractère, seul le premier sera utilisé. Ce comportement est différent de celui de strchr(). Si needle n'est pas une chaîne, il est converti en entier, et utilisée comme caractère de code ASCII correspondant.
  *
  * @return string	Retourne la portion de la chaîne, ou FALSE si needle n'est pas trouvé.
  *
@@ -49244,7 +49244,7 @@ if(!function_exists('strspnThis'))
  * @version PHP 5
  *
  * @param string   $haystack    La chaîne d'entrée.
- * @param mixed     $needle    Si needle n'est pas une chaîne, elle sera convertie en entier, et utilisée comme code ASCII du caractère correspondant.
+ * @param mixed    $needle    Si needle n'est pas une chaîne, elle sera convertie en entier, et utilisée comme code ASCII du caractère correspondant.
  * @param bool     $before_needle    Si vaut TRUE, strstr() retourne la partie de haystack avant la première occurrence de needle (needle étant exclus).
  *
  * @return string	Retourne la portion de la chaîne, ou FALSE si needle n'est pas trouvé.
@@ -49405,7 +49405,7 @@ if(!function_exists('strtrThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    La variable à convertir en chaîne de caractères. var peut être un scalaire ou un objet implémentant la méthode magique __toString(). Vous ne pouvez pas utiliser la fonction strval() avec des tableaux ou des objets qui n'implémentent pas la méthode magique __toString().
+ * @param mixed    $var    La variable à convertir en chaîne de caractères. var peut être un scalaire ou un objet implémentant la méthode magique __toString(). Vous ne pouvez pas utiliser la fonction strval() avec des tableaux ou des objets qui n'implémentent pas la méthode magique __toString().
  *
  * @return string	La valeur de la variable var sous la forme d'une chaîne de caractères.
  *
@@ -49521,10 +49521,10 @@ if(!function_exists('substr_countThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $string    La chaîne d'entrée. Un tableau de chaînes de caractères peut être fourni, et dans ce cas, les remplacements surviendront sur chacune des chaînes. Dans cette situation, les paramètres replacement, start length doivent être fournis soit comme valeurs scalaires à appliquer sur chaque chaîne, ou comme tableaux où l'élément du tableau correspondant sera utilisé pour chaque chaîne d'entrée.
- * @param mixed     $replacement    La chaîne de remplacement.
- * @param mixed     $start    Si start est positif, le remplacement se fera à partir du caractère numéro start dans string. Si start est négatif, le remplacement se fera à partir du start-ième caractère en partant de la fin de la chaîne string.
- * @param mixed     $length    Si length est fourni et positif, il représentera la longueur du segment de code remplacé dans la chaîne string. S'il est négatif, il représentera la longueur du segment remplacé, mais compté dans l'ordre inverse de la chaîne string. S'il est omis, il prendra la valeur par défaut de la taille de la chaîne, et remplacera tout jusqu'à la fin de la chaîne string. Bien sûr, si length vaut 0, alors, cette fonction aura comme effet d'insérer replacement dans string à la position start donnée.
+ * @param mixed    $string    La chaîne d'entrée. Un tableau de chaînes de caractères peut être fourni, et dans ce cas, les remplacements surviendront sur chacune des chaînes. Dans cette situation, les paramètres replacement, start length doivent être fournis soit comme valeurs scalaires à appliquer sur chaque chaîne, ou comme tableaux où l'élément du tableau correspondant sera utilisé pour chaque chaîne d'entrée.
+ * @param mixed    $replacement    La chaîne de remplacement.
+ * @param mixed    $start    Si start est positif, le remplacement se fera à partir du caractère numéro start dans string. Si start est négatif, le remplacement se fera à partir du start-ième caractère en partant de la fin de la chaîne string.
+ * @param mixed    $length    Si length est fourni et positif, il représentera la longueur du segment de code remplacé dans la chaîne string. S'il est négatif, il représentera la longueur du segment remplacé, mais compté dans l'ordre inverse de la chaîne string. S'il est omis, il prendra la valeur par défaut de la taille de la chaîne, et remplacera tout jusqu'à la fin de la chaîne string. Bien sûr, si length vaut 0, alors, cette fonction aura comme effet d'insérer replacement dans string à la position start donnée.
  *
  * @return mixed	La chaîne résultante est retournée. Si le paramètre string est un tableau, alors un tableau sera retourné.
  *
@@ -51459,7 +51459,7 @@ if(!function_exists('sybase_fetch_fieldThis'))
  * @version PHP 5
  *
  * @param resource $result
- * @param mixed     $object    Utilisez le second paramètre object pour spécifier le type d'objet que vous voulez retourner. Si ce paramètre est omis, l'objet résultant sera de classe stdClass.
+ * @param mixed    $object    Utilisez le second paramètre object pour spécifier le type d'objet que vous voulez retourner. Si ce paramètre est omis, l'objet résultant sera de classe stdClass.
  *
  * @return object	retourne un objet qui contient la ligne demandée, en cas de succès, et FALSE s'il n'y a plus de ligne.
  *
@@ -51793,7 +51793,7 @@ if(!function_exists('sybase_queryThis'))
  *
  * @param resource $result
  * @param int      $row
- * @param mixed     $field    Peut être la position du champ, le nom du champ ou la table suivie d'un point, puis du nom du champ (nom_table.nom_champ). Si le nom de la colonne est un alias ('select foo as bar from...'), utilisez l'alias au lieu du nom de la colonne.
+ * @param mixed    $field    Peut être la position du champ, le nom du champ ou la table suivie d'un point, puis du nom du champ (nom_table.nom_champ). Si le nom de la colonne est un alias ('select foo as bar from...'), utilisez l'alias au lieu du nom de la colonne.
  *
  * @return string	sybase_result() retourne le contenu d'une cellule, depuis le jeu de résultat Sybase.
  *
@@ -51846,7 +51846,7 @@ if(!function_exists('sybase_select_dbThis'))
  * @version PHP 4 >= 4.3.0
  * @version PHP 5
  *
- * @param callable     $handler    Le gestionnaire attend 5 arguments, dans l'ordre suivant : numéro de message, sévérité, état, numéro de ligne et description. Les 4 premiers paramètres sont des entiers et le dernier est une chaîne de caractères. Si ce gestionnaire retourne la valeur FALSE, PHP retournera un message d'erreur classique.
+ * @param callable $handler    Le gestionnaire attend 5 arguments, dans l'ordre suivant : numéro de message, sévérité, état, numéro de ligne et description. Les 4 premiers paramètres sont des entiers et le dernier est une chaîne de caractères. Si ce gestionnaire retourne la valeur FALSE, PHP retournera un message d'erreur classique.
  * @param resource $link_identifier    Si non spécifié, le dernier lien ouvert sera utilisé.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -52419,7 +52419,7 @@ if(!function_exists('trimThis'))
  * @version PHP 5
  *
  * @param array    &$array    Le tableau d'entrée.
- * @param callable     $cmp_function    Voyez les fonctions usort() et uksort() pour des exemples de tris avec utilisation de fonction personnalisée.
+ * @param callable $cmp_function    Voyez les fonctions usort() et uksort() pour des exemples de tris avec utilisation de fonction personnalisée.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -52570,7 +52570,7 @@ if(!function_exists('udm_open_storedThis'))
  * @version PHP 5
  *
  * @param array    &$array    Le tableau d'entrée.
- * @param callable     $cmp_function    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
+ * @param callable $cmp_function    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -52877,7 +52877,7 @@ if(!function_exists('usleepThis'))
  * @version PHP 5
  *
  * @param array    &$array    Le tableau d'entrée.
- * @param callable     $cmp_function    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
+ * @param callable $cmp_function    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -52953,8 +52953,8 @@ if(!function_exists('utf8_encodeThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $expression    La variable que vous voulez afficher.
- * @param mixed     $item
+ * @param mixed    $expression    La variable que vous voulez afficher.
+ * @param mixed    $item
  *
  * @return void	Aucune valeur n'est retournée.
  *
@@ -52979,7 +52979,7 @@ if(!function_exists('var_dumpThis'))
  * @version PHP 4 >= 4.2.0
  * @version PHP 5
  *
- * @param mixed     $expression    La variable que vous voulez exporter.
+ * @param mixed    $expression    La variable que vous voulez exporter.
  * @param bool     $return    Si utilisé et mis à TRUE, var_export() retournera la représentation de la variable au lieu de l'afficher.
  *
  * @return mixed	Retourne la représentation de la variable lorsque le paramètre return est utilisé et évalué à TRUE. Autrement, cette fonction retournera NULL.
@@ -53005,7 +53005,7 @@ if(!function_exists('var_exportThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $val    Le variant.
+ * @param mixed    $val    Le variant.
  *
  * @return mixed	Retourne la valeur absolue de val.
  *
@@ -53028,8 +53028,8 @@ if(!function_exists('variant_absThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  * @return mixed	Retourne le résultat.
  *
@@ -53053,8 +53053,8 @@ if(!function_exists('variant_addThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  */
 if(!function_exists('variant_andThis'))
@@ -53102,8 +53102,8 @@ if(!function_exists('variant_castThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  * @return mixed	Retourne le résultat de la concaténation.
  *
@@ -53127,8 +53127,8 @@ if(!function_exists('variant_catThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  * @param int      $lcid    Locale Identifier valide à utiliser lors des comparaisons des chaînes (cela affecte la collation de la chaîne).
  * @param int      $flags    flags peut être une ou plusieurs des valeurs suivantes, jointes avec des OR, et affecte les comparaisons de chaînes :
  *
@@ -53205,8 +53205,8 @@ if(!function_exists('variant_date_to_timestampThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  */
 if(!function_exists('variant_divThis'))
@@ -53228,8 +53228,8 @@ if(!function_exists('variant_divThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  * @return mixed	Si chaque bit dans left est égal au bit correspondant dans right alors la fonction retourne TRUE, sinon elle retourne FALSE.
  *
@@ -53253,7 +53253,7 @@ if(!function_exists('variant_eqvThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $variant    Le variant.
+ * @param mixed    $variant    Le variant.
  *
  * @return mixed	Si variant est négatif, le premier entier négatif plus grand ou égal au variant est retourné, sinon cette fonction retourne la portion entière de la valeur de variant.
  *
@@ -53300,8 +53300,8 @@ if(!function_exists('variant_get_typeThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  */
 if(!function_exists('variant_idivThis'))
@@ -53323,8 +53323,8 @@ if(!function_exists('variant_idivThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  */
 if(!function_exists('variant_impThis'))
@@ -53346,7 +53346,7 @@ if(!function_exists('variant_impThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $variant    Le variant.
+ * @param mixed    $variant    Le variant.
  *
  * @return mixed	Si variant est négatif, le premier entier négatif supérieur ou égal à ce variant est retourné, sinon cette fonction retourne la partie entière de la valeur de variant.
  *
@@ -53369,8 +53369,8 @@ if(!function_exists('variant_intThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  * @return mixed	Retourne le reste de la division.
  *
@@ -53394,8 +53394,8 @@ if(!function_exists('variant_modThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  */
 if(!function_exists('variant_mulThis'))
@@ -53417,7 +53417,7 @@ if(!function_exists('variant_mulThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $variant    Le variant.
+ * @param mixed    $variant    Le variant.
  *
  * @return mixed	Retourne le résultat de la négation logique.
  *
@@ -53440,7 +53440,7 @@ if(!function_exists('variant_negThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $variant    Le variant.
+ * @param mixed    $variant    Le variant.
  *
  * @return mixed	Retourne la négation. Si variant vaut NULL, le résultat sera également NULL.
  *
@@ -53463,8 +53463,8 @@ if(!function_exists('variant_notThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  */
 if(!function_exists('variant_orThis'))
@@ -53486,8 +53486,8 @@ if(!function_exists('variant_orThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  * @return mixed	Retourne le résultat de left à la puissance right.
  *
@@ -53511,7 +53511,7 @@ if(!function_exists('variant_powThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $variant    Le variant.
+ * @param mixed    $variant    Le variant.
  * @param int      $decimals    Nombre de décimales.
  *
  * @return mixed	Retourne la valeur arrondie.
@@ -53538,7 +53538,7 @@ if(!function_exists('variant_roundThis'))
  * @version PHP 5
  *
  * @param variant  $variant    Le variant.
- * @param mixed     $value
+ * @param mixed    $value
  *
  * @return void	Aucune valeur n'est retournée.
  *
@@ -53588,8 +53588,8 @@ if(!function_exists('variant_set_typeThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  */
 if(!function_exists('variant_subThis'))
@@ -53611,8 +53611,8 @@ if(!function_exists('variant_subThis'))
  *
  * @version PHP 5
  *
- * @param mixed     $left    L'opérande de gauche.
- * @param mixed     $right    L'opérande de droite.
+ * @param mixed    $left    L'opérande de gauche.
+ * @param mixed    $right    L'opérande de droite.
  *
  */
 if(!function_exists('variant_xorThis'))
@@ -53803,8 +53803,8 @@ if(!function_exists('w32api_deftypeThis'))
  * @version PHP 4 >= 4.2.0
  *
  * @param string   $typename    Le paramètre typename est sensible à la casse.
- * @param mixed     $value    Il faut donner les valeurs dans le même ordre que lors de la définition du type, avec w32api_deftype().
- * @param mixed     $item
+ * @param mixed    $value    Il faut donner les valeurs dans le même ordre que lors de la définition du type, avec w32api_deftype().
+ * @param mixed    $item
  *
  * @return resource	Retourne la ressource dynaparm.
  *
@@ -53830,8 +53830,8 @@ if(!function_exists('w32api_init_dtypeThis'))
  * @version PHP 4 >= 4.2.0
  *
  * @param string   $funcname    Le nom de la fonction.
- * @param mixed     $argument    Les arguments peuvent être n'importe lequel de ceux de PHP, ou un type défini via la fonction w32api_deftype().
- * @param mixed     $item
+ * @param mixed    $argument    Les arguments peuvent être n'importe lequel de ceux de PHP, ou un type défini via la fonction w32api_deftype().
+ * @param mixed    $item
  *
  * @return mixed	Le type retourné est celui que vous avez enregistré avec la fonction. La valeur est celle retournée par la fonction.
  *
@@ -53910,8 +53910,8 @@ if(!function_exists('w32api_set_call_methodThis'))
  * @version PHP 5
  *
  * @param resource $packet_id    Un paquet WDDX, retourné par la fonction wddx_packet_start().
- * @param mixed     $var_name    Peut être une chaîne de caractères nommant une variable ou un tableau contenant des noms de variables ou d'autres tableaux, etc..
- * @param mixed     $item
+ * @param mixed    $var_name    Peut être une chaîne de caractères nommant une variable ou un tableau contenant des noms de variables ou d'autres tableaux, etc..
+ * @param mixed    $item
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -54012,7 +54012,7 @@ if(!function_exists('wddx_packet_startThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var    La valeur à linéariser.
+ * @param mixed    $var    La valeur à linéariser.
  * @param string   $comment    Une chaîne de caractères optionnelle contenant un commentaire qui apparaît dans l'en-tête du paquet.
  *
  * @return string	Retourne le paquet WDDX, ou FALSE si une erreur survient.
@@ -54039,8 +54039,8 @@ if(!function_exists('wddx_serialize_valueThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param mixed     $var_name    Peut être soit une chaîne de caractères nommant une variable ou un tableau contenant des noms de variables ou d'autres tableaux, etc..
- * @param mixed     $item
+ * @param mixed    $var_name    Peut être soit une chaîne de caractères nommant une variable ou un tableau contenant des noms de variables ou d'autres tableaux, etc..
+ * @param mixed    $item
  *
  * @return string	Retourne le paquet WDDX, ou FALSE si une erreur survient.
  *
@@ -54387,7 +54387,7 @@ if(!function_exists('xml_parser_get_optionThis'))
  *
  * @param resource $parser    Une référence vers un analyseur XML.
  * @param int      $option    L'option à modifier. Voir ci-dessous. Les options suivantes sont disponibles :
- * @param mixed     $value    La nouvelle valeur de l'option.
+ * @param mixed    $value    La nouvelle valeur de l'option.
  *
  * @return bool	Retourne FALSE si parser n'est pas une référence valide sur un analyseur XML, ou si l'option n'a pas pu être modifiée. Sinon, l'option est effectivement modifiée, et la fonction retourne TRUE.
  *
@@ -54414,7 +54414,7 @@ if(!function_exists('xml_parser_set_optionThis'))
  * @version PHP 5
  *
  * @param resource $parser    Une référence à un analyseur XML à définir comme fonction gérant les données.
- * @param callable     $handler    handler est une chaîne qui contient le nom d'une fonction qui existe lorsque xml_parse() est appelé pour créer parser. La fonction handler doit accepter deux paramètres : Le gestionnaire des données est appelé pour chaque pièce du texte d'un document XML. Il peut être appelé plusieurs fois dans chaque fragment (e.g. pour les chaînes non-ASCII). Si un gestionnaire reçoit une chaîne vide ou FALSE, c'est qu'il est désactivé.
+ * @param callable $handler    handler est une chaîne qui contient le nom d'une fonction qui existe lorsque xml_parse() est appelé pour créer parser. La fonction handler doit accepter deux paramètres : Le gestionnaire des données est appelé pour chaque pièce du texte d'un document XML. Il peut être appelé plusieurs fois dans chaque fragment (e.g. pour les chaînes non-ASCII). Si un gestionnaire reçoit une chaîne vide ou FALSE, c'est qu'il est désactivé.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -54441,7 +54441,7 @@ if(!function_exists('xml_set_character_data_handlerThis'))
  * @version PHP 5
  *
  * @param resource $parser    Une référence à un analyseur XML à définir comme fonction d'analyse par défaut.
- * @param callable     $handler    handler est une chaîne qui contient le nom d'une fonction qui existe lorsque xml_parse() est appelé pour créer parser. La fonction handler doit accepter deux paramètres : Si un gestionnaire reçoit une chaîne vide ou FALSE, c'est qu'il est désactivé.
+ * @param callable $handler    handler est une chaîne qui contient le nom d'une fonction qui existe lorsque xml_parse() est appelé pour créer parser. La fonction handler doit accepter deux paramètres : Si un gestionnaire reçoit une chaîne vide ou FALSE, c'est qu'il est désactivé.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -54468,8 +54468,8 @@ if(!function_exists('xml_set_default_handlerThis'))
  * @version PHP 5
  *
  * @param resource $parser    Une référence d'analyseur XML à définir comme fonction gérant les éléments de début et de fin.
- * @param callable     $start_element_handler    La fonction start_element_handler doit accepter trois paramètres :
- * @param callable     $end_element_handler
+ * @param callable $start_element_handler    La fonction start_element_handler doit accepter trois paramètres :
+ * @param callable $end_element_handler
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -54497,7 +54497,7 @@ if(!function_exists('xml_set_element_handlerThis'))
  * @version PHP 5
  *
  * @param resource $parser    Une référence à un analyseur XML.
- * @param callable     $handler    handler est une chaîne contenant le nom d'une fonction qui doit exister lorsque la fonction xml_parse() est appelée pour l'analyseur parser. La fonction nommée par le paramètre handler doit accepter 2 paramètres, et doit retourner une valeur entière. Si la valeur retournée du gestionnaire est FALSE (ce qui sera le cas si aucune valeur n'est retournée), l'analyseur XML arrêtera l'analyse et la fonction xml_get_error_code() retournera XML_ERROR_EXTERNAL_ENTITY_HANDLING. Si une chaîne vide, ou FALSE, est passée à la fonction représentant le gestionnaire, le gestionnaire en question sera désactivé.
+ * @param callable $handler    handler est une chaîne contenant le nom d'une fonction qui doit exister lorsque la fonction xml_parse() est appelée pour l'analyseur parser. La fonction nommée par le paramètre handler doit accepter 2 paramètres, et doit retourner une valeur entière. Si la valeur retournée du gestionnaire est FALSE (ce qui sera le cas si aucune valeur n'est retournée), l'analyseur XML arrêtera l'analyse et la fonction xml_get_error_code() retournera XML_ERROR_EXTERNAL_ENTITY_HANDLING. Si une chaîne vide, ou FALSE, est passée à la fonction représentant le gestionnaire, le gestionnaire en question sera désactivé.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -54524,7 +54524,7 @@ if(!function_exists('xml_set_end_namespace_decl_handlerThis'))
  * @version PHP 5
  *
  * @param resource $parser    Une référence d'analyseur XML à définir comme fonction de référence d'entités externes.
- * @param callable     $handler    handler est une chaîne qui contient les noms de fonctions qui existent lorsque xml_parse() est appelé pour créer le parser. La fonction handler doit accepter 5 paramètres, et retourner un entier. Si la valeur retournée par le gestionnaire est FALSE (par exemple si aucune valeur n'est retournée), l'analyseur XML s'arrêtera, et la fonction xml_get_error_code() retournera XML_ERROR_EXTERNAL_ENTITY_HANDLING. Si un gestionnaire reçoit une chaîne vide, ou FALSE, c'est qu'il est en train d'être désactivé.
+ * @param callable $handler    handler est une chaîne qui contient les noms de fonctions qui existent lorsque xml_parse() est appelé pour créer le parser. La fonction handler doit accepter 5 paramètres, et retourner un entier. Si la valeur retournée par le gestionnaire est FALSE (par exemple si aucune valeur n'est retournée), l'analyseur XML s'arrêtera, et la fonction xml_get_error_code() retournera XML_ERROR_EXTERNAL_ENTITY_HANDLING. Si un gestionnaire reçoit une chaîne vide, ou FALSE, c'est qu'il est en train d'être désactivé.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -54551,7 +54551,7 @@ if(!function_exists('xml_set_external_entity_ref_handlerThis'))
  * @version PHP 5
  *
  * @param resource $parser    Une référence d'analyseur XML à définir comme fonction de déclaration de notation.
- * @param callable     $handler    handler est une chaîne qui contient le nom d'une fonction qui existe lorsque xml_parse() est appelé pour créer parser. La fonction handler doit accepter cinq paramètres : Si un gestionnaire reçoit une chaîne vide ou FALSE, c'est qu'il est en train d'être désactivé.
+ * @param callable $handler    handler est une chaîne qui contient le nom d'une fonction qui existe lorsque xml_parse() est appelé pour créer parser. La fonction handler doit accepter cinq paramètres : Si un gestionnaire reçoit une chaîne vide ou FALSE, c'est qu'il est en train d'être désactivé.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -54605,7 +54605,7 @@ if(!function_exists('xml_set_objectThis'))
  * @version PHP 5
  *
  * @param resource $parser    Une référence à l'analyseur XML à définir comme fonction d'analyse d'instructions (PI).
- * @param callable     $handler    handler est une chaîne qui contient le nom d'une fonction qui existe lorsque xml_parse() est appelé pour créer parser. La fonction handler doit accepter trois paramètres : Si un gestionnaire reçoit une chaîne vide, ou FALSE, c'est qu'il est désactivé.
+ * @param callable $handler    handler est une chaîne qui contient le nom d'une fonction qui existe lorsque xml_parse() est appelé pour créer parser. La fonction handler doit accepter trois paramètres : Si un gestionnaire reçoit une chaîne vide, ou FALSE, c'est qu'il est désactivé.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -54632,7 +54632,7 @@ if(!function_exists('xml_set_processing_instruction_handlerThis'))
  * @version PHP 5
  *
  * @param resource $parser    Une référence vers l'analyseur XML.
- * @param callable     $handler    handler est une chaîne contenant le nom d'une fonction devant exister lorsque la fonction xml_parse() est appelé pour l'analyseur parser. La fonction nommée par le paramètre handler doit accepter 3 paramètres, et doit retourner une valeur entière. Si la valeur retournée par le gestionnaire vaut FALSE (ce qui sera le cas lorsqu'aucune valeur n'est retourné), l'analyseur XML arrêtera l'analyse et la fonction xml_get_error_code() retournera XML_ERROR_EXTERNAL_ENTITY_HANDLING. Si une chaîne vide, ou la valeur FALSE, est passée en guise de fonction pour le gestionnaire, il sera désactivé.
+ * @param callable $handler    handler est une chaîne contenant le nom d'une fonction devant exister lorsque la fonction xml_parse() est appelé pour l'analyseur parser. La fonction nommée par le paramètre handler doit accepter 3 paramètres, et doit retourner une valeur entière. Si la valeur retournée par le gestionnaire vaut FALSE (ce qui sera le cas lorsqu'aucune valeur n'est retourné), l'analyseur XML arrêtera l'analyse et la fonction xml_get_error_code() retournera XML_ERROR_EXTERNAL_ENTITY_HANDLING. Si une chaîne vide, ou la valeur FALSE, est passée en guise de fonction pour le gestionnaire, il sera désactivé.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -54659,7 +54659,7 @@ if(!function_exists('xml_set_start_namespace_decl_handlerThis'))
  * @version PHP 5
  *
  * @param resource $parser    Une référence à l'analyseur XML à définir à la fonction utilisée par traiter les déclarations d'entités non-analysées.
- * @param callable     $handler    handler est une chaîne qui contient le nom d'une fonction qui existe lorsque xml_parse() est appelé pour créer parser. La fonction handler doit accepter six paramètres : Si un gestionnaire reçoit une chaîne vide ou FALSE, c'est qu'il est en train d'être désactivé.
+ * @param callable $handler    handler est une chaîne qui contient le nom d'une fonction qui existe lorsque xml_parse() est appelé pour créer parser. La fonction handler doit accepter six paramètres : Si un gestionnaire reçoit une chaîne vide ou FALSE, c'est qu'il est en train d'être désactivé.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -54739,7 +54739,7 @@ if(!function_exists('xmlrpc_decode_requestThis'))
  * @version PHP 4 >= 4.1.0
  * @version PHP 5
  *
- * @param mixed     $value
+ * @param mixed    $value
  *
  */
 if(!function_exists('xmlrpc_encodeThis'))
@@ -54762,7 +54762,7 @@ if(!function_exists('xmlrpc_encodeThis'))
  * @version PHP 5
  *
  * @param string   $method    Nom de la méthode à appeler.
- * @param mixed     $params    Paramètres de la méthode, compatibles avec la signature de la méthode.
+ * @param mixed    $params    Paramètres de la méthode, compatibles avec la signature de la méthode.
  * @param array    $output_options    Tableau spécifiant les options de sortie pouvant contenir (les valeurs par défaut sont en gras) :
  *
  * @return string	Retourne une chaîne contenant la représentation XML de la demande.
@@ -54790,7 +54790,7 @@ if(!function_exists('xmlrpc_encode_requestThis'))
  * @version PHP 4 >= 4.1.0
  * @version PHP 5
  *
- * @param mixed     $value    Valeur PHP
+ * @param mixed    $value    Valeur PHP
  *
  * @return string	Retourne le type XML-RPC.
  *
@@ -54889,7 +54889,7 @@ if(!function_exists('xmlrpc_server_add_introspection_dataThis'))
  *
  * @param resource $server
  * @param string   $xml
- * @param mixed     $user_data
+ * @param mixed    $user_data
  * @param array    $output_options
  *
  */
@@ -55295,7 +55295,7 @@ if(!function_exists('xslt_set_encodingThis'))
  * @version PHP 4 >= 4.0.4
  *
  * @param resource $xh    Un identifiant de lien du processus XSLT créé avec la fonction xslt_create().
- * @param mixed     $handler    La fonction utilisateur, qui doit accepter quatre paramètres : le processeur XSLT, le niveau d'erreur, le code erreur et un tableau de messages. La fonction peut être définie comme :
+ * @param mixed    $handler    La fonction utilisateur, qui doit accepter quatre paramètres : le processeur XSLT, le niveau d'erreur, le code erreur et un tableau de messages. La fonction peut être définie comme :
  *
  * @return void	Aucune valeur n'est retournée.
  *
@@ -55320,7 +55320,7 @@ if(!function_exists('xslt_set_error_handlerThis'))
  * @version PHP 4 >= 4.0.6
  *
  * @param resource $xh    Un identifiant de lien du processus XSLT créé avec la fonction xslt_create().
- * @param mixed     $log    Ce paramètre est soit un booléen, qui active ou non l'enregistrement dans le fichier d'historique, ou une chaîne contenant le nom du fichier d'historique dans lequel les erreurs seront enregistrées.
+ * @param mixed    $log    Ce paramètre est soit un booléen, qui active ou non l'enregistrement dans le fichier d'historique, ou une chaîne contenant le nom du fichier d'historique dans lequel les erreurs seront enregistrées.
  *
  * @return void	Aucune valeur n'est retournée.
  *

@@ -117,6 +117,8 @@ foreach ($phpdoc as $key => $value)
 			{
 				if($val['type'] == 'resource') 
 					$space = '';
+				elseif($val['type'] == 'resouce')
+					$space = ' ';
 				elseif($val['type'] == 'int')
 					$space = '     ';
 				elseif($val['type'] == 'integer')
@@ -139,6 +141,14 @@ foreach ($phpdoc as $key => $value)
 					$space = '  ';
 				elseif($val['type'] == 'variant')
 					$space = ' ';
+				elseif($val['type'] == 'callable')
+					$space = '';
+				elseif($val['type'] == 'callback')
+					$space = ' ';
+				elseif($val['type'] == 'mixed')
+					$space = '   ';
+				elseif($val['type'] == 'char')
+					$space = '    ';
 				else
 					$space = '    ';
 
