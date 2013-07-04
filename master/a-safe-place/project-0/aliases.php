@@ -2017,6 +2017,33 @@ if(!function_exists('call_user_funcThis'))
 }
 
 /**
+ * call_user_func_arrayThis
+ *
+ * Appelle une fonction de rappel avec les paramètres rassemblés en tableau.
+ *
+ * @link http://php.net/manual/fr/function.call-user-func-array.php Documentation pour call_user_func_array.
+ *
+ * @version PHP 4 >= 4.0.4
+ * @version PHP 5
+ *
+ * @param callable     $callback    La fonction de rappel à appeler.
+ * @param array    $param_arr    Les paramètres à passer à la fonction de rappel, sous la forme d'un tableau indexé.
+ *
+ * @return mixed	Retourne la valeur retournée par la fonction de rappel, ou FALSE si une erreur survient.
+ *
+ */
+if(!function_exists('call_user_func_arrayThis'))
+{
+    function call_user_func_arrayThis($callback, $param_arr)
+    {
+		$callback = is_callable($callback) ? $callback : NULL;
+		$param_arr = (array)$param_arr;
+
+		return call_user_func_array($callback, $param_arr);
+    }
+}
+
+/**
  * ceilThis
  *
  * Arrondit au nombre supérieur.
@@ -3930,6 +3957,32 @@ if(!function_exists('curl_setoptThis'))
 		$option = (int)$option;
 		$value = ($value);
 		return curl_setopt($ch, $option, $value);
+    }
+}
+
+/**
+ * curl_setopt_arrayThis
+ *
+ * Fixe plusieurs options pour un transfert cURL.
+ *
+ * @link http://php.net/manual/fr/function.curl-setopt-array.php Documentation pour curl_setopt_array.
+ *
+ * @version PHP 5 >= 5.1.3
+ *
+ * @param resource $ch    Un gestionnaire cURL retourné par la fonction curl_init().
+ * @param array    $options    Un tableau spécifiant quelles options à fixer avec leurs valeurs. Les clés devraient être des constantes valides de curl_setopt() ou leur entier équivalent.
+ *
+ * @return bool	Retourne TRUE si toutes les options ont été fixées correctement. Si une option ne peut pas être fixée correctement, FALSE est retourné immédiatement, en ignorant toutes les options futures dans le tableau options.
+ *
+ */
+if(!function_exists('curl_setopt_arrayThis'))
+{
+    function curl_setopt_arrayThis($ch, $options)
+    {
+		$ch = is_resource($ch) ? $ch : NULL;
+		$options = (array)$options;
+
+		return curl_setopt_array($ch, $options);
     }
 }
 
@@ -7291,6 +7344,33 @@ if(!function_exists('fbsql_errorThis'))
 }
 
 /**
+ * fbsql_fetch_arrayThis
+ *
+ * Lit toute une ligne de résultat dans un tableau.
+ *
+ * @link http://php.net/manual/fr/function.fbsql-fetch-array.php Documentation pour fbsql_fetch_array.
+ *
+ * @version PHP 4 >= 4.0.6
+ * @version PHP 5
+ *
+ * @param resource $result    Un identifiant de résultat retourné par la fonction fbsql_query() ou la fonction fbsql_db_query().
+ * @param int      $result_type    Une constante et peut prendre les valeurs suivantes : FBSQL_ASSOC, FBSQL_NUM, ou FBSQL_BOTH. Lors de l'utilisation de FBSQL_BOTH, en plus de stocker les indices numériques du tableau de résultats, il stockera les données dans des indices associatifs, en utilisant les noms des champs comme clés.
+ *
+ * @return array	Retourne un tableau qui correspond à la ligne récupérée, ou FALSE s'il n'y a plus de ligne de disponible.
+ *
+ */
+if(!function_exists('fbsql_fetch_arrayThis'))
+{
+    function fbsql_fetch_arrayThis($result, $result_type = NULL)
+    {
+		$result = is_resource($result) ? $result : NULL;
+		$result_type = (int)$result_type;
+
+		return fbsql_fetch_array($result, $result_type);
+    }
+}
+
+/**
  * fbsql_fetch_assocThis
  *
  * Lit toute une ligne de résultat dans un tableau associatif.
@@ -10054,6 +10134,34 @@ if(!function_exists('filter_inputThis'))
 }
 
 /**
+ * filter_input_arrayThis
+ *
+ * Récupère plusieurs valeurs externes et les filtre.
+ *
+ * @link http://php.net/manual/fr/function.filter-input-array.php Documentation pour filter_input_array.
+ *
+ * @version PHP 5 >= 5.2.0
+ *
+ * @param int      $type    Une constante parmi INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER ou INPUT_ENV.
+ * @param mixed     $definition    Un tableau définissant les arguments. Une clé valide est une chaîne de caractères contenant le nom de la variable et une valeur valide est soit le type d'un filtre, soit un tableau spécifiant le filtre, les drapeaux et les options. Si la valeur est un tableau, les clés valides sont filter qui spécifie le type du filtre, flags qui spécifie tous les drapeaux à appliquer au filtre, et options qui spécifie toutes les options à appliquer au filtre. Voir l'exemple ci-dessous pour une meilleure compréhension. Ce paramètre peut également être un entier contenant une constante de filtre. Ensuite, toutes les valeurs du tableau d'entrée seront filtrées par ce filtre.
+ * @param bool     $add_empty    Ajout des clés manquantes à la valeur NULL dans la valeur retournée.
+ *
+ * @return mixed	Un tableau contenant les valeurs des variables demandées en cas de succès, ou FALSE si une erreur survient. Un tableau de valeurs peut valoir FALSE si le filtre échoue, ou NULL si la variable n'est pas définie. Ou, si le drapeau FILTER_NULL_ON_FAILURE est utilisé, la fonction retournera FALSE si la variable n'est pas définie et NULL si le filtre échoue.
+ *
+ */
+if(!function_exists('filter_input_arrayThis'))
+{
+    function filter_input_arrayThis($type, $definition = NULL, $add_empty = true)
+    {
+		$type = (int)$type;
+		$definition = ($definition);
+		$add_empty = (bool)$add_empty;
+
+		return filter_input_array($type, $definition, $add_empty);
+    }
+}
+
+/**
  * filter_listThis
  *
  * Retourne une liste de tous les filtres supportés.
@@ -10096,6 +10204,34 @@ if(!function_exists('filter_varThis'))
 		$filter = (int)$filter;
 		$options = ($options);
 		return filter_var($variable, $filter, $options);
+    }
+}
+
+/**
+ * filter_var_arrayThis
+ *
+ * Récupère plusieurs variables et les filtre.
+ *
+ * @link http://php.net/manual/fr/function.filter-var-array.php Documentation pour filter_var_array.
+ *
+ * @version PHP 5 >= 5.2.0
+ *
+ * @param array    $data    Un tableau avec les clés contenant les données à filtrer.
+ * @param mixed     $definition    Un tableau définissant les arguments. Une clé valide est une chaîne de caractères contenant le nom de la variable et une valeur valide est soit le type d'un filtre, soit un tableau spécifiant le filtre, les drapeaux et les options. Si la valeur est un tableau, les clés valides sont filter qui spécifie le type du filtre, flags qui spécifie tous les drapeaux à appliquer au filtre, et options qui spécifie toutes les options à appliquer au filtre. Voir l'exemple ci-dessous pour une meilleure compréhension. Ce paramètre peut également être un entier contenant une constante de filtre. Ensuite, toutes les valeurs du tableau d'entrée seront filtrées par ce filtre.
+ * @param bool     $add_empty    Ajout des clés manquantes à la valeur NULL dans la valeur retournée.
+ *
+ * @return mixed	Un tableau contenant les valeurs des variables demandées en cas de succès, ou FALSE si une erreur survient. Un tableau de valeurs peut valoir FALSE si le filtre échoue, ou NULL si la variable n'est pas définie.
+ *
+ */
+if(!function_exists('filter_var_arrayThis'))
+{
+    function filter_var_arrayThis($data, $definition = NULL, $add_empty = true)
+    {
+		$data = (array)$data;
+		$definition = ($definition);
+		$add_empty = (bool)$add_empty;
+
+		return filter_var_array($data, $definition, $add_empty);
     }
 }
 
@@ -10308,6 +10444,32 @@ if(!function_exists('forward_static_callThis'))
 		$parameter = ($parameter);
 		$parameter1 = ($parameter1);
 		return forward_static_call($function, $parameter, $parameter1);
+    }
+}
+
+/**
+ * forward_static_call_arrayThis
+ *
+ * Appelle une méthode statique et passe les arguments en tableau.
+ *
+ * @link http://php.net/manual/fr/function.forward-static-call-array.php Documentation pour forward_static_call_array.
+ *
+ * @version PHP 5 >= 5.3.0
+ *
+ * @param callable     $function    La fonction ou la méthode appelée. Ce paramètre peut être un tableau, avec le nom de la classe et de la méthode, ou une chaîne, avec le nom de la fonction.
+ * @param array    $parameters    Un paramètre, rassemblant tous les paramètres dans un tableau.
+ *
+ * @return mixed	Retourne le résultat de la fonction, et FALSE en cas d'erreur.
+ *
+ */
+if(!function_exists('forward_static_call_arrayThis'))
+{
+    function forward_static_call_arrayThis($function, $parameters)
+    {
+		$function = is_callable($function) ? $function : NULL;
+		$parameters = (array)$parameters;
+
+		return forward_static_call_array($function, $parameters);
     }
 }
 
@@ -16658,6 +16820,32 @@ if(!function_exists('hw_mvThis'))
 		$destination_id = (int)$destination_id;
 
 		return hw_mv($connection, $object_id_array, $source_id, $destination_id);
+    }
+}
+
+/**
+ * hw_objrec2arrayThis
+ *
+ * Convertit les attributs d'un objet en tableau.
+ *
+ * @link http://php.net/manual/fr/function.hw-objrec2array.php Documentation pour hw_objrec2array.
+ *
+ * @version PHP 4
+ *
+ * @param string   $object_record    L'objet record.
+ * @param array    $format    Un tableau associatif, avec les attributs comme index, le nom, et la valeur étant l'une des suivantes : HW_ATTR_LANG ou HW_ATTR_NONE.
+ *
+ * @return array	Retourne un tableau. Les clés du tableau seront les noms des attributs. Les attributs multiples comme "Title", dans différentes langues, seront rassemblés dans un autre tableau. Une clé est la partie gauche d'un attribut. Cette partie doit être longue d'au moins deux caractères.
+ *
+ */
+if(!function_exists('hw_objrec2arrayThis'))
+{
+    function hw_objrec2arrayThis($object_record, $format = NULL)
+    {
+		$object_record = (string)$object_record;
+		$format = (array)$format;
+
+		return hw_objrec2array($object_record, $format);
     }
 }
 
@@ -24464,6 +24652,35 @@ if(!function_exists('import_request_variablesThis'))
 }
 
 /**
+ * in_arrayThis
+ *
+ * Indique si une valeur appartient à un tableau.
+ *
+ * @link http://php.net/manual/fr/function.in-array.php Documentation pour in_array.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param mixed     $needle    La valeur recherchée.
+ * @param array    $haystack    Le tableau.
+ * @param bool     $strict    Le troisième paramètre strict est optionnel. S'il vaut TRUE alors in_array() vérifiera aussi que le type du paramètre needle correspond au type de la valeur trouvée dans haystack.
+ *
+ * @return bool	Retourne TRUE si needle est trouvé dans le tableau, FALSE sinon.
+ *
+ */
+if(!function_exists('in_arrayThis'))
+{
+    function in_arrayThis($needle, $haystack, $strict = FALSE)
+    {
+		$needle = ($needle);
+		$haystack = (array)$haystack;
+		$strict = (bool)$strict;
+
+		return in_array($needle, $haystack, $strict);
+    }
+}
+
+/**
  * inet_ntopThis
  *
  * Convertit un paquet d'adresses internet en une représentation humainement lisible.
@@ -24804,6 +25021,30 @@ if(!function_exists('is_aThis'))
 		$allow_string = (bool)$allow_string;
 
 		return is_a($object, $class_name, $allow_string);
+    }
+}
+
+/**
+ * is_arrayThis
+ *
+ * Détermine si une variable est un tableau.
+ *
+ * @link http://php.net/manual/fr/function.is-array.php Documentation pour is_array.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param mixed     $var    La variable à évaluer.
+ *
+ * @return bool	Retourne TRUE si var est un array, FALSE sinon.
+ *
+ */
+if(!function_exists('is_arrayThis'))
+{
+    function is_arrayThis($var)
+    {
+		$var = ($var);
+		return is_array($var);
     }
 }
 
@@ -25403,6 +25644,32 @@ if(!function_exists('iterator_countThis'))
 		$iterator = (is_array($iterator) || $iterator instanceof Traversable) ? $iterator : NULL;
 
 		return iterator_count($iterator);
+    }
+}
+
+/**
+ * iterator_to_arrayThis
+ *
+ * Copie un itérateur dans un tableau.
+ *
+ * @link http://php.net/manual/fr/function.iterator-to-array.php Documentation pour iterator_to_array.
+ *
+ * @version PHP 5 >= 5.1.0
+ *
+ * @param Traversable     $iterator    L'itérateur à copier.
+ * @param bool     $use_keys    S'il faut utiliser les éléments de l'itérateur comme clé.
+ *
+ * @return array	Un tableau contenant les éléments de l'itérateur iterator.
+ *
+ */
+if(!function_exists('iterator_to_arrayThis'))
+{
+    function iterator_to_arrayThis($iterator, $use_keys = true)
+    {
+		$iterator = (is_array($iterator) || $iterator instanceof Traversable) ? $iterator : NULL;
+		$use_keys = (bool)$use_keys;
+
+		return iterator_to_array($iterator, $use_keys);
     }
 }
 
@@ -29318,6 +29585,29 @@ if(!function_exists('msession_getThis'))
 }
 
 /**
+ * msession_get_arrayThis
+ *
+ * Lit un tableau de variables msession.
+ *
+ * @link http://php.net/manual/fr/function.msession-get-array.php Documentation pour msession_get_array.
+ *
+ * @version PHP 4 >= 4.2.0
+ * @version PHP 5 <= 5.1.2
+ *
+ * @param string   $session
+ *
+ */
+if(!function_exists('msession_get_arrayThis'))
+{
+    function msession_get_arrayThis($session)
+    {
+		$session = (string)$session;
+
+		return msession_get_array($session);
+    }
+}
+
+/**
  * msession_get_dataThis
  *
  * Lit les données de la session.
@@ -29506,6 +29796,31 @@ if(!function_exists('msession_setThis'))
 		$value = (string)$value;
 
 		return msession_set($session, $name, $value);
+    }
+}
+
+/**
+ * msession_set_arrayThis
+ *
+ * Définit les variables msession depuis un tableau.
+ *
+ * @link http://php.net/manual/fr/function.msession-set-array.php Documentation pour msession_set_array.
+ *
+ * @version PHP 4 >= 4.2.0
+ * @version PHP 5 <= 5.1.2
+ *
+ * @param string   $session
+ * @param array    $tuples
+ *
+ */
+if(!function_exists('msession_set_arrayThis'))
+{
+    function msession_set_arrayThis($session, $tuples)
+    {
+		$session = (string)$session;
+		$tuples = (array)$tuples;
+
+		return msession_set_array($session, $tuples);
     }
 }
 
@@ -30015,6 +30330,33 @@ if(!function_exists('msql_errorThis'))
     function msql_errorThis()
     {
 		return msql_error();
+    }
+}
+
+/**
+ * msql_fetch_arrayThis
+ *
+ * Lit une ligne sous la forme d'un tableau.
+ *
+ * @link http://php.net/manual/fr/function.msql-fetch-array.php Documentation pour msql_fetch_array.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param resource $result    La ressource de résultat qui vient d'être évaluée. Ce résultat vient de l'appel à la fonction msql_query().
+ * @param int      $result_type    Une constante qui peut prendre les valeurs suivantes : MSQL_ASSOC, MSQL_NUM, et MSQL_BOTH où MSQL_BOTH est la valeur par défaut.
+ *
+ * @return array	Retourne un tableau qui correspond à la ligne récupérée, ou FALSE s'il n'y a plus de lignes.
+ *
+ */
+if(!function_exists('msql_fetch_arrayThis'))
+{
+    function msql_fetch_arrayThis($result, $result_type = NULL)
+    {
+		$result = is_resource($result) ? $result : NULL;
+		$result_type = (int)$result_type;
+
+		return msql_fetch_array($result, $result_type);
     }
 }
 
@@ -30903,6 +31245,33 @@ if(!function_exists('mysql_escape_stringThis'))
 		$unescaped_string = (string)$unescaped_string;
 
 		return mysql_escape_string($unescaped_string);
+    }
+}
+
+/**
+ * mysql_fetch_arrayThis
+ *
+ * Retourne une ligne de résultat MySQL sous la forme d'un tableau associatif, d'un tableau indexé, ou les deux.
+ *
+ * @link http://php.net/manual/fr/function.mysql-fetch-array.php Documentation pour mysql_fetch_array.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param resource $result    La ressource de résultat qui vient d'être évaluée. Ce résultat vient de l'appel à la fonction mysql_query().
+ * @param int      $result_type    Le type de tableau à récupérer. C'est une constante qui peut prendre les valeurs suivantes : MYSQL_ASSOC, MYSQL_NUM, et MYSQL_BOTH.
+ *
+ * @return array	Retourne un tableau de chaînes qui correspond à la ligne récupérée ou FALSE s'il n'y a plus de lignes. Le type de tableau retourné dépend de la définition du paramètre result_type. En utilisant MYSQL_BOTH (défaut), vous récupérerez un tableau contenant des indices associatifs et numériques. En utilisant MYSQL_ASSOC, vous ne récupérerez que les indices associatifs (comme le fonctionnement de la fonction mysql_fetch_assoc()), en utilisant MYSQL_NUM, vous ne récupérerez que les indices numériques (comme le fonctionnement de la fonction mysql_fetch_row()).
+ *
+ */
+if(!function_exists('mysql_fetch_arrayThis'))
+{
+    function mysql_fetch_arrayThis($result, $result_type = MYSQL_BOTH)
+    {
+		$result = is_resource($result) ? $result : NULL;
+		$result_type = (int)$result_type;
+
+		return mysql_fetch_array($result, $result_type);
     }
 }
 
@@ -33164,6 +33533,33 @@ if(!function_exists('odbc_executeThis'))
 		$parameters_array = (array)$parameters_array;
 
 		return odbc_execute($result_id, $parameters_array);
+    }
+}
+
+/**
+ * odbc_fetch_arrayThis
+ *
+ * Lit une ligne de résultat dans un tableau associatif.
+ *
+ * @link http://php.net/manual/fr/function.odbc-fetch-array.php Documentation pour odbc_fetch_array.
+ *
+ * @version PHP 4 >= 4.0.2
+ * @version PHP 5
+ *
+ * @param resource $result    La ressource de résultat depuis la fonction odbc_exec().
+ * @param int      $rownumber    Le numéro de ligne doit être lu, optionnel.
+ *
+ * @return array	Retourne un tableau correspondant à la ligne récupérée, ou FALSE s'il n'y a plus de ligne de disponible.
+ *
+ */
+if(!function_exists('odbc_fetch_arrayThis'))
+{
+    function odbc_fetch_arrayThis($result, $rownumber = NULL)
+    {
+		$result = is_resource($result) ? $result : NULL;
+		$rownumber = (int)$rownumber;
+
+		return odbc_fetch_array($result, $rownumber);
     }
 }
 
@@ -37370,6 +37766,35 @@ if(!function_exists('pg_fetch_all_columnsThis'))
 		$column = (int)$column;
 
 		return pg_fetch_all_columns($result, $column);
+    }
+}
+
+/**
+ * pg_fetch_arrayThis
+ *
+ * Lit une ligne de résultat PostgreSQL dans un tableau.
+ *
+ * @link http://php.net/manual/fr/function.pg-fetch-array.php Documentation pour pg_fetch_array.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param resource $result    Ressource de résultat de requête PostgreSQL, retournée par pg_query(), pg_query_params() ou pg_execute() (entre d'autres).
+ * @param int      $row    Numéro de la ligne à récupérer. Les lignes sont numérotées en commençant à 0. Si l'argument est omis ou s'il vaut NULL, la ligne suivante est récupérée.
+ * @param int      $result_type    Paramètre optionnel qui contrôle comment sera indexé le array retourné. pg_fetch_array() est une constante, qui peut prendre les valeurs suivantes : PGSQL_ASSOC, PGSQL_NUM et PGSQL_BOTH. En utilisant PGSQL_NUM, pg_fetch_array() retourne un tableau avec des indices numériques, en utilisant PGSQL_ASSOC retourne uniquement des indices associatifs alors que, PGSQL_BOTH, la valeur par défaut, retourne à la fois des indices numériques et associatifs.
+ *
+ * @return array	Un tableau à indice numérique (commençant à 0), associatif (indexé avec le nom des champs) ou les deux. Chaque valeur dans le tableau est représentée comme une chaîne (string). Les valeurs NULL de la base de données sont retournées NULL.
+ *
+ */
+if(!function_exists('pg_fetch_arrayThis'))
+{
+    function pg_fetch_arrayThis($result, $row = NULL, $result_type = PGSQL_BOTH)
+    {
+		$result = is_resource($result) ? $result : NULL;
+		$row = (int)$row;
+		$result_type = (int)$result_type;
+
+		return pg_fetch_array($result, $row, $result_type);
     }
 }
 
@@ -46200,6 +46625,37 @@ if(!function_exists('sqlsrv_fetchThis'))
 }
 
 /**
+ * sqlsrv_fetch_arrayThis
+ *
+ * Retourne une ligne sous la forme d'un tableau.
+ *
+ * @link http://php.net/manual/fr/function.sqlsrv-fetch-array.php Documentation pour sqlsrv_fetch_array.
+ *
+ * @version No version information available
+ * @version might only be in SVN
+ *
+ * @param resource $stmt    Une ressource de requête retournée par sqlsrv_query ou sqlsrv_execute.
+ * @param int      $fetchType    Une constante prédéfinie spécifiant le type de tableau à retourner. Les valeurs possibles sont SQLSRV_FETCH_ASSOC, SQLSRV_FETCH_NUMERIC, et SQLSRV_FETCH_BOTH (la valeur par défaut). Le type de récupération SQLSRV_FETCH_ASSOC ne doit pas être utilisé lors du traitement d'un jeu de résultats possédant des colonnes dont le nom est identique.
+ * @param int      $row    Spécifie la ligne à traiter dans le jeu de résultats utilisant un curseur scrollable. Les valeurs possibles sont SQLSRV_SCROLL_NEXT, SQLSRV_SCROLL_PRIOR, SQLSRV_SCROLL_FIRST, SQLSRV_SCROLL_LAST, SQLSRV_SCROLL_ABSOLUTE et, SQLSRV_SCROLL_RELATIVE (la valeur par défaut). Lorsque ce paramètre est spécifié, le paramètre fetchType doit également être explicitement défini.
+ * @param int      $offset    Spécifie la ligne à accéder si le paramètre row est défini à SQLSRV_SCROLL_ABSOLUTE ou SQLSRV_SCROLL_RELATIVE. Notez que la première ligne du jeu de résultats a comme index 0.
+ *
+ * @return array	Retourne un tableau en cas de succès, NULL s'il n'y a plus de ligne à retourner, et FALSE si une erreur survient.
+ *
+ */
+if(!function_exists('sqlsrv_fetch_arrayThis'))
+{
+    function sqlsrv_fetch_arrayThis($stmt, $fetchType = NULL, $row = NULL, $offset = NULL)
+    {
+		$stmt = is_resource($stmt) ? $stmt : NULL;
+		$fetchType = (int)$fetchType;
+		$row = (int)$row;
+		$offset = (int)$offset;
+
+		return sqlsrv_fetch_array($stmt, $fetchType, $row, $offset);
+    }
+}
+
+/**
  * sqlsrv_fetch_objectThis
  *
  * Récupère la prochaine ligne de données du jeu de résultats sous la forme d'un objet.
@@ -50912,6 +51368,31 @@ if(!function_exists('sybase_deadlock_retry_countThis'))
 		$retry_count = (int)$retry_count;
 
 		return sybase_deadlock_retry_count($retry_count);
+    }
+}
+
+/**
+ * sybase_fetch_arrayThis
+ *
+ * Retourne une ligne Sybase sous la forme d'un tableau.
+ *
+ * @link http://php.net/manual/fr/function.sybase-fetch-array.php Documentation pour sybase_fetch_array.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param resource $result
+ *
+ * @return array	Retourne un tableau qui contient la ligne demandée, ou FALSE s'il ne reste plus de ligne.
+ *
+ */
+if(!function_exists('sybase_fetch_arrayThis'))
+{
+    function sybase_fetch_arrayThis($result)
+    {
+		$result = is_resource($result) ? $result : NULL;
+
+		return sybase_fetch_array($result);
     }
 }
 
