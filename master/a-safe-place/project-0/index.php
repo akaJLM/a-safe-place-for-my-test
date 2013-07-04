@@ -1,14 +1,14 @@
 <?php header('Content-type: text/html; charset=utf-8');
 
-	$generate = true; // If true generate aliases.php file else include it
+	$generate = true; // If true generate aliases.php file, else include it (php error + include it benchmark)
 
 	$docpath = 'doc'; // Folder doc path name
 	
-	$lang   = 'fr'; // language folder in folder doc path
+	$lang   = 'fr'; // your language folder name (in doc path folder)
 	
 	$for    = 'Documentation pour'; // "Documentation for" in your language
 
-	$functions_excluded = array('__halt_compiler', 'array', 'echo', 'empty', 'eval', 'exit', 'isset', 'list', 'print', 'unset'); // A handle of function to completely ignore.
+	$functions_excluded = array('#^ldap_#', '__halt_compiler', 'array', 'key', 'echo', 'empty', 'eval', 'exit', 'isset', 'list', 'print', 'unset'); // A handle of function to completely ignore // You can use regular expression with delimiters (only # for delimiters)
 
 	$exclude_obsolescence = true; // exclude all obsolete function
 

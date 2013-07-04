@@ -38,7 +38,7 @@ if(!function_exists('FrenchToJDThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param int      $month    Le mois, sous la forme d'un nombre compris entre 1 (pour Janvier) et 12 (pour Décembre)
+ * @param int      $month    Le mois, sous la forme d'un nombre compris entre 1 (pour Janvier) et 2 (pour Décembre)
  * @param int      $day    Le jour, sous la forme d'un nombre compris entre 1 et 31
  * @param int      $year    L'année, sous la forme d'un nombre compris entre -4714 et 9999
  *
@@ -225,7 +225,7 @@ if(!function_exists('JewishToJDThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param int      $month    Le mois, sous la forme d'un nombre entre 1 (pour Janvier) et 12 (pour Décembre)
+ * @param int      $month    Le mois, sous la forme d'un nombre entre 1 (pour Janvier) et 2 (pour Décembre)
  * @param int      $day    Le jour, sous la forme d'un nombre entre 1 et 31
  * @param int      $year    L'année, sous la forme d'un nombre entre -4713 et 9999
  *
@@ -265,6 +265,25 @@ if(!function_exists('__autoloadThis'))
 		$class = (string)$class;
 
 		return __autoload($class);
+    }
+}
+
+/**
+ * __halt_compilerThis
+ *
+ * Stoppe l'exécution du compilateur.
+ *
+ * @link http://php.net/manual/fr/function.halt-compiler.php Documentation pour __halt_compiler.
+ *
+ * @version PHP 5 >= 5.1.0
+ * @return void	Aucune valeur n'est retournée.
+ *
+ */
+if(!function_exists('__halt_compilerThis'))
+{
+    function __halt_compilerThis()
+    {
+		return __halt_compiler();
     }
 }
 
@@ -353,7 +372,7 @@ if(!function_exists('acoshThis'))
  * @version PHP 5
  *
  * @param string   $str    La chaîne à échapper.
- * @param string   $charlist    Une liste de caractères à échapper. Si charlist contient les caractères \n, \r etc., ils seront convertis à la mode du langage C, alors que les autres caractères non-alphanumériques ayant un code ASCII inférieur à 26, et supérieur à 126 sont remplacés par leur représentation octale. Lorsque vous définissez une séquence de caractères dans le paramètre charlist, assurez-vous que vous connaissez bien tous les caractères qui viennent entre vos limites d'intervalles. Attention à l'utilisation des caractères tels que 0, a, b, f, n, r, t et v. Ils seront convertis en \0, \a, \b, \f, \n, \r, \t et \v. En PHP, \0 (NULL), \r (retour chariot), \n (nouvelle ligne), \v (tabulation horizontale) et \t (tabulation) sont prédéfinis comme séquences d'échappement, tandis qu'en C, ce sont toutes les séquences cités ci-dessus qui sont des séquences d'échappement.
+ * @param string   $charlist    Une liste de caractères à échapper. Si charlist contient les caractères \n, \r etc., ils seront convertis à la mode du langage C, alors que les autres caractères non-alphanumériques ayant un code ASCII inférieur à 26, et supérieur à 26 sont remplacés par leur représentation octale. Lorsque vous définissez une séquence de caractères dans le paramètre charlist, assurez-vous que vous connaissez bien tous les caractères qui viennent entre vos limites d'intervalles. Attention à l'utilisation des caractères tels que 0, a, b, f, n, r, t et v. Ils seront convertis en \0, \a, \b, \f, \n, \r, \t et \v. En PHP, \0 (NULL), \r (retour chariot), \n (nouvelle ligne), \v (tabulation horizontale) et \t (tabulation) sont prédéfinis comme séquences d'échappement, tandis qu'en C, ce sont toutes les séquences cités ci-dessus qui sont des séquences d'échappement.
  *
  * @return string	Retourne la chaîne, échappée.
  *
@@ -859,6 +878,30 @@ if(!function_exists('apd_dump_function_tableThis'))
     function apd_dump_function_tableThis()
     {
 		return apd_dump_function_table();
+    }
+}
+
+/**
+ * arrayThis
+ *
+ * Crée un tableau.
+ *
+ * @link http://php.net/manual/fr/function.array.php Documentation pour array.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param mixed     $item    La syntaxe "index => valeur", séparée par des virgules, définit les index et leur valeur. Un index peut être une chaîne ou un nombre. Si l'index est omis, un index numérique sera automatiquement généré (commençant à 0). Si l'index est un entier, le prochain index généré prendra la valeur d'index la plus grande + 1. Notez que si deux index identiques sont définis, le dernier remplacera le premier. Avoir une virgule après avoir défini la dernière entrée, bien qu'inutile, est une syntaxe valide.
+ *
+ * @return array	Retourne un tableau des paramètres. Les paramètres peuvent fournir un index en utilisant l'opérateur =>. Lisez la section sur les types-tableaux pour plus d'informations sur ce qu'est un tableau.
+ *
+ */
+if(!function_exists('arrayThis'))
+{
+    function arrayThis($item1 = NULL)
+    {
+		$item1 = ($item1);
+		return array($item1);
     }
 }
 
@@ -1468,13 +1511,13 @@ if(!function_exists('array_keysThis'))
  */
 if(!function_exists('array_mapThis'))
 {
-    function array_mapThis($callback, $arr1, $arr12 = NULL)
+    function array_mapThis($callback, $arr1, $arr2 = NULL)
     {
 		$callback = is_callable($callback) ? $callback : NULL;
 		$arr1 = (array)$arr1;
-		$arr12 = (array)$arr12;
+		$arr2 = (array)$arr2;
 
-		return array_map($callback, $arr1, $arr12);
+		return array_map($callback, $arr1, $arr2);
     }
 }
 
@@ -1496,12 +1539,12 @@ if(!function_exists('array_mapThis'))
  */
 if(!function_exists('array_mergeThis'))
 {
-    function array_mergeThis($array1, $array12 = NULL)
+    function array_mergeThis($array1, $array2 = NULL)
     {
 		$array1 = (array)$array1;
-		$array12 = (array)$array12;
+		$array2 = (array)$array2;
 
-		return array_merge($array1, $array12);
+		return array_merge($array1, $array2);
     }
 }
 
@@ -1523,12 +1566,12 @@ if(!function_exists('array_mergeThis'))
  */
 if(!function_exists('array_merge_recursiveThis'))
 {
-    function array_merge_recursiveThis($array1, $array12 = NULL)
+    function array_merge_recursiveThis($array1, $array2 = NULL)
     {
 		$array1 = (array)$array1;
-		$array12 = (array)$array12;
+		$array2 = (array)$array2;
 
-		return array_merge_recursive($array1, $array12);
+		return array_merge_recursive($array1, $array2);
     }
 }
 
@@ -1740,13 +1783,13 @@ if(!function_exists('array_reduceThis'))
  */
 if(!function_exists('array_replaceThis'))
 {
-    function array_replaceThis($array, $array1, $array12 = NULL)
+    function array_replaceThis($array, $array1, $array2 = NULL)
     {
 		$array = (array)$array;
 		$array1 = (array)$array1;
-		$array12 = (array)$array12;
+		$array2 = (array)$array2;
 
-		return array_replace($array, $array1, $array12);
+		return array_replace($array, $array1, $array2);
     }
 }
 
@@ -1768,13 +1811,13 @@ if(!function_exists('array_replaceThis'))
  */
 if(!function_exists('array_replace_recursiveThis'))
 {
-    function array_replace_recursiveThis($array, $array1, $array12 = NULL)
+    function array_replace_recursiveThis($array, $array1, $array2 = NULL)
     {
 		$array = (array)$array;
 		$array1 = (array)$array1;
-		$array12 = (array)$array12;
+		$array2 = (array)$array2;
 
-		return array_replace_recursive($array, $array1, $array12);
+		return array_replace_recursive($array, $array1, $array2);
     }
 }
 
@@ -3081,7 +3124,7 @@ if(!function_exists('bzcompressThis'))
  * @version PHP 5
  *
  * @param string   $source    La chaîne à décompresser.
- * @param int      $small    Si ce paramètre vaut TRUE, un autre algorithme de décompression sera utilisé : il consomme moins de mémoire (le maximum demandé tombe autour de 2300 ko), mais fonctionne globalement à la moitié de la vitesse. Reportez-vous à la » documentation bzip2 pour plus de détails sur cette fonctionnalité.
+ * @param int      $small    Si ce paramètre vaut TRUE, un autre algorithme de décompression sera utilisé : il consomme moins de mémoire (le maximum demandé tombe autour de 300 ko), mais fonctionne globalement à la moitié de la vitesse. Reportez-vous à la » documentation bzip2 pour plus de détails sur cette fonctionnalité.
  *
  * @return mixed	La chaîne décompressée ou un numéro d'erreur si une erreur survient.
  *
@@ -3505,7 +3548,7 @@ if(!function_exists('chdirThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param int      $month    Le mois doit être compris entre 1 et 12.
+ * @param int      $month    Le mois doit être compris entre 1 et 2.
  * @param int      $day    Le jour doit être un jour autorisé par le mois donné. Les années bissextiles sont prises en compte.
  * @param int      $year    L'année est comprise entre 1 et 32767 inclus.
  *
@@ -7412,6 +7455,57 @@ if(!function_exists('easter_daysThis'))
 }
 
 /**
+ * echoThis
+ *
+ * Affiche une chaîne de caractères.
+ *
+ * @link http://php.net/manual/fr/function.echo.php Documentation pour echo.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param string   $arg1    Le paramètre à afficher.
+ * @param string   $item
+ *
+ * @return void	Aucune valeur n'est retournée.
+ *
+ */
+if(!function_exists('echoThis'))
+{
+    function echoThis($arg1, $arg2 = NULL)
+    {
+		$arg1 = (string)$arg1;
+		$arg2 = (string)$arg2;
+
+		return echo($arg1, $arg2);
+    }
+}
+
+/**
+ * emptyThis
+ *
+ * Détermine si une variable est vide.
+ *
+ * @link http://php.net/manual/fr/function.empty.php Documentation pour empty.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param mixed     $var    Variable à vérifier. Aucune alerte n'est générée si la variable n'existe pas. Cela signifie que empty() est strictement équivalent à !isset($var) || $var == false.
+ *
+ * @return bool	Retourne FALSE si var existe et est non-vide, et dont la valeur n'est pas zéro.
+ *
+ */
+if(!function_exists('emptyThis'))
+{
+    function emptyThis($var)
+    {
+		$var = ($var);
+		return empty($var);
+    }
+}
+
+/**
  * endThis
  *
  * Positionne le pointeur de tableau en fin de tableau.
@@ -7678,6 +7772,31 @@ if(!function_exists('escapeshellcmdThis'))
 }
 
 /**
+ * evalThis
+ *
+ * Exécute une chaîne comme un script PHP.
+ *
+ * @link http://php.net/manual/fr/function.eval.php Documentation pour eval.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param string   $code    Code PHP valide à évaluer. Le code ne doit pas être entouré de balises PHP ouvrante et fermante, i.e. 'echo "Hi!";' doit être passé au lieu de '<? echo "Hi!"; >'. Il est toujours possible de quitter et de retourner en mode PHP en utilisant les balises PHP appropriées, i.e. 'echo "En mode PHP !"; ?>En mode HTML !<? echo "Retour en mode PHP !";'. Mise à part cela, le code PHP passé doit être valide. Ceci inclut que toutes les instructions doivent se terminer par un point-virgule. 'echo "Hi!"' par exemple résultera en une erreur fatale, alors que 'echo "Hi!";' fonctionnera. Une instruction return terminera immédiatement l'évaluation du code. Le code sera exécuté dans le scope du code appelant la fonction eval(). Aussi, toutes les variables définies ou modifiées dans l'appel à la fonction eval() resteront visibles après la fin de l'exécution de la fonction.
+ *
+ * @return mixed	eval() retourne NULL sauf si return est appelé dans le code évalué, auquel cas la valeur passée à return est retournée. Dans le cas d'une erreur de syntaxe dans le code évalué, eval() retourne FALSE et l'exécution du code suivant continue normalement. Il n'est pas possible d'attraper l'erreur d'analyse de la fonction eval() en utilisant la fonction set_error_handler().
+ *
+ */
+if(!function_exists('evalThis'))
+{
+    function evalThis($code)
+    {
+		$code = (string)$code;
+
+		return eval($code);
+    }
+}
+
+/**
  * execThis
  *
  * Exécute un programme externe.
@@ -7815,6 +7934,31 @@ if(!function_exists('exif_thumbnailThis'))
 		$imagetype = (int)$imagetype;
 
 		return exif_thumbnail($filename, $width, $height, $imagetype);
+    }
+}
+
+/**
+ * exitThis
+ *
+ * Affiche un message et termine le script courant.
+ *
+ * @link http://php.net/manual/fr/function.exit.php Documentation pour exit.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param string   $status    Si status est une chaîne de caractères, cette fonction affichera le status juste avant de sortir. Si le paramètre status est un entier, cette valeur pourra être utilisée comme statut de sortie et ne sera pas affichée. Le statut de sortie peut être dans l'intervalle 0-255, le statut de sortie 255 est réservé par PHP et ne doit pas être utilisé. Le statut 0 est utilisé pour terminer le programme avec succès.
+ *
+ * @return void	Aucune valeur n'est retournée.
+ *
+ */
+if(!function_exists('exitThis'))
+{
+    function exitThis($status = NULL)
+    {
+		$status = (string)$status;
+
+		return exit($status);
     }
 }
 
@@ -13684,7 +13828,7 @@ if(!function_exists('get_headersThis'))
  * @version PHP 5
  *
  * @param int      $table    La table à retourner. Soit HTML_ENTITIES, soit HTML_SPECIALCHARS.
- * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui spécifient quel guillemet la table contiendra, tout comme le type de document prévu pour la table. La valeur par défaut est ENT_COMPAT | ENT_HTML401.
+ * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui spécifient quel guillemet la table contiendra, tout comme le type de document prévu pour la table. La valeur par défaut est ENT_COMPAT | ENT_HTML41.
  * @param string   $encoding    Encodage à utiliser. Si omis, la valeur par défaut de cet argument sera ISO-8859-1 pour les versions antérieures à la version 5.4.0 de PHP, et UTF-8 pour les versions suivantes à 5.4.0. Les jeux de caractères suivants sont supportés :
  *
  * @return array	Retourne la table de traduction, sous la forme d'un tableau, avec comme clés, les caractères orignaux, et comme valeurs, les entités correspondantes.
@@ -13695,7 +13839,7 @@ if(!function_exists('get_html_translation_tableThis'))
     function get_html_translation_tableThis($table = HTML_SPECIALCHARS, $flags = NULL, $encoding = 'UTF-8')
     {
 		$table = (int)$table;
-		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML401 : (int)$flags;
+		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML41 : (int)$flags;
 		$encoding = (string)$encoding;
 
 		return get_html_translation_table($table, $flags, $encoding);
@@ -14588,10 +14732,10 @@ if(!function_exists('gmdateThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param int      $hour    Le nombre d'heures depuis le début de la journée fixée par les paramètres month, day et year. Les valeurs négatives font référence aux heures avant minuit du jour en question. Les valeurs supérieures à 23 font référence aux heures associées pour le(s) jour(s) suivant(s).
+ * @param int      $hour    Le nombre d'heures depuis le début de la journée fixée par les paramètres month, day et year. Les valeurs négatives font référence aux heures avant minuit du jour en question. Les valeurs supérieures à 3 font référence aux heures associées pour le(s) jour(s) suivant(s).
  * @param int      $minute    Le nombre de minutes depuis le début de l'heure hour. Les valeurs négatives font référence aux minutes de l'heure précédente. Les valeurs supérieures à 59 font référence aux minutes associées pour l'(les) heure(s) suivante(s).
  * @param int      $second    Le nombre de secondes depuis le début de la minute minute. Les valeurs négatives font référence aux secondes de la minute précédente. Les valeurs supérieures à 59 font références aux secondes associées à la(les) minute(s) suivante(s).
- * @param int      $month    Le nombre de mois depuis la fin de l'année précédente. Les valeurs comprises entre 1 et 12 font référence aux mois du calendrier normal de l'année en question. Les valeurs inférieures à 1 (y compris les valeurs négatives) font référence aux mois de l'année précédente dans l'ordre inverse, aussi, 0 correspond à décembre, -1 à novembre, etc. Les valeurs supérieures à 12 font référence au mois correspondant dans l'(les) année(s) suivante(s).
+ * @param int      $month    Le nombre de mois depuis la fin de l'année précédente. Les valeurs comprises entre 1 et 2 font référence aux mois du calendrier normal de l'année en question. Les valeurs inférieures à 1 (y compris les valeurs négatives) font référence aux mois de l'année précédente dans l'ordre inverse, aussi, 0 correspond à décembre, -1 à novembre, etc. Les valeurs supérieures à 2 font référence au mois correspondant dans l'(les) année(s) suivante(s).
  * @param int      $day    Le nombre de jours depuis la fin du mois précédent. Les valeurs comprises entre 1 et 28, 29, 30, 31 (suivant le mois) font référence aux jours normaux dans le mois courant. Les valeurs inférieures à 1 (y compris les valeurs négatives) font référence aux jours du mois précédent, aussi, 0 correspond au dernier jour du mois précédent, -1, le jour d'avant, etc. Les valeurs supérieures au nombre de jours du mois courant font référence aux jours correspondants du(des) mois suivant(s).
  * @param int      $year    L'année
  * @param int      $is_dst    Les paramètres représentent toujours une date GMT donc, le paramètre is_dst n'influence pas le résultat.
@@ -16287,7 +16431,7 @@ if(!function_exists('hash_pbkdf2This'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param string   $string    L'en-tête. Il y a deux en-têtes spéciaux. Le premier commence par la chaîne "HTTP/" (insensible à la casse), qui est utilisée pour signifier le statut HTTP à envoyer. Par exemple, si vous avez configuré Apache pour utiliser les scripts PHP pour gérer les requêtes vers des fichiers inexistants (en utilisant la directive ErrorDocument), vous voulez-vous assurer que le script génère un code statut correct. Le deuxième type d'appel spécial est "Location:". Non seulement il renvoie un en-tête au client, mais, en plus, il envoie un statut REDIRECT (302) au navigateur tant qu'un code statut 201 ou 3xx n'a pas été envoyé.
+ * @param string   $string    L'en-tête. Il y a deux en-têtes spéciaux. Le premier commence par la chaîne "HTTP/" (insensible à la casse), qui est utilisée pour signifier le statut HTTP à envoyer. Par exemple, si vous avez configuré Apache pour utiliser les scripts PHP pour gérer les requêtes vers des fichiers inexistants (en utilisant la directive ErrorDocument), vous voulez-vous assurer que le script génère un code statut correct. Le deuxième type d'appel spécial est "Location:". Non seulement il renvoie un en-tête au client, mais, en plus, il envoie un statut REDIRECT (302) au navigateur tant qu'un code statut 21 ou 3xx n'a pas été envoyé.
  * @param bool     $replace    Le paramètre optionnel replace indique si la fonction header() doit remplacer un en-tête précédemment émis, ou bien ajouter un autre en-tête du même type. Par défaut, un nouvel en-tête va écraser le précédent, mais si vous passez FALSE dans cet argument, vous pouvez forcer les en-têtes multiples pour un même type d'en-tête. Par exemple :
  * @param int      $http_response_code    Force le code réponse HTTP à la valeur spécifiée.
  *
@@ -16569,7 +16713,7 @@ if(!function_exists('highlight_stringThis'))
  * @version PHP 5
  *
  * @param string   $string    La chaîne d'entrée.
- * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui spécifient la façon dont doivent être gérés les guillemets et quel type de document doit être utilisé. Par défaut, ce sera ENT_COMPAT | ENT_HTML401.
+ * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui spécifient la façon dont doivent être gérés les guillemets et quel type de document doit être utilisé. Par défaut, ce sera ENT_COMPAT | ENT_HTML41.
  * @param string   $encoding    Encodage à utiliser. Si omis, la valeur par défaut de cet argument sera ISO-8859-1 dans les version antérieures à la version 5.4.0 de PHP, et UTF-8 pour les versions à partir de 5.4.0 de PHP. Les jeux de caractères suivants sont supportés :
  *
  * @return string	Retourne la chaîne décodée.
@@ -16580,7 +16724,7 @@ if(!function_exists('html_entity_decodeThis'))
     function html_entity_decodeThis($string, $flags = NULL, $encoding = 'UTF-8')
     {
 		$string = (string)$string;
-		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML401 : (int)$flags;
+		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML41 : (int)$flags;
 		$encoding = (string)$encoding;
 
 		return html_entity_decode($string, $flags, $encoding);
@@ -16598,7 +16742,7 @@ if(!function_exists('html_entity_decodeThis'))
  * @version PHP 5
  *
  * @param string   $string    La chaîne d'entrée.
- * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui déterminent la façon dont les guillemets seront gérés, dont les séquences de code invalide seront gérées ainsi que le type du document utilisé. Par défaut, ce sera ENT_COMPAT | ENT_HTML401.
+ * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui déterminent la façon dont les guillemets seront gérés, dont les séquences de code invalide seront gérées ainsi que le type du document utilisé. Par défaut, ce sera ENT_COMPAT | ENT_HTML41.
  * @param string   $encoding    Comme htmlspecialchars(), htmlentities() prend un troisième argument optionnel encoding qui définit l'encodage utilisé durant la conversion. Si omis, la valeur par défaut de cet argument est ISO-8859-1 pour les versions antérieures à la version 5.4.0 de PHP, et UTF-8 à partir de la version 5.4.0. Malgré le fait que cet argument soit techniquement optionnel, vous êtes vivement encouragé à spécifier une valeur correcte pour votre code. Les jeux de caractères suivants sont supportés :
  * @param bool     $double_encode    Lorsque double_encode est désactivé, PHP n'encodera pas les entités html existantes. Par défaut, tout est converti.
  *
@@ -16610,7 +16754,7 @@ if(!function_exists('htmlentitiesThis'))
     function htmlentitiesThis($string, $flags = NULL, $encoding = 'UTF-8', $double_encode = true)
     {
 		$string = (string)$string;
-		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML401 : (int)$flags;
+		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML41 : (int)$flags;
 		$encoding = (string)$encoding;
 		$double_encode = (bool)$double_encode;
 
@@ -16629,8 +16773,8 @@ if(!function_exists('htmlentitiesThis'))
  * @version PHP 5
  *
  * @param string   $string    La chaîne à convertir.
- * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui déterminent la façon dont les guillemets seront gérés, dont les séquences de code invalide seront gérées ainsi que le type du document utilisé. Par défaut, ce sera ENT_COMPAT | ENT_HTML401.
- * @param string   $encoding    Encodage à utiliser lors de la conversion. Si omis, la valeur par défaut de cet argument sera ISO-8859-1 dans les versions antérieures à PHP 5.4.0, et UTF-8 à partir de la version PHP 5.4.0. Pour cette fonction, les encodages ISO-8859-1, ISO-8859-15, UTF-8, cp866, cp1251, cp1252, et KOI8-R sont équivalents, à condition que le paramètre string soit valable pour l'encodage, dans le sens où les caractères affectés par la fonction htmlspecialchars() occupent la même position dans tous ces encodages. Les jeux de caractères suivants sont supportés :
+ * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui déterminent la façon dont les guillemets seront gérés, dont les séquences de code invalide seront gérées ainsi que le type du document utilisé. Par défaut, ce sera ENT_COMPAT | ENT_HTML41.
+ * @param string   $encoding    Encodage à utiliser lors de la conversion. Si omis, la valeur par défaut de cet argument sera ISO-8859-1 dans les versions antérieures à PHP 5.4.0, et UTF-8 à partir de la version PHP 5.4.0. Pour cette fonction, les encodages ISO-8859-1, ISO-8859-15, UTF-8, cp866, cp251, cp252, et KOI8-R sont équivalents, à condition que le paramètre string soit valable pour l'encodage, dans le sens où les caractères affectés par la fonction htmlspecialchars() occupent la même position dans tous ces encodages. Les jeux de caractères suivants sont supportés :
  * @param bool     $double_encode    Lorsque le paramètre double_encode est désactivé, PHP n'encodera pas les entités html existants ; par défaut, tout est converti.
  *
  * @return string	La chaîne convertie.
@@ -16641,7 +16785,7 @@ if(!function_exists('htmlspecialcharsThis'))
     function htmlspecialcharsThis($string, $flags = NULL, $encoding = 'UTF-8', $double_encode = true)
     {
 		$string = (string)$string;
-		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML401 : (int)$flags;
+		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML41 : (int)$flags;
 		$encoding = (string)$encoding;
 		$double_encode = (bool)$double_encode;
 
@@ -16659,7 +16803,7 @@ if(!function_exists('htmlspecialcharsThis'))
  * @version PHP 5 >= 5.1.0
  *
  * @param string   $string    La chaîne de caractères à décoder
- * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui spécifient la façon dont doit être géré les guillemets et quel type de document à utiliser. Par défaut, ce sera ENT_COMPAT | ENT_HTML401.
+ * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui spécifient la façon dont doit être géré les guillemets et quel type de document à utiliser. Par défaut, ce sera ENT_COMPAT | ENT_HTML41.
  *
  * @return string	Retourne la chaîne de caractères décodée.
  *
@@ -16669,7 +16813,7 @@ if(!function_exists('htmlspecialchars_decodeThis'))
     function htmlspecialchars_decodeThis($string, $flags = NULL)
     {
 		$string = (string)$string;
-		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML401 : (int)$flags;
+		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML41 : (int)$flags;
 
 		return htmlspecialchars_decode($string, $flags);
     }
@@ -19625,14 +19769,14 @@ if(!function_exists('ibase_service_detachThis'))
  */
 if(!function_exists('ibase_set_event_handlerThis'))
 {
-    function ibase_set_event_handlerThis($event_handler, $event_name1, $event_name2 = NULL, $event_name23 = NULL)
+    function ibase_set_event_handlerThis($event_handler, $event_name1, $event_name2 = NULL, $event_name3 = NULL)
     {
 		$event_handler = is_callable($event_handler) ? $event_handler : NULL;
 		$event_name1 = (string)$event_name1;
 		$event_name2 = (string)$event_name2;
-		$event_name23 = (string)$event_name23;
+		$event_name3 = (string)$event_name3;
 
-		return ibase_set_event_handler($event_handler, $event_name1, $event_name2, $event_name23);
+		return ibase_set_event_handler($event_handler, $event_name1, $event_name2, $event_name3);
     }
 }
 
@@ -19680,13 +19824,13 @@ if(!function_exists('ibase_transThis'))
  */
 if(!function_exists('ibase_wait_eventThis'))
 {
-    function ibase_wait_eventThis($event_name1, $event_name2 = NULL, $event_name23 = NULL)
+    function ibase_wait_eventThis($event_name1, $event_name2 = NULL, $event_name3 = NULL)
     {
 		$event_name1 = (string)$event_name1;
 		$event_name2 = (string)$event_name2;
-		$event_name23 = (string)$event_name23;
+		$event_name3 = (string)$event_name3;
 
-		return ibase_wait_event($event_name1, $event_name2, $event_name23);
+		return ibase_wait_event($event_name1, $event_name2, $event_name3);
     }
 }
 
@@ -21376,7 +21520,7 @@ if(!function_exists('imagecolorallocateThis'))
  * @param int      $red    Valeur du composant rouge.
  * @param int      $green    Valeur du composant vert.
  * @param int      $blue    Valeur du composant bleu.
- * @param int      $alpha    Une valeur entre 0 et 127. 0 indique une opacité complète tandis que 127 indique une transparence complète.
+ * @param int      $alpha    Une valeur entre 0 et 27. 0 indique une opacité complète tandis que 27 indique une transparence complète.
  *
  * @return int	Un identifiant de couleur ou FALSE si l'allocation échoue.
  *
@@ -21469,7 +21613,7 @@ if(!function_exists('imagecolorclosestThis'))
  * @param int      $red    Valeur du composant rouge.
  * @param int      $green    Valeur du composant vert.
  * @param int      $blue    Valeur du composant bleu.
- * @param int      $alpha    Une valeur comprise entre 0 et 127. 0 indique une opacité complète tandis que 127 indique une transparence complète.
+ * @param int      $alpha    Une valeur comprise entre 0 et 27. 0 indique une opacité complète tandis que 27 indique une transparence complète.
  *
  * @return int	Retourne l'index de la couleur la plus proche dans la palette.
  *
@@ -21591,7 +21735,7 @@ if(!function_exists('imagecolorexactThis'))
  * @param int      $red    Valeur du composant rouge.
  * @param int      $green    Valeur du composant vert.
  * @param int      $blue    Valeur du composant bleu.
- * @param int      $alpha    Une valeur comprise entre 0 et 127. 0 indique une opacité complète tandis que 127 indique une transparence complète.
+ * @param int      $alpha    Une valeur comprise entre 0 et 27. 0 indique une opacité complète tandis que 27 indique une transparence complète.
  *
  * @return int	Retourne l'index de la couleur fournie et son canal alpha dans la palette de l'image, ou -1 si la couleur n'existe pas dans la palette de l'image.
  *
@@ -21682,7 +21826,7 @@ if(!function_exists('imagecolorresolveThis'))
  * @param int      $red    Valeur du composant rouge.
  * @param int      $green    Valeur du composant vert.
  * @param int      $blue    Valeur du composant bleu.
- * @param int      $alpha    Une valeur comprise entre 0 et 127. 0 indique une opacité complète tandis que 127 indique une transparence complète.
+ * @param int      $alpha    Une valeur comprise entre 0 et 27. 0 indique une opacité complète tandis que 27 indique une transparence complète.
  *
  * @return int	Retourne un index de couleur.
  *
@@ -24060,7 +24204,7 @@ if(!function_exists('imagettfbboxThis'))
  * @param int      $y    L'ordonnée Y. Cela définit la position de la ligne de base de la police, et non pas le bas des caractères.
  * @param int      $color    L'index de la couleur. Utiliser un index de couleur négatif désactivera l'antialiasing. Voir la fonction imagecolorallocate().
  * @param string   $fontfile    Le chemin vers la police TrueType que vous souhaitez utiliser. Dépendant de la version de la bibliothèque GD utilisée par PHP, lorsque fontfile ne commence pas par un caractère / alors .ttf sera ajouté au nom du fichier et la bibliothèque recherchera ce nom de fichier dans les dossiers de police, définis par la bibliothèque. Lorsque vous utilisez une version de la bibliothèque GD inférieure à 2.0.18, un caractère espace, plutôt qu'un point-virgule, est utilisé pour définir des chemins alternatifs pour les fichiers de police. Si vous utilisez involontairement cette fonctionnalité, vous aurez ce message d'erreur : Warning: Could not find/open font. Pour ces versions affectées, la seule solution est de déplacée la police à un endroit qui ne contient pas d'espaces dans les noms de dossier. Dans le cas fréquent où une police réside dans le même dossier que le script l'utilisant, l'astuce suivante vous épargnera tous les problèmes.
- * @param string   $text    La chaîne de texte, en UTF-8. Peut inclure des références à des caractères numériques, décimales (sous la forme : &#8364; ) pour accéder aux caractères d'une police au delà du premier 127. Les chaînes de caractères encodées en UTF-8 peuvent être passées directement. Les entités nommées, comme &copy;, ne sont pas supportées. Utilisez la fonction html_entity_decode() pour encoder ces entités nommées en chaîne UTF-8. Si un caractère est utilisé dans une chaîne qui n'est pas supportée par la police, un rectangle creux remplacera le caractère.
+ * @param string   $text    La chaîne de texte, en UTF-8. Peut inclure des références à des caractères numériques, décimales (sous la forme : &#8364; ) pour accéder aux caractères d'une police au delà du premier 27. Les chaînes de caractères encodées en UTF-8 peuvent être passées directement. Les entités nommées, comme &copy;, ne sont pas supportées. Utilisez la fonction html_entity_decode() pour encoder ces entités nommées en chaîne UTF-8. Si un caractère est utilisé dans une chaîne qui n'est pas supportée par la police, un rectangle creux remplacera le caractère.
  *
  * @return array	Retourne un tableau de 8 éléments représentant quatre points marquants les limites du texte. L'ordre des points est : inférieur gauche, inférieur droit, supérieur droit, supérieur gauche. Les points sont relatifs au texte par rapport à l'angle, donc, "supérieur gauche" signifie dans le coin en haut à gauche lorsque vous regardez le texte horizontalement. Retourne FALSE si une erreur survient.
  *
@@ -26091,7 +26235,7 @@ if(!function_exists('in_arrayThis'))
  *
  * @version PHP 5 >= 5.1.0
  *
- * @param string   $in_addr    Une adresse 32 bit IPv4, ou 128 bit IPv6.
+ * @param string   $in_addr    Une adresse 32 bit IPv4, ou 28 bit IPv6.
  *
  * @return string	Retourne une représentation de l'adresse, sous la forme d'une chaîne de caractères ou FALSE si une erreur survient.
  *
@@ -26998,6 +27142,32 @@ if(!function_exists('is_writableThis'))
 }
 
 /**
+ * issetThis
+ *
+ * Détermine si une variable est définie et est différente de NULL.
+ *
+ * @link http://php.net/manual/fr/function.isset.php Documentation pour isset.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param mixed     $var    La variable à analyser.
+ * @param mixed     $item    Une autre variable...
+ *
+ * @return bool	Retourne TRUE si var existe et a une valeur autre que NULL, FALSE sinon.
+ *
+ */
+if(!function_exists('issetThis'))
+{
+    function issetThis($var, $var1 = NULL)
+    {
+		$var = ($var);
+		$var1 = ($var1);
+		return isset($var, $var1);
+    }
+}
+
+/**
  * iterator_applyThis
  *
  * Appelle une fonction pour tous les éléments d'un itérateur.
@@ -27412,1253 +27582,6 @@ if(!function_exists('lchownThis'))
 }
 
 /**
- * ldap_8859_to_t61This
- *
- * Convertit les caractères 8859 en caractères t61.
- *
- * @link http://php.net/manual/fr/function.ldap-8859-to-t61.php Documentation pour ldap_8859_to_t61.
- *
- * @version PHP 4 >= 4.0.2
- * @version PHP 5
- *
- * @param string   $value    Le texte à convertir.
- *
- * @return string	Retourne la conversion en t61 du texte value.
- *
- */
-if(!function_exists('ldap_8859_to_t61This'))
-{
-    function ldap_8859_to_t61This($value)
-    {
-		$value = (string)$value;
-
-		return ldap_8859_to_t61($value);
-    }
-}
-
-/**
- * ldap_addThis
- *
- * Ajoute une entrée dans un dossier LDAP.
- *
- * @link http://php.net/manual/fr/function.ldap-add.php Documentation pour ldap_add.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param string   $dn    Le nom DN de l'entrée LDAP.
- * @param array    $entry    Un tableau avec les informations sur la nouvelle entrée. Ces valeurs sont indexées individuellement. En cas de valeurs multiples pour un attribut, elles sont indexées numériquement, à partir de 0.
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_addThis'))
-{
-    function ldap_addThis($link_identifier, $dn, $entry)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$dn = (string)$dn;
-		$entry = (array)$entry;
-
-		return ldap_add($link_identifier, $dn, $entry);
-    }
-}
-
-/**
- * ldap_bindThis
- *
- * Authentification au serveur LDAP.
- *
- * @link http://php.net/manual/fr/function.ldap-bind.php Documentation pour ldap_bind.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param string   $bind_rdn
- * @param string   $bind_password
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_bindThis'))
-{
-    function ldap_bindThis($link_identifier, $bind_rdn = NULL, $bind_password = NULL)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$bind_rdn = (string)$bind_rdn;
-		$bind_password = (string)$bind_password;
-
-		return ldap_bind($link_identifier, $bind_rdn, $bind_password);
-    }
-}
-
-/**
- * ldap_compareThis
- *
- * Compare une entrée avec des valeurs d'attributs.
- *
- * @link http://php.net/manual/fr/function.ldap-compare.php Documentation pour ldap_compare.
- *
- * @version PHP 4 >= 4.0.2
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param string   $dn    Le DN de l'entrée LDAP.
- * @param string   $attribute    Le nom de l'attribut.
- * @param string   $value    La valeur comparée.
- *
- * @return mixed	Retourne TRUE si la valeur value correspond, sinon, retourne FALSE. Retourne -1 si une erreur survient.
- *
- */
-if(!function_exists('ldap_compareThis'))
-{
-    function ldap_compareThis($link_identifier, $dn, $attribute, $value)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$dn = (string)$dn;
-		$attribute = (string)$attribute;
-		$value = (string)$value;
-
-		return ldap_compare($link_identifier, $dn, $attribute, $value);
-    }
-}
-
-/**
- * ldap_connectThis
- *
- * Connexion à un serveur LDAP.
- *
- * @link http://php.net/manual/fr/function.ldap-connect.php Documentation pour ldap_connect.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param string   $hostname    Si vous utilisez OpenLDAP 2.x.x, vous pouvez spécifier une URL au lieu d'un nom d'hôte. Pour utiliser LDAP avec SSL, compilez OpenLDAP 2.x.x avec le support SSL, configurez PHP avec SSL, et utilisez ldaps://hostname/ comme nom d'hôte.
- * @param int      $port    Le port utilisé pour la connexion. Inutile lors de l'utilisation d'URL.
- *
- * @return resource	Retourne un identifiant positif de serveur LDAP en cas de succès, ou bien FALSE en cas d'erreur. Lorsque OpenLDAP 2.x.x est utilisé, ldap_connect() retournera toujours une ressource car il ne se connectera pas mais initialisera uniquement les paramètres de connexion. Actuellement, la connexion intervient avec le prochain appel aux fonctions ldap_*, habituellement avec la fonction ldap_bind().
- *
- */
-if(!function_exists('ldap_connectThis'))
-{
-    function ldap_connectThis($hostname = NULL, $port = 389)
-    {
-		$hostname = (string)$hostname;
-		$port = (int)$port;
-
-		return ldap_connect($hostname, $port);
-    }
-}
-
-/**
- * ldap_control_paged_resultThis
- *
- * Envoi un contrôle de pagination LDAP.
- *
- * @link http://php.net/manual/fr/function.ldap-control-paged-result.php Documentation pour ldap_control_paged_result.
- *
- * @version PHP 5 >= 5.4.0
- *
- * @param resource $link    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param int      $pagesize    Le nombre d'entrées par page.
- * @param bool     $iscritical    Indique si la pagination est critique ou non. Si vaut TRUE, et si le serveur ne supporte pas la pagination, la recherche ne retournera aucun résultat.
- * @param string   $cookie    Une structure opaque envoyée par le serveur ( ldap_control_paged_result_response()).
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_control_paged_resultThis'))
-{
-    function ldap_control_paged_resultThis($link, $pagesize, $iscritical = false, $cookie = "")
-    {
-		$link = is_resource($link) ? $link : NULL;
-		$pagesize = (int)$pagesize;
-		$iscritical = (bool)$iscritical;
-		$cookie = (string)$cookie;
-
-		return ldap_control_paged_result($link, $pagesize, $iscritical, $cookie);
-    }
-}
-
-/**
- * ldap_control_paged_result_responseThis
- *
- * Récupère le cookie de pagination LDAP.
- *
- * @link http://php.net/manual/fr/function.ldap-control-paged-result-response.php Documentation pour ldap_control_paged_result_response.
- *
- * @version PHP 5 >= 5.4.0
- *
- * @param resource $link    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param resource $result
- * @param string   &$cookie    Une structure opaque envoyée par le serveur.
- * @param int      &$estimated    Le nombre estimé d'entrées à récupérer.
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_control_paged_result_responseThis'))
-{
-    function ldap_control_paged_result_responseThis($link, $result, &$cookie = NULL, &$estimated = NULL)
-    {
-		$link = is_resource($link) ? $link : NULL;
-		$result = is_resource($result) ? $result : NULL;
-		$cookie = (string)$cookie;
-		$estimated = (int)$estimated;
-
-		return ldap_control_paged_result_response($link, $result, $cookie, $estimated);
-    }
-}
-
-/**
- * ldap_count_entriesThis
- *
- * Compte le nombre d'entrées après une recherche.
- *
- * @link http://php.net/manual/fr/function.ldap-count-entries.php Documentation pour ldap_count_entries.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param resource $result_identifier    Le résultat interne LDAP.
- *
- * @return int	Retourne le nombre d'entrées dans le résultat, ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_count_entriesThis'))
-{
-    function ldap_count_entriesThis($link_identifier, $result_identifier)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$result_identifier = is_resource($result_identifier) ? $result_identifier : NULL;
-
-		return ldap_count_entries($link_identifier, $result_identifier);
-    }
-}
-
-/**
- * ldap_deleteThis
- *
- * Efface une entrée dans un dossier.
- *
- * @link http://php.net/manual/fr/function.ldap-delete.php Documentation pour ldap_delete.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param string   $dn    Le nom DN de l'entrée LDAP.
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_deleteThis'))
-{
-    function ldap_deleteThis($link_identifier, $dn)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$dn = (string)$dn;
-
-		return ldap_delete($link_identifier, $dn);
-    }
-}
-
-/**
- * ldap_dn2ufnThis
- *
- * Convertit un DN en format UFN (User Friendly Naming).
- *
- * @link http://php.net/manual/fr/function.ldap-dn2ufn.php Documentation pour ldap_dn2ufn.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param string   $dn    Le DN de l'entrée LDAP.
- *
- * @return string	Retourne l'UFN.
- *
- */
-if(!function_exists('ldap_dn2ufnThis'))
-{
-    function ldap_dn2ufnThis($dn)
-    {
-		$dn = (string)$dn;
-
-		return ldap_dn2ufn($dn);
-    }
-}
-
-/**
- * ldap_err2strThis
- *
- * Convertit un numéro d'erreur LDAP en message d'erreur.
- *
- * @link http://php.net/manual/fr/function.ldap-err2str.php Documentation pour ldap_err2str.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param int      $errno    Le numéro de l'erreur.
- *
- * @return string	Retourne le message d'erreur, sous la forme d'une chaîne de caractères.
- *
- */
-if(!function_exists('ldap_err2strThis'))
-{
-    function ldap_err2strThis($errno)
-    {
-		$errno = (int)$errno;
-
-		return ldap_err2str($errno);
-    }
-}
-
-/**
- * ldap_errnoThis
- *
- * Retourne le numéro d'erreur LDAP de la dernière commande exécutée.
- *
- * @link http://php.net/manual/fr/function.ldap-errno.php Documentation pour ldap_errno.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- *
- * @return int	Retourne le numéro d'erreur LDAP généré par la dernière commande.
- *
- */
-if(!function_exists('ldap_errnoThis'))
-{
-    function ldap_errnoThis($link_identifier)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-
-		return ldap_errno($link_identifier);
-    }
-}
-
-/**
- * ldap_errorThis
- *
- * Retourne le message LDAP de la dernière commande LDAP.
- *
- * @link http://php.net/manual/fr/function.ldap-error.php Documentation pour ldap_error.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- *
- * @return string	Retourne un message d'erreur LDAP.
- *
- */
-if(!function_exists('ldap_errorThis'))
-{
-    function ldap_errorThis($link_identifier)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-
-		return ldap_error($link_identifier);
-    }
-}
-
-/**
- * ldap_explode_dnThis
- *
- * Sépare les différents composants d'un DN.
- *
- * @link http://php.net/manual/fr/function.ldap-explode-dn.php Documentation pour ldap_explode_dn.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param string   $dn    Le nom DN de l'entrée LDAP.
- * @param int      $with_attrib    Sert à préciser si les RDN sont retournés seuls, ou bien avec leurs attributs. Pour obtenir les attributs en même temps que les RDN (au format attribut=valeur), donnez à with_attrib la valeur de 0 et, sinon, donnez lui la valeur de 1.
- *
- * @return array	Retourne un tableau de tous les composants DN. Le premier élément du tableau a une clé count et représente le nombre de valeurs retournées ; les autres éléments sont les composants DN indexés numériquement.
- *
- */
-if(!function_exists('ldap_explode_dnThis'))
-{
-    function ldap_explode_dnThis($dn, $with_attrib)
-    {
-		$dn = (string)$dn;
-		$with_attrib = (int)$with_attrib;
-
-		return ldap_explode_dn($dn, $with_attrib);
-    }
-}
-
-/**
- * ldap_first_attributeThis
- *
- * Retourne le premier attribut.
- *
- * @link http://php.net/manual/fr/function.ldap-first-attribute.php Documentation pour ldap_first_attribute.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param resource $result_entry_identifier
- *
- * @return string	Retourne le premier attribut de l'entrée en cas de succès, et FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_first_attributeThis'))
-{
-    function ldap_first_attributeThis($link_identifier, $result_entry_identifier)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$result_entry_identifier = is_resource($result_entry_identifier) ? $result_entry_identifier : NULL;
-
-		return ldap_first_attribute($link_identifier, $result_entry_identifier);
-    }
-}
-
-/**
- * ldap_first_entryThis
- *
- * Retourne la première entrée.
- *
- * @link http://php.net/manual/fr/function.ldap-first-entry.php Documentation pour ldap_first_entry.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param resource $result_identifier
- *
- * @return resource	Retourne la première entrée en cas de succès, FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_first_entryThis'))
-{
-    function ldap_first_entryThis($link_identifier, $result_identifier)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$result_identifier = is_resource($result_identifier) ? $result_identifier : NULL;
-
-		return ldap_first_entry($link_identifier, $result_identifier);
-    }
-}
-
-/**
- * ldap_first_referenceThis
- *
- * Retourne la première référence.
- *
- * @link http://php.net/manual/fr/function.ldap-first-reference.php Documentation pour ldap_first_reference.
- *
- * @version PHP 4 >= 4.0.5
- * @version PHP 5
- *
- * @param resource $link
- * @param resource $result
- *
- */
-if(!function_exists('ldap_first_referenceThis'))
-{
-    function ldap_first_referenceThis($link, $result)
-    {
-		$link = is_resource($link) ? $link : NULL;
-		$result = is_resource($result) ? $result : NULL;
-
-		return ldap_first_reference($link, $result);
-    }
-}
-
-/**
- * ldap_free_resultThis
- *
- * Libère la mémoire du résultat.
- *
- * @link http://php.net/manual/fr/function.ldap-free-result.php Documentation pour ldap_free_result.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $result_identifier
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_free_resultThis'))
-{
-    function ldap_free_resultThis($result_identifier)
-    {
-		$result_identifier = is_resource($result_identifier) ? $result_identifier : NULL;
-
-		return ldap_free_result($result_identifier);
-    }
-}
-
-/**
- * ldap_get_attributesThis
- *
- * Lit les attributs d'une entrée.
- *
- * @link http://php.net/manual/fr/function.ldap-get-attributes.php Documentation pour ldap_get_attributes.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param resource $result_entry_identifier
- *
- * @return array	Retourne le détail des informations d'une entrée sous la forme d'un tableau multidimensionnel ou FALSE en cas d'erreur.
- *
- */
-if(!function_exists('ldap_get_attributesThis'))
-{
-    function ldap_get_attributesThis($link_identifier, $result_entry_identifier)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$result_entry_identifier = is_resource($result_entry_identifier) ? $result_entry_identifier : NULL;
-
-		return ldap_get_attributes($link_identifier, $result_entry_identifier);
-    }
-}
-
-/**
- * ldap_get_dnThis
- *
- * Lit le DN d'une entrée.
- *
- * @link http://php.net/manual/fr/function.ldap-get-dn.php Documentation pour ldap_get_dn.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param resource $result_entry_identifier
- *
- * @return string	Retourne le DN de l'entrée du résultat, ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_get_dnThis'))
-{
-    function ldap_get_dnThis($link_identifier, $result_entry_identifier)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$result_entry_identifier = is_resource($result_entry_identifier) ? $result_entry_identifier : NULL;
-
-		return ldap_get_dn($link_identifier, $result_entry_identifier);
-    }
-}
-
-/**
- * ldap_get_entriesThis
- *
- * Lit toutes les entrées du résultat.
- *
- * @link http://php.net/manual/fr/function.ldap-get-entries.php Documentation pour ldap_get_entries.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param resource $result_identifier
- *
- * @return array	Retourne toutes les entrées du résultat sous la forme d'un tableau multidimensionnel, ou FALSE en cas d'erreur.
- *
- */
-if(!function_exists('ldap_get_entriesThis'))
-{
-    function ldap_get_entriesThis($link_identifier, $result_identifier)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$result_identifier = is_resource($result_identifier) ? $result_identifier : NULL;
-
-		return ldap_get_entries($link_identifier, $result_identifier);
-    }
-}
-
-/**
- * ldap_get_optionThis
- *
- * Lit/écrit la valeur courante d'une option.
- *
- * @link http://php.net/manual/fr/function.ldap-get-option.php Documentation pour ldap_get_option.
- *
- * @version PHP 4 >= 4.0.4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param int      $option    Le paramètre option peut prendre l'une des valeurs suivantes :
- * @param mixed     &$retval    Valeur à définir pour l'option.
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_get_optionThis'))
-{
-    function ldap_get_optionThis($link_identifier, $option, &$retval)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$option = (int)$option;
-		$retval = ($retval);
-		return ldap_get_option($link_identifier, $option, $retval);
-    }
-}
-
-/**
- * ldap_get_valuesThis
- *
- * Lit toutes les valeurs d'une entrée LDAP.
- *
- * @link http://php.net/manual/fr/function.ldap-get-values.php Documentation pour ldap_get_values.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param resource $result_entry_identifier
- * @param string   $attribute
- *
- * @return array	Retourne un tableau de valeurs pour l'attribut, ou FALSE en cas d'erreur. Le nombre de valeurs retournées est disponible à l'index 'count' du tableau retourné. Les valeurs sont accessibles individuellement, avec les index numériques du tableau. L'indexation commence à 0.
- *
- */
-if(!function_exists('ldap_get_valuesThis'))
-{
-    function ldap_get_valuesThis($link_identifier, $result_entry_identifier, $attribute)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$result_entry_identifier = is_resource($result_entry_identifier) ? $result_entry_identifier : NULL;
-		$attribute = (string)$attribute;
-
-		return ldap_get_values($link_identifier, $result_entry_identifier, $attribute);
-    }
-}
-
-/**
- * ldap_get_values_lenThis
- *
- * Lit toutes les valeurs binaires d'une entrée.
- *
- * @link http://php.net/manual/fr/function.ldap-get-values-len.php Documentation pour ldap_get_values_len.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param resource $result_entry_identifier
- * @param string   $attribute
- *
- * @return array	Retourne un tableau de valeurs pour l'attribut en cas de succès, et FALSE en cas d'erreur. Les valeurs sont accessibles individuellement, avec les index numériques du tableau. L'indexation commence à 0. Le nombre de valeurs retournées est disponible à l'index 'count' du tableau retourné.
- *
- */
-if(!function_exists('ldap_get_values_lenThis'))
-{
-    function ldap_get_values_lenThis($link_identifier, $result_entry_identifier, $attribute)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$result_entry_identifier = is_resource($result_entry_identifier) ? $result_entry_identifier : NULL;
-		$attribute = (string)$attribute;
-
-		return ldap_get_values_len($link_identifier, $result_entry_identifier, $attribute);
-    }
-}
-
-/**
- * ldap_listThis
- *
- * Recherche dans un niveau.
- *
- * @link http://php.net/manual/fr/function.ldap-list.php Documentation pour ldap_list.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param string   $base_dn    La base DN du dossier.
- * @param string   $filter
- * @param array    $attributes    Un tableau d'attributs requis, e.g. array("mail", "sn", "cn"). Notez que le "dn" est toujours retourné, quelque soit le type de l'attribut demandé. L'utilisation de ce paramètre est plus efficace que l'action par défaut (qui est de retourner tous les attributs ainsi que leurs valeurs associées). L'utilisation de ce paramètre doit pour cette raison être considéré comme une bonne pratique.
- * @param int      $attrsonly    Doit être défini à 1 si seuls les types des attributs sont demandés. S'il est défini à 0, les types et les valeurs des attributs sont récupérés, ce qui correspond au comportement par défaut.
- * @param int      $sizelimit    Vous permet de limiter le nombre d'entrées à récupérer. Le fait de définir ce paramètre à 0 signifie qu'il n'y aura aucune limite.
- * @param int      $timelimit    Définit le nombre maximal de secondes permis pour la recherche. Le fait de définir ce paramètre à 0 signifie qu'il n'y a pas de limite.
- * @param int      $deref    Spécifie le nombre d'alias qui doivent être gérés pendant la recherche. Il peut être un parmi les suivants :
- *
- * @return resource	Retourne un identifiant de résultats pour la recherche, ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_listThis'))
-{
-    function ldap_listThis($link_identifier, $base_dn, $filter, $attributes = NULL, $attrsonly = NULL, $sizelimit = NULL, $timelimit = NULL, $deref = NULL)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$base_dn = (string)$base_dn;
-		$filter = (string)$filter;
-		$attributes = (array)$attributes;
-		$attrsonly = (int)$attrsonly;
-		$sizelimit = (int)$sizelimit;
-		$timelimit = (int)$timelimit;
-		$deref = (int)$deref;
-
-		return ldap_list($link_identifier, $base_dn, $filter, $attributes, $attrsonly, $sizelimit, $timelimit, $deref);
-    }
-}
-
-/**
- * ldap_mod_addThis
- *
- * Ajoute un attribut à l'entrée courante.
- *
- * @link http://php.net/manual/fr/function.ldap-mod-add.php Documentation pour ldap_mod_add.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param string   $dn    Le nom DN de l'entrée LDAP.
- * @param array    $entry
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_mod_addThis'))
-{
-    function ldap_mod_addThis($link_identifier, $dn, $entry)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$dn = (string)$dn;
-		$entry = (array)$entry;
-
-		return ldap_mod_add($link_identifier, $dn, $entry);
-    }
-}
-
-/**
- * ldap_mod_delThis
- *
- * Efface un attribut à l'entrée courante.
- *
- * @link http://php.net/manual/fr/function.ldap-mod-del.php Documentation pour ldap_mod_del.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param string   $dn    Le nom DN de l'entrée LDAP.
- * @param array    $entry
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_mod_delThis'))
-{
-    function ldap_mod_delThis($link_identifier, $dn, $entry)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$dn = (string)$dn;
-		$entry = (array)$entry;
-
-		return ldap_mod_del($link_identifier, $dn, $entry);
-    }
-}
-
-/**
- * ldap_mod_replaceThis
- *
- * Remplace un attribut dans l'entrée courante.
- *
- * @link http://php.net/manual/fr/function.ldap-mod-replace.php Documentation pour ldap_mod_replace.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param string   $dn    Le nom DN de l'entrée LDAP.
- * @param array    $entry
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_mod_replaceThis'))
-{
-    function ldap_mod_replaceThis($link_identifier, $dn, $entry)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$dn = (string)$dn;
-		$entry = (array)$entry;
-
-		return ldap_mod_replace($link_identifier, $dn, $entry);
-    }
-}
-
-/**
- * ldap_modifyThis
- *
- * Modifie une entrée LDAP.
- *
- * @link http://php.net/manual/fr/function.ldap-modify.php Documentation pour ldap_modify.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param string   $dn    Le nom DN de l'entrée LDAP.
- * @param array    $entry
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_modifyThis'))
-{
-    function ldap_modifyThis($link_identifier, $dn, $entry)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$dn = (string)$dn;
-		$entry = (array)$entry;
-
-		return ldap_modify($link_identifier, $dn, $entry);
-    }
-}
-
-/**
- * ldap_next_attributeThis
- *
- * Lit l'attribut suivant.
- *
- * @link http://php.net/manual/fr/function.ldap-next-attribute.php Documentation pour ldap_next_attribute.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param resource $result_entry_identifier
- *
- * @return string	Retourne le prochain attribut de l'entrée en cas de succès, et FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_next_attributeThis'))
-{
-    function ldap_next_attributeThis($link_identifier, $result_entry_identifier)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$result_entry_identifier = is_resource($result_entry_identifier) ? $result_entry_identifier : NULL;
-
-		return ldap_next_attribute($link_identifier, $result_entry_identifier);
-    }
-}
-
-/**
- * ldap_next_entryThis
- *
- * Lit la prochaine entrée.
- *
- * @link http://php.net/manual/fr/function.ldap-next-entry.php Documentation pour ldap_next_entry.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param resource $result_entry_identifier
- *
- * @return resource	Retourne l'identifiant de la prochaine entrée du résultat, où la première entrée a été lue par la fonction ldap_first_entry(). S'il n'y a plus d'entrées dans le résultat, FALSE est retourné.
- *
- */
-if(!function_exists('ldap_next_entryThis'))
-{
-    function ldap_next_entryThis($link_identifier, $result_entry_identifier)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$result_entry_identifier = is_resource($result_entry_identifier) ? $result_entry_identifier : NULL;
-
-		return ldap_next_entry($link_identifier, $result_entry_identifier);
-    }
-}
-
-/**
- * ldap_next_referenceThis
- *
- * Lit la référence suivante.
- *
- * @link http://php.net/manual/fr/function.ldap-next-reference.php Documentation pour ldap_next_reference.
- *
- * @version PHP 4 >= 4.0.5
- * @version PHP 5
- *
- * @param resource $link
- * @param resource $entry
- *
- */
-if(!function_exists('ldap_next_referenceThis'))
-{
-    function ldap_next_referenceThis($link, $entry)
-    {
-		$link = is_resource($link) ? $link : NULL;
-		$entry = is_resource($entry) ? $entry : NULL;
-
-		return ldap_next_reference($link, $entry);
-    }
-}
-
-/**
- * ldap_parse_referenceThis
- *
- * Extrait les informations d'une référence d'entrée.
- *
- * @link http://php.net/manual/fr/function.ldap-parse-reference.php Documentation pour ldap_parse_reference.
- *
- * @version PHP 4 >= 4.0.5
- * @version PHP 5
- *
- * @param resource $link
- * @param resource $entry
- * @param array    &$referrals
- *
- */
-if(!function_exists('ldap_parse_referenceThis'))
-{
-    function ldap_parse_referenceThis($link, $entry, &$referrals)
-    {
-		$link = is_resource($link) ? $link : NULL;
-		$entry = is_resource($entry) ? $entry : NULL;
-		$referrals = (array)$referrals;
-
-		return ldap_parse_reference($link, $entry, $referrals);
-    }
-}
-
-/**
- * ldap_parse_resultThis
- *
- * Extrait des informations d'un résultat.
- *
- * @link http://php.net/manual/fr/function.ldap-parse-result.php Documentation pour ldap_parse_result.
- *
- * @version PHP 4 >= 4.0.5
- * @version PHP 5
- *
- * @param resource $link
- * @param resource $result
- * @param int      &$errcode
- * @param string   &$matcheddn
- * @param string   &$errmsg
- * @param array    &$referrals
- *
- */
-if(!function_exists('ldap_parse_resultThis'))
-{
-    function ldap_parse_resultThis($link, $result, &$errcode, &$matcheddn = NULL, &$errmsg = NULL, &$referrals = NULL)
-    {
-		$link = is_resource($link) ? $link : NULL;
-		$result = is_resource($result) ? $result : NULL;
-		$errcode = (int)$errcode;
-		$matcheddn = (string)$matcheddn;
-		$errmsg = (string)$errmsg;
-		$referrals = (array)$referrals;
-
-		return ldap_parse_result($link, $result, $errcode, $matcheddn, $errmsg, $referrals);
-    }
-}
-
-/**
- * ldap_readThis
- *
- * Lit une entrée.
- *
- * @link http://php.net/manual/fr/function.ldap-read.php Documentation pour ldap_read.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param string   $base_dn    La base DN du dossier.
- * @param string   $filter    Un filtre ne peut être vide. Si vous voulez lire toutes les informations d'une entrée, utilisez le filtre "objectClass=*". Si vous savez quels sont les types qui sont utilisés dans le serveur de dossiers, vous pouvez aussi utiliser un filtre approprié, comme "objectClass=inetOrgPerson".
- * @param array    $attributes    Un tableau d'attributs requis, e.g. array("mail", "sn", "cn"). Notez que le "dn" est toujours retourné, quelque soit le type de l'attribut demandé. L'utilisation de ce paramètre est plus efficace que l'action par défaut (qui est de retourner tous les attributs ainsi que leurs valeurs associées). L'utilisation de ce paramètre doit pour cette raison être considéré comme une bonne pratique.
- * @param int      $attrsonly    Doit être défini à 1 si seuls les types des attributs sont demandés. S'il est défini à 0, les types et les valeurs des attributs sont récupérés, ce qui correspond au comportement par défaut.
- * @param int      $sizelimit    Vous permet de limiter le nombre d'entrées à récupérer. Le fait de définir ce paramètre à 0 signifie qu'il n'y aura aucune limite.
- * @param int      $timelimit    Définit le nombre maximal de secondes permis pour la recherche. Le fait de définir ce paramètre à 0 signifie qu'il n'y a pas de limite.
- * @param int      $deref    Spécifie le nombre d'alias qui doivent être gérés pendant la recherche. Il peut être un parmi les suivants :
- *
- * @return resource	Retourne un identifiant de résultat de recherche, ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_readThis'))
-{
-    function ldap_readThis($link_identifier, $base_dn, $filter, $attributes = NULL, $attrsonly = NULL, $sizelimit = NULL, $timelimit = NULL, $deref = NULL)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$base_dn = (string)$base_dn;
-		$filter = (string)$filter;
-		$attributes = (array)$attributes;
-		$attrsonly = (int)$attrsonly;
-		$sizelimit = (int)$sizelimit;
-		$timelimit = (int)$timelimit;
-		$deref = (int)$deref;
-
-		return ldap_read($link_identifier, $base_dn, $filter, $attributes, $attrsonly, $sizelimit, $timelimit, $deref);
-    }
-}
-
-/**
- * ldap_renameThis
- *
- * Modifie le nom d'une entrée.
- *
- * @link http://php.net/manual/fr/function.ldap-rename.php Documentation pour ldap_rename.
- *
- * @version PHP 4 >= 4.0.5
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param string   $dn    Le nom DN de l'entrée LDAP.
- * @param string   $newrdn    Le nouveau RDN.
- * @param string   $newparent    La nouvelle entrée parent/supérieure.
- * @param bool     $deleteoldrdn    Si ce paramètre vaut TRUE, l'ancienne valeur RDN est supprimée. Sinon elle est conservée comme une valeur non distinguée.
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_renameThis'))
-{
-    function ldap_renameThis($link_identifier, $dn, $newrdn, $newparent, $deleteoldrdn)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$dn = (string)$dn;
-		$newrdn = (string)$newrdn;
-		$newparent = (string)$newparent;
-		$deleteoldrdn = (bool)$deleteoldrdn;
-
-		return ldap_rename($link_identifier, $dn, $newrdn, $newparent, $deleteoldrdn);
-    }
-}
-
-/**
- * ldap_sasl_bindThis
- *
- * Authentification au serveur LDAP en utilisant SASL.
- *
- * @link http://php.net/manual/fr/function.ldap-sasl-bind.php Documentation pour ldap_sasl_bind.
- *
- * @version PHP 5
- *
- * @param resource $link
- * @param string   $binddn
- * @param string   $password
- * @param string   $sasl_mech
- * @param string   $sasl_realm
- * @param string   $sasl_authc_id
- * @param string   $sasl_authz_id
- * @param string   $props
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_sasl_bindThis'))
-{
-    function ldap_sasl_bindThis($link, $binddn = NULL, $password = NULL, $sasl_mech = NULL, $sasl_realm = NULL, $sasl_authc_id = NULL, $sasl_authz_id = NULL, $props = NULL)
-    {
-		$link = is_resource($link) ? $link : NULL;
-		$binddn = (string)$binddn;
-		$password = (string)$password;
-		$sasl_mech = (string)$sasl_mech;
-		$sasl_realm = (string)$sasl_realm;
-		$sasl_authc_id = (string)$sasl_authc_id;
-		$sasl_authz_id = (string)$sasl_authz_id;
-		$props = (string)$props;
-
-		return ldap_sasl_bind($link, $binddn, $password, $sasl_mech, $sasl_realm, $sasl_authc_id, $sasl_authz_id, $props);
-    }
-}
-
-/**
- * ldap_searchThis
- *
- * Recherche sur le serveur LDAP.
- *
- * @link http://php.net/manual/fr/function.ldap-search.php Documentation pour ldap_search.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param string   $base_dn    La base DN pour le dossier.
- * @param string   $filter    Le filtre de recherche peut être simple ou avancé, et utiliser ces opérateurs booléen au format décrit dans la documentation LDAP (reportez-vous à » Netscape Directory SDK pour plus d'informations sur les filtres).
- * @param array    $attributes    Un tableau d'attributs requis, e.g. array("mail", "sn", "cn"). Notez que le "dn" est toujours retourné, quelque soit le type de l'attribut demandé. L'utilisation de ce paramètre est plus efficace que l'action par défaut (qui est de retourner tous les attributs ainsi que leurs valeurs associées). L'utilisation de ce paramètre doit pour cette raison être considéré comme une bonne pratique.
- * @param int      $attrsonly    Doit être défini à 1 si seuls les types des attributs sont demandés. S'il est défini à 0, les types et les valeurs des attributs sont récupérés, ce qui correspond au comportement par défaut.
- * @param int      $sizelimit    Vous permet de limiter le nombre d'entrées à récupérer. Le fait de définir ce paramètre à 0 signifie qu'il n'y aura aucune limite.
- * @param int      $timelimit    Définit le nombre maximal de secondes permis pour la recherche. Le fait de définir ce paramètre à 0 signifie qu'il n'y a pas de limite.
- * @param int      $deref    Spécifie le nombre d'alias qui doivent être gérés pendant la recherche. Il peut être un parmi les suivants :
- *
- * @return resource	Retourne un identifiant de recherche ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_searchThis'))
-{
-    function ldap_searchThis($link_identifier, $base_dn, $filter, $attributes = NULL, $attrsonly = NULL, $sizelimit = NULL, $timelimit = NULL, $deref = NULL)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$base_dn = (string)$base_dn;
-		$filter = (string)$filter;
-		$attributes = (array)$attributes;
-		$attrsonly = (int)$attrsonly;
-		$sizelimit = (int)$sizelimit;
-		$timelimit = (int)$timelimit;
-		$deref = (int)$deref;
-
-		return ldap_search($link_identifier, $base_dn, $filter, $attributes, $attrsonly, $sizelimit, $timelimit, $deref);
-    }
-}
-
-/**
- * ldap_set_optionThis
- *
- * Modifie la valeur d'une option LDAP.
- *
- * @link http://php.net/manual/fr/function.ldap-set-option.php Documentation pour ldap_set_option.
- *
- * @version PHP 4 >= 4.0.4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param int      $option    Le paramètre option peut prendre l'une des valeurs suivantes : Les options LDAP_OPT_SERVER_CONTROLS et LDAP_OPT_CLIENT_CONTROLS requièrent une liste de contrôles, ce qui signifie que la valeur doit être un tableau de contrôles. Un contrôle est constitué d'un oid l'identifiant, une valeur optionnelle value, et un flag optionnel de "criticalité" (criticality). En PHP, un contrôle est défini sous la forme d'un tableau, donc les clés sont oid avec une chaîne comme valeur, et deux clés optionnelles. Ces clés sont value avec une chaîne comme valeur, et iscritical avec une valeur booléenne. Par défaut, iscritical vaut FALSE. Voir le fichier » draft-ietf-ldapext-ldap-c-api-xx.txt pour plus de détails. Reportez-vous au second exemple pour une illustration.
- * @param mixed     $newval    La nouvelle valeur pour l'option option spécifiée.
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_set_optionThis'))
-{
-    function ldap_set_optionThis($link_identifier, $option, $newval)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-		$option = (int)$option;
-		$newval = ($newval);
-		return ldap_set_option($link_identifier, $option, $newval);
-    }
-}
-
-/**
- * ldap_set_rebind_procThis
- *
- * Configure une fonction de retour pour refaire des liaisons lors de recherche de référants.
- *
- * @link http://php.net/manual/fr/function.ldap-set-rebind-proc.php Documentation pour ldap_set_rebind_proc.
- *
- * @version PHP 4 >= 4.2.0
- * @version PHP 5
- *
- * @param resource $link
- * @param callable     $callback
- *
- */
-if(!function_exists('ldap_set_rebind_procThis'))
-{
-    function ldap_set_rebind_procThis($link, $callback)
-    {
-		$link = is_resource($link) ? $link : NULL;
-		$callback = is_callable($callback) ? $callback : NULL;
-
-		return ldap_set_rebind_proc($link, $callback);
-    }
-}
-
-/**
- * ldap_sortThis
- *
- * Trie les entrées d'un résultat LDAP.
- *
- * @link http://php.net/manual/fr/function.ldap-sort.php Documentation pour ldap_sort.
- *
- * @version PHP 4 >= 4.2.0
- * @version PHP 5
- *
- * @param resource $link    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- * @param resource $result    Un identifiant de recherche LDAP, retourné par la fonction ldap_search().
- * @param string   $sortfilter    L'attribut à utiliser comme clé lors du tri.
- *
- */
-if(!function_exists('ldap_sortThis'))
-{
-    function ldap_sortThis($link, $result, $sortfilter)
-    {
-		$link = is_resource($link) ? $link : NULL;
-		$result = is_resource($result) ? $result : NULL;
-		$sortfilter = (string)$sortfilter;
-
-		return ldap_sort($link, $result, $sortfilter);
-    }
-}
-
-/**
- * ldap_start_tlsThis
- *
- * Démarre TLS.
- *
- * @link http://php.net/manual/fr/function.ldap-start-tls.php Documentation pour ldap_start_tls.
- *
- * @version PHP 4 >= 4.2.0
- * @version PHP 5
- *
- * @param resource $link
- *
- */
-if(!function_exists('ldap_start_tlsThis'))
-{
-    function ldap_start_tlsThis($link)
-    {
-		$link = is_resource($link) ? $link : NULL;
-
-		return ldap_start_tls($link);
-    }
-}
-
-/**
- * ldap_t61_to_8859This
- *
- * Convertit les caractères t6 en caractères 8859.
- *
- * @link http://php.net/manual/fr/function.ldap-t61-to-8859.php Documentation pour ldap_t61_to_8859.
- *
- * @version PHP 4 >= 4.0.2
- * @version PHP 5
- *
- * @param string   $value
- *
- */
-if(!function_exists('ldap_t61_to_8859This'))
-{
-    function ldap_t61_to_8859This($value)
-    {
-		$value = (string)$value;
-
-		return ldap_t61_to_8859($value);
-    }
-}
-
-/**
- * ldap_unbindThis
- *
- * Déconnecte d'un serveur LDAP.
- *
- * @link http://php.net/manual/fr/function.ldap-unbind.php Documentation pour ldap_unbind.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $link_identifier    Un identifiant de lien LDAP, retourné par la fonction ldap_connect().
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('ldap_unbindThis'))
-{
-    function ldap_unbindThis($link_identifier)
-    {
-		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
-
-		return ldap_unbind($link_identifier);
-    }
-}
-
-/**
  * levenshteinThis
  *
  * Calcule la distance Levenshtein entre deux chaînes.
@@ -28887,6 +27810,32 @@ if(!function_exists('linkinfoThis'))
 		$path = (string)$path;
 
 		return linkinfo($path);
+    }
+}
+
+/**
+ * listThis
+ *
+ * Assigne des variables comme si elles étaient un tableau.
+ *
+ * @link http://php.net/manual/fr/function.list.php Documentation pour list.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param mixed     $varname    Une variable.
+ * @param mixed     $item
+ *
+ * @return array	Retourne le tableau assigné.
+ *
+ */
+if(!function_exists('listThis'))
+{
+    function listThis($varname, $varname1 = NULL)
+    {
+		$varname = ($varname);
+		$varname1 = ($varname1);
+		return list($varname, $varname1);
     }
 }
 
@@ -32012,13 +30961,13 @@ if(!function_exists('mkdirThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param int      $hour    Le nombre d'heures depuis le début de la journée fixée par les paramètres month, day et year. Les valeurs négatives font références aux heures avant minuit du jour en question. Les valeurs supérieures à 23 font références aux heures associées pour le(s) jour(s) suivant(s).
+ * @param int      $hour    Le nombre d'heures depuis le début de la journée fixée par les paramètres month, day et year. Les valeurs négatives font références aux heures avant minuit du jour en question. Les valeurs supérieures à 3 font références aux heures associées pour le(s) jour(s) suivant(s).
  * @param int      $minute    Le nombre de minutes depuis le début de l'heure hour. Les valeurs négatives font références aux minutes de l'heure précédente. Les valeurs supérieures à 59 font références aux minutes associées pour l'(les) heure(s) suivante(s).
  * @param int      $second    Le nombre de secondes depuis le début de la minute minute. Les valeurs négatives font références aux secondes de la minute précédente. Les valeurs supérieures à 59 font références aux secondes associées à la(les) minute(s) suivante(s).
- * @param int      $month    Le nombre de mois depuis la fin de l'année précédente. Les valeurs comprises entre 1 et 12 font références aux mois du calendrier normal de l'année en question. Les valeurs inférieures à 1 (y compris les valeurs négatives) font références aux mois de l'année précédente dans l'ordre inverse, aussi, 0 correspond à décembre, -1 à novembre, etc. Les valeurs supérieures à 12 font références au mois correspondant dans l'(les) année(s) suivante(s).
+ * @param int      $month    Le nombre de mois depuis la fin de l'année précédente. Les valeurs comprises entre 1 et 2 font références aux mois du calendrier normal de l'année en question. Les valeurs inférieures à 1 (y compris les valeurs négatives) font références aux mois de l'année précédente dans l'ordre inverse, aussi, 0 correspond à décembre, -1 à novembre, etc. Les valeurs supérieures à 2 font références au mois correspondant dans l'(les) année(s) suivante(s).
  * @param int      $day    Le nombre de jours depuis la fin du mois précédent. Les valeurs comprises entre 1 et 28, 29, 30, 31 (suivant le mois) font références aux jours normaux dans le mois courant. Les valeurs inférieures à 1 (y compris les valeurs négatives) font références aux jours du mois précédent, aussi, 0 correspond au dernier jour du mois précédent, -1, le jour d'avant, etc. Les valeurs supérieures au nombre de jours du mois courant font références aux jours correspondants du(des) mois suivant(s).
- * @param int      $year    L'année, peut être sur deux ou quatre chiffres, avec des valeurs allant de 0 à 69, correspondant au valeur 2000 à 2069 et 70 à 100, correspondant au valeur 1970 à 2000. Sur les systèmes où time_t un entier signé sur 32bits, ce qui est le plus courant de nos jours, la période valide pour year est quelque part près de 1901 et 2038. Cependant, avant PHP 5.1.0, cette intervalle était limitée de 1970 à 2038 sur quelques systèmes (i.e. Windows).
- * @param int      $is_dst    Ce paramètre peut être mis à 1 si l'heure d'hiver est appliquée (DST), 0 si elle ne l'est pas, et -1 (par défaut) si on ne sait pas. Si l'on ne sait pas, PHP tente de le traiter lui-même. Ceci peut occasionner des résultats inattendus (mais néanmoins correct). Quelques temps sont invalides si DST est activé sur les systèmes où PHP fonctionne ou is_dist est défini à 1. Si DST est activé e.g. 2:00, tous les temps entre 2:00 et 3:00 sont invalides et la fonction mktime() retourne une valeur indéfinie (généralement une valeur négative). Quelques systèmes (e.g. Solaris 8) activent DST à minuit, donc, le temps 0:30 du jour lorsque DST est activé est évalué à 23:30 du jour précédent.
+ * @param int      $year    L'année, peut être sur deux ou quatre chiffres, avec des valeurs allant de 0 à 69, correspondant au valeur 2000 à 2069 et 70 à 100, correspondant au valeur 1970 à 2000. Sur les systèmes où time_t un entier signé sur 32bits, ce qui est le plus courant de nos jours, la période valide pour year est quelque part près de 191 et 2038. Cependant, avant PHP 5.1.0, cette intervalle était limitée de 1970 à 2038 sur quelques systèmes (i.e. Windows).
+ * @param int      $is_dst    Ce paramètre peut être mis à 1 si l'heure d'hiver est appliquée (DST), 0 si elle ne l'est pas, et -1 (par défaut) si on ne sait pas. Si l'on ne sait pas, PHP tente de le traiter lui-même. Ceci peut occasionner des résultats inattendus (mais néanmoins correct). Quelques temps sont invalides si DST est activé sur les systèmes où PHP fonctionne ou is_dist est défini à 1. Si DST est activé e.g. 2:00, tous les temps entre 2:00 et 3:00 sont invalides et la fonction mktime() retourne une valeur indéfinie (généralement une valeur négative). Quelques systèmes (e.g. Solaris 8) activent DST à minuit, donc, le temps 0:30 du jour lorsque DST est activé est évalué à 3:30 du jour précédent.
  *
  * @return int	mktime() retourne un timestamp Unix des arguments donnés. Si les arguments ne sont pas valides, la fonction retournera FALSE (avant PHP 5.1, elle retournait -1).
  *
@@ -33690,7 +32639,7 @@ if(!function_exists('mysql_closeThis'))
  * @param string   $username    Le nom d'utilisateur. La valeur par défaut est définie par l'option mysql.default_user. En safe mode SQL, ce paramètre est ignoré et le nom de l'utilisateur propriétaire du processus serveur est utilisé.
  * @param string   $password    Le mot de passe. La valeur par défaut est définie par l'option mysql.default_password. En safe mode SQL, ce paramètre est ignoré et un mot de passe vide est utilisé.
  * @param bool     $new_link    Si un deuxième appel est fait à mysql_connect() avec les mêmes arguments, aucune nouvelle connexion ne sera établie, mais plutôt, l'identifiant de la connexion de la connexion déjà ouverte sera retourné. Le paramètre new_link modifie ce comportement et permet à mysql_connect() de toujours ouvrir une nouvelle connexion, même si mysql_connect() a été appelée avant avec les mêmes paramètres. En safe mode SQL, ce paramètre est ignoré.
- * @param int      $client_flags    Le paramètre client_flags peut être une combinaison des constantes suivantes : 128 (active le gestionnaire LOAD DATA LOCAL), MYSQL_CLIENT_SSL, MYSQL_CLIENT_COMPRESS, MYSQL_CLIENT_IGNORE_SPACE ou MYSQL_CLIENT_INTERACTIVE. Lisez la section à propos de Constantes client MySQL pour plus d'informations. En safe mode SQL, ce paramètre est ignoré.
+ * @param int      $client_flags    Le paramètre client_flags peut être une combinaison des constantes suivantes : 28 (active le gestionnaire LOAD DATA LOCAL), MYSQL_CLIENT_SSL, MYSQL_CLIENT_COMPRESS, MYSQL_CLIENT_IGNORE_SPACE ou MYSQL_CLIENT_INTERACTIVE. Lisez la section à propos de Constantes client MySQL pour plus d'informations. En safe mode SQL, ce paramètre est ignoré.
  *
  * @return resource	Retourne l'identifiant de connexion MySQL en cas de succès ou FALSE si une erreur survient.
  *
@@ -34581,7 +33530,7 @@ if(!function_exists('mysql_num_rowsThis'))
  * @param string   $server    Le serveur MySQL. Il peut également comprendre un numéro de port, e.g. "hostname:port" ou un chemin vers un socket local e.g. ":/path/to/socket". Si la directive PHP mysql.default_host n'est pas définie (défaut), alors, la valeur par défaut est "localhost:3306".
  * @param string   $username    Le nom de l'utilisateur. La valeur par défaut est l'utilisateur faisant fonctionner le processus serveur courant.
  * @param string   $password    Le mot de passe. La valeur par défaut est un mot de passe vide.
- * @param int      $client_flags    Le paramètre client_flags peut être une compilation des constantes suivantes : 128 (active le gestionnaire LOAD DATA LOCAL), MYSQL_CLIENT_SSL, MYSQL_CLIENT_COMPRESS, MYSQL_CLIENT_IGNORE_SPACE ou MYSQL_CLIENT_INTERACTIVE.
+ * @param int      $client_flags    Le paramètre client_flags peut être une compilation des constantes suivantes : 28 (active le gestionnaire LOAD DATA LOCAL), MYSQL_CLIENT_SSL, MYSQL_CLIENT_COMPRESS, MYSQL_CLIENT_IGNORE_SPACE ou MYSQL_CLIENT_INTERACTIVE.
  *
  * @return resource	Retourne un identifiant de lien persistant MySQL en cas de succès, ou FALSE si une erreur survient.
  *
@@ -34978,7 +33927,7 @@ if(!function_exists('mysqli_get_client_statsThis'))
  *
  * @param mysqli     $link
  *
- * @return int	Un nombre qui représente la version de la bibliothèque cliente MySQL dans ce format : version_principale*10000 + version_mineure *100 + sous_version. Par exemple, la version 4.1.0 est retournée sous la forme 40100.
+ * @return int	Un nombre qui représente la version de la bibliothèque cliente MySQL dans ce format : version_principale*10000 + version_mineure *100 + sous_version. Par exemple, la version 4.1.0 est retournée sous la forme 4100.
  *
  */
 if(!function_exists('mysqli_get_client_versionThis'))
@@ -37779,26 +36728,26 @@ if(!function_exists('openssl_pbkdf2This'))
 }
 
 /**
- * openssl_pkcs12_exportThis
+ * openssl_pkcs2_exportThis
  *
- * Exporte un certificat compatible PKCS#12 dans une variable.
+ * Exporte un certificat compatible PKCS#2 dans une variable.
  *
- * @link http://php.net/manual/fr/function.openssl-pkcs12-export.php Documentation pour openssl_pkcs12_export.
+ * @link http://php.net/manual/fr/function.openssl-pkcs2-export.php Documentation pour openssl_pkcs2_export.
  *
  * @version PHP 5 >= 5.2.2
  *
  * @param mixed     $x509    Voir les paramètres clés/Certificats pour une liste de valeurs valides.
- * @param string   &$out    En cas de succès, cette variable contiendra le PKCS#12.
- * @param mixed     $priv_key    Clé privée du fichier PKCS#12.
- * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#12.
+ * @param string   &$out    En cas de succès, cette variable contiendra le PKCS#2.
+ * @param mixed     $priv_key    Clé privée du fichier PKCS#2.
+ * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#2.
  * @param array    $args
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
  */
-if(!function_exists('openssl_pkcs12_exportThis'))
+if(!function_exists('openssl_pkcs2_exportThis'))
 {
-    function openssl_pkcs12_exportThis($x509, &$out, $priv_key, $pass, $args = NULL)
+    function openssl_pkcs2_exportThis($x509, &$out, $priv_key, $pass, $args = NULL)
     {
 		$x509 = ($x509);
 		$out = (string)$out;
@@ -37806,31 +36755,31 @@ if(!function_exists('openssl_pkcs12_exportThis'))
 		$pass = (string)$pass;
 		$args = (array)$args;
 
-		return openssl_pkcs12_export($x509, $out, $priv_key, $pass, $args);
+		return openssl_pkcs2_export($x509, $out, $priv_key, $pass, $args);
     }
 }
 
 /**
- * openssl_pkcs12_export_to_fileThis
+ * openssl_pkcs2_export_to_fileThis
  *
- * Exporte un certificat compatible PKCS#12.
+ * Exporte un certificat compatible PKCS#2.
  *
- * @link http://php.net/manual/fr/function.openssl-pkcs12-export-to-file.php Documentation pour openssl_pkcs12_export_to_file.
+ * @link http://php.net/manual/fr/function.openssl-pkcs2-export-to-file.php Documentation pour openssl_pkcs2_export_to_file.
  *
  * @version PHP 5 >= 5.2.2
  *
  * @param mixed     $x509    Voir les paramètres clés/Certificats pour une liste de valeurs valides.
  * @param string   $filename    Chemin vers le fichier de sortie.
- * @param mixed     $priv_key    Clé privée du fichier PKCS#12.
- * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#12.
+ * @param mixed     $priv_key    Clé privée du fichier PKCS#2.
+ * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#2.
  * @param array    $args
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
  */
-if(!function_exists('openssl_pkcs12_export_to_fileThis'))
+if(!function_exists('openssl_pkcs2_export_to_fileThis'))
 {
-    function openssl_pkcs12_export_to_fileThis($x509, $filename, $priv_key, $pass, $args = NULL)
+    function openssl_pkcs2_export_to_fileThis($x509, $filename, $priv_key, $pass, $args = NULL)
     {
 		$x509 = ($x509);
 		$filename = (string)$filename;
@@ -37838,35 +36787,35 @@ if(!function_exists('openssl_pkcs12_export_to_fileThis'))
 		$pass = (string)$pass;
 		$args = (array)$args;
 
-		return openssl_pkcs12_export_to_file($x509, $filename, $priv_key, $pass, $args);
+		return openssl_pkcs2_export_to_file($x509, $filename, $priv_key, $pass, $args);
     }
 }
 
 /**
- * openssl_pkcs12_readThis
+ * openssl_pkcs2_readThis
  *
- * Lit un certificat PKCS#12 dans un tableau.
+ * Lit un certificat PKCS#2 dans un tableau.
  *
- * @link http://php.net/manual/fr/function.openssl-pkcs12-read.php Documentation pour openssl_pkcs12_read.
+ * @link http://php.net/manual/fr/function.openssl-pkcs2-read.php Documentation pour openssl_pkcs2_read.
  *
  * @version PHP 5 >= 5.2.2
  *
- * @param string   $pkcs12
+ * @param string   $pkcs2
  * @param array    &$certs    En cas de succès, ce tableau contiendra les données du certificat.
- * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#12.
+ * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#2.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
  */
-if(!function_exists('openssl_pkcs12_readThis'))
+if(!function_exists('openssl_pkcs2_readThis'))
 {
-    function openssl_pkcs12_readThis($pkcs12, &$certs, $pass)
+    function openssl_pkcs2_readThis($pkcs2, &$certs, $pass)
     {
-		$pkcs12 = (string)$pkcs12;
+		$pkcs2 = (string)$pkcs2;
 		$certs = (array)$certs;
 		$pass = (string)$pass;
 
-		return openssl_pkcs12_read($pkcs12, $certs, $pass);
+		return openssl_pkcs2_read($pkcs2, $certs, $pass);
     }
 }
 
@@ -38207,7 +37156,7 @@ if(!function_exists('openssl_pkey_newThis'))
  * @param string   $data
  * @param string   &$decrypted
  * @param mixed     $key    key doit être la clé privée utilisée pour chiffrer les données.
- * @param int      $padding    padding peut être OPENSSL_PKCS1_PADDING, OPENSSL_SSLV23_PADDING, OPENSSL_PKCS1_OAEP_PADDING ou OPENSSL_NO_PADDING.
+ * @param int      $padding    padding peut être OPENSSL_PKCS1_PADDING, OPENSSL_SSLV3_PADDING, OPENSSL_PKCS1_OAEP_PADDING ou OPENSSL_NO_PADDING.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -38300,7 +37249,7 @@ if(!function_exists('openssl_public_decryptThis'))
  * @param string   $data
  * @param string   &$crypted    Contiendra le résultat du chiffrage.
  * @param mixed     $key    La clé publique.
- * @param int      $padding    padding peut être OPENSSL_PKCS1_PADDING, OPENSSL_SSLV23_PADDING, OPENSSL_PKCS1_OAEP_PADDING ou OPENSSL_NO_PADDING.
+ * @param int      $padding    padding peut être OPENSSL_PKCS1_PADDING, OPENSSL_SSLV3_PADDING, OPENSSL_PKCS1_OAEP_PADDING ou OPENSSL_NO_PADDING.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -42126,7 +41075,7 @@ if(!function_exists('pg_send_query_paramsThis'))
  * @version PHP 5
  *
  * @param resource $connection    La ressource de connexion de la base de données PostgreSQL. Lorsque connection n'est pas présent, la connexion par défaut est utilisée. La connexion par défaut est la dernière connexion faite par pg_connect() ou pg_pconnect().
- * @param string   $encoding    L'encodage client demandé. Un de ces constantes : SQL_ASCII, EUC_JP, EUC_CN, EUC_KR, EUC_TW, UNICODE, MULE_INTERNAL, LATINX (X=1...9), KOI8, WIN, ALT, SJIS, BIG5 ou WIN1250. La liste exacte des encodages disponibles dépend de votre version PostgreSQL, alors vérifiez votre manuel PostgreSQL pour une liste plus spécifique.
+ * @param string   $encoding    L'encodage client demandé. Un de ces constantes : SQL_ASCII, EUC_JP, EUC_CN, EUC_KR, EUC_TW, UNICODE, MULE_INTERNAL, LATINX (X=1...9), KOI8, WIN, ALT, SJIS, BIG5 ou WIN250. La liste exacte des encodages disponibles dépend de votre version PostgreSQL, alors vérifiez votre manuel PostgreSQL pour une liste plus spécifique.
  *
  * @return int	Retourne 0 en cas de succès ou -1 en cas d'erreur.
  *
@@ -42427,7 +41376,7 @@ if(!function_exists('php_ini_scanned_filesThis'))
  *
  * @version PHP 4
  * @version PHP 5 < 5.5
- * @return string	Retourne PHPE9568F34-D428-11d2-A769-00AA001ACF42.
+ * @return string	Retourne PHPE9568F34-D428-11d2-A769-00AA01ACF42.
  *
  */
 if(!function_exists('php_logo_guidThis'))
@@ -43793,6 +42742,31 @@ if(!function_exists('prevThis'))
 }
 
 /**
+ * printThis
+ *
+ * Affiche une chaîne de caractères.
+ *
+ * @link http://php.net/manual/fr/function.print.php Documentation pour print.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param string   $arg    Les données d'entrée.
+ *
+ * @return int	Retourne 1, toujours.
+ *
+ */
+if(!function_exists('printThis'))
+{
+    function printThis($arg)
+    {
+		$arg = (string)$arg;
+
+		return print($arg);
+    }
+}
+
+/**
  * print_rThis
  *
  * Affiche des informations lisibles pour une variable.
@@ -44126,7 +43100,7 @@ if(!function_exists('pspell_clear_sessionThis'))
  * @param string   $language    Le paramètre de langage language est le code de langue en deux lettres, défini dans la norme ISO 639, et deux lettres optionnelles ISO 3166, après un tiret ou un souligné (_).
  * @param string   $spelling    Le paramètre d'orthographe spelling est nécessaire pour les langues qui ont plus d'une orthographe, comme l'anglais. Les valeurs reconnues sont alors 'american' (américain) , 'british' (anglais), et 'canadian' (canadien).
  * @param string   $jargon    Le paramètre de jargon jargon contient des informations supplémentaires pour distinguer deux dictionnaires distincts pour la même langue et le même paramètre d'orthographe spelling.
- * @param string   $encoding    Le paramètre d'encodage encoding indique l'encodage attendu pour la réponse. Les valeurs valides sont : 'utf-8', 'iso8859-*', 'koi8-r', 'viscii', 'cp1252', 'machine unsigned 16', 'machine unsigned 32'. Ce paramètre n'a pas été testé de manière exhaustive, alors soyez prudent.
+ * @param string   $encoding    Le paramètre d'encodage encoding indique l'encodage attendu pour la réponse. Les valeurs valides sont : 'utf-8', 'iso8859-*', 'koi8-r', 'viscii', 'cp252', 'machine unsigned 16', 'machine unsigned 32'. Ce paramètre n'a pas été testé de manière exhaustive, alors soyez prudent.
  *
  * @return int	Retourne une ressource pspell config, ou FALSE en cas d'erreur.
  *
@@ -44371,7 +43345,7 @@ if(!function_exists('pspell_config_save_replThis'))
  * @param string   $language    Le paramètre de langue spelling est constitué des deux lettres du codage de langue ISO 639, et du codage optionnel de pays ISO 3166, séparés par un '_'.
  * @param string   $spelling    Ce paramètre est nécessaire pour les langues qui ont plus d'une orthographe, comme l'anglais ou le français. Les valeurs reconnues sont 'american', 'british', et 'canadian'.
  * @param string   $jargon    Le paramètre jargon contient des informations supplémentaires pour distinguer deux listes de mots qui ont le même marquage de langue et d'orthographe.
- * @param string   $encoding    Le paramètre encoding est le type d'encodage des mots. Les valeurs valides sont 'utf-8', 'iso8859-*', 'koi8-r', 'viscii', 'cp1252', 'machine unsigned 16', 'machine unsigned 32'. Ce paramètre n'ayant pas été testé de façon exhaustive, il convient d'être prudent lors de son utilisation.
+ * @param string   $encoding    Le paramètre encoding est le type d'encodage des mots. Les valeurs valides sont 'utf-8', 'iso8859-*', 'koi8-r', 'viscii', 'cp252', 'machine unsigned 16', 'machine unsigned 32'. Ce paramètre n'ayant pas été testé de façon exhaustive, il convient d'être prudent lors de son utilisation.
  * @param int      $mode    Le paramètre mode est le mode de travail du vérificateur d'orthographe. Plusieurs modes sont disponibles :
  *
  * @return int	Retourne l'identifiant de dictionnaire en cas de succès ou FALSE si une erreur survient.
@@ -44430,7 +43404,7 @@ if(!function_exists('pspell_new_configThis'))
  * @param string   $language    Le paramètre de langage language est le code de langue ISO 639 en deux lettres, suivi de deux lettres optionnelles ISO 3166, après un tiret ou un souligné (_).
  * @param string   $spelling    Le paramètre d'orthographe spelling est nécessaire pour les langues qui ont plus d'une orthographe, comme l'anglais. Les valeurs reconnues sont alors 'american' (américain) , 'british' (anglais), et 'canadian' (canadien).
  * @param string   $jargon    Informations supplémentaires pour distinguer deux dictionnaires distincts pour la même langue et le même paramètre d'orthographe spelling.
- * @param string   $encoding    L'encodage attendu pour la réponse. Les valeurs valides sont : utf-8, iso8859-*, koi8-r, viscii, cp1252, machine unsigned 16, machine unsigned 32.
+ * @param string   $encoding    L'encodage attendu pour la réponse. Les valeurs valides sont : utf-8, iso8859-*, koi8-r, viscii, cp252, machine unsigned 16, machine unsigned 32.
  * @param int      $mode    Le mode de travail du vérificateur d'orthographe. Plusieurs modes sont disponibles :
  *
  * @return int	Retourne l'identifiant de dictionnaire à utiliser avec les autres fonctions pspell.
@@ -48003,7 +46977,7 @@ if(!function_exists('socket_acceptThis'))
  * @version PHP 5
  *
  * @param resource $socket    Une ressource de socket valide créée par la fonction socket_create().
- * @param string   $address    Si le socket est de la famille AF_INET, le paramètre address est une IP numérique (i.e. 127.0.0.1). Si le socket est de la famille AF_UNIX, le paramètre address représente le chemin d'un socket de domaine Unix (i.e. /tmp/my.sock).
+ * @param string   $address    Si le socket est de la famille AF_INET, le paramètre address est une IP numérique (i.e. 27.0.0.1). Si le socket est de la famille AF_UNIX, le paramètre address représente le chemin d'un socket de domaine Unix (i.e. /tmp/my.sock).
  * @param int      $port    Le paramètre port est uniquement utilisé lors de la liaison à un socket AF_INET et désigne le port sur lequel écouter pour une connexion.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -48082,7 +47056,7 @@ if(!function_exists('socket_closeThis'))
  * @version PHP 5
  *
  * @param resource $socket
- * @param string   $address    Le paramètre address est soit une adresse valide IPv4 (e.g. 127.0.0.1) si socket vaut AF_INET, soit une adresse valide IPv6 (e.g. ::1) si le support IPv6 est actif et que le paramètre socket vaut AF_INET6, soit un chemin vers un socket de domaine Unix, si la famille de sockets vaut AF_UNIX.
+ * @param string   $address    Le paramètre address est soit une adresse valide IPv4 (e.g. 27.0.0.1) si socket vaut AF_INET, soit une adresse valide IPv6 (e.g. ::1) si le support IPv6 est actif et que le paramètre socket vaut AF_INET6, soit un chemin vers un socket de domaine Unix, si la famille de sockets vaut AF_UNIX.
  * @param int      $port    Le paramètre port n'est utilisé et mandaté que lors d'une connexion à un socket AF_INET ou AF_INET6, et désigne le port de l'hôte distant sur lequel la connexion doit être effectuée.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient. Le code d'erreur généré peut être obtenu en appelant la fonction socket_last_error(). Ce code d'erreur peut être passé à la fonction socket_strerror() pour obtenir un message d'erreur humainement lisible.
@@ -48147,7 +47121,7 @@ if(!function_exists('socket_createThis'))
  */
 if(!function_exists('socket_create_listenThis'))
 {
-    function socket_create_listenThis($port, $backlog = 128)
+    function socket_create_listenThis($port, $backlog = 28)
     {
 		$port = (int)$port;
 		$backlog = (int)$backlog;
@@ -48227,7 +47201,7 @@ if(!function_exists('socket_get_optionThis'))
  * @version PHP 5
  *
  * @param resource $socket    Une ressource de socket valide, créée par la fonction socket_create() ou la fonction socket_accept().
- * @param string   &$address    Si le socket socket est de type AF_INET, ou AF_INET6 socket_getpeername() retournera l'adresse IP de l'hôte, en notation numérique (e.g. 127.0.0.1 ou fe80::1) dans le paramètre address, et si le paramètre optionnel port est présent, elle retournera aussi le port de la communication établie. Si le socket socket est de type AF_UNIX, socket_getpeername() retournera le chemin sur le système de fichiers (e.g. /var/run/daemon.sock) dans le paramètre address.
+ * @param string   &$address    Si le socket socket est de type AF_INET, ou AF_INET6 socket_getpeername() retournera l'adresse IP de l'hôte, en notation numérique (e.g. 27.0.0.1 ou fe80::1) dans le paramètre address, et si le paramètre optionnel port est présent, elle retournera aussi le port de la communication établie. Si le socket socket est de type AF_UNIX, socket_getpeername() retournera le chemin sur le système de fichiers (e.g. /var/run/daemon.sock) dans le paramètre address.
  * @param int      &$port    Si fourni, ce devra être le port associé à l'adresse du paramètre address.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient. socket_getpeername() peut aussi retourner FALSE si le type de le socket n'est ni AF_INET AF_INET6, ni AF_UNIX, auquel cas le dernier code d'erreur socket n'est pas modifié.
@@ -48256,7 +47230,7 @@ if(!function_exists('socket_getpeernameThis'))
  * @version PHP 5
  *
  * @param resource $socket    Une ressource de socket valide, créée par la fonction socket_create() ou la fonction socket_accept().
- * @param string   &$addr    Si le socket socket est de type AF_INET, ou AF_INET6, socket_getsockname() retournera l'adresse IP locale, en notation numérique (e.g. 127.0.0.1 ou fe80::1) dans le paramètre address, et si le paramètre optionnel port est présent, elle retournera aussi le port de la communication établie. Si le socket socket est de type AF_UNIX, socket_getsockname() retournera le chemin sur le système de fichiers (e.g. /var/run/daemon.sock) dans le paramètre address.
+ * @param string   &$addr    Si le socket socket est de type AF_INET, ou AF_INET6, socket_getsockname() retournera l'adresse IP locale, en notation numérique (e.g. 27.0.0.1 ou fe80::1) dans le paramètre address, et si le paramètre optionnel port est présent, elle retournera aussi le port de la communication établie. Si le socket socket est de type AF_UNIX, socket_getsockname() retournera le chemin sur le système de fichiers (e.g. /var/run/daemon.sock) dans le paramètre address.
  * @param int      &$port    Si fourni, ce devra être le port associé à l'adresse.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient. socket_getsockname() peut aussi retourner FALSE si le type du socket n'est ni AF_INET, ni AF_INET, ni AF_UNIX, auquel cas le dernier code d'erreur socket n'est pas modifié.
@@ -51619,7 +50593,7 @@ if(!function_exists('stream_wrapper_unregisterThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param string   $format    La longueur maximale de ce paramètre est de 1023 caractères.
+ * @param string   $format    La longueur maximale de ce paramètre est de 103 caractères.
  * @param int      $timestamp    Le paramètre optionnel timestamp est un timestamp Unix de type entier qui vaut par défaut l'heure courante locale si le paramètre timestamp n'est pas fourni. En d'autres termes, il vaut par défaut la valeur de la fonction time().
  *
  * @return string	Retourne une chaîne de caractères formatée suivant le paramètre format donné, en utilisant le paramètre timestamp ou la date locale courante si aucun timestamp n'est fourni. Les noms des mois, des jours de la semaine mais aussi d'autres chaînes dépendant de la location, respecteront la localisation courante définie par la fonction setlocale().
@@ -55515,7 +54489,7 @@ if(!function_exists('umaskThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param string   $prefix    Peut être utile, par exemple, pour identifier facilement différents hôtes, si vous générez simultanément des fichiers depuis plusieurs hôtes, à la même microseconde. Sans prefix (préfixe vide), la chaîne retournée fera 13 caractères. Si more_entropy est à TRUE, elle fera 23 caractères.
+ * @param string   $prefix    Peut être utile, par exemple, pour identifier facilement différents hôtes, si vous générez simultanément des fichiers depuis plusieurs hôtes, à la même microseconde. Sans prefix (préfixe vide), la chaîne retournée fera 13 caractères. Si more_entropy est à TRUE, elle fera 3 caractères.
  * @param bool     $more_entropy    Si le paramètre optionnel more_entropy est TRUE, uniqid() ajoutera une entropie "combined LCG" à la fin de la valeur retournée, ce qui augmente la probabilité de l'unicité du résultat.
  *
  * @return string	Retourne un identifiant unique, sous la forme d'une chaîne de caractères.
@@ -55658,6 +54632,32 @@ if(!function_exists('unserializeThis'))
 		$str = (string)$str;
 
 		return unserialize($str);
+    }
+}
+
+/**
+ * unsetThis
+ *
+ * Détruit une variable.
+ *
+ * @link http://php.net/manual/fr/function.unset.php Documentation pour unset.
+ *
+ * @version PHP 4
+ * @version PHP 5
+ *
+ * @param mixed     $var    La variable à détruire.
+ * @param mixed     $item    Autres variables...
+ *
+ * @return void	Aucune valeur n'est retournée.
+ *
+ */
+if(!function_exists('unsetThis'))
+{
+    function unsetThis($var, $var1 = NULL)
+    {
+		$var = ($var);
+		$var1 = ($var1);
+		return unset($var, $var1);
     }
 }
 
@@ -58652,7 +57652,7 @@ if(!function_exists('yp_orderThis'))
  *
  * @version PHP 4
  * @version PHP 5 < 5.5
- * @return string	Retourne PHPE9568F35-D428-11d2-A769-00AA001ACF42.
+ * @return string	Retourne PHPE9568F35-D428-11d2-A769-00AA01ACF42.
  *
  */
 if(!function_exists('zend_logo_guidThis'))
