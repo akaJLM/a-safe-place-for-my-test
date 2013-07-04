@@ -24,19 +24,6 @@
 		chdir(dirname(__FILE__));
 	}
 
-	if (realpath($docpath) !== FALSE)
-	{
-		$docpath = realpath($docpath).'/';
-	}
-
-	// ensure there's a trailing slash
-	$docpath = rtrim($docpath, '/').'/';
-
-	if (!is_dir($docpath))
-	{
-		exit("Your php doc folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
-	}
-
 	// Self
 	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
@@ -67,7 +54,7 @@ if($generate === true)
 else
 {
 	$time_start = microtime(true);
-	
+
 	include_once(ROOTPATH.'aliases.php');
 
 	$time_end = microtime(true);
