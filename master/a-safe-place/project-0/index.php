@@ -51,7 +51,7 @@ if($generate === true)
 {
 	$time_start = microtime(true);
 
-	require_once ROOTPATH.'core/codeGenerator.php';
+	require_once(ROOTPATH.'core/codeGenerator.php');
 
 	$time_end = microtime(true);
 
