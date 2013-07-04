@@ -22,20 +22,15 @@ foreach ($phpdoc as $key => $value)
 
 	$inc_func = true;
 
-	/*if(!empty($functions_excluded))
-	{
-		$inc_func = isset($value['name']) ? !in_array($value['name'], $functions_excluded) : false;
-	}*/
-
 	if(!empty($functions_excluded))
 	{
 		$inc_func = isset($value['name']) ? !in_array($value['name'], $functions_excluded) : false;
 
 		foreach ($functions_excluded as $k => $v)
 		{
-			if(preg_match('/^#(.+)#$/', $v))
+			if(preg_match('/^#(.+)#$/', $v) && isset($value['name']) && preg_match($v, $value['name']))
 			{
-				$inc_func = isset($value['name']) ? !preg_match($v, $value['name']) : false;
+				$inc_func = false;
 			}
 		}
 	}
@@ -434,6 +429,6 @@ foreach ($phpdoc as $key => $value)
 	$count++;
 }
 //Some correction until best match
-$large_string = str_replace('01', '1', str_replace('12', '2', str_replace('23', '3', str_replace('$...', '$item',  str_replace('$ ', '$', str_replace('$$', '$', ob_get_contents()))))));
+$large_string = str_replace('arr23', 'arr3', str_replace('arr12', 'arr2', str_replace('arr01', 'arr1', str_replace('array01', 'array1', str_replace('array12', 'array2', str_replace('array23', 'array3', str_replace('$...', '$item',  str_replace('$ ', '$', str_replace('$$', '$', ob_get_contents())))))))));
 file_put_contents('aliases.php', $large_string);
 ob_end_clean();

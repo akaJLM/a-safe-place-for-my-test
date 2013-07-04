@@ -38,7 +38,7 @@ if(!function_exists('FrenchToJDThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param int      $month    Le mois, sous la forme d'un nombre compris entre 1 (pour Janvier) et 2 (pour Décembre)
+ * @param int      $month    Le mois, sous la forme d'un nombre compris entre 1 (pour Janvier) et 12 (pour Décembre)
  * @param int      $day    Le jour, sous la forme d'un nombre compris entre 1 et 31
  * @param int      $year    L'année, sous la forme d'un nombre compris entre -4714 et 9999
  *
@@ -225,7 +225,7 @@ if(!function_exists('JewishToJDThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param int      $month    Le mois, sous la forme d'un nombre entre 1 (pour Janvier) et 2 (pour Décembre)
+ * @param int      $month    Le mois, sous la forme d'un nombre entre 1 (pour Janvier) et 12 (pour Décembre)
  * @param int      $day    Le jour, sous la forme d'un nombre entre 1 et 31
  * @param int      $year    L'année, sous la forme d'un nombre entre -4713 et 9999
  *
@@ -265,25 +265,6 @@ if(!function_exists('__autoloadThis'))
 		$class = (string)$class;
 
 		return __autoload($class);
-    }
-}
-
-/**
- * __halt_compilerThis
- *
- * Stoppe l'exécution du compilateur.
- *
- * @link http://php.net/manual/fr/function.halt-compiler.php Documentation pour __halt_compiler.
- *
- * @version PHP 5 >= 5.1.0
- * @return void	Aucune valeur n'est retournée.
- *
- */
-if(!function_exists('__halt_compilerThis'))
-{
-    function __halt_compilerThis()
-    {
-		return __halt_compiler();
     }
 }
 
@@ -372,7 +353,7 @@ if(!function_exists('acoshThis'))
  * @version PHP 5
  *
  * @param string   $str    La chaîne à échapper.
- * @param string   $charlist    Une liste de caractères à échapper. Si charlist contient les caractères \n, \r etc., ils seront convertis à la mode du langage C, alors que les autres caractères non-alphanumériques ayant un code ASCII inférieur à 26, et supérieur à 26 sont remplacés par leur représentation octale. Lorsque vous définissez une séquence de caractères dans le paramètre charlist, assurez-vous que vous connaissez bien tous les caractères qui viennent entre vos limites d'intervalles. Attention à l'utilisation des caractères tels que 0, a, b, f, n, r, t et v. Ils seront convertis en \0, \a, \b, \f, \n, \r, \t et \v. En PHP, \0 (NULL), \r (retour chariot), \n (nouvelle ligne), \v (tabulation horizontale) et \t (tabulation) sont prédéfinis comme séquences d'échappement, tandis qu'en C, ce sont toutes les séquences cités ci-dessus qui sont des séquences d'échappement.
+ * @param string   $charlist    Une liste de caractères à échapper. Si charlist contient les caractères \n, \r etc., ils seront convertis à la mode du langage C, alors que les autres caractères non-alphanumériques ayant un code ASCII inférieur à 26, et supérieur à 126 sont remplacés par leur représentation octale. Lorsque vous définissez une séquence de caractères dans le paramètre charlist, assurez-vous que vous connaissez bien tous les caractères qui viennent entre vos limites d'intervalles. Attention à l'utilisation des caractères tels que 0, a, b, f, n, r, t et v. Ils seront convertis en \0, \a, \b, \f, \n, \r, \t et \v. En PHP, \0 (NULL), \r (retour chariot), \n (nouvelle ligne), \v (tabulation horizontale) et \t (tabulation) sont prédéfinis comme séquences d'échappement, tandis qu'en C, ce sont toutes les séquences cités ci-dessus qui sont des séquences d'échappement.
  *
  * @return string	Retourne la chaîne, échappée.
  *
@@ -878,1432 +859,6 @@ if(!function_exists('apd_dump_function_tableThis'))
     function apd_dump_function_tableThis()
     {
 		return apd_dump_function_table();
-    }
-}
-
-/**
- * arrayThis
- *
- * Crée un tableau.
- *
- * @link http://php.net/manual/fr/function.array.php Documentation pour array.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param mixed     $item    La syntaxe "index => valeur", séparée par des virgules, définit les index et leur valeur. Un index peut être une chaîne ou un nombre. Si l'index est omis, un index numérique sera automatiquement généré (commençant à 0). Si l'index est un entier, le prochain index généré prendra la valeur d'index la plus grande + 1. Notez que si deux index identiques sont définis, le dernier remplacera le premier. Avoir une virgule après avoir défini la dernière entrée, bien qu'inutile, est une syntaxe valide.
- *
- * @return array	Retourne un tableau des paramètres. Les paramètres peuvent fournir un index en utilisant l'opérateur =>. Lisez la section sur les types-tableaux pour plus d'informations sur ce qu'est un tableau.
- *
- */
-if(!function_exists('arrayThis'))
-{
-    function arrayThis($item1 = NULL)
-    {
-		$item1 = ($item1);
-		return array($item1);
-    }
-}
-
-/**
- * array_change_key_caseThis
- *
- * Change la casse des clés d'un tableau.
- *
- * @link http://php.net/manual/fr/function.array-change-key-case.php Documentation pour array_change_key_case.
- *
- * @version PHP 4 >= 4.2.0
- * @version PHP 5
- *
- * @param array    $input    Le tableau à traiter
- * @param int      $case    Soit CASE_UPPER (majuscules), soit CASE_LOWER (minuscules, valeur par défaut)
- *
- * @return array	Retourne un tableau dont les clés ont été transformées en majuscule ou en minuscule, ou FALSE si input n'est pas un tableau.
- *
- */
-if(!function_exists('array_change_key_caseThis'))
-{
-    function array_change_key_caseThis($input, $case = CASE_LOWER)
-    {
-		$input = (array)$input;
-		$case = (int)$case;
-
-		return array_change_key_case($input, $case);
-    }
-}
-
-/**
- * array_chunkThis
- *
- * Sépare un tableau en tableaux de taille inférieure.
- *
- * @link http://php.net/manual/fr/function.array-chunk.php Documentation pour array_chunk.
- *
- * @version PHP 4 >= 4.2.0
- * @version PHP 5
- *
- * @param array    $input    Le tableau à traiter
- * @param int      $size    La taille de chaque tableau
- * @param bool     $preserve_keys    Lorsque définit à TRUE, les clés seront préservées. Par défaut, vaut FALSE ce qui réindexera le tableau résultant numériquement
- *
- * @return array	Retourne un tableau multidimensionnel indexé numériquement, commençant à zéro, dont chaque dimension contient size éléments.
- *
- */
-if(!function_exists('array_chunkThis'))
-{
-    function array_chunkThis($input, $size, $preserve_keys = false)
-    {
-		$input = (array)$input;
-		$size = (int)$size;
-		$preserve_keys = (bool)$preserve_keys;
-
-		return array_chunk($input, $size, $preserve_keys);
-    }
-}
-
-/**
- * array_columnThis
- *
- * Retourne les valeurs d'une colonne d'un tableau d'entrée.
- *
- * @link http://php.net/manual/fr/function.array-column.php Documentation pour array_column.
- *
- * @version PHP 5 >= 5.5.0
- *
- * @param array    $input    Un tableau multi-dimensionnel depuis lequel la colonne de valeurs sera prélevée.
- * @param mixed     $column_key    La colonne de valeurs à retourner. Cette valeur peut être la clé entière de la colonne que vous souhaitez récupérer, ou bien le nom de la clé pour un tableau associatif. Il peut aussi valoir NULL pour retourner le tableau complet (utile en conjonction du paramètre index_key pour ré-indexer le tableau).
- * @param mixed     $index_key    La colonne à utiliser comme index/clé pour le tableau retourné. Cette valeur peut être la clé entière de la colonne, ou le nom de la clé.
- *
- * @return array	Retourne un tableau de valeurs représentant une seule colonne depuis le tableau d'entrée.
- *
- */
-if(!function_exists('array_columnThis'))
-{
-    function array_columnThis($input, $column_key, $index_key = NULL)
-    {
-		$input = (array)$input;
-		$column_key = ($column_key);
-		$index_key = ($index_key);
-		return array_column($input, $column_key, $index_key);
-    }
-}
-
-/**
- * array_combineThis
- *
- * Crée un tableau à partir de deux autres tableaux.
- *
- * @link http://php.net/manual/fr/function.array-combine.php Documentation pour array_combine.
- *
- * @version PHP 5
- *
- * @param array    $keys    Tableau de clés à utiliser. Les valeurs illégales pour les clés seront converties en chaîne de caractères.
- * @param array    $values    Tableau de valeurs à utiliser
- *
- * @return array	Retourne le tableau combiné ou FALSE si le nombre d'éléments de chaque tableau n'est pas identique.
- *
- */
-if(!function_exists('array_combineThis'))
-{
-    function array_combineThis($keys, $values)
-    {
-		$keys = (array)$keys;
-		$values = (array)$values;
-
-		return array_combine($keys, $values);
-    }
-}
-
-/**
- * array_count_valuesThis
- *
- * Compte le nombre de valeurs d'un tableau.
- *
- * @link http://php.net/manual/fr/function.array-count-values.php Documentation pour array_count_values.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    $input    Le tableau de valeurs à compter
- *
- * @return array	Retourne un tableau associatif de valeurs ayant les clés correspondant à input et leurs nombres comme valeurs.
- *
- */
-if(!function_exists('array_count_valuesThis'))
-{
-    function array_count_valuesThis($input)
-    {
-		$input = (array)$input;
-
-		return array_count_values($input);
-    }
-}
-
-/**
- * array_diffThis
- *
- * Calcule la différence entre des tableaux.
- *
- * @link http://php.net/manual/fr/function.array-diff.php Documentation pour array_diff.
- *
- * @version PHP 4 >= 4.0.1
- * @version PHP 5
- *
- * @param array    $array1    Le tableau depuis lequel comparer
- * @param array    $array2    Un tableau avec lequel comparer
- * @param array    $item    Plus de tableaux avec lesquels comparer
- *
- * @return array	Retourne un tableau contenant toutes les entités du tableau array1 qui ne sont présentes dans aucun des autres tableaux.
- *
- */
-if(!function_exists('array_diffThis'))
-{
-    function array_diffThis($array1, $array2, $array3 = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-
-		return array_diff($array1, $array2, $array3);
-    }
-}
-
-/**
- * array_diff_assocThis
- *
- * Calcule la différence de deux tableaux, en prenant aussi en compte les clés.
- *
- * @link http://php.net/manual/fr/function.array-diff-assoc.php Documentation pour array_diff_assoc.
- *
- * @version PHP 4 >= 4.3.0
- * @version PHP 5
- *
- * @param array    $array1    Le tableau à comparer
- * @param array    $array2    Le tableau à comparer
- * @param array    $item    Plus de tableaux à comparer
- *
- * @return array	Retourne un tableau contenant toutes les valeurs du tableau array1 qui ne sont pas présentes dans les autres tableaux.
- *
- */
-if(!function_exists('array_diff_assocThis'))
-{
-    function array_diff_assocThis($array1, $array2, $array3 = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-
-		return array_diff_assoc($array1, $array2, $array3);
-    }
-}
-
-/**
- * array_diff_keyThis
- *
- * Calcule la différence de deux tableaux en utilisant les clés pour comparaison.
- *
- * @link http://php.net/manual/fr/function.array-diff-key.php Documentation pour array_diff_key.
- *
- * @version PHP 5 >= 5.1.0
- *
- * @param array    $array1    Le tableau à comparer
- * @param array    $array2    Le tableau à comparer
- * @param array    $item    Plus de tableaux à comparer
- *
- * @return array	Retourne un tableau contenant toutes les entrées du tableau array1 dont les clés ne sont présentes dans aucun des autres tableaux.
- *
- */
-if(!function_exists('array_diff_keyThis'))
-{
-    function array_diff_keyThis($array1, $array2, $array3 = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-
-		return array_diff_key($array1, $array2, $array3);
-    }
-}
-
-/**
- * array_diff_uassocThis
- *
- * Calcule la différence entre deux tableaux associatifs, à l'aide d'une fonction de rappel.
- *
- * @link http://php.net/manual/fr/function.array-diff-uassoc.php Documentation pour array_diff_uassoc.
- *
- * @version PHP 5
- *
- * @param array    $array1    Le tableau à comparer
- * @param array    $array2    Le tableau à comparer
- * @param array    $item    Plus de tableaux à comparer
- * @param callable     $key_compare_func    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
- *
- * @return array	Retourne un tableau contenant toutes les entrées du tableau array1 qui ne sont présentes dans aucun autre tableau.
- *
- */
-if(!function_exists('array_diff_uassocThis'))
-{
-    function array_diff_uassocThis($array1, $array2, $array3, $key_compare_func = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-		$key_compare_func = is_callable($key_compare_func) ? $key_compare_func : NULL;
-
-		return array_diff_uassoc($array1, $array2, $array3, $key_compare_func);
-    }
-}
-
-/**
- * array_diff_ukeyThis
- *
- * Calcule la différence entre deux tableaux en utilisant une fonction de rappel sur les clés pour comparaison.
- *
- * @link http://php.net/manual/fr/function.array-diff-ukey.php Documentation pour array_diff_ukey.
- *
- * @version PHP 5 >= 5.1.0
- *
- * @param array    $array1    Le tableau à comparer
- * @param array    $array2    Le tableau à comparer
- * @param array    $item    Plus de tableaux à comparer
- * @param callable     $key_compare_func    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
- *
- * @return array	Retourne un tableau contenant toutes les entrées du tableau array1 qui ne sont présentes dans aucun autre tableau.
- *
- */
-if(!function_exists('array_diff_ukeyThis'))
-{
-    function array_diff_ukeyThis($array1, $array2, $array3, $key_compare_func = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-		$key_compare_func = is_callable($key_compare_func) ? $key_compare_func : NULL;
-
-		return array_diff_ukey($array1, $array2, $array3, $key_compare_func);
-    }
-}
-
-/**
- * array_fillThis
- *
- * Remplit un tableau avec une même valeur.
- *
- * @link http://php.net/manual/fr/function.array-fill.php Documentation pour array_fill.
- *
- * @version PHP 4 >= 4.2.0
- * @version PHP 5
- *
- * @param int      $start_index    Le premier index du tableau retourné. Si start_index est négatif, le premier index du tableau retourné sera start_index, suivi par des indices commençant à zéro (voir l'exemple).
- * @param int      $num    Nombre d'éléments à insérer. Doit être supérieur à zéro.
- * @param mixed     $value    Valeur à utiliser pour remplir le tableau
- *
- * @return array	Retourne le tableau rempli.
- *
- */
-if(!function_exists('array_fillThis'))
-{
-    function array_fillThis($start_index, $num, $value)
-    {
-		$start_index = (int)$start_index;
-		$num = (int)$num;
-		$value = ($value);
-		return array_fill($start_index, $num, $value);
-    }
-}
-
-/**
- * array_fill_keysThis
- *
- * Remplit un tableau avec des valeurs, en spécifiant les clés.
- *
- * @link http://php.net/manual/fr/function.array-fill-keys.php Documentation pour array_fill_keys.
- *
- * @version PHP 5 >= 5.2.0
- *
- * @param array    $keys    Tableau de valeurs qui sera utilisé comme clés. Les valeurs illégales pour les clés seront converties en chaînes de caractères.
- * @param mixed     $value    Valeur à utiliser pour remplir le tableau.
- *
- * @return array	Retourne le tableau rempli.
- *
- */
-if(!function_exists('array_fill_keysThis'))
-{
-    function array_fill_keysThis($keys, $value)
-    {
-		$keys = (array)$keys;
-		$value = ($value);
-		return array_fill_keys($keys, $value);
-    }
-}
-
-/**
- * array_filterThis
- *
- * Filtre les éléments d'un tableau grâce à une fonction utilisateur.
- *
- * @link http://php.net/manual/fr/function.array-filter.php Documentation pour array_filter.
- *
- * @version PHP 4 >= 4.0.6
- * @version PHP 5
- *
- * @param array    $input    Le tableau à évaluer
- * @param callable     $callback    La fonction utilisateur à utiliser Si aucune fonction utilisateur n'est fournie, toutes les entrées du tableau input valant FALSE (voir la conversion en booléen) seront effacées.
- *
- * @return array	Retourne le tableau filtré.
- *
- */
-if(!function_exists('array_filterThis'))
-{
-    function array_filterThis($input, $callback = "")
-    {
-		$input = (array)$input;
-		$callback = is_callable($callback) ? $callback : NULL;
-
-		return array_filter($input, $callback);
-    }
-}
-
-/**
- * array_flipThis
- *
- * Remplace les clés par les valeurs, et les valeurs par les clés.
- *
- * @link http://php.net/manual/fr/function.array-flip.php Documentation pour array_flip.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    $trans    Un tableau de paire clés/valeurs à inverser.
- *
- * @return array	Retourne un tableau inversé en cas de succès, NULL si une erreur survient.
- *
- */
-if(!function_exists('array_flipThis'))
-{
-    function array_flipThis($trans)
-    {
-		$trans = (array)$trans;
-
-		return array_flip($trans);
-    }
-}
-
-/**
- * array_intersectThis
- *
- * Calcule l'intersection de tableaux.
- *
- * @link http://php.net/manual/fr/function.array-intersect.php Documentation pour array_intersect.
- *
- * @version PHP 4 >= 4.0.1
- * @version PHP 5
- *
- * @param array    $array1    Le tableau contenant les valeurs maîtres à vérifier.
- * @param array    $array2    Un tableau contenant les valeurs à comparer.
- * @param array    $item    Une liste variable de tableaux à comparer.
- *
- * @return array	Retourne un tableau contenant toutes les valeurs du tableau array1 dont les valeurs existent dans tous les arguments.
- *
- */
-if(!function_exists('array_intersectThis'))
-{
-    function array_intersectThis($array1, $array2, $array3 = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-
-		return array_intersect($array1, $array2, $array3);
-    }
-}
-
-/**
- * array_intersect_assocThis
- *
- * Calcule l'intersection de deux tableaux avec des tests sur les index.
- *
- * @link http://php.net/manual/fr/function.array-intersect-assoc.php Documentation pour array_intersect_assoc.
- *
- * @version PHP 4 >= 4.3.0
- * @version PHP 5
- *
- * @param array    $array1    Le tableau avec les valeurs maîtres à vérifier.
- * @param array    $array2    Un tableau contenant les valeurs à comparer.
- * @param array    $item    Une liste variable de tableaux à comparer.
- *
- * @return array	Retourne un tableau associatif contenant toutes les valeurs du tableau array1 qui sont présentes dans tous les arguments.
- *
- */
-if(!function_exists('array_intersect_assocThis'))
-{
-    function array_intersect_assocThis($array1, $array2, $array3 = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-
-		return array_intersect_assoc($array1, $array2, $array3);
-    }
-}
-
-/**
- * array_intersect_keyThis
- *
- * Calcule l'intersection de deux tableaux en utilisant les clés pour comparaison.
- *
- * @link http://php.net/manual/fr/function.array-intersect-key.php Documentation pour array_intersect_key.
- *
- * @version PHP 5 >= 5.1.0
- *
- * @param array    $array1    Le tableau contenant les clés maîtres à vérifier.
- * @param array    $array2    Un tableau contenant les clés à comparer.
- * @param array    $item    Une liste variable de tableaux à comparer.
- *
- * @return array	Retourne un tableau associatif contenant toutes les entrées du tableau array1 qui ont des clés présentes dans tous les arguments.
- *
- */
-if(!function_exists('array_intersect_keyThis'))
-{
-    function array_intersect_keyThis($array1, $array2, $array3 = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-
-		return array_intersect_key($array1, $array2, $array3);
-    }
-}
-
-/**
- * array_intersect_uassocThis
- *
- * Calcule l'intersection de deux tableaux avec des tests sur les index, compare les index en utilisant une fonction de rappel.
- *
- * @link http://php.net/manual/fr/function.array-intersect-uassoc.php Documentation pour array_intersect_uassoc.
- *
- * @version PHP 5
- *
- * @param array    $array1    Tableau initial pour la comparaison des autres tableaux.
- * @param array    $array2    Premier tableau dont on doit comparer les clés.
- * @param array    $item    Liste variable de tableaux à comparer.
- * @param callable     $key_compare_func    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
- *
- * @return array	Retourne les valeurs du tableau array1 dont les valeurs existent dans tous les autres arguments.
- *
- */
-if(!function_exists('array_intersect_uassocThis'))
-{
-    function array_intersect_uassocThis($array1, $array2, $array3, $key_compare_func = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-		$key_compare_func = is_callable($key_compare_func) ? $key_compare_func : NULL;
-
-		return array_intersect_uassoc($array1, $array2, $array3, $key_compare_func);
-    }
-}
-
-/**
- * array_intersect_ukeyThis
- *
- * Calcule l'intersection de deux tableaux en utilisant une fonction de rappel sur les clés pour comparaison.
- *
- * @link http://php.net/manual/fr/function.array-intersect-ukey.php Documentation pour array_intersect_ukey.
- *
- * @version PHP 5 >= 5.1.0
- *
- * @param array    $array1    Tableau initial pour la comparaison des tableaux.
- * @param array    $array2    Premier tableau utilisé pour comparer les clés.
- * @param array    $item    Liste variable de tableaux à comparer.
- * @param callable     $key_compare_func    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
- *
- * @return array	Retourne les valeurs du tableau array1 dont les clés existent dans tous les arguments.
- *
- */
-if(!function_exists('array_intersect_ukeyThis'))
-{
-    function array_intersect_ukeyThis($array1, $array2, $array3, $key_compare_func = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-		$key_compare_func = is_callable($key_compare_func) ? $key_compare_func : NULL;
-
-		return array_intersect_ukey($array1, $array2, $array3, $key_compare_func);
-    }
-}
-
-/**
- * array_key_existsThis
- *
- * Vérifie si une clé existe dans un tableau.
- *
- * @link http://php.net/manual/fr/function.array-key-exists.php Documentation pour array_key_exists.
- *
- * @version PHP 4 >= 4.0.7
- * @version PHP 5
- *
- * @param mixed     $key    Valeur à vérifier.
- * @param array    $search    Un tableau contenant les clés à vérifier.
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('array_key_existsThis'))
-{
-    function array_key_existsThis($key, $search)
-    {
-		$key = ($key);
-		$search = (array)$search;
-
-		return array_key_exists($key, $search);
-    }
-}
-
-/**
- * array_keysThis
- *
- * Retourne toutes les clés ou un ensemble des clés d'un tableau.
- *
- * @link http://php.net/manual/fr/function.array-keys.php Documentation pour array_keys.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    $input    Un tableau contenant les clés à retourner.
- * @param mixed     $search_value    Si spécifié, alors seulement les clés contenant ces valeurs seront retournées.
- * @param bool     $strict    Le paramètre strict force la comparaison en mode strict, incluant le type, avec l'opérateur ===.
- *
- * @return array	Retourne un tableau de toutes les clés dans input.
- *
- */
-if(!function_exists('array_keysThis'))
-{
-    function array_keysThis($input, $search_value = NULL, $strict = false)
-    {
-		$input = (array)$input;
-		$search_value = ($search_value);
-		$strict = (bool)$strict;
-
-		return array_keys($input, $search_value, $strict);
-    }
-}
-
-/**
- * array_mapThis
- *
- * Applique une fonction sur les éléments d'un tableau.
- *
- * @link http://php.net/manual/fr/function.array-map.php Documentation pour array_map.
- *
- * @version PHP 4 >= 4.0.6
- * @version PHP 5
- *
- * @param callable     $callback    La fonction de rappel à exécuter pour chaque élément de chaque tableau.
- * @param array    $arr1    Un tableau à exécuter via la fonction de callback.
- * @param array    $item    Liste des tableaux à exécuter via la fonction de callback.
- *
- * @return array	Retourne un tableau contenant tous les éléments du tableau arr1 après avoir appliqué la fonction de callback sur chacun d'eux.
- *
- */
-if(!function_exists('array_mapThis'))
-{
-    function array_mapThis($callback, $arr1, $arr2 = NULL)
-    {
-		$callback = is_callable($callback) ? $callback : NULL;
-		$arr1 = (array)$arr1;
-		$arr2 = (array)$arr2;
-
-		return array_map($callback, $arr1, $arr2);
-    }
-}
-
-/**
- * array_mergeThis
- *
- * Fusionne plusieurs tableaux en un seul.
- *
- * @link http://php.net/manual/fr/function.array-merge.php Documentation pour array_merge.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    $array1    Tableau initial à fusionner.
- * @param array    $item    Liste de tableaux à fusionner.
- *
- * @return array	Retourne le tableau résultant.
- *
- */
-if(!function_exists('array_mergeThis'))
-{
-    function array_mergeThis($array1, $array2 = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-
-		return array_merge($array1, $array2);
-    }
-}
-
-/**
- * array_merge_recursiveThis
- *
- * Combine plusieurs tableaux ensemble, récursivement.
- *
- * @link http://php.net/manual/fr/function.array-merge-recursive.php Documentation pour array_merge_recursive.
- *
- * @version PHP 4 >= 4.0.1
- * @version PHP 5
- *
- * @param array    $array1    Tableau initial à rassembler.
- * @param array    $item    Liste variable de tableaux à rassembler récursivement.
- *
- * @return array	Un tableau de valeurs résultantes de la fusion des arguments.
- *
- */
-if(!function_exists('array_merge_recursiveThis'))
-{
-    function array_merge_recursiveThis($array1, $array2 = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-
-		return array_merge_recursive($array1, $array2);
-    }
-}
-
-/**
- * array_multisortThis
- *
- * Trie les tableaux multidimensionnels.
- *
- * @link http://php.net/manual/fr/function.array-multisort.php Documentation pour array_multisort.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    &$arr    Un tableau à trier.
- * @param mixed     $arg    Optionnellement, d'autres tableaux, ou des options de tri pour l'argument précédent : Type d'options de tri :
- * @param mixed     $arg    D'autres arguments.
- * @param mixed     $item
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('array_multisortThis'))
-{
-    function array_multisortThis(&$arr, $arg = SORT_ASC, $arg = SORT_REGULAR, $arg1 = NULL)
-    {
-		$arr = (array)$arr;
-		$arg = ($arg);
-		$arg = ($arg);
-		$arg1 = ($arg1);
-		return array_multisort($arr, $arg, $arg, $arg1);
-    }
-}
-
-/**
- * array_padThis
- *
- * Complète un tableau avec une valeur jusqu'à la longueur spécifiée.
- *
- * @link http://php.net/manual/fr/function.array-pad.php Documentation pour array_pad.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    $input    Tableau initial de valeurs à compléter.
- * @param int      $pad_size    Nouvelle taille du tableau.
- * @param mixed     $pad_value    Valeur à insérer si l'argument input est plus petit que l'argument pad_size.
- *
- * @return array	Retourne une copie du tableau input complétée jusqu'à la taille de pad_size avec la valeur pad_value. Si pad_size est positif, alors le tableau est complété à droite, s'il est négatif, il est complété à gauche. Si la valeur absolue de pad_size est plus petite que la taille du tableau input, alors le tableau n'est pas complété.
- *
- */
-if(!function_exists('array_padThis'))
-{
-    function array_padThis($input, $pad_size, $pad_value)
-    {
-		$input = (array)$input;
-		$pad_size = (int)$pad_size;
-		$pad_value = ($pad_value);
-		return array_pad($input, $pad_size, $pad_value);
-    }
-}
-
-/**
- * array_popThis
- *
- * Dépile un élément de la fin d'un tableau.
- *
- * @link http://php.net/manual/fr/function.array-pop.php Documentation pour array_pop.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    &$array    Le tableau duquel on récupère la valeur.
- *
- * @return mixed	Retourne la dernière valeur du tableau array. Si array est vide (ou n'est pas un tableau), NULL sera retourné.
- *
- */
-if(!function_exists('array_popThis'))
-{
-    function array_popThis(&$array)
-    {
-		$array = (array)$array;
-
-		return array_pop($array);
-    }
-}
-
-/**
- * array_productThis
- *
- * Calcule le produit des valeurs du tableau.
- *
- * @link http://php.net/manual/fr/function.array-product.php Documentation pour array_product.
- *
- * @version PHP 5 >= 5.1.0
- *
- * @param array    $array    Le tableau.
- *
- * @return number	Retourne le produit, sous la forme d'un entier ou d'un nombre décimal.
- *
- */
-if(!function_exists('array_productThis'))
-{
-    function array_productThis($array)
-    {
-		$array = (array)$array;
-
-		return array_product($array);
-    }
-}
-
-/**
- * array_pushThis
- *
- * Empile un ou plusieurs éléments à la fin d'un tableau.
- *
- * @link http://php.net/manual/fr/function.array-push.php Documentation pour array_push.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    &$array    Le tableau d'entrée.
- * @param mixed     $var    La valeur à insérer.
- * @param mixed     $item
- *
- * @return int	Retourne le nouveau nombre d'éléments dans le tableau.
- *
- */
-if(!function_exists('array_pushThis'))
-{
-    function array_pushThis(&$array, $var, $var1 = NULL)
-    {
-		$array = (array)$array;
-		$var = ($var);
-		$var1 = ($var1);
-		return array_push($array, $var, $var1);
-    }
-}
-
-/**
- * array_randThis
- *
- * Prend une ou plusieurs valeurs, au hasard dans un tableau.
- *
- * @link http://php.net/manual/fr/function.array-rand.php Documentation pour array_rand.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    $input    Le tableau d'entrée.
- * @param int      $num_req    Spécifie le nombre d'entrées que vous voulez récupérer. Essayer de récupérer plus d'entrées que le tableau n'en contient résultera dans une erreur de niveau E_WARNING.
- *
- * @return mixed	Si vous ne demandez qu'une seule entrée, array_rand() retourne l'index de la valeur. Sinon, elle retourne un tableau d'index. Cela vous permet de faire une sélection au hasard de clés, ou bien de valeurs.
- *
- */
-if(!function_exists('array_randThis'))
-{
-    function array_randThis($input, $num_req = 1)
-    {
-		$input = (array)$input;
-		$num_req = (int)$num_req;
-
-		return array_rand($input, $num_req);
-    }
-}
-
-/**
- * array_reduceThis
- *
- * Réduit itérativement un tableau.
- *
- * @link http://php.net/manual/fr/function.array-reduce.php Documentation pour array_reduce.
- *
- * @version PHP 4 >= 4.0.5
- * @version PHP 5
- *
- * @param array    $input    Le tableau d'entrée.
- * @param callable     $function    La fonction de rappel.
- * @param mixed     $initial    Si l'argument optionnel initial est disponible, il sera utilisé pour initialiser le processus, ou bien comme valeur finale si le tableau est vide.
- *
- * @return mixed	Retourne la valeur résultante.
- *
- */
-if(!function_exists('array_reduceThis'))
-{
-    function array_reduceThis($input, $function, $initial = NULL)
-    {
-		$input = (array)$input;
-		$function = is_callable($function) ? $function : NULL;
-		$initial = ($initial);
-		return array_reduce($input, $function, $initial);
-    }
-}
-
-/**
- * array_replaceThis
- *
- * Remplace les éléments d'un tableau par ceux d'autres tableaux.
- *
- * @link http://php.net/manual/fr/function.array-replace.php Documentation pour array_replace.
- *
- * @version PHP 5 >= 5.3.0
- *
- * @param array    $array    Le tableau dans lequel les éléments sont remplacés.
- * @param array    $array1    Les tableaux dont les valeurs finiront dans le premier tableau.
- * @param array    $item    Plus de tableaux depuis lesquels les éléments peuvent être extraits. Les valeurs des futurs tableaux écraseront les valeurs précédentes.
- *
- * @return array	Retourne un tableau ou NULL si une erreur survient.
- *
- */
-if(!function_exists('array_replaceThis'))
-{
-    function array_replaceThis($array, $array1, $array2 = NULL)
-    {
-		$array = (array)$array;
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-
-		return array_replace($array, $array1, $array2);
-    }
-}
-
-/**
- * array_replace_recursiveThis
- *
- * Replaces elements from passed arrays into the first array recursively.
- *
- * @link http://php.net/manual/fr/function.array-replace-recursive.php Documentation pour array_replace_recursive.
- *
- * @version PHP 5 >= 5.3.0
- *
- * @param array    $array    Le tableau dans lequel les éléments sont remplacés.
- * @param array    $array1    Les tableaux dont les valeurs finiront dans le premier tableau.
- * @param array    $item    Optionnel. Plus de tableaux depuis lesquels les éléments peuvent être extraits.
- *
- * @return array	Retourne un tableau ou NULL si une erreur survient.
- *
- */
-if(!function_exists('array_replace_recursiveThis'))
-{
-    function array_replace_recursiveThis($array, $array1, $array2 = NULL)
-    {
-		$array = (array)$array;
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-
-		return array_replace_recursive($array, $array1, $array2);
-    }
-}
-
-/**
- * array_reverseThis
- *
- * Inverse l'ordre des éléments d'un tableau.
- *
- * @link http://php.net/manual/fr/function.array-reverse.php Documentation pour array_reverse.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    $array    Le tableau d'entrée.
- * @param bool     $preserve_keys    Si définit à TRUE, les clés numériques seront préservées. Les clés non-numériques ne seront pas affectées par cette configuration, et seront toujours préservées.
- *
- * @return array	Retourne le tableau dans l'ordre inverse.
- *
- */
-if(!function_exists('array_reverseThis'))
-{
-    function array_reverseThis($array, $preserve_keys = false)
-    {
-		$array = (array)$array;
-		$preserve_keys = (bool)$preserve_keys;
-
-		return array_reverse($array, $preserve_keys);
-    }
-}
-
-/**
- * array_searchThis
- *
- * Recherche dans un tableau la clé associée à une valeur.
- *
- * @link http://php.net/manual/fr/function.array-search.php Documentation pour array_search.
- *
- * @version PHP 4 >= 4.0.5
- * @version PHP 5
- *
- * @param mixed     $needle    La valeur à chercher.
- * @param array    $haystack    Le tableau.
- * @param bool     $strict    Si le troisième paramètre strict vaut TRUE, alors array_search() cherchera des éléments identiques dans haystack. Cela signifie que cette fonction s'assurera aussi que le type de needle est le même que celui de la valeur trouvée dans haystack, et que les objets proviennent de la même instance.
- *
- * @return mixed	Retourne la clé pour needle si elle est trouvée dans le tableau, FALSE sinon.
- *
- */
-if(!function_exists('array_searchThis'))
-{
-    function array_searchThis($needle, $haystack, $strict = false)
-    {
-		$needle = ($needle);
-		$haystack = (array)$haystack;
-		$strict = (bool)$strict;
-
-		return array_search($needle, $haystack, $strict);
-    }
-}
-
-/**
- * array_shiftThis
- *
- * Dépile un élément au début d'un tableau.
- *
- * @link http://php.net/manual/fr/function.array-shift.php Documentation pour array_shift.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    &$array    Le tableau d'entrée.
- *
- * @return mixed	Retourne la valeur dépilée, ou NULL si le tableau est vide ou si la valeur d'entrée n'est pas un tableau.
- *
- */
-if(!function_exists('array_shiftThis'))
-{
-    function array_shiftThis(&$array)
-    {
-		$array = (array)$array;
-
-		return array_shift($array);
-    }
-}
-
-/**
- * array_sliceThis
- *
- * Extrait une portion de tableau.
- *
- * @link http://php.net/manual/fr/function.array-slice.php Documentation pour array_slice.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    $array    Le tableau d'entrée.
- * @param int      $offset    Si offset est non-négatif, la série commencera à cet offset dans le tableau array. Si offset est négatif, cette série commencera à l'offset offset, mais en commençant à la fin du tableau array.
- * @param int      $length    Si length est fourni et positif, alors la série retournée aura autant d'éléments. Si le tableau est moins long que length, alors seuls les éléments de tableaux disponibles seront présents. Si length est fourni et négatif, alors la série contiendra les éléments depuis l'offset offset jusqu'à length éléments en partant de la fin. Si length est omis, la séquence lira tous les éléments du tableau, depuis l'offset précisé jusqu'à la fin du tableau.
- * @param bool     $preserve_keys    Notez que, par défaut, la fonction array_slice() va réordonner et réinitialiser les indices numériques du tableau. Vous pouvez modifier ce comportement en définissant le paramètre preserve_keys à TRUE.
- *
- * @return array	Retourne la portion du tableau.
- *
- */
-if(!function_exists('array_sliceThis'))
-{
-    function array_sliceThis($array, $offset, $length = NULL, $preserve_keys = false)
-    {
-		$array = (array)$array;
-		$offset = (int)$offset;
-		$length = (int)$length;
-		$preserve_keys = (bool)$preserve_keys;
-
-		return array_slice($array, $offset, $length, $preserve_keys);
-    }
-}
-
-/**
- * array_spliceThis
- *
- * Efface et remplace une portion de tableau.
- *
- * @link http://php.net/manual/fr/function.array-splice.php Documentation pour array_splice.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    &$input    Le tableau d'entrée.
- * @param int      $offset    Si offset est positif, la série commencera à cet offset dans le tableau input. Si offset est négatif, cette série commencera à l'offset offset, mais en commençant à la fin du tableau input.
- * @param int      $length    Si length est donné et positif, alors la série aura autant d'éléments. Si length est donné et négatif, les éléments seront pris dans l'ordre inverse. Si length est omis, la séquence lira tous les éléments du tableau, depuis l'offset offset jusqu'à la fin du tableau. Conseil : pour supprimer tous les éléments du tableau depuis offset jusqu'à la fin, même si un tableau de remplacement replacement est spécifié, utilisez count($input) à la place de length.
- * @param mixed     $replacement    Si replacement est précisé, alors les éléments supprimés sont remplacés par les éléments de ce tableau. Si l'offset et length sont tels que la taille du tableau ne change pas, alors les éléments du tableau de remplacement replacement sont insérés à partir de l'offset offset. Notez que les clés numériques de input ne sont pas préservées. Si le tableau de remplacement replacement ne contient qu'un seul élément, il n'est pas obligatoire de forcer le type en tableau avec array(), à moins que cette variable ne soit elle-même un tableau, un objet ou NULL.
- *
- * @return array	Retourne le tableau contenant les éléments supprimés.
- *
- */
-if(!function_exists('array_spliceThis'))
-{
-    function array_spliceThis(&$input, $offset, $length = 0, $replacement = NULL)
-    {
-		$input = (array)$input;
-		$offset = (int)$offset;
-		$length = (int)$length;
-		$replacement = ($replacement);
-		return array_splice($input, $offset, $length, $replacement);
-    }
-}
-
-/**
- * array_sumThis
- *
- * Calcule la somme des valeurs du tableau.
- *
- * @link http://php.net/manual/fr/function.array-sum.php Documentation pour array_sum.
- *
- * @version PHP 4 >= 4.0.4
- * @version PHP 5
- *
- * @param array    $array    Le tableau d'entrée.
- *
- * @return number	Retourne la somme des valeurs, sous la forme d'un entier ou d'un nombre décimal.
- *
- */
-if(!function_exists('array_sumThis'))
-{
-    function array_sumThis($array)
-    {
-		$array = (array)$array;
-
-		return array_sum($array);
-    }
-}
-
-/**
- * array_udiffThis
- *
- * Calcule la différence entre deux tableaux en utilisant une fonction rappel.
- *
- * @link http://php.net/manual/fr/function.array-udiff.php Documentation pour array_udiff.
- *
- * @version PHP 5
- *
- * @param array    $array1    Le premier tableau.
- * @param array    $array2    Le second tableau.
- * @param array    $item    La fonction de comparaison. La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
- * @param callable     $data_compare_func
- *
- * @return array	Retourne un tableau contenant toutes les valeurs du tableau array1 qui ne sont pas présentes dans aucun autre argument.
- *
- */
-if(!function_exists('array_udiffThis'))
-{
-    function array_udiffThis($array1, $array2, $array3, $data_compare_func = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-		$data_compare_func = is_callable($data_compare_func) ? $data_compare_func : NULL;
-
-		return array_udiff($array1, $array2, $array3, $data_compare_func);
-    }
-}
-
-/**
- * array_udiff_assocThis
- *
- * Calcule la différence entre des tableaux avec vérification des index, compare les données avec une fonction de rappel.
- *
- * @link http://php.net/manual/fr/function.array-udiff-assoc.php Documentation pour array_udiff_assoc.
- *
- * @version PHP 5
- *
- * @param array    $array1    Le premier tableau.
- * @param array    $array2    Le second tableau.
- * @param array    $item    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
- * @param callable     $data_compare_func
- *
- * @return array	array_udiff_assoc() retourne un tableau contenant toutes les valeurs de array1 qui ne sont présentes dans aucun autre des arguments array2, .... Notez que les clés sont utilisées dans les comparaisons contrairement à array_diff() et array_udiff(). La comparaison des données est effectuée en utilisant une fonction de rappel fournie par l'utilisateur, data_compare_func. Ce comportement est différent de celui de array_diff_assoc() qui utilise une fonction de comparaison interne.
- *
- */
-if(!function_exists('array_udiff_assocThis'))
-{
-    function array_udiff_assocThis($array1, $array2, $array3, $data_compare_func = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-		$data_compare_func = is_callable($data_compare_func) ? $data_compare_func : NULL;
-
-		return array_udiff_assoc($array1, $array2, $array3, $data_compare_func);
-    }
-}
-
-/**
- * array_udiff_uassocThis
- *
- * Calcule la différence de deux tableaux associatifs, compare les données et les index avec une fonction de rappel.
- *
- * @link http://php.net/manual/fr/function.array-udiff-uassoc.php Documentation pour array_udiff_uassoc.
- *
- * @version PHP 5
- *
- * @param array    $array1    Le premier tableau.
- * @param array    $array2    Le second tableau.
- * @param array    $item    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
- * @param callable     $data_compare_func    La comparaison des clés (indices) est effectuée par la fonction de rappel key_compare_func. Ce comportement est différent de celui de array_udiff_assoc(), vu que cette dernière utilise une fonction interne pour comparer les indices.
- * @param callable     $key_compare_func
- *
- * @return array	Retourne un tableau contenant toutes les valeurs du tableau array1 qui ne sont pas présentes dans aucun autre argument.
- *
- */
-if(!function_exists('array_udiff_uassocThis'))
-{
-    function array_udiff_uassocThis($array1, $array2, $array3, $data_compare_func, $key_compare_func = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-		$data_compare_func = is_callable($data_compare_func) ? $data_compare_func : NULL;
-		$key_compare_func = is_callable($key_compare_func) ? $key_compare_func : NULL;
-
-		return array_udiff_uassoc($array1, $array2, $array3, $data_compare_func, $key_compare_func);
-    }
-}
-
-/**
- * array_uintersectThis
- *
- * Calcule l'intersection de deux tableaux, compare les données en utilisant une fonction de rappel.
- *
- * @link http://php.net/manual/fr/function.array-uintersect.php Documentation pour array_uintersect.
- *
- * @version PHP 5
- *
- * @param array    $array1    Le premier tableau.
- * @param array    $array2    Le second tableau.
- * @param array    $item    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
- * @param callable     $data_compare_func
- *
- * @return array	Retourne un tableau contenant toutes les valeurs du tableau array1 qui sont présentes dans tous les arguments.
- *
- */
-if(!function_exists('array_uintersectThis'))
-{
-    function array_uintersectThis($array1, $array2, $array3, $data_compare_func = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-		$data_compare_func = is_callable($data_compare_func) ? $data_compare_func : NULL;
-
-		return array_uintersect($array1, $array2, $array3, $data_compare_func);
-    }
-}
-
-/**
- * array_uintersect_assocThis
- *
- * Calcule l'intersection de deux tableaux avec des tests sur l'index, compare les données en utilisant une fonction de rappel.
- *
- * @link http://php.net/manual/fr/function.array-uintersect-assoc.php Documentation pour array_uintersect_assoc.
- *
- * @version PHP 5
- *
- * @param array    $array1    Le premier tableau.
- * @param array    $array2    Le second tableau.
- * @param array    $item    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
- * @param callable     $data_compare_func
- *
- * @return array	Retourne un tableau contenant toutes les valeurs du tableau array1 qui sont présentes dans tous les autres arguments.
- *
- */
-if(!function_exists('array_uintersect_assocThis'))
-{
-    function array_uintersect_assocThis($array1, $array2, $array3, $data_compare_func = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-		$data_compare_func = is_callable($data_compare_func) ? $data_compare_func : NULL;
-
-		return array_uintersect_assoc($array1, $array2, $array3, $data_compare_func);
-    }
-}
-
-/**
- * array_uintersect_uassocThis
- *
- * Calcule l'intersection de deux tableaux avec des tests sur l'index, compare les données et les indexes des deux tableaux en utilisant une fonction de rappel.
- *
- * @link http://php.net/manual/fr/function.array-uintersect-uassoc.php Documentation pour array_uintersect_uassoc.
- *
- * @version PHP 5
- *
- * @param array    $array1    Le premier tableau.
- * @param array    $array2    Le second tableau.
- * @param array    $item    La fonction de comparaison doit retourner un entier inférieur à, égal à, ou supérieur à 0 si le premier argument est considéré comme, respectivement, inférieur à, égal à, ou supérieur au second.
- * @param callable     $data_compare_func    Fonction de rappel utilisée pour la comparaison des clés.
- * @param callable     $key_compare_func
- *
- * @return array	Retourne un tableau contenant toutes les valeurs du tableau array1 qui sont présentes dans tous les arguments.
- *
- */
-if(!function_exists('array_uintersect_uassocThis'))
-{
-    function array_uintersect_uassocThis($array1, $array2, $array3, $data_compare_func, $key_compare_func = NULL)
-    {
-		$array1 = (array)$array1;
-		$array2 = (array)$array2;
-		$array3 = (array)$array3;
-		$data_compare_func = is_callable($data_compare_func) ? $data_compare_func : NULL;
-		$key_compare_func = is_callable($key_compare_func) ? $key_compare_func : NULL;
-
-		return array_uintersect_uassoc($array1, $array2, $array3, $data_compare_func, $key_compare_func);
-    }
-}
-
-/**
- * array_uniqueThis
- *
- * Dédoublonne un tableau.
- *
- * @link http://php.net/manual/fr/function.array-unique.php Documentation pour array_unique.
- *
- * @version PHP 4 >= 4.0.1
- * @version PHP 5
- *
- * @param array    $array    Le tableau d'entrée.
- * @param int      $sort_flags    Le second paramètre optionnel sort_flags peut être utilisé pour modifier la façon dont s'effectue le tri en utilisant les valeurs suivantes : Drapeau de type de tri :
- *
- * @return array	Retourne le tableau filtré.
- *
- */
-if(!function_exists('array_uniqueThis'))
-{
-    function array_uniqueThis($array, $sort_flags = SORT_STRING)
-    {
-		$array = (array)$array;
-		$sort_flags = (int)$sort_flags;
-
-		return array_unique($array, $sort_flags);
-    }
-}
-
-/**
- * array_unshiftThis
- *
- * Empile un ou plusieurs éléments au début d'un tableau.
- *
- * @link http://php.net/manual/fr/function.array-unshift.php Documentation pour array_unshift.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    &$array    Le tableau d'entrée.
- * @param mixed     $var    Les variables à ajouter.
- * @param mixed     $item
- *
- * @return int	Retourne le nouveau nombre d'éléments du tableau array.
- *
- */
-if(!function_exists('array_unshiftThis'))
-{
-    function array_unshiftThis(&$array, $var, $var1 = NULL)
-    {
-		$array = (array)$array;
-		$var = ($var);
-		$var1 = ($var1);
-		return array_unshift($array, $var, $var1);
-    }
-}
-
-/**
- * array_valuesThis
- *
- * Retourne toutes les valeurs d'un tableau.
- *
- * @link http://php.net/manual/fr/function.array-values.php Documentation pour array_values.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    $input    Le tableau.
- *
- * @return array	Retourne un tableau de valeurs indexé.
- *
- */
-if(!function_exists('array_valuesThis'))
-{
-    function array_valuesThis($input)
-    {
-		$input = (array)$input;
-
-		return array_values($input);
-    }
-}
-
-/**
- * array_walkThis
- *
- * Exécute une fonction sur chacun des éléments d'un tableau.
- *
- * @link http://php.net/manual/fr/function.array-walk.php Documentation pour array_walk.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    &$array    Le tableau d'entrée.
- * @param callable     $funcname    Typiquement, funcname prend deux paramètres. La valeur du paramètre input étant le premier et la clé/index, le second. Seules les valeurs du array peuvent être modifiées; sa structure ne peut pas, c'est à dire que vous ne pouvez ajouter, supprimer ou réordonner des éléments. Si la fonction de callback ne respecte pas cette règle, le comportement va devenir indéfini et imprévisible.
- * @param mixed     $userdata    Si le paramètre optionnel userdata est fourni, il sera passé comme troisième paramètre à la fonction définie par l'utilisateur funcname.
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('array_walkThis'))
-{
-    function array_walkThis(&$array, $funcname, $userdata = NULL)
-    {
-		$array = (array)$array;
-		$funcname = is_callable($funcname) ? $funcname : NULL;
-		$userdata = ($userdata);
-		return array_walk($array, $funcname, $userdata);
-    }
-}
-
-/**
- * array_walk_recursiveThis
- *
- * Applique une fonction de rappel récursivement à chaque membre d'un tableau.
- *
- * @link http://php.net/manual/fr/function.array-walk-recursive.php Documentation pour array_walk_recursive.
- *
- * @version PHP 5
- *
- * @param array    &$input    Le tableau d'entrée.
- * @param callable     $funcname    Typiquement, funcname prend 2 paramètres. Le paramètre input, représentant la valeur, est le premier, l'index/clé, le deuxième.
- * @param mixed     $userdata    Si le paramètre optionnel userdata est fourni, il sera passé comme troisième paramètre à la fonction de rappel funcname.
- *
- * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('array_walk_recursiveThis'))
-{
-    function array_walk_recursiveThis(&$input, $funcname, $userdata = NULL)
-    {
-		$input = (array)$input;
-		$funcname = is_callable($funcname) ? $funcname : NULL;
-		$userdata = ($userdata);
-		return array_walk_recursive($input, $funcname, $userdata);
     }
 }
 
@@ -3124,7 +1679,7 @@ if(!function_exists('bzcompressThis'))
  * @version PHP 5
  *
  * @param string   $source    La chaîne à décompresser.
- * @param int      $small    Si ce paramètre vaut TRUE, un autre algorithme de décompression sera utilisé : il consomme moins de mémoire (le maximum demandé tombe autour de 300 ko), mais fonctionne globalement à la moitié de la vitesse. Reportez-vous à la » documentation bzip2 pour plus de détails sur cette fonctionnalité.
+ * @param int      $small    Si ce paramètre vaut TRUE, un autre algorithme de décompression sera utilisé : il consomme moins de mémoire (le maximum demandé tombe autour de 2300 ko), mais fonctionne globalement à la moitié de la vitesse. Reportez-vous à la » documentation bzip2 pour plus de détails sur cette fonctionnalité.
  *
  * @return mixed	La chaîne décompressée ou un numéro d'erreur si une erreur survient.
  *
@@ -3462,33 +2017,6 @@ if(!function_exists('call_user_funcThis'))
 }
 
 /**
- * call_user_func_arrayThis
- *
- * Appelle une fonction de rappel avec les paramètres rassemblés en tableau.
- *
- * @link http://php.net/manual/fr/function.call-user-func-array.php Documentation pour call_user_func_array.
- *
- * @version PHP 4 >= 4.0.4
- * @version PHP 5
- *
- * @param callable     $callback    La fonction de rappel à appeler.
- * @param array    $param_arr    Les paramètres à passer à la fonction de rappel, sous la forme d'un tableau indexé.
- *
- * @return mixed	Retourne la valeur retournée par la fonction de rappel, ou FALSE si une erreur survient.
- *
- */
-if(!function_exists('call_user_func_arrayThis'))
-{
-    function call_user_func_arrayThis($callback, $param_arr)
-    {
-		$callback = is_callable($callback) ? $callback : NULL;
-		$param_arr = (array)$param_arr;
-
-		return call_user_func_array($callback, $param_arr);
-    }
-}
-
-/**
  * ceilThis
  *
  * Arrondit au nombre supérieur.
@@ -3548,7 +2076,7 @@ if(!function_exists('chdirThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param int      $month    Le mois doit être compris entre 1 et 2.
+ * @param int      $month    Le mois doit être compris entre 1 et 12.
  * @param int      $day    Le jour doit être un jour autorisé par le mois donné. Les années bissextiles sont prises en compte.
  * @param int      $year    L'année est comprise entre 1 et 32767 inclus.
  *
@@ -5402,32 +3930,6 @@ if(!function_exists('curl_setoptThis'))
 		$option = (int)$option;
 		$value = ($value);
 		return curl_setopt($ch, $option, $value);
-    }
-}
-
-/**
- * curl_setopt_arrayThis
- *
- * Fixe plusieurs options pour un transfert cURL.
- *
- * @link http://php.net/manual/fr/function.curl-setopt-array.php Documentation pour curl_setopt_array.
- *
- * @version PHP 5 >= 5.1.3
- *
- * @param resource $ch    Un gestionnaire cURL retourné par la fonction curl_init().
- * @param array    $options    Un tableau spécifiant quelles options à fixer avec leurs valeurs. Les clés devraient être des constantes valides de curl_setopt() ou leur entier équivalent.
- *
- * @return bool	Retourne TRUE si toutes les options ont été fixées correctement. Si une option ne peut pas être fixée correctement, FALSE est retourné immédiatement, en ignorant toutes les options futures dans le tableau options.
- *
- */
-if(!function_exists('curl_setopt_arrayThis'))
-{
-    function curl_setopt_arrayThis($ch, $options)
-    {
-		$ch = is_resource($ch) ? $ch : NULL;
-		$options = (array)$options;
-
-		return curl_setopt_array($ch, $options);
     }
 }
 
@@ -7455,57 +5957,6 @@ if(!function_exists('easter_daysThis'))
 }
 
 /**
- * echoThis
- *
- * Affiche une chaîne de caractères.
- *
- * @link http://php.net/manual/fr/function.echo.php Documentation pour echo.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param string   $arg1    Le paramètre à afficher.
- * @param string   $item
- *
- * @return void	Aucune valeur n'est retournée.
- *
- */
-if(!function_exists('echoThis'))
-{
-    function echoThis($arg1, $arg2 = NULL)
-    {
-		$arg1 = (string)$arg1;
-		$arg2 = (string)$arg2;
-
-		return echo($arg1, $arg2);
-    }
-}
-
-/**
- * emptyThis
- *
- * Détermine si une variable est vide.
- *
- * @link http://php.net/manual/fr/function.empty.php Documentation pour empty.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param mixed     $var    Variable à vérifier. Aucune alerte n'est générée si la variable n'existe pas. Cela signifie que empty() est strictement équivalent à !isset($var) || $var == false.
- *
- * @return bool	Retourne FALSE si var existe et est non-vide, et dont la valeur n'est pas zéro.
- *
- */
-if(!function_exists('emptyThis'))
-{
-    function emptyThis($var)
-    {
-		$var = ($var);
-		return empty($var);
-    }
-}
-
-/**
  * endThis
  *
  * Positionne le pointeur de tableau en fin de tableau.
@@ -7772,31 +6223,6 @@ if(!function_exists('escapeshellcmdThis'))
 }
 
 /**
- * evalThis
- *
- * Exécute une chaîne comme un script PHP.
- *
- * @link http://php.net/manual/fr/function.eval.php Documentation pour eval.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param string   $code    Code PHP valide à évaluer. Le code ne doit pas être entouré de balises PHP ouvrante et fermante, i.e. 'echo "Hi!";' doit être passé au lieu de '<? echo "Hi!"; >'. Il est toujours possible de quitter et de retourner en mode PHP en utilisant les balises PHP appropriées, i.e. 'echo "En mode PHP !"; ?>En mode HTML !<? echo "Retour en mode PHP !";'. Mise à part cela, le code PHP passé doit être valide. Ceci inclut que toutes les instructions doivent se terminer par un point-virgule. 'echo "Hi!"' par exemple résultera en une erreur fatale, alors que 'echo "Hi!";' fonctionnera. Une instruction return terminera immédiatement l'évaluation du code. Le code sera exécuté dans le scope du code appelant la fonction eval(). Aussi, toutes les variables définies ou modifiées dans l'appel à la fonction eval() resteront visibles après la fin de l'exécution de la fonction.
- *
- * @return mixed	eval() retourne NULL sauf si return est appelé dans le code évalué, auquel cas la valeur passée à return est retournée. Dans le cas d'une erreur de syntaxe dans le code évalué, eval() retourne FALSE et l'exécution du code suivant continue normalement. Il n'est pas possible d'attraper l'erreur d'analyse de la fonction eval() en utilisant la fonction set_error_handler().
- *
- */
-if(!function_exists('evalThis'))
-{
-    function evalThis($code)
-    {
-		$code = (string)$code;
-
-		return eval($code);
-    }
-}
-
-/**
  * execThis
  *
  * Exécute un programme externe.
@@ -7934,31 +6360,6 @@ if(!function_exists('exif_thumbnailThis'))
 		$imagetype = (int)$imagetype;
 
 		return exif_thumbnail($filename, $width, $height, $imagetype);
-    }
-}
-
-/**
- * exitThis
- *
- * Affiche un message et termine le script courant.
- *
- * @link http://php.net/manual/fr/function.exit.php Documentation pour exit.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param string   $status    Si status est une chaîne de caractères, cette fonction affichera le status juste avant de sortir. Si le paramètre status est un entier, cette valeur pourra être utilisée comme statut de sortie et ne sera pas affichée. Le statut de sortie peut être dans l'intervalle 0-255, le statut de sortie 255 est réservé par PHP et ne doit pas être utilisé. Le statut 0 est utilisé pour terminer le programme avec succès.
- *
- * @return void	Aucune valeur n'est retournée.
- *
- */
-if(!function_exists('exitThis'))
-{
-    function exitThis($status = NULL)
-    {
-		$status = (string)$status;
-
-		return exit($status);
     }
 }
 
@@ -8886,33 +7287,6 @@ if(!function_exists('fbsql_errorThis'))
 		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
 
 		return fbsql_error($link_identifier);
-    }
-}
-
-/**
- * fbsql_fetch_arrayThis
- *
- * Lit toute une ligne de résultat dans un tableau.
- *
- * @link http://php.net/manual/fr/function.fbsql-fetch-array.php Documentation pour fbsql_fetch_array.
- *
- * @version PHP 4 >= 4.0.6
- * @version PHP 5
- *
- * @param resource $result    Un identifiant de résultat retourné par la fonction fbsql_query() ou la fonction fbsql_db_query().
- * @param int      $result_type    Une constante et peut prendre les valeurs suivantes : FBSQL_ASSOC, FBSQL_NUM, ou FBSQL_BOTH. Lors de l'utilisation de FBSQL_BOTH, en plus de stocker les indices numériques du tableau de résultats, il stockera les données dans des indices associatifs, en utilisant les noms des champs comme clés.
- *
- * @return array	Retourne un tableau qui correspond à la ligne récupérée, ou FALSE s'il n'y a plus de ligne de disponible.
- *
- */
-if(!function_exists('fbsql_fetch_arrayThis'))
-{
-    function fbsql_fetch_arrayThis($result, $result_type = NULL)
-    {
-		$result = is_resource($result) ? $result : NULL;
-		$result_type = (int)$result_type;
-
-		return fbsql_fetch_array($result, $result_type);
     }
 }
 
@@ -11680,34 +10054,6 @@ if(!function_exists('filter_inputThis'))
 }
 
 /**
- * filter_input_arrayThis
- *
- * Récupère plusieurs valeurs externes et les filtre.
- *
- * @link http://php.net/manual/fr/function.filter-input-array.php Documentation pour filter_input_array.
- *
- * @version PHP 5 >= 5.2.0
- *
- * @param int      $type    Une constante parmi INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER ou INPUT_ENV.
- * @param mixed     $definition    Un tableau définissant les arguments. Une clé valide est une chaîne de caractères contenant le nom de la variable et une valeur valide est soit le type d'un filtre, soit un tableau spécifiant le filtre, les drapeaux et les options. Si la valeur est un tableau, les clés valides sont filter qui spécifie le type du filtre, flags qui spécifie tous les drapeaux à appliquer au filtre, et options qui spécifie toutes les options à appliquer au filtre. Voir l'exemple ci-dessous pour une meilleure compréhension. Ce paramètre peut également être un entier contenant une constante de filtre. Ensuite, toutes les valeurs du tableau d'entrée seront filtrées par ce filtre.
- * @param bool     $add_empty    Ajout des clés manquantes à la valeur NULL dans la valeur retournée.
- *
- * @return mixed	Un tableau contenant les valeurs des variables demandées en cas de succès, ou FALSE si une erreur survient. Un tableau de valeurs peut valoir FALSE si le filtre échoue, ou NULL si la variable n'est pas définie. Ou, si le drapeau FILTER_NULL_ON_FAILURE est utilisé, la fonction retournera FALSE si la variable n'est pas définie et NULL si le filtre échoue.
- *
- */
-if(!function_exists('filter_input_arrayThis'))
-{
-    function filter_input_arrayThis($type, $definition = NULL, $add_empty = true)
-    {
-		$type = (int)$type;
-		$definition = ($definition);
-		$add_empty = (bool)$add_empty;
-
-		return filter_input_array($type, $definition, $add_empty);
-    }
-}
-
-/**
  * filter_listThis
  *
  * Retourne une liste de tous les filtres supportés.
@@ -11750,34 +10096,6 @@ if(!function_exists('filter_varThis'))
 		$filter = (int)$filter;
 		$options = ($options);
 		return filter_var($variable, $filter, $options);
-    }
-}
-
-/**
- * filter_var_arrayThis
- *
- * Récupère plusieurs variables et les filtre.
- *
- * @link http://php.net/manual/fr/function.filter-var-array.php Documentation pour filter_var_array.
- *
- * @version PHP 5 >= 5.2.0
- *
- * @param array    $data    Un tableau avec les clés contenant les données à filtrer.
- * @param mixed     $definition    Un tableau définissant les arguments. Une clé valide est une chaîne de caractères contenant le nom de la variable et une valeur valide est soit le type d'un filtre, soit un tableau spécifiant le filtre, les drapeaux et les options. Si la valeur est un tableau, les clés valides sont filter qui spécifie le type du filtre, flags qui spécifie tous les drapeaux à appliquer au filtre, et options qui spécifie toutes les options à appliquer au filtre. Voir l'exemple ci-dessous pour une meilleure compréhension. Ce paramètre peut également être un entier contenant une constante de filtre. Ensuite, toutes les valeurs du tableau d'entrée seront filtrées par ce filtre.
- * @param bool     $add_empty    Ajout des clés manquantes à la valeur NULL dans la valeur retournée.
- *
- * @return mixed	Un tableau contenant les valeurs des variables demandées en cas de succès, ou FALSE si une erreur survient. Un tableau de valeurs peut valoir FALSE si le filtre échoue, ou NULL si la variable n'est pas définie.
- *
- */
-if(!function_exists('filter_var_arrayThis'))
-{
-    function filter_var_arrayThis($data, $definition = NULL, $add_empty = true)
-    {
-		$data = (array)$data;
-		$definition = ($definition);
-		$add_empty = (bool)$add_empty;
-
-		return filter_var_array($data, $definition, $add_empty);
     }
 }
 
@@ -11990,32 +10308,6 @@ if(!function_exists('forward_static_callThis'))
 		$parameter = ($parameter);
 		$parameter1 = ($parameter1);
 		return forward_static_call($function, $parameter, $parameter1);
-    }
-}
-
-/**
- * forward_static_call_arrayThis
- *
- * Appelle une méthode statique et passe les arguments en tableau.
- *
- * @link http://php.net/manual/fr/function.forward-static-call-array.php Documentation pour forward_static_call_array.
- *
- * @version PHP 5 >= 5.3.0
- *
- * @param callable     $function    La fonction ou la méthode appelée. Ce paramètre peut être un tableau, avec le nom de la classe et de la méthode, ou une chaîne, avec le nom de la fonction.
- * @param array    $parameters    Un paramètre, rassemblant tous les paramètres dans un tableau.
- *
- * @return mixed	Retourne le résultat de la fonction, et FALSE en cas d'erreur.
- *
- */
-if(!function_exists('forward_static_call_arrayThis'))
-{
-    function forward_static_call_arrayThis($function, $parameters)
-    {
-		$function = is_callable($function) ? $function : NULL;
-		$parameters = (array)$parameters;
-
-		return forward_static_call_array($function, $parameters);
     }
 }
 
@@ -13828,7 +12120,7 @@ if(!function_exists('get_headersThis'))
  * @version PHP 5
  *
  * @param int      $table    La table à retourner. Soit HTML_ENTITIES, soit HTML_SPECIALCHARS.
- * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui spécifient quel guillemet la table contiendra, tout comme le type de document prévu pour la table. La valeur par défaut est ENT_COMPAT | ENT_HTML41.
+ * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui spécifient quel guillemet la table contiendra, tout comme le type de document prévu pour la table. La valeur par défaut est ENT_COMPAT | ENT_HTML401.
  * @param string   $encoding    Encodage à utiliser. Si omis, la valeur par défaut de cet argument sera ISO-8859-1 pour les versions antérieures à la version 5.4.0 de PHP, et UTF-8 pour les versions suivantes à 5.4.0. Les jeux de caractères suivants sont supportés :
  *
  * @return array	Retourne la table de traduction, sous la forme d'un tableau, avec comme clés, les caractères orignaux, et comme valeurs, les entités correspondantes.
@@ -13839,7 +12131,7 @@ if(!function_exists('get_html_translation_tableThis'))
     function get_html_translation_tableThis($table = HTML_SPECIALCHARS, $flags = NULL, $encoding = 'UTF-8')
     {
 		$table = (int)$table;
-		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML41 : (int)$flags;
+		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML401 : (int)$flags;
 		$encoding = (string)$encoding;
 
 		return get_html_translation_table($table, $flags, $encoding);
@@ -14732,10 +13024,10 @@ if(!function_exists('gmdateThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param int      $hour    Le nombre d'heures depuis le début de la journée fixée par les paramètres month, day et year. Les valeurs négatives font référence aux heures avant minuit du jour en question. Les valeurs supérieures à 3 font référence aux heures associées pour le(s) jour(s) suivant(s).
+ * @param int      $hour    Le nombre d'heures depuis le début de la journée fixée par les paramètres month, day et year. Les valeurs négatives font référence aux heures avant minuit du jour en question. Les valeurs supérieures à 23 font référence aux heures associées pour le(s) jour(s) suivant(s).
  * @param int      $minute    Le nombre de minutes depuis le début de l'heure hour. Les valeurs négatives font référence aux minutes de l'heure précédente. Les valeurs supérieures à 59 font référence aux minutes associées pour l'(les) heure(s) suivante(s).
  * @param int      $second    Le nombre de secondes depuis le début de la minute minute. Les valeurs négatives font référence aux secondes de la minute précédente. Les valeurs supérieures à 59 font références aux secondes associées à la(les) minute(s) suivante(s).
- * @param int      $month    Le nombre de mois depuis la fin de l'année précédente. Les valeurs comprises entre 1 et 2 font référence aux mois du calendrier normal de l'année en question. Les valeurs inférieures à 1 (y compris les valeurs négatives) font référence aux mois de l'année précédente dans l'ordre inverse, aussi, 0 correspond à décembre, -1 à novembre, etc. Les valeurs supérieures à 2 font référence au mois correspondant dans l'(les) année(s) suivante(s).
+ * @param int      $month    Le nombre de mois depuis la fin de l'année précédente. Les valeurs comprises entre 1 et 12 font référence aux mois du calendrier normal de l'année en question. Les valeurs inférieures à 1 (y compris les valeurs négatives) font référence aux mois de l'année précédente dans l'ordre inverse, aussi, 0 correspond à décembre, -1 à novembre, etc. Les valeurs supérieures à 12 font référence au mois correspondant dans l'(les) année(s) suivante(s).
  * @param int      $day    Le nombre de jours depuis la fin du mois précédent. Les valeurs comprises entre 1 et 28, 29, 30, 31 (suivant le mois) font référence aux jours normaux dans le mois courant. Les valeurs inférieures à 1 (y compris les valeurs négatives) font référence aux jours du mois précédent, aussi, 0 correspond au dernier jour du mois précédent, -1, le jour d'avant, etc. Les valeurs supérieures au nombre de jours du mois courant font référence aux jours correspondants du(des) mois suivant(s).
  * @param int      $year    L'année
  * @param int      $is_dst    Les paramètres représentent toujours une date GMT donc, le paramètre is_dst n'influence pas le résultat.
@@ -16431,7 +14723,7 @@ if(!function_exists('hash_pbkdf2This'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param string   $string    L'en-tête. Il y a deux en-têtes spéciaux. Le premier commence par la chaîne "HTTP/" (insensible à la casse), qui est utilisée pour signifier le statut HTTP à envoyer. Par exemple, si vous avez configuré Apache pour utiliser les scripts PHP pour gérer les requêtes vers des fichiers inexistants (en utilisant la directive ErrorDocument), vous voulez-vous assurer que le script génère un code statut correct. Le deuxième type d'appel spécial est "Location:". Non seulement il renvoie un en-tête au client, mais, en plus, il envoie un statut REDIRECT (302) au navigateur tant qu'un code statut 21 ou 3xx n'a pas été envoyé.
+ * @param string   $string    L'en-tête. Il y a deux en-têtes spéciaux. Le premier commence par la chaîne "HTTP/" (insensible à la casse), qui est utilisée pour signifier le statut HTTP à envoyer. Par exemple, si vous avez configuré Apache pour utiliser les scripts PHP pour gérer les requêtes vers des fichiers inexistants (en utilisant la directive ErrorDocument), vous voulez-vous assurer que le script génère un code statut correct. Le deuxième type d'appel spécial est "Location:". Non seulement il renvoie un en-tête au client, mais, en plus, il envoie un statut REDIRECT (302) au navigateur tant qu'un code statut 201 ou 3xx n'a pas été envoyé.
  * @param bool     $replace    Le paramètre optionnel replace indique si la fonction header() doit remplacer un en-tête précédemment émis, ou bien ajouter un autre en-tête du même type. Par défaut, un nouvel en-tête va écraser le précédent, mais si vous passez FALSE dans cet argument, vous pouvez forcer les en-têtes multiples pour un même type d'en-tête. Par exemple :
  * @param int      $http_response_code    Force le code réponse HTTP à la valeur spécifiée.
  *
@@ -16713,7 +15005,7 @@ if(!function_exists('highlight_stringThis'))
  * @version PHP 5
  *
  * @param string   $string    La chaîne d'entrée.
- * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui spécifient la façon dont doivent être gérés les guillemets et quel type de document doit être utilisé. Par défaut, ce sera ENT_COMPAT | ENT_HTML41.
+ * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui spécifient la façon dont doivent être gérés les guillemets et quel type de document doit être utilisé. Par défaut, ce sera ENT_COMPAT | ENT_HTML401.
  * @param string   $encoding    Encodage à utiliser. Si omis, la valeur par défaut de cet argument sera ISO-8859-1 dans les version antérieures à la version 5.4.0 de PHP, et UTF-8 pour les versions à partir de 5.4.0 de PHP. Les jeux de caractères suivants sont supportés :
  *
  * @return string	Retourne la chaîne décodée.
@@ -16724,7 +15016,7 @@ if(!function_exists('html_entity_decodeThis'))
     function html_entity_decodeThis($string, $flags = NULL, $encoding = 'UTF-8')
     {
 		$string = (string)$string;
-		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML41 : (int)$flags;
+		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML401 : (int)$flags;
 		$encoding = (string)$encoding;
 
 		return html_entity_decode($string, $flags, $encoding);
@@ -16742,7 +15034,7 @@ if(!function_exists('html_entity_decodeThis'))
  * @version PHP 5
  *
  * @param string   $string    La chaîne d'entrée.
- * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui déterminent la façon dont les guillemets seront gérés, dont les séquences de code invalide seront gérées ainsi que le type du document utilisé. Par défaut, ce sera ENT_COMPAT | ENT_HTML41.
+ * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui déterminent la façon dont les guillemets seront gérés, dont les séquences de code invalide seront gérées ainsi que le type du document utilisé. Par défaut, ce sera ENT_COMPAT | ENT_HTML401.
  * @param string   $encoding    Comme htmlspecialchars(), htmlentities() prend un troisième argument optionnel encoding qui définit l'encodage utilisé durant la conversion. Si omis, la valeur par défaut de cet argument est ISO-8859-1 pour les versions antérieures à la version 5.4.0 de PHP, et UTF-8 à partir de la version 5.4.0. Malgré le fait que cet argument soit techniquement optionnel, vous êtes vivement encouragé à spécifier une valeur correcte pour votre code. Les jeux de caractères suivants sont supportés :
  * @param bool     $double_encode    Lorsque double_encode est désactivé, PHP n'encodera pas les entités html existantes. Par défaut, tout est converti.
  *
@@ -16754,7 +15046,7 @@ if(!function_exists('htmlentitiesThis'))
     function htmlentitiesThis($string, $flags = NULL, $encoding = 'UTF-8', $double_encode = true)
     {
 		$string = (string)$string;
-		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML41 : (int)$flags;
+		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML401 : (int)$flags;
 		$encoding = (string)$encoding;
 		$double_encode = (bool)$double_encode;
 
@@ -16773,8 +15065,8 @@ if(!function_exists('htmlentitiesThis'))
  * @version PHP 5
  *
  * @param string   $string    La chaîne à convertir.
- * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui déterminent la façon dont les guillemets seront gérés, dont les séquences de code invalide seront gérées ainsi que le type du document utilisé. Par défaut, ce sera ENT_COMPAT | ENT_HTML41.
- * @param string   $encoding    Encodage à utiliser lors de la conversion. Si omis, la valeur par défaut de cet argument sera ISO-8859-1 dans les versions antérieures à PHP 5.4.0, et UTF-8 à partir de la version PHP 5.4.0. Pour cette fonction, les encodages ISO-8859-1, ISO-8859-15, UTF-8, cp866, cp251, cp252, et KOI8-R sont équivalents, à condition que le paramètre string soit valable pour l'encodage, dans le sens où les caractères affectés par la fonction htmlspecialchars() occupent la même position dans tous ces encodages. Les jeux de caractères suivants sont supportés :
+ * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui déterminent la façon dont les guillemets seront gérés, dont les séquences de code invalide seront gérées ainsi que le type du document utilisé. Par défaut, ce sera ENT_COMPAT | ENT_HTML401.
+ * @param string   $encoding    Encodage à utiliser lors de la conversion. Si omis, la valeur par défaut de cet argument sera ISO-8859-1 dans les versions antérieures à PHP 5.4.0, et UTF-8 à partir de la version PHP 5.4.0. Pour cette fonction, les encodages ISO-8859-1, ISO-8859-15, UTF-8, cp866, cp1251, cp1252, et KOI8-R sont équivalents, à condition que le paramètre string soit valable pour l'encodage, dans le sens où les caractères affectés par la fonction htmlspecialchars() occupent la même position dans tous ces encodages. Les jeux de caractères suivants sont supportés :
  * @param bool     $double_encode    Lorsque le paramètre double_encode est désactivé, PHP n'encodera pas les entités html existants ; par défaut, tout est converti.
  *
  * @return string	La chaîne convertie.
@@ -16785,7 +15077,7 @@ if(!function_exists('htmlspecialcharsThis'))
     function htmlspecialcharsThis($string, $flags = NULL, $encoding = 'UTF-8', $double_encode = true)
     {
 		$string = (string)$string;
-		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML41 : (int)$flags;
+		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML401 : (int)$flags;
 		$encoding = (string)$encoding;
 		$double_encode = (bool)$double_encode;
 
@@ -16803,7 +15095,7 @@ if(!function_exists('htmlspecialcharsThis'))
  * @version PHP 5 >= 5.1.0
  *
  * @param string   $string    La chaîne de caractères à décoder
- * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui spécifient la façon dont doit être géré les guillemets et quel type de document à utiliser. Par défaut, ce sera ENT_COMPAT | ENT_HTML41.
+ * @param int      $flags    Un masque d'un ou plusieurs drapeaux suivants, qui spécifient la façon dont doit être géré les guillemets et quel type de document à utiliser. Par défaut, ce sera ENT_COMPAT | ENT_HTML401.
  *
  * @return string	Retourne la chaîne de caractères décodée.
  *
@@ -16813,7 +15105,7 @@ if(!function_exists('htmlspecialchars_decodeThis'))
     function htmlspecialchars_decodeThis($string, $flags = NULL)
     {
 		$string = (string)$string;
-		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML41 : (int)$flags;
+		$flags = empty($flags) ? (int)ENT_COMPAT | ENT_HTML401 : (int)$flags;
 
 		return htmlspecialchars_decode($string, $flags);
     }
@@ -18370,32 +16662,6 @@ if(!function_exists('hw_mvThis'))
 }
 
 /**
- * hw_objrec2arrayThis
- *
- * Convertit les attributs d'un objet en tableau.
- *
- * @link http://php.net/manual/fr/function.hw-objrec2array.php Documentation pour hw_objrec2array.
- *
- * @version PHP 4
- *
- * @param string   $object_record    L'objet record.
- * @param array    $format    Un tableau associatif, avec les attributs comme index, le nom, et la valeur étant l'une des suivantes : HW_ATTR_LANG ou HW_ATTR_NONE.
- *
- * @return array	Retourne un tableau. Les clés du tableau seront les noms des attributs. Les attributs multiples comme "Title", dans différentes langues, seront rassemblés dans un autre tableau. Une clé est la partie gauche d'un attribut. Cette partie doit être longue d'au moins deux caractères.
- *
- */
-if(!function_exists('hw_objrec2arrayThis'))
-{
-    function hw_objrec2arrayThis($object_record, $format = NULL)
-    {
-		$object_record = (string)$object_record;
-		$format = (array)$format;
-
-		return hw_objrec2array($object_record, $format);
-    }
-}
-
-/**
  * hw_pConnectThis
  *
  * Crée une connexion persistante.
@@ -19769,14 +18035,14 @@ if(!function_exists('ibase_service_detachThis'))
  */
 if(!function_exists('ibase_set_event_handlerThis'))
 {
-    function ibase_set_event_handlerThis($event_handler, $event_name1, $event_name2 = NULL, $event_name3 = NULL)
+    function ibase_set_event_handlerThis($event_handler, $event_name1, $event_name2 = NULL, $event_name23 = NULL)
     {
 		$event_handler = is_callable($event_handler) ? $event_handler : NULL;
 		$event_name1 = (string)$event_name1;
 		$event_name2 = (string)$event_name2;
-		$event_name3 = (string)$event_name3;
+		$event_name23 = (string)$event_name23;
 
-		return ibase_set_event_handler($event_handler, $event_name1, $event_name2, $event_name3);
+		return ibase_set_event_handler($event_handler, $event_name1, $event_name2, $event_name23);
     }
 }
 
@@ -19824,13 +18090,13 @@ if(!function_exists('ibase_transThis'))
  */
 if(!function_exists('ibase_wait_eventThis'))
 {
-    function ibase_wait_eventThis($event_name1, $event_name2 = NULL, $event_name3 = NULL)
+    function ibase_wait_eventThis($event_name1, $event_name2 = NULL, $event_name23 = NULL)
     {
 		$event_name1 = (string)$event_name1;
 		$event_name2 = (string)$event_name2;
-		$event_name3 = (string)$event_name3;
+		$event_name23 = (string)$event_name23;
 
-		return ibase_wait_event($event_name1, $event_name2, $event_name3);
+		return ibase_wait_event($event_name1, $event_name2, $event_name23);
     }
 }
 
@@ -21520,7 +19786,7 @@ if(!function_exists('imagecolorallocateThis'))
  * @param int      $red    Valeur du composant rouge.
  * @param int      $green    Valeur du composant vert.
  * @param int      $blue    Valeur du composant bleu.
- * @param int      $alpha    Une valeur entre 0 et 27. 0 indique une opacité complète tandis que 27 indique une transparence complète.
+ * @param int      $alpha    Une valeur entre 0 et 127. 0 indique une opacité complète tandis que 127 indique une transparence complète.
  *
  * @return int	Un identifiant de couleur ou FALSE si l'allocation échoue.
  *
@@ -21613,7 +19879,7 @@ if(!function_exists('imagecolorclosestThis'))
  * @param int      $red    Valeur du composant rouge.
  * @param int      $green    Valeur du composant vert.
  * @param int      $blue    Valeur du composant bleu.
- * @param int      $alpha    Une valeur comprise entre 0 et 27. 0 indique une opacité complète tandis que 27 indique une transparence complète.
+ * @param int      $alpha    Une valeur comprise entre 0 et 127. 0 indique une opacité complète tandis que 127 indique une transparence complète.
  *
  * @return int	Retourne l'index de la couleur la plus proche dans la palette.
  *
@@ -21735,7 +20001,7 @@ if(!function_exists('imagecolorexactThis'))
  * @param int      $red    Valeur du composant rouge.
  * @param int      $green    Valeur du composant vert.
  * @param int      $blue    Valeur du composant bleu.
- * @param int      $alpha    Une valeur comprise entre 0 et 27. 0 indique une opacité complète tandis que 27 indique une transparence complète.
+ * @param int      $alpha    Une valeur comprise entre 0 et 127. 0 indique une opacité complète tandis que 127 indique une transparence complète.
  *
  * @return int	Retourne l'index de la couleur fournie et son canal alpha dans la palette de l'image, ou -1 si la couleur n'existe pas dans la palette de l'image.
  *
@@ -21826,7 +20092,7 @@ if(!function_exists('imagecolorresolveThis'))
  * @param int      $red    Valeur du composant rouge.
  * @param int      $green    Valeur du composant vert.
  * @param int      $blue    Valeur du composant bleu.
- * @param int      $alpha    Une valeur comprise entre 0 et 27. 0 indique une opacité complète tandis que 27 indique une transparence complète.
+ * @param int      $alpha    Une valeur comprise entre 0 et 127. 0 indique une opacité complète tandis que 127 indique une transparence complète.
  *
  * @return int	Retourne un index de couleur.
  *
@@ -24204,7 +22470,7 @@ if(!function_exists('imagettfbboxThis'))
  * @param int      $y    L'ordonnée Y. Cela définit la position de la ligne de base de la police, et non pas le bas des caractères.
  * @param int      $color    L'index de la couleur. Utiliser un index de couleur négatif désactivera l'antialiasing. Voir la fonction imagecolorallocate().
  * @param string   $fontfile    Le chemin vers la police TrueType que vous souhaitez utiliser. Dépendant de la version de la bibliothèque GD utilisée par PHP, lorsque fontfile ne commence pas par un caractère / alors .ttf sera ajouté au nom du fichier et la bibliothèque recherchera ce nom de fichier dans les dossiers de police, définis par la bibliothèque. Lorsque vous utilisez une version de la bibliothèque GD inférieure à 2.0.18, un caractère espace, plutôt qu'un point-virgule, est utilisé pour définir des chemins alternatifs pour les fichiers de police. Si vous utilisez involontairement cette fonctionnalité, vous aurez ce message d'erreur : Warning: Could not find/open font. Pour ces versions affectées, la seule solution est de déplacée la police à un endroit qui ne contient pas d'espaces dans les noms de dossier. Dans le cas fréquent où une police réside dans le même dossier que le script l'utilisant, l'astuce suivante vous épargnera tous les problèmes.
- * @param string   $text    La chaîne de texte, en UTF-8. Peut inclure des références à des caractères numériques, décimales (sous la forme : &#8364; ) pour accéder aux caractères d'une police au delà du premier 27. Les chaînes de caractères encodées en UTF-8 peuvent être passées directement. Les entités nommées, comme &copy;, ne sont pas supportées. Utilisez la fonction html_entity_decode() pour encoder ces entités nommées en chaîne UTF-8. Si un caractère est utilisé dans une chaîne qui n'est pas supportée par la police, un rectangle creux remplacera le caractère.
+ * @param string   $text    La chaîne de texte, en UTF-8. Peut inclure des références à des caractères numériques, décimales (sous la forme : &#8364; ) pour accéder aux caractères d'une police au delà du premier 127. Les chaînes de caractères encodées en UTF-8 peuvent être passées directement. Les entités nommées, comme &copy;, ne sont pas supportées. Utilisez la fonction html_entity_decode() pour encoder ces entités nommées en chaîne UTF-8. Si un caractère est utilisé dans une chaîne qui n'est pas supportée par la police, un rectangle creux remplacera le caractère.
  *
  * @return array	Retourne un tableau de 8 éléments représentant quatre points marquants les limites du texte. L'ordre des points est : inférieur gauche, inférieur droit, supérieur droit, supérieur gauche. Les points sont relatifs au texte par rapport à l'angle, donc, "supérieur gauche" signifie dans le coin en haut à gauche lorsque vous regardez le texte horizontalement. Retourne FALSE si une erreur survient.
  *
@@ -26198,35 +24464,6 @@ if(!function_exists('import_request_variablesThis'))
 }
 
 /**
- * in_arrayThis
- *
- * Indique si une valeur appartient à un tableau.
- *
- * @link http://php.net/manual/fr/function.in-array.php Documentation pour in_array.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param mixed     $needle    La valeur recherchée.
- * @param array    $haystack    Le tableau.
- * @param bool     $strict    Le troisième paramètre strict est optionnel. S'il vaut TRUE alors in_array() vérifiera aussi que le type du paramètre needle correspond au type de la valeur trouvée dans haystack.
- *
- * @return bool	Retourne TRUE si needle est trouvé dans le tableau, FALSE sinon.
- *
- */
-if(!function_exists('in_arrayThis'))
-{
-    function in_arrayThis($needle, $haystack, $strict = FALSE)
-    {
-		$needle = ($needle);
-		$haystack = (array)$haystack;
-		$strict = (bool)$strict;
-
-		return in_array($needle, $haystack, $strict);
-    }
-}
-
-/**
  * inet_ntopThis
  *
  * Convertit un paquet d'adresses internet en une représentation humainement lisible.
@@ -26235,7 +24472,7 @@ if(!function_exists('in_arrayThis'))
  *
  * @version PHP 5 >= 5.1.0
  *
- * @param string   $in_addr    Une adresse 32 bit IPv4, ou 28 bit IPv6.
+ * @param string   $in_addr    Une adresse 32 bit IPv4, ou 128 bit IPv6.
  *
  * @return string	Retourne une représentation de l'adresse, sous la forme d'une chaîne de caractères ou FALSE si une erreur survient.
  *
@@ -26567,30 +24804,6 @@ if(!function_exists('is_aThis'))
 		$allow_string = (bool)$allow_string;
 
 		return is_a($object, $class_name, $allow_string);
-    }
-}
-
-/**
- * is_arrayThis
- *
- * Détermine si une variable est un tableau.
- *
- * @link http://php.net/manual/fr/function.is-array.php Documentation pour is_array.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param mixed     $var    La variable à évaluer.
- *
- * @return bool	Retourne TRUE si var est un array, FALSE sinon.
- *
- */
-if(!function_exists('is_arrayThis'))
-{
-    function is_arrayThis($var)
-    {
-		$var = ($var);
-		return is_array($var);
     }
 }
 
@@ -27142,32 +25355,6 @@ if(!function_exists('is_writableThis'))
 }
 
 /**
- * issetThis
- *
- * Détermine si une variable est définie et est différente de NULL.
- *
- * @link http://php.net/manual/fr/function.isset.php Documentation pour isset.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param mixed     $var    La variable à analyser.
- * @param mixed     $item    Une autre variable...
- *
- * @return bool	Retourne TRUE si var existe et a une valeur autre que NULL, FALSE sinon.
- *
- */
-if(!function_exists('issetThis'))
-{
-    function issetThis($var, $var1 = NULL)
-    {
-		$var = ($var);
-		$var1 = ($var1);
-		return isset($var, $var1);
-    }
-}
-
-/**
  * iterator_applyThis
  *
  * Appelle une fonction pour tous les éléments d'un itérateur.
@@ -27216,32 +25403,6 @@ if(!function_exists('iterator_countThis'))
 		$iterator = (is_array($iterator) || $iterator instanceof Traversable) ? $iterator : NULL;
 
 		return iterator_count($iterator);
-    }
-}
-
-/**
- * iterator_to_arrayThis
- *
- * Copie un itérateur dans un tableau.
- *
- * @link http://php.net/manual/fr/function.iterator-to-array.php Documentation pour iterator_to_array.
- *
- * @version PHP 5 >= 5.1.0
- *
- * @param Traversable     $iterator    L'itérateur à copier.
- * @param bool     $use_keys    S'il faut utiliser les éléments de l'itérateur comme clé.
- *
- * @return array	Un tableau contenant les éléments de l'itérateur iterator.
- *
- */
-if(!function_exists('iterator_to_arrayThis'))
-{
-    function iterator_to_arrayThis($iterator, $use_keys = true)
-    {
-		$iterator = (is_array($iterator) || $iterator instanceof Traversable) ? $iterator : NULL;
-		$use_keys = (bool)$use_keys;
-
-		return iterator_to_array($iterator, $use_keys);
     }
 }
 
@@ -27405,31 +25566,6 @@ if(!function_exists('json_last_error_msgThis'))
     function json_last_error_msgThis()
     {
 		return json_last_error_msg();
-    }
-}
-
-/**
- * keyThis
- *
- * Retourne une clé d'un tableau associatif.
- *
- * @link http://php.net/manual/fr/function.key.php Documentation pour key.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param array    &$array    Le tableau.
- *
- * @return mixed	La fonction key() retourne simplement la clé de l'élément du tableau qui est actuellement pointée par le pointeur interne. Cette fonction ne modifie en aucun cas la position de ce pointeur. Si le pointeur interne pointe un élément se situant après la fin de la liste des éléments, ou bien si le tableau est vide, la fonction key() retournera NULL.
- *
- */
-if(!function_exists('keyThis'))
-{
-    function keyThis(&$array)
-    {
-		$array = (array)$array;
-
-		return key($array);
     }
 }
 
@@ -27810,32 +25946,6 @@ if(!function_exists('linkinfoThis'))
 		$path = (string)$path;
 
 		return linkinfo($path);
-    }
-}
-
-/**
- * listThis
- *
- * Assigne des variables comme si elles étaient un tableau.
- *
- * @link http://php.net/manual/fr/function.list.php Documentation pour list.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param mixed     $varname    Une variable.
- * @param mixed     $item
- *
- * @return array	Retourne le tableau assigné.
- *
- */
-if(!function_exists('listThis'))
-{
-    function listThis($varname, $varname1 = NULL)
-    {
-		$varname = ($varname);
-		$varname1 = ($varname1);
-		return list($varname, $varname1);
     }
 }
 
@@ -30961,13 +29071,13 @@ if(!function_exists('mkdirThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param int      $hour    Le nombre d'heures depuis le début de la journée fixée par les paramètres month, day et year. Les valeurs négatives font références aux heures avant minuit du jour en question. Les valeurs supérieures à 3 font références aux heures associées pour le(s) jour(s) suivant(s).
+ * @param int      $hour    Le nombre d'heures depuis le début de la journée fixée par les paramètres month, day et year. Les valeurs négatives font références aux heures avant minuit du jour en question. Les valeurs supérieures à 23 font références aux heures associées pour le(s) jour(s) suivant(s).
  * @param int      $minute    Le nombre de minutes depuis le début de l'heure hour. Les valeurs négatives font références aux minutes de l'heure précédente. Les valeurs supérieures à 59 font références aux minutes associées pour l'(les) heure(s) suivante(s).
  * @param int      $second    Le nombre de secondes depuis le début de la minute minute. Les valeurs négatives font références aux secondes de la minute précédente. Les valeurs supérieures à 59 font références aux secondes associées à la(les) minute(s) suivante(s).
- * @param int      $month    Le nombre de mois depuis la fin de l'année précédente. Les valeurs comprises entre 1 et 2 font références aux mois du calendrier normal de l'année en question. Les valeurs inférieures à 1 (y compris les valeurs négatives) font références aux mois de l'année précédente dans l'ordre inverse, aussi, 0 correspond à décembre, -1 à novembre, etc. Les valeurs supérieures à 2 font références au mois correspondant dans l'(les) année(s) suivante(s).
+ * @param int      $month    Le nombre de mois depuis la fin de l'année précédente. Les valeurs comprises entre 1 et 12 font références aux mois du calendrier normal de l'année en question. Les valeurs inférieures à 1 (y compris les valeurs négatives) font références aux mois de l'année précédente dans l'ordre inverse, aussi, 0 correspond à décembre, -1 à novembre, etc. Les valeurs supérieures à 12 font références au mois correspondant dans l'(les) année(s) suivante(s).
  * @param int      $day    Le nombre de jours depuis la fin du mois précédent. Les valeurs comprises entre 1 et 28, 29, 30, 31 (suivant le mois) font références aux jours normaux dans le mois courant. Les valeurs inférieures à 1 (y compris les valeurs négatives) font références aux jours du mois précédent, aussi, 0 correspond au dernier jour du mois précédent, -1, le jour d'avant, etc. Les valeurs supérieures au nombre de jours du mois courant font références aux jours correspondants du(des) mois suivant(s).
- * @param int      $year    L'année, peut être sur deux ou quatre chiffres, avec des valeurs allant de 0 à 69, correspondant au valeur 2000 à 2069 et 70 à 100, correspondant au valeur 1970 à 2000. Sur les systèmes où time_t un entier signé sur 32bits, ce qui est le plus courant de nos jours, la période valide pour year est quelque part près de 191 et 2038. Cependant, avant PHP 5.1.0, cette intervalle était limitée de 1970 à 2038 sur quelques systèmes (i.e. Windows).
- * @param int      $is_dst    Ce paramètre peut être mis à 1 si l'heure d'hiver est appliquée (DST), 0 si elle ne l'est pas, et -1 (par défaut) si on ne sait pas. Si l'on ne sait pas, PHP tente de le traiter lui-même. Ceci peut occasionner des résultats inattendus (mais néanmoins correct). Quelques temps sont invalides si DST est activé sur les systèmes où PHP fonctionne ou is_dist est défini à 1. Si DST est activé e.g. 2:00, tous les temps entre 2:00 et 3:00 sont invalides et la fonction mktime() retourne une valeur indéfinie (généralement une valeur négative). Quelques systèmes (e.g. Solaris 8) activent DST à minuit, donc, le temps 0:30 du jour lorsque DST est activé est évalué à 3:30 du jour précédent.
+ * @param int      $year    L'année, peut être sur deux ou quatre chiffres, avec des valeurs allant de 0 à 69, correspondant au valeur 2000 à 2069 et 70 à 100, correspondant au valeur 1970 à 2000. Sur les systèmes où time_t un entier signé sur 32bits, ce qui est le plus courant de nos jours, la période valide pour year est quelque part près de 1901 et 2038. Cependant, avant PHP 5.1.0, cette intervalle était limitée de 1970 à 2038 sur quelques systèmes (i.e. Windows).
+ * @param int      $is_dst    Ce paramètre peut être mis à 1 si l'heure d'hiver est appliquée (DST), 0 si elle ne l'est pas, et -1 (par défaut) si on ne sait pas. Si l'on ne sait pas, PHP tente de le traiter lui-même. Ceci peut occasionner des résultats inattendus (mais néanmoins correct). Quelques temps sont invalides si DST est activé sur les systèmes où PHP fonctionne ou is_dist est défini à 1. Si DST est activé e.g. 2:00, tous les temps entre 2:00 et 3:00 sont invalides et la fonction mktime() retourne une valeur indéfinie (généralement une valeur négative). Quelques systèmes (e.g. Solaris 8) activent DST à minuit, donc, le temps 0:30 du jour lorsque DST est activé est évalué à 23:30 du jour précédent.
  *
  * @return int	mktime() retourne un timestamp Unix des arguments donnés. Si les arguments ne sont pas valides, la fonction retournera FALSE (avant PHP 5.1, elle retournait -1).
  *
@@ -31208,29 +29318,6 @@ if(!function_exists('msession_getThis'))
 }
 
 /**
- * msession_get_arrayThis
- *
- * Lit un tableau de variables msession.
- *
- * @link http://php.net/manual/fr/function.msession-get-array.php Documentation pour msession_get_array.
- *
- * @version PHP 4 >= 4.2.0
- * @version PHP 5 <= 5.1.2
- *
- * @param string   $session
- *
- */
-if(!function_exists('msession_get_arrayThis'))
-{
-    function msession_get_arrayThis($session)
-    {
-		$session = (string)$session;
-
-		return msession_get_array($session);
-    }
-}
-
-/**
  * msession_get_dataThis
  *
  * Lit les données de la session.
@@ -31419,31 +29506,6 @@ if(!function_exists('msession_setThis'))
 		$value = (string)$value;
 
 		return msession_set($session, $name, $value);
-    }
-}
-
-/**
- * msession_set_arrayThis
- *
- * Définit les variables msession depuis un tableau.
- *
- * @link http://php.net/manual/fr/function.msession-set-array.php Documentation pour msession_set_array.
- *
- * @version PHP 4 >= 4.2.0
- * @version PHP 5 <= 5.1.2
- *
- * @param string   $session
- * @param array    $tuples
- *
- */
-if(!function_exists('msession_set_arrayThis'))
-{
-    function msession_set_arrayThis($session, $tuples)
-    {
-		$session = (string)$session;
-		$tuples = (array)$tuples;
-
-		return msession_set_array($session, $tuples);
     }
 }
 
@@ -31953,33 +30015,6 @@ if(!function_exists('msql_errorThis'))
     function msql_errorThis()
     {
 		return msql_error();
-    }
-}
-
-/**
- * msql_fetch_arrayThis
- *
- * Lit une ligne sous la forme d'un tableau.
- *
- * @link http://php.net/manual/fr/function.msql-fetch-array.php Documentation pour msql_fetch_array.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $result    La ressource de résultat qui vient d'être évaluée. Ce résultat vient de l'appel à la fonction msql_query().
- * @param int      $result_type    Une constante qui peut prendre les valeurs suivantes : MSQL_ASSOC, MSQL_NUM, et MSQL_BOTH où MSQL_BOTH est la valeur par défaut.
- *
- * @return array	Retourne un tableau qui correspond à la ligne récupérée, ou FALSE s'il n'y a plus de lignes.
- *
- */
-if(!function_exists('msql_fetch_arrayThis'))
-{
-    function msql_fetch_arrayThis($result, $result_type = NULL)
-    {
-		$result = is_resource($result) ? $result : NULL;
-		$result_type = (int)$result_type;
-
-		return msql_fetch_array($result, $result_type);
     }
 }
 
@@ -32639,7 +30674,7 @@ if(!function_exists('mysql_closeThis'))
  * @param string   $username    Le nom d'utilisateur. La valeur par défaut est définie par l'option mysql.default_user. En safe mode SQL, ce paramètre est ignoré et le nom de l'utilisateur propriétaire du processus serveur est utilisé.
  * @param string   $password    Le mot de passe. La valeur par défaut est définie par l'option mysql.default_password. En safe mode SQL, ce paramètre est ignoré et un mot de passe vide est utilisé.
  * @param bool     $new_link    Si un deuxième appel est fait à mysql_connect() avec les mêmes arguments, aucune nouvelle connexion ne sera établie, mais plutôt, l'identifiant de la connexion de la connexion déjà ouverte sera retourné. Le paramètre new_link modifie ce comportement et permet à mysql_connect() de toujours ouvrir une nouvelle connexion, même si mysql_connect() a été appelée avant avec les mêmes paramètres. En safe mode SQL, ce paramètre est ignoré.
- * @param int      $client_flags    Le paramètre client_flags peut être une combinaison des constantes suivantes : 28 (active le gestionnaire LOAD DATA LOCAL), MYSQL_CLIENT_SSL, MYSQL_CLIENT_COMPRESS, MYSQL_CLIENT_IGNORE_SPACE ou MYSQL_CLIENT_INTERACTIVE. Lisez la section à propos de Constantes client MySQL pour plus d'informations. En safe mode SQL, ce paramètre est ignoré.
+ * @param int      $client_flags    Le paramètre client_flags peut être une combinaison des constantes suivantes : 128 (active le gestionnaire LOAD DATA LOCAL), MYSQL_CLIENT_SSL, MYSQL_CLIENT_COMPRESS, MYSQL_CLIENT_IGNORE_SPACE ou MYSQL_CLIENT_INTERACTIVE. Lisez la section à propos de Constantes client MySQL pour plus d'informations. En safe mode SQL, ce paramètre est ignoré.
  *
  * @return resource	Retourne l'identifiant de connexion MySQL en cas de succès ou FALSE si une erreur survient.
  *
@@ -32868,33 +30903,6 @@ if(!function_exists('mysql_escape_stringThis'))
 		$unescaped_string = (string)$unescaped_string;
 
 		return mysql_escape_string($unescaped_string);
-    }
-}
-
-/**
- * mysql_fetch_arrayThis
- *
- * Retourne une ligne de résultat MySQL sous la forme d'un tableau associatif, d'un tableau indexé, ou les deux.
- *
- * @link http://php.net/manual/fr/function.mysql-fetch-array.php Documentation pour mysql_fetch_array.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $result    La ressource de résultat qui vient d'être évaluée. Ce résultat vient de l'appel à la fonction mysql_query().
- * @param int      $result_type    Le type de tableau à récupérer. C'est une constante qui peut prendre les valeurs suivantes : MYSQL_ASSOC, MYSQL_NUM, et MYSQL_BOTH.
- *
- * @return array	Retourne un tableau de chaînes qui correspond à la ligne récupérée ou FALSE s'il n'y a plus de lignes. Le type de tableau retourné dépend de la définition du paramètre result_type. En utilisant MYSQL_BOTH (défaut), vous récupérerez un tableau contenant des indices associatifs et numériques. En utilisant MYSQL_ASSOC, vous ne récupérerez que les indices associatifs (comme le fonctionnement de la fonction mysql_fetch_assoc()), en utilisant MYSQL_NUM, vous ne récupérerez que les indices numériques (comme le fonctionnement de la fonction mysql_fetch_row()).
- *
- */
-if(!function_exists('mysql_fetch_arrayThis'))
-{
-    function mysql_fetch_arrayThis($result, $result_type = MYSQL_BOTH)
-    {
-		$result = is_resource($result) ? $result : NULL;
-		$result_type = (int)$result_type;
-
-		return mysql_fetch_array($result, $result_type);
     }
 }
 
@@ -33530,7 +31538,7 @@ if(!function_exists('mysql_num_rowsThis'))
  * @param string   $server    Le serveur MySQL. Il peut également comprendre un numéro de port, e.g. "hostname:port" ou un chemin vers un socket local e.g. ":/path/to/socket". Si la directive PHP mysql.default_host n'est pas définie (défaut), alors, la valeur par défaut est "localhost:3306".
  * @param string   $username    Le nom de l'utilisateur. La valeur par défaut est l'utilisateur faisant fonctionner le processus serveur courant.
  * @param string   $password    Le mot de passe. La valeur par défaut est un mot de passe vide.
- * @param int      $client_flags    Le paramètre client_flags peut être une compilation des constantes suivantes : 28 (active le gestionnaire LOAD DATA LOCAL), MYSQL_CLIENT_SSL, MYSQL_CLIENT_COMPRESS, MYSQL_CLIENT_IGNORE_SPACE ou MYSQL_CLIENT_INTERACTIVE.
+ * @param int      $client_flags    Le paramètre client_flags peut être une compilation des constantes suivantes : 128 (active le gestionnaire LOAD DATA LOCAL), MYSQL_CLIENT_SSL, MYSQL_CLIENT_COMPRESS, MYSQL_CLIENT_IGNORE_SPACE ou MYSQL_CLIENT_INTERACTIVE.
  *
  * @return resource	Retourne un identifiant de lien persistant MySQL en cas de succès, ou FALSE si une erreur survient.
  *
@@ -33809,226 +31817,6 @@ if(!function_exists('mysql_unbuffered_queryThis'))
 		$link_identifier = is_resource($link_identifier) ? $link_identifier : NULL;
 
 		return mysql_unbuffered_query($query, $link_identifier);
-    }
-}
-
-/**
- * mysqli_disable_rpl_parseThis
- *
- * Désactive l'analyseur RPL.
- *
- * @link http://php.net/manual/fr/function.mysqli-disable-rpl-parse.php Documentation pour mysqli_disable_rpl_parse.
- *
- * @version PHP 5
- *
- * @param mysqli     $link
- *
- */
-if(!function_exists('mysqli_disable_rpl_parseThis'))
-{
-    function mysqli_disable_rpl_parseThis($link)
-    {
-		$link = is_resource($link) ? $link : NULL;
-
-		return mysqli_disable_rpl_parse($link);
-    }
-}
-
-/**
- * mysqli_enable_reads_from_masterThis
- *
- * Active la lecture depuis le maître.
- *
- * @link http://php.net/manual/fr/function.mysqli-enable-reads-from-master.php Documentation pour mysqli_enable_reads_from_master.
- *
- * @version PHP 5
- *
- * @param mysqli     $link
- *
- */
-if(!function_exists('mysqli_enable_reads_from_masterThis'))
-{
-    function mysqli_enable_reads_from_masterThis($link)
-    {
-		$link = is_resource($link) ? $link : NULL;
-
-		return mysqli_enable_reads_from_master($link);
-    }
-}
-
-/**
- * mysqli_enable_rpl_parseThis
- *
- * Active l'analyseur RPL.
- *
- * @link http://php.net/manual/fr/function.mysqli-enable-rpl-parse.php Documentation pour mysqli_enable_rpl_parse.
- *
- * @version PHP 5
- *
- * @param mysqli     $link
- *
- */
-if(!function_exists('mysqli_enable_rpl_parseThis'))
-{
-    function mysqli_enable_rpl_parseThis($link)
-    {
-		$link = is_resource($link) ? $link : NULL;
-
-		return mysqli_enable_rpl_parse($link);
-    }
-}
-
-/**
- * mysqli_get_cache_statsThis
- *
- * Retourne les statistiques sur le cache du client Zval.
- *
- * @link http://php.net/manual/fr/function.mysqli-get-cache-stats.php Documentation pour mysqli_get_cache_stats.
- *
- * @version PHP 5 >= 5.3.0
- * @return array	Retourne un tableau avec les statistiques sur le cache du client Zval en cas de succès, FALSE sinon.
- *
- */
-if(!function_exists('mysqli_get_cache_statsThis'))
-{
-    function mysqli_get_cache_statsThis()
-    {
-		return mysqli_get_cache_stats();
-    }
-}
-
-/**
- * mysqli_get_client_statsThis
- *
- * Retournes des statistiques sur le client, par processus.
- *
- * @link http://php.net/manual/fr/mysqli.get-client-stats.php Documentation pour mysqli_get_client_stats.
- *
- * @version PHP 5 >= 5.3.0
- * @return array	Retourne un tableau avec les statistiques sur le client en cas de succès, FALSE sinon.
- *
- */
-if(!function_exists('mysqli_get_client_statsThis'))
-{
-    function mysqli_get_client_statsThis()
-    {
-		return mysqli_get_client_stats();
-    }
-}
-
-/**
- * mysqli_get_client_versionThis
- *
- * Retourne la version du client MySQL sous forme de chaîne de caractères.
- *
- * @link http://php.net/manual/fr/mysqli.get-client-version.php Documentation pour mysqli_get_client_version.
- *
- * @version PHP 5
- *
- * @param mysqli     $link
- *
- * @return int	Un nombre qui représente la version de la bibliothèque cliente MySQL dans ce format : version_principale*10000 + version_mineure *100 + sous_version. Par exemple, la version 4.1.0 est retournée sous la forme 4100.
- *
- */
-if(!function_exists('mysqli_get_client_versionThis'))
-{
-    function mysqli_get_client_versionThis($link)
-    {
-		$link = is_resource($link) ? $link : NULL;
-
-		return mysqli_get_client_version($link);
-    }
-}
-
-/**
- * mysqli_master_queryThis
- *
- * Force l'exécution d'une requête sur le maître dans une configuration maître/esclave.
- *
- * @link http://php.net/manual/fr/function.mysqli-master-query.php Documentation pour mysqli_master_query.
- *
- * @version PHP 5
- *
- * @param mysqli     $link
- * @param string   $query
- *
- */
-if(!function_exists('mysqli_master_queryThis'))
-{
-    function mysqli_master_queryThis($link, $query)
-    {
-		$link = is_resource($link) ? $link : NULL;
-		$query = (string)$query;
-
-		return mysqli_master_query($link, $query);
-    }
-}
-
-/**
- * mysqli_rpl_parse_enabledThis
- *
- * Vérifie si l'analyseur RPL est activé.
- *
- * @link http://php.net/manual/fr/function.mysqli-rpl-parse-enabled.php Documentation pour mysqli_rpl_parse_enabled.
- *
- * @version PHP 5
- *
- * @param mysqli     $link
- *
- */
-if(!function_exists('mysqli_rpl_parse_enabledThis'))
-{
-    function mysqli_rpl_parse_enabledThis($link)
-    {
-		$link = is_resource($link) ? $link : NULL;
-
-		return mysqli_rpl_parse_enabled($link);
-    }
-}
-
-/**
- * mysqli_rpl_probeThis
- *
- * Sonde le RPL.
- *
- * @link http://php.net/manual/fr/function.mysqli-rpl-probe.php Documentation pour mysqli_rpl_probe.
- *
- * @version PHP 5
- *
- * @param mysqli     $link
- *
- */
-if(!function_exists('mysqli_rpl_probeThis'))
-{
-    function mysqli_rpl_probeThis($link)
-    {
-		$link = is_resource($link) ? $link : NULL;
-
-		return mysqli_rpl_probe($link);
-    }
-}
-
-/**
- * mysqli_slave_queryThis
- *
- * Force l'exécution de la requête sur un serveur esclave pour une configuration maître/esclave.
- *
- * @link http://php.net/manual/fr/function.mysqli-slave-query.php Documentation pour mysqli_slave_query.
- *
- * @version PHP 5
- *
- * @param mysqli     $link
- * @param string   $query
- *
- */
-if(!function_exists('mysqli_slave_queryThis'))
-{
-    function mysqli_slave_queryThis($link, $query)
-    {
-		$link = is_resource($link) ? $link : NULL;
-		$query = (string)$query;
-
-		return mysqli_slave_query($link, $query);
     }
 }
 
@@ -35380,33 +33168,6 @@ if(!function_exists('odbc_executeThis'))
 }
 
 /**
- * odbc_fetch_arrayThis
- *
- * Lit une ligne de résultat dans un tableau associatif.
- *
- * @link http://php.net/manual/fr/function.odbc-fetch-array.php Documentation pour odbc_fetch_array.
- *
- * @version PHP 4 >= 4.0.2
- * @version PHP 5
- *
- * @param resource $result    La ressource de résultat depuis la fonction odbc_exec().
- * @param int      $rownumber    Le numéro de ligne doit être lu, optionnel.
- *
- * @return array	Retourne un tableau correspondant à la ligne récupérée, ou FALSE s'il n'y a plus de ligne de disponible.
- *
- */
-if(!function_exists('odbc_fetch_arrayThis'))
-{
-    function odbc_fetch_arrayThis($result, $rownumber = NULL)
-    {
-		$result = is_resource($result) ? $result : NULL;
-		$rownumber = (int)$rownumber;
-
-		return odbc_fetch_array($result, $rownumber);
-    }
-}
-
-/**
  * odbc_fetch_intoThis
  *
  * Lit une ligne de résultat, et la place dans un tableau.
@@ -36728,26 +34489,26 @@ if(!function_exists('openssl_pbkdf2This'))
 }
 
 /**
- * openssl_pkcs2_exportThis
+ * openssl_pkcs12_exportThis
  *
- * Exporte un certificat compatible PKCS#2 dans une variable.
+ * Exporte un certificat compatible PKCS#12 dans une variable.
  *
- * @link http://php.net/manual/fr/function.openssl-pkcs2-export.php Documentation pour openssl_pkcs2_export.
+ * @link http://php.net/manual/fr/function.openssl-pkcs12-export.php Documentation pour openssl_pkcs12_export.
  *
  * @version PHP 5 >= 5.2.2
  *
  * @param mixed     $x509    Voir les paramètres clés/Certificats pour une liste de valeurs valides.
- * @param string   &$out    En cas de succès, cette variable contiendra le PKCS#2.
- * @param mixed     $priv_key    Clé privée du fichier PKCS#2.
- * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#2.
+ * @param string   &$out    En cas de succès, cette variable contiendra le PKCS#12.
+ * @param mixed     $priv_key    Clé privée du fichier PKCS#12.
+ * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#12.
  * @param array    $args
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
  */
-if(!function_exists('openssl_pkcs2_exportThis'))
+if(!function_exists('openssl_pkcs12_exportThis'))
 {
-    function openssl_pkcs2_exportThis($x509, &$out, $priv_key, $pass, $args = NULL)
+    function openssl_pkcs12_exportThis($x509, &$out, $priv_key, $pass, $args = NULL)
     {
 		$x509 = ($x509);
 		$out = (string)$out;
@@ -36755,31 +34516,31 @@ if(!function_exists('openssl_pkcs2_exportThis'))
 		$pass = (string)$pass;
 		$args = (array)$args;
 
-		return openssl_pkcs2_export($x509, $out, $priv_key, $pass, $args);
+		return openssl_pkcs12_export($x509, $out, $priv_key, $pass, $args);
     }
 }
 
 /**
- * openssl_pkcs2_export_to_fileThis
+ * openssl_pkcs12_export_to_fileThis
  *
- * Exporte un certificat compatible PKCS#2.
+ * Exporte un certificat compatible PKCS#12.
  *
- * @link http://php.net/manual/fr/function.openssl-pkcs2-export-to-file.php Documentation pour openssl_pkcs2_export_to_file.
+ * @link http://php.net/manual/fr/function.openssl-pkcs12-export-to-file.php Documentation pour openssl_pkcs12_export_to_file.
  *
  * @version PHP 5 >= 5.2.2
  *
  * @param mixed     $x509    Voir les paramètres clés/Certificats pour une liste de valeurs valides.
  * @param string   $filename    Chemin vers le fichier de sortie.
- * @param mixed     $priv_key    Clé privée du fichier PKCS#2.
- * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#2.
+ * @param mixed     $priv_key    Clé privée du fichier PKCS#12.
+ * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#12.
  * @param array    $args
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
  */
-if(!function_exists('openssl_pkcs2_export_to_fileThis'))
+if(!function_exists('openssl_pkcs12_export_to_fileThis'))
 {
-    function openssl_pkcs2_export_to_fileThis($x509, $filename, $priv_key, $pass, $args = NULL)
+    function openssl_pkcs12_export_to_fileThis($x509, $filename, $priv_key, $pass, $args = NULL)
     {
 		$x509 = ($x509);
 		$filename = (string)$filename;
@@ -36787,35 +34548,35 @@ if(!function_exists('openssl_pkcs2_export_to_fileThis'))
 		$pass = (string)$pass;
 		$args = (array)$args;
 
-		return openssl_pkcs2_export_to_file($x509, $filename, $priv_key, $pass, $args);
+		return openssl_pkcs12_export_to_file($x509, $filename, $priv_key, $pass, $args);
     }
 }
 
 /**
- * openssl_pkcs2_readThis
+ * openssl_pkcs12_readThis
  *
- * Lit un certificat PKCS#2 dans un tableau.
+ * Lit un certificat PKCS#12 dans un tableau.
  *
- * @link http://php.net/manual/fr/function.openssl-pkcs2-read.php Documentation pour openssl_pkcs2_read.
+ * @link http://php.net/manual/fr/function.openssl-pkcs12-read.php Documentation pour openssl_pkcs12_read.
  *
  * @version PHP 5 >= 5.2.2
  *
- * @param string   $pkcs2
+ * @param string   $pkcs12
  * @param array    &$certs    En cas de succès, ce tableau contiendra les données du certificat.
- * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#2.
+ * @param string   $pass    Mot de passe de chiffrement pour déverrouiller le fichier PKCS#12.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
  */
-if(!function_exists('openssl_pkcs2_readThis'))
+if(!function_exists('openssl_pkcs12_readThis'))
 {
-    function openssl_pkcs2_readThis($pkcs2, &$certs, $pass)
+    function openssl_pkcs12_readThis($pkcs12, &$certs, $pass)
     {
-		$pkcs2 = (string)$pkcs2;
+		$pkcs12 = (string)$pkcs12;
 		$certs = (array)$certs;
 		$pass = (string)$pass;
 
-		return openssl_pkcs2_read($pkcs2, $certs, $pass);
+		return openssl_pkcs12_read($pkcs12, $certs, $pass);
     }
 }
 
@@ -37156,7 +34917,7 @@ if(!function_exists('openssl_pkey_newThis'))
  * @param string   $data
  * @param string   &$decrypted
  * @param mixed     $key    key doit être la clé privée utilisée pour chiffrer les données.
- * @param int      $padding    padding peut être OPENSSL_PKCS1_PADDING, OPENSSL_SSLV3_PADDING, OPENSSL_PKCS1_OAEP_PADDING ou OPENSSL_NO_PADDING.
+ * @param int      $padding    padding peut être OPENSSL_PKCS1_PADDING, OPENSSL_SSLV23_PADDING, OPENSSL_PKCS1_OAEP_PADDING ou OPENSSL_NO_PADDING.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -37249,7 +35010,7 @@ if(!function_exists('openssl_public_decryptThis'))
  * @param string   $data
  * @param string   &$crypted    Contiendra le résultat du chiffrage.
  * @param mixed     $key    La clé publique.
- * @param int      $padding    padding peut être OPENSSL_PKCS1_PADDING, OPENSSL_SSLV3_PADDING, OPENSSL_PKCS1_OAEP_PADDING ou OPENSSL_NO_PADDING.
+ * @param int      $padding    padding peut être OPENSSL_PKCS1_PADDING, OPENSSL_SSLV23_PADDING, OPENSSL_PKCS1_OAEP_PADDING ou OPENSSL_NO_PADDING.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
  *
@@ -39613,35 +37374,6 @@ if(!function_exists('pg_fetch_all_columnsThis'))
 }
 
 /**
- * pg_fetch_arrayThis
- *
- * Lit une ligne de résultat PostgreSQL dans un tableau.
- *
- * @link http://php.net/manual/fr/function.pg-fetch-array.php Documentation pour pg_fetch_array.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $result    Ressource de résultat de requête PostgreSQL, retournée par pg_query(), pg_query_params() ou pg_execute() (entre d'autres).
- * @param int      $row    Numéro de la ligne à récupérer. Les lignes sont numérotées en commençant à 0. Si l'argument est omis ou s'il vaut NULL, la ligne suivante est récupérée.
- * @param int      $result_type    Paramètre optionnel qui contrôle comment sera indexé le array retourné. pg_fetch_array() est une constante, qui peut prendre les valeurs suivantes : PGSQL_ASSOC, PGSQL_NUM et PGSQL_BOTH. En utilisant PGSQL_NUM, pg_fetch_array() retourne un tableau avec des indices numériques, en utilisant PGSQL_ASSOC retourne uniquement des indices associatifs alors que, PGSQL_BOTH, la valeur par défaut, retourne à la fois des indices numériques et associatifs.
- *
- * @return array	Un tableau à indice numérique (commençant à 0), associatif (indexé avec le nom des champs) ou les deux. Chaque valeur dans le tableau est représentée comme une chaîne (string). Les valeurs NULL de la base de données sont retournées NULL.
- *
- */
-if(!function_exists('pg_fetch_arrayThis'))
-{
-    function pg_fetch_arrayThis($result, $row = NULL, $result_type = PGSQL_BOTH)
-    {
-		$result = is_resource($result) ? $result : NULL;
-		$row = (int)$row;
-		$result_type = (int)$result_type;
-
-		return pg_fetch_array($result, $row, $result_type);
-    }
-}
-
-/**
  * pg_fetch_assocThis
  *
  * Lit une ligne de résultat PostgreSQL sous forme de tableau associatif.
@@ -41075,7 +38807,7 @@ if(!function_exists('pg_send_query_paramsThis'))
  * @version PHP 5
  *
  * @param resource $connection    La ressource de connexion de la base de données PostgreSQL. Lorsque connection n'est pas présent, la connexion par défaut est utilisée. La connexion par défaut est la dernière connexion faite par pg_connect() ou pg_pconnect().
- * @param string   $encoding    L'encodage client demandé. Un de ces constantes : SQL_ASCII, EUC_JP, EUC_CN, EUC_KR, EUC_TW, UNICODE, MULE_INTERNAL, LATINX (X=1...9), KOI8, WIN, ALT, SJIS, BIG5 ou WIN250. La liste exacte des encodages disponibles dépend de votre version PostgreSQL, alors vérifiez votre manuel PostgreSQL pour une liste plus spécifique.
+ * @param string   $encoding    L'encodage client demandé. Un de ces constantes : SQL_ASCII, EUC_JP, EUC_CN, EUC_KR, EUC_TW, UNICODE, MULE_INTERNAL, LATINX (X=1...9), KOI8, WIN, ALT, SJIS, BIG5 ou WIN1250. La liste exacte des encodages disponibles dépend de votre version PostgreSQL, alors vérifiez votre manuel PostgreSQL pour une liste plus spécifique.
  *
  * @return int	Retourne 0 en cas de succès ou -1 en cas d'erreur.
  *
@@ -41376,7 +39108,7 @@ if(!function_exists('php_ini_scanned_filesThis'))
  *
  * @version PHP 4
  * @version PHP 5 < 5.5
- * @return string	Retourne PHPE9568F34-D428-11d2-A769-00AA01ACF42.
+ * @return string	Retourne PHPE9568F34-D428-11d2-A769-00AA001ACF42.
  *
  */
 if(!function_exists('php_logo_guidThis'))
@@ -42742,31 +40474,6 @@ if(!function_exists('prevThis'))
 }
 
 /**
- * printThis
- *
- * Affiche une chaîne de caractères.
- *
- * @link http://php.net/manual/fr/function.print.php Documentation pour print.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param string   $arg    Les données d'entrée.
- *
- * @return int	Retourne 1, toujours.
- *
- */
-if(!function_exists('printThis'))
-{
-    function printThis($arg)
-    {
-		$arg = (string)$arg;
-
-		return print($arg);
-    }
-}
-
-/**
  * print_rThis
  *
  * Affiche des informations lisibles pour une variable.
@@ -43100,7 +40807,7 @@ if(!function_exists('pspell_clear_sessionThis'))
  * @param string   $language    Le paramètre de langage language est le code de langue en deux lettres, défini dans la norme ISO 639, et deux lettres optionnelles ISO 3166, après un tiret ou un souligné (_).
  * @param string   $spelling    Le paramètre d'orthographe spelling est nécessaire pour les langues qui ont plus d'une orthographe, comme l'anglais. Les valeurs reconnues sont alors 'american' (américain) , 'british' (anglais), et 'canadian' (canadien).
  * @param string   $jargon    Le paramètre de jargon jargon contient des informations supplémentaires pour distinguer deux dictionnaires distincts pour la même langue et le même paramètre d'orthographe spelling.
- * @param string   $encoding    Le paramètre d'encodage encoding indique l'encodage attendu pour la réponse. Les valeurs valides sont : 'utf-8', 'iso8859-*', 'koi8-r', 'viscii', 'cp252', 'machine unsigned 16', 'machine unsigned 32'. Ce paramètre n'a pas été testé de manière exhaustive, alors soyez prudent.
+ * @param string   $encoding    Le paramètre d'encodage encoding indique l'encodage attendu pour la réponse. Les valeurs valides sont : 'utf-8', 'iso8859-*', 'koi8-r', 'viscii', 'cp1252', 'machine unsigned 16', 'machine unsigned 32'. Ce paramètre n'a pas été testé de manière exhaustive, alors soyez prudent.
  *
  * @return int	Retourne une ressource pspell config, ou FALSE en cas d'erreur.
  *
@@ -43345,7 +41052,7 @@ if(!function_exists('pspell_config_save_replThis'))
  * @param string   $language    Le paramètre de langue spelling est constitué des deux lettres du codage de langue ISO 639, et du codage optionnel de pays ISO 3166, séparés par un '_'.
  * @param string   $spelling    Ce paramètre est nécessaire pour les langues qui ont plus d'une orthographe, comme l'anglais ou le français. Les valeurs reconnues sont 'american', 'british', et 'canadian'.
  * @param string   $jargon    Le paramètre jargon contient des informations supplémentaires pour distinguer deux listes de mots qui ont le même marquage de langue et d'orthographe.
- * @param string   $encoding    Le paramètre encoding est le type d'encodage des mots. Les valeurs valides sont 'utf-8', 'iso8859-*', 'koi8-r', 'viscii', 'cp252', 'machine unsigned 16', 'machine unsigned 32'. Ce paramètre n'ayant pas été testé de façon exhaustive, il convient d'être prudent lors de son utilisation.
+ * @param string   $encoding    Le paramètre encoding est le type d'encodage des mots. Les valeurs valides sont 'utf-8', 'iso8859-*', 'koi8-r', 'viscii', 'cp1252', 'machine unsigned 16', 'machine unsigned 32'. Ce paramètre n'ayant pas été testé de façon exhaustive, il convient d'être prudent lors de son utilisation.
  * @param int      $mode    Le paramètre mode est le mode de travail du vérificateur d'orthographe. Plusieurs modes sont disponibles :
  *
  * @return int	Retourne l'identifiant de dictionnaire en cas de succès ou FALSE si une erreur survient.
@@ -43404,7 +41111,7 @@ if(!function_exists('pspell_new_configThis'))
  * @param string   $language    Le paramètre de langage language est le code de langue ISO 639 en deux lettres, suivi de deux lettres optionnelles ISO 3166, après un tiret ou un souligné (_).
  * @param string   $spelling    Le paramètre d'orthographe spelling est nécessaire pour les langues qui ont plus d'une orthographe, comme l'anglais. Les valeurs reconnues sont alors 'american' (américain) , 'british' (anglais), et 'canadian' (canadien).
  * @param string   $jargon    Informations supplémentaires pour distinguer deux dictionnaires distincts pour la même langue et le même paramètre d'orthographe spelling.
- * @param string   $encoding    L'encodage attendu pour la réponse. Les valeurs valides sont : utf-8, iso8859-*, koi8-r, viscii, cp252, machine unsigned 16, machine unsigned 32.
+ * @param string   $encoding    L'encodage attendu pour la réponse. Les valeurs valides sont : utf-8, iso8859-*, koi8-r, viscii, cp1252, machine unsigned 16, machine unsigned 32.
  * @param int      $mode    Le mode de travail du vérificateur d'orthographe. Plusieurs modes sont disponibles :
  *
  * @return int	Retourne l'identifiant de dictionnaire à utiliser avec les autres fonctions pspell.
@@ -46977,7 +44684,7 @@ if(!function_exists('socket_acceptThis'))
  * @version PHP 5
  *
  * @param resource $socket    Une ressource de socket valide créée par la fonction socket_create().
- * @param string   $address    Si le socket est de la famille AF_INET, le paramètre address est une IP numérique (i.e. 27.0.0.1). Si le socket est de la famille AF_UNIX, le paramètre address représente le chemin d'un socket de domaine Unix (i.e. /tmp/my.sock).
+ * @param string   $address    Si le socket est de la famille AF_INET, le paramètre address est une IP numérique (i.e. 127.0.0.1). Si le socket est de la famille AF_UNIX, le paramètre address représente le chemin d'un socket de domaine Unix (i.e. /tmp/my.sock).
  * @param int      $port    Le paramètre port est uniquement utilisé lors de la liaison à un socket AF_INET et désigne le port sur lequel écouter pour une connexion.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient.
@@ -47056,7 +44763,7 @@ if(!function_exists('socket_closeThis'))
  * @version PHP 5
  *
  * @param resource $socket
- * @param string   $address    Le paramètre address est soit une adresse valide IPv4 (e.g. 27.0.0.1) si socket vaut AF_INET, soit une adresse valide IPv6 (e.g. ::1) si le support IPv6 est actif et que le paramètre socket vaut AF_INET6, soit un chemin vers un socket de domaine Unix, si la famille de sockets vaut AF_UNIX.
+ * @param string   $address    Le paramètre address est soit une adresse valide IPv4 (e.g. 127.0.0.1) si socket vaut AF_INET, soit une adresse valide IPv6 (e.g. ::1) si le support IPv6 est actif et que le paramètre socket vaut AF_INET6, soit un chemin vers un socket de domaine Unix, si la famille de sockets vaut AF_UNIX.
  * @param int      $port    Le paramètre port n'est utilisé et mandaté que lors d'une connexion à un socket AF_INET ou AF_INET6, et désigne le port de l'hôte distant sur lequel la connexion doit être effectuée.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient. Le code d'erreur généré peut être obtenu en appelant la fonction socket_last_error(). Ce code d'erreur peut être passé à la fonction socket_strerror() pour obtenir un message d'erreur humainement lisible.
@@ -47121,7 +44828,7 @@ if(!function_exists('socket_createThis'))
  */
 if(!function_exists('socket_create_listenThis'))
 {
-    function socket_create_listenThis($port, $backlog = 28)
+    function socket_create_listenThis($port, $backlog = 128)
     {
 		$port = (int)$port;
 		$backlog = (int)$backlog;
@@ -47201,7 +44908,7 @@ if(!function_exists('socket_get_optionThis'))
  * @version PHP 5
  *
  * @param resource $socket    Une ressource de socket valide, créée par la fonction socket_create() ou la fonction socket_accept().
- * @param string   &$address    Si le socket socket est de type AF_INET, ou AF_INET6 socket_getpeername() retournera l'adresse IP de l'hôte, en notation numérique (e.g. 27.0.0.1 ou fe80::1) dans le paramètre address, et si le paramètre optionnel port est présent, elle retournera aussi le port de la communication établie. Si le socket socket est de type AF_UNIX, socket_getpeername() retournera le chemin sur le système de fichiers (e.g. /var/run/daemon.sock) dans le paramètre address.
+ * @param string   &$address    Si le socket socket est de type AF_INET, ou AF_INET6 socket_getpeername() retournera l'adresse IP de l'hôte, en notation numérique (e.g. 127.0.0.1 ou fe80::1) dans le paramètre address, et si le paramètre optionnel port est présent, elle retournera aussi le port de la communication établie. Si le socket socket est de type AF_UNIX, socket_getpeername() retournera le chemin sur le système de fichiers (e.g. /var/run/daemon.sock) dans le paramètre address.
  * @param int      &$port    Si fourni, ce devra être le port associé à l'adresse du paramètre address.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient. socket_getpeername() peut aussi retourner FALSE si le type de le socket n'est ni AF_INET AF_INET6, ni AF_UNIX, auquel cas le dernier code d'erreur socket n'est pas modifié.
@@ -47230,7 +44937,7 @@ if(!function_exists('socket_getpeernameThis'))
  * @version PHP 5
  *
  * @param resource $socket    Une ressource de socket valide, créée par la fonction socket_create() ou la fonction socket_accept().
- * @param string   &$addr    Si le socket socket est de type AF_INET, ou AF_INET6, socket_getsockname() retournera l'adresse IP locale, en notation numérique (e.g. 27.0.0.1 ou fe80::1) dans le paramètre address, et si le paramètre optionnel port est présent, elle retournera aussi le port de la communication établie. Si le socket socket est de type AF_UNIX, socket_getsockname() retournera le chemin sur le système de fichiers (e.g. /var/run/daemon.sock) dans le paramètre address.
+ * @param string   &$addr    Si le socket socket est de type AF_INET, ou AF_INET6, socket_getsockname() retournera l'adresse IP locale, en notation numérique (e.g. 127.0.0.1 ou fe80::1) dans le paramètre address, et si le paramètre optionnel port est présent, elle retournera aussi le port de la communication établie. Si le socket socket est de type AF_UNIX, socket_getsockname() retournera le chemin sur le système de fichiers (e.g. /var/run/daemon.sock) dans le paramètre address.
  * @param int      &$port    Si fourni, ce devra être le port associé à l'adresse.
  *
  * @return bool	Cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient. socket_getsockname() peut aussi retourner FALSE si le type du socket n'est ni AF_INET, ni AF_INET, ni AF_UNIX, auquel cas le dernier code d'erreur socket n'est pas modifié.
@@ -48489,37 +46196,6 @@ if(!function_exists('sqlsrv_fetchThis'))
 		$offset = (int)$offset;
 
 		return sqlsrv_fetch($stmt, $row, $offset);
-    }
-}
-
-/**
- * sqlsrv_fetch_arrayThis
- *
- * Retourne une ligne sous la forme d'un tableau.
- *
- * @link http://php.net/manual/fr/function.sqlsrv-fetch-array.php Documentation pour sqlsrv_fetch_array.
- *
- * @version No version information available
- * @version might only be in SVN
- *
- * @param resource $stmt    Une ressource de requête retournée par sqlsrv_query ou sqlsrv_execute.
- * @param int      $fetchType    Une constante prédéfinie spécifiant le type de tableau à retourner. Les valeurs possibles sont SQLSRV_FETCH_ASSOC, SQLSRV_FETCH_NUMERIC, et SQLSRV_FETCH_BOTH (la valeur par défaut). Le type de récupération SQLSRV_FETCH_ASSOC ne doit pas être utilisé lors du traitement d'un jeu de résultats possédant des colonnes dont le nom est identique.
- * @param int      $row    Spécifie la ligne à traiter dans le jeu de résultats utilisant un curseur scrollable. Les valeurs possibles sont SQLSRV_SCROLL_NEXT, SQLSRV_SCROLL_PRIOR, SQLSRV_SCROLL_FIRST, SQLSRV_SCROLL_LAST, SQLSRV_SCROLL_ABSOLUTE et, SQLSRV_SCROLL_RELATIVE (la valeur par défaut). Lorsque ce paramètre est spécifié, le paramètre fetchType doit également être explicitement défini.
- * @param int      $offset    Spécifie la ligne à accéder si le paramètre row est défini à SQLSRV_SCROLL_ABSOLUTE ou SQLSRV_SCROLL_RELATIVE. Notez que la première ligne du jeu de résultats a comme index 0.
- *
- * @return array	Retourne un tableau en cas de succès, NULL s'il n'y a plus de ligne à retourner, et FALSE si une erreur survient.
- *
- */
-if(!function_exists('sqlsrv_fetch_arrayThis'))
-{
-    function sqlsrv_fetch_arrayThis($stmt, $fetchType = NULL, $row = NULL, $offset = NULL)
-    {
-		$stmt = is_resource($stmt) ? $stmt : NULL;
-		$fetchType = (int)$fetchType;
-		$row = (int)$row;
-		$offset = (int)$offset;
-
-		return sqlsrv_fetch_array($stmt, $fetchType, $row, $offset);
     }
 }
 
@@ -50593,7 +48269,7 @@ if(!function_exists('stream_wrapper_unregisterThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param string   $format    La longueur maximale de ce paramètre est de 103 caractères.
+ * @param string   $format    La longueur maximale de ce paramètre est de 1023 caractères.
  * @param int      $timestamp    Le paramètre optionnel timestamp est un timestamp Unix de type entier qui vaut par défaut l'heure courante locale si le paramètre timestamp n'est pas fourni. En d'autres termes, il vaut par défaut la valeur de la fonction time().
  *
  * @return string	Retourne une chaîne de caractères formatée suivant le paramètre format donné, en utilisant le paramètre timestamp ou la date locale courante si aucun timestamp n'est fourni. Les noms des mois, des jours de la semaine mais aussi d'autres chaînes dépendant de la location, respecteront la localisation courante définie par la fonction setlocale().
@@ -53240,31 +50916,6 @@ if(!function_exists('sybase_deadlock_retry_countThis'))
 }
 
 /**
- * sybase_fetch_arrayThis
- *
- * Retourne une ligne Sybase sous la forme d'un tableau.
- *
- * @link http://php.net/manual/fr/function.sybase-fetch-array.php Documentation pour sybase_fetch_array.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param resource $result
- *
- * @return array	Retourne un tableau qui contient la ligne demandée, ou FALSE s'il ne reste plus de ligne.
- *
- */
-if(!function_exists('sybase_fetch_arrayThis'))
-{
-    function sybase_fetch_arrayThis($result)
-    {
-		$result = is_resource($result) ? $result : NULL;
-
-		return sybase_fetch_array($result);
-    }
-}
-
-/**
  * sybase_fetch_assocThis
  *
  * Lit une ligne de résultat Sybase sous forme de tableau associatif.
@@ -54489,7 +52140,7 @@ if(!function_exists('umaskThis'))
  * @version PHP 4
  * @version PHP 5
  *
- * @param string   $prefix    Peut être utile, par exemple, pour identifier facilement différents hôtes, si vous générez simultanément des fichiers depuis plusieurs hôtes, à la même microseconde. Sans prefix (préfixe vide), la chaîne retournée fera 13 caractères. Si more_entropy est à TRUE, elle fera 3 caractères.
+ * @param string   $prefix    Peut être utile, par exemple, pour identifier facilement différents hôtes, si vous générez simultanément des fichiers depuis plusieurs hôtes, à la même microseconde. Sans prefix (préfixe vide), la chaîne retournée fera 13 caractères. Si more_entropy est à TRUE, elle fera 23 caractères.
  * @param bool     $more_entropy    Si le paramètre optionnel more_entropy est TRUE, uniqid() ajoutera une entropie "combined LCG" à la fin de la valeur retournée, ce qui augmente la probabilité de l'unicité du résultat.
  *
  * @return string	Retourne un identifiant unique, sous la forme d'une chaîne de caractères.
@@ -54632,32 +52283,6 @@ if(!function_exists('unserializeThis'))
 		$str = (string)$str;
 
 		return unserialize($str);
-    }
-}
-
-/**
- * unsetThis
- *
- * Détruit une variable.
- *
- * @link http://php.net/manual/fr/function.unset.php Documentation pour unset.
- *
- * @version PHP 4
- * @version PHP 5
- *
- * @param mixed     $var    La variable à détruire.
- * @param mixed     $item    Autres variables...
- *
- * @return void	Aucune valeur n'est retournée.
- *
- */
-if(!function_exists('unsetThis'))
-{
-    function unsetThis($var, $var1 = NULL)
-    {
-		$var = ($var);
-		$var1 = ($var1);
-		return unset($var, $var1);
     }
 }
 
@@ -57652,7 +55277,7 @@ if(!function_exists('yp_orderThis'))
  *
  * @version PHP 4
  * @version PHP 5 < 5.5
- * @return string	Retourne PHPE9568F35-D428-11d2-A769-00AA01ACF42.
+ * @return string	Retourne PHPE9568F35-D428-11d2-A769-00AA001ACF42.
  *
  */
 if(!function_exists('zend_logo_guidThis'))
