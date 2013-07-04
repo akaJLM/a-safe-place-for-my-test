@@ -51,10 +51,11 @@
  * And away we go...
  *
  */
-$time_start = microtime(true);
 
 if($generate === true)
 {
+	$time_start = microtime(true);
+
 	require_once ROOTPATH.'core/codeGenerator.php';
 
 	$time_end = microtime(true);
@@ -65,6 +66,8 @@ if($generate === true)
 }
 else
 {
+	$time_start = microtime(true);
+	
 	include_once(ROOTPATH.'aliases.php');
 
 	$time_end = microtime(true);
