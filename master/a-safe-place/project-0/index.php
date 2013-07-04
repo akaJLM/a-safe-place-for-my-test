@@ -32,24 +32,18 @@
 	// ensure there's a trailing slash
 	$docpath = rtrim($docpath, '/').'/';
 
-	// Is the doc path correct?
-	if ( ! is_dir($docpath))
+	if (!is_dir($docpath))
 	{
 		exit("Your php doc folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
 	}
 
-/*
- * -------------------------------------------------------------------
- *  Now that we know the path, set the main path constants
- * -------------------------------------------------------------------
- */
-	// The name of THIS file
+	// Self
 	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
-	// Path to the system folder
+	// Path to the doc folder
 	define('DOCPATH', str_replace("\\", "/", $docpath));
 
-	// Path to the front controller (this file)
+	// Path to the root
 	define('ROOTPATH', str_replace(SELF, '', __FILE__));
 
 /*
@@ -79,7 +73,3 @@ else
 
 	echo '<div style="position:absolute;top:0;right:0;left:0;background:green;color:white;padding:10px">Did it in '.$time.' seconds</div>';
 }
-
-
-/* End of file index.php */
-/* Location: ./index.php */
