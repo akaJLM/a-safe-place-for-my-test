@@ -17,7 +17,7 @@ foreach ($phpdoc as $key => $value)
 
 	if($exclude_obsolescence == true)
 	{
-		$inc_obs = isset($value['desc']) ? !preg_match('/O?o?bsolète/', $value['desc']) : true;
+		$inc_obs = isset($value['desc']) ? !preg_match('/O?o?bsolète/', $value['desc']) : false;
 	}
 
 	$inc_func = true;
@@ -40,7 +40,15 @@ foreach ($phpdoc as $key => $value)
 			{
 				if(in_array($val, $include_these_versions))
 				{
-					$one_version_match  = true;
+					$one_version_match = true;
+				}
+
+				foreach ($include_these_versions as $k => $v)
+				{
+					if(preg_match('/^#(.+)#$/', $v))
+					{
+						$one_version_match = preg_match($v, $val);
+					}
 				}
 			}
 		}
@@ -51,7 +59,15 @@ foreach ($phpdoc as $key => $value)
 			{
 				if(in_array($val, $exclude_these_versions))
 				{
-					$one_version_match  = false;
+					$one_version_match = false;
+				}
+
+				foreach ($exclude_these_versions as $k => $v)
+				{
+					if(preg_match('/^#(.+)#$/', $v))
+					{
+						$one_version_match = !preg_match($v, $val);
+					}
 				}
 			}
 		}
