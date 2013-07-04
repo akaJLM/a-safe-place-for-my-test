@@ -40,8 +40,8 @@ foreach ($phpdoc as $key => $value)
 			{
 				if(in_array($val, $include_these_versions))
 				{
-	            	$one_version_match  = true;
-	            }
+					$one_version_match  = true;
+				}
 			}
 		}
 
@@ -51,8 +51,8 @@ foreach ($phpdoc as $key => $value)
 			{
 				if(in_array($val, $exclude_these_versions))
 				{
-	            	$one_version_match  = false;
-	            }
+					$one_version_match  = false;
+				}
 			}
 		}
 		//CONFS*/
@@ -210,7 +210,7 @@ foreach ($phpdoc as $key => $value)
 				}
 				if(isset($val['def']) && preg_match('/^[A-Z](.+) \||\+ (.+)/', $val['def']))
 				{
-					$val['def'] = NULL;
+					$val['def'] = 'NULL';
 				}
 				if($val['beh'] == 1)
 				{
