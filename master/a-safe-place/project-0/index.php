@@ -24,6 +24,14 @@
 		chdir(dirname(__FILE__));
 	}
 
+	if (realpath($docpath) !== FALSE)
+	{
+		$docpath = realpath($docpath).'/';
+	}
+
+	// ensure there's a trailing slash
+	$docpath = rtrim($docpath, '/').'/';
+
 	// Self
 	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
 
