@@ -1,6 +1,6 @@
 <?php header('Content-type: text/html; charset=utf-8');
 
-	$generate = false; // If true generate aliases.php file else include it
+	$generate = true; // If true generate aliases.php file else include it
 
 	$docpath = 'doc'; // Folder doc path name
 	
