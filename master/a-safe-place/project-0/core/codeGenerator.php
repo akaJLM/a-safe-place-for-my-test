@@ -60,7 +60,7 @@ foreach ($phpdoc as $key => $value)
 		///*RESULTS
 		if($one_version_match == true)
 		{
-			$list      = $value['params'][0]['list'];
+			$list = $value['params'][0]['list'];
 
 			echo  '/**';
 			echo  "\r\n";

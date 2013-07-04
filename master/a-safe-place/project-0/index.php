@@ -1,6 +1,6 @@
 <?php header('Content-type: text/html; charset=utf-8');
 
-	$generate = true; // If true generate aliases.php file else include it
+	$generate = false; // If true generate aliases.php file else include it
 
 	$docpath = 'doc'; // Folder doc path name
 	
@@ -8,7 +8,7 @@
 	
 	$for    = 'Documentation pour'; // "Documentation for" in your language
 
-	$functions_excluded = array('__halt_compiler', 'array', 'echo', 'empty', 'eval', 'exit', 'isset', 'list', 'print', 'unset');
+	$functions_excluded = array('__halt_compiler', 'array', 'echo', 'empty', 'eval', 'exit', 'isset', 'list', 'print', 'unset'); // You can use also pattern
 
 	$exclude_obsolescence = true;
 
