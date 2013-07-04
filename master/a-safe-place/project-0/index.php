@@ -8,7 +8,7 @@
 	
 	$for    = 'Documentation pour'; // "Documentation for" in your language
 
-	$functions_excluded = array('#^array_#', '#^ldap_#', '#^mysqli_#', '__halt_compiler', 'array', 'key', 'echo', 'empty', 'eval', 'exit', 'isset', 'list', 'print', 'unset'); // You can use regular expression with delimiters (only # for delimiters)
+	$functions_excluded = array('#^gz([a-z]++)#', '#^zlib_#', '#^array_#', '#^ldap_#', '#^mysqli_#', '__halt_compiler', 'array', 'key', 'echo', 'empty', 'eval', 'exit', 'isset', 'list', 'print', 'unset'); // You can use regular expression with delimiters (only # for delimiters)
 
 	$exclude_obsolescence = true; // exclude all obsolete function
 
