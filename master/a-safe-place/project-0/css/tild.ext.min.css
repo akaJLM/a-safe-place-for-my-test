@@ -1,0 +1,161 @@
+/* Airiness .grid * - elements */
+
+/* "Blockers" */
+.grid table, .grid form, .grid ol, .grid dl  {
+    /*To defines airiness, color, font */
+    padding: 0.5% 0;
+    margin: 0
+}
+/* "Readers" - h1 & h2 & h3 excluded (too dependent of the design) - p excluded (too dependent of the application) */
+.grid article {
+    /*To defines airiness, color, font */
+    padding: 2%;
+    margin: 3%
+}
+/* "readers" the following */
+.grid blockquote, .grid h4, .grid h5, .grid h6 {
+    /*To defines airiness, color, font */
+    padding: 1% 0;
+    margin: 1% 0
+}
+/* "Navis" ul & nav excluded (too dependent of the design) */
+.grid details {
+    padding: 1% 0;
+    margin: 0
+}
+/* "centered" */
+.grid video, .grid audio, .grid figure {
+    /*To defines airiness, color, font */
+    color: #333;
+    padding: 1% 0;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center
+}
+/* "Specials" */
+.grid pre, .grid pre > code {
+    /*To defines airiness, color, font */
+    font-family: "Consolas", "Lucida Console", serif;
+    color: #555;
+    padding: 1% 0;
+    margin: 0
+}
+.grid pre > code {
+    padding: 1% 2%;
+    font-size: 0.8em;
+    font-style: italic
+}
+
+/* Completly random colors by https://kuler.adobe.com/create/color-wheel/ (to adapt @ your convenience) */
+.bg-white {
+    background-color: #FFF
+}
+.bg-light {
+    background-color:  rgba(204, 204, 204, 0.8);
+}
+.bg-grey {
+    background-color: #555
+}
+.bg-black {
+    background-color: #000
+}
+.bg-green {
+    background-color: #D8FF7B
+}
+.bg-yellow {
+    background-color: #E8B052
+}
+.bg-red {
+    background-color: #FF6770
+}
+.bg-purple {
+    background-color: #7B52E8
+}
+.bg-blue {
+    background-color: #3D6AA2
+}
+
+.txt-white {
+    color: #FFF
+}
+.txt-light {
+    color:  #FEFEFE;
+}
+.txt-grey {
+    color: #555
+}
+.txt-black {
+    color: #000 
+}
+.txt-green {
+    color: #B5FF1A
+}
+.txt-yellow {
+    color: #E89606
+}
+.txt-red {
+    color: #FF060B
+}
+.txt-purple {
+    color: #4806E8
+}
+.txt-blue {
+    color: #355E95
+}
+
+.btn-white {
+    background-color: #FFF
+}
+.btn-light {
+    background-color: rgba(204, 204, 204, 0.8)
+}
+.btn-grey {
+    background-color: #555
+}
+.btn-black {
+    background-color: #000 
+}
+.btn-green {
+    background-color: #B5FF1A
+}
+.btn-yellow {
+    background-color: #E89606
+}
+.btn-red {
+    background-color: #FF060B
+}
+.btn-purple {
+    background-color: #4806E8
+}
+.btn-blue {
+    background-color: #355E95
+}
+
+.brd-white {
+    border-color: #FFF
+}
+.brd-light {
+    border-color: rgba(204, 204, 204, 0.8);
+}
+.brd-grey {
+    border-color: #777
+}
+.brd-black {
+    border-color: #000
+}
+.brd-green {
+    border-color: #B5FF1A
+}
+.brd-yellow {
+    border-color: #E89606
+}
+.brd-red {
+    border-color: #FF060B
+}
+.brd-purple {
+    border-color: #4806E8
+}
+.brd-blue {
+    border-color: #07EAFF
+}
