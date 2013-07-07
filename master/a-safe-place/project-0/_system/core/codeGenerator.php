@@ -12,10 +12,9 @@ $for                    = $option['gpa_traduc_doc_for'];
 $phpdoc = json_decode(file_get_contents(SYSPATH . 'doc/php/'.$lang.'/database.json'), true);
 //var_dump($phpdoc);
 
-$string    = "";
-echo  '<?php ';
-echo  "\r\n";
-$count     = 0;
+echo '<?php ';
+echo "\r\n";
+$count = 0;
 
 foreach ($phpdoc as $key => $value)
 {
