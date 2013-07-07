@@ -89,7 +89,7 @@ foreach ($phpdoc as $key => $value)
 		//CONFS*/
 
 		///*RESULTS
-		if($one_version_match == true)
+		if($one_version_match === true)
 		{
 			$list = $value['params'][0]['list'];
 
