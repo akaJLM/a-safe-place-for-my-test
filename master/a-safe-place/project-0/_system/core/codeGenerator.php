@@ -2,12 +2,12 @@
 
 ob_start();
 
-$lang 					= $option['gpa_doc_path_lang'];
-$exclude_obsolescence 	= $option['gpa_but_exc_obsolescence'];
+$lang                   = $option['gpa_doc_path_lang'];
+$exclude_obsolescence   = $option['gpa_but_exc_obsolescence'];
 $functions_excluded     = $option['gpa_exc_functions'];
 $include_these_versions = $option['gpa_inc_these_versions'];
 $exclude_these_versions = $option['gpa_exc_these_versions'];
-$for 					= $option['gpa_traduc_doc_for'];
+$for                    = $option['gpa_traduc_doc_for'];
 
 $phpdoc = json_decode(file_get_contents(SYSPATH . 'doc/php/'.$lang.'/database.json'), true);
 //var_dump($phpdoc);
