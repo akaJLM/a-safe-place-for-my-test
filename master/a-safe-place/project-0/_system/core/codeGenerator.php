@@ -93,6 +93,7 @@ foreach ($phpdoc as $key => $value)
 		{
 			$list = $value['params'][0]['list'];
 
+			///*Comments
 			echo  '/**';
 			echo  "\r\n";
 			echo  ' * '.$value['name'].'This';
@@ -159,8 +160,10 @@ foreach ($phpdoc as $key => $value)
 				else
 					$space = '    ';
 
+				///*Some var php doc rectification
 				if(preg_match('/^\$[0-9]+/', $val['var']))
 				{
+					//Place @ the end some digits when $var start with some digit in the php doc...
 					$total_digit = preg_match_all( "/[0-9]/", $val['var']);
 					$vals = explode('$', $val['var']);
 					$str = substr(strrev($vals[1]), 0, -$total_digit);
@@ -174,7 +177,8 @@ foreach ($phpdoc as $key => $value)
 				if(preg_match('/\*/', $val['var']))
 				{
 					$val['var'] = str_replace('*', '', $val['var']);
-				}
+				} 
+				//Some var php doc rectification*/
 
 				echo  ' * @param '.$val['type'].$space.' '.$val['var'];
 				
@@ -208,6 +212,7 @@ foreach ($phpdoc as $key => $value)
 			}
 			echo  ' */';
 			echo  "\r\n";
+			//Comments*/
 
 			echo  'if(!function_exists(\''.$value['name'].'This\'))';
 			echo  "\r\n";
