@@ -1,13 +1,13 @@
-#wamp and zend framework
+#wamp and Zend Framework 2
 
 Resume
 ------
 
-**THe best way for zend framework installation, using wamp**
+**THe best way for zend framework 2 installation, using wamp**
 
-1 Install wamp, only the x86 version because the latest version of php is already most recent on x86 (usefull and mendatory to use PHPUnit)
+1 Install wamp, only the x86 version because the latest version of php is already most recent on x86 with wamp (usefull or mendatory to use PHPUnit)
 
-2 Go to > wamp > bin > php > php version folder, open the file php.ini and uncomment one line for the command line with composer.phar and others .phar (don't use the icon wamp in the task bar, it's not the same effect, one is for php module of the http server, this other php.ini is for php as php application, only this change work for cli request).
+2 Go to wamp > bin > php > php version folder, open the file php.ini and uncomment one line for the command line with composer.phar and others .phar (don't use the icon wamp in the task bar, it's not the same effect, one is for php module of the http server, this other php.ini is for php as php application, only this change work for cli request).
 
 ```
 extension=php_openssl.dll
@@ -27,7 +27,6 @@ e.g.
 ```
 cd c:/wamp/www
 php .\composer.phar self-update
-
 ```
 
 7 Put composer.phar and zftool.phar to the www directory of wamp
@@ -38,7 +37,6 @@ php .\composer.phar self-update
 
 ```
 Include conf/extra/httpd-vhosts.conf
-
 ```
 
 10 Start your Git shell or your shell
@@ -48,14 +46,12 @@ Include conf/extra/httpd-vhosts.conf
 ```
 cd c:/wamp/www
 php zftool.phar create project c:/wamp/www/zf2
-
 ```
 
 ```
 cd ./zf2
 php composer.phar self-update
 php composer.phar install
-
 ```
 
 12 Go to > wamp > bin > apache > apache version > conf > extra folder, open the file httpd-vhosts.conf and add
@@ -84,7 +80,6 @@ php composer.phar install
         Allow from all
     </Directory>
 </VirtualHost>
-
 ```
 
 13 Open as administrator (right click) your text editor and open the file > windows > system32 > Drivers > etc > hosts and add the line
@@ -92,7 +87,6 @@ php composer.phar install
 ```
 127.0.0.1	localhost
 127.0.0.1	zf2.localhost localhost
-
 ```
 
 14 Restart your computer (mendatory)
@@ -100,4 +94,4 @@ php composer.phar install
 15 Start now your wamp server, visite zf2.localhost
 
 
-Now it's a few step to start any project with zf2, just create the project with the step 10 (just choose another folder name) and also step 12 + 13 (just add a virtual host but just choose another folder path name and another domain.localhost name)
+**Now it's a few step to start any project with zf2, just create the project with the step 10 (just choose another folder name) and also step 12 + 13 (just add a virtual host but just choose another folder path name and another domain.localhost name)**
