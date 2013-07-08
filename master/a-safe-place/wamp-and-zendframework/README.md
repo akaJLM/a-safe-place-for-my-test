@@ -7,7 +7,7 @@ Resume
 
 1 Install wamp, only the x86 version because the latest version of php is already most recent on x86 with wamp (usefull or mendatory to use PHPUnit)
 
-2 Go to wamp > bin > php > php version folder, open the file php.ini and uncomment one line for the command line with composer.phar and others .phar (don't use the icon wamp in the task bar, it's not the same effect, one is for php module of the http server, this other php.ini is for php as php application, only this change work for cli request).
+2 Go to wamp > bin > php > php version folder, open the file php.ini and uncomment one line, usefull for the command line with composer.phar and others .phar (don't use the icon wamp in the task bar, it's not the same effect, one is for php as module of the http server, this other php.ini is for php as php application, only this change work for cli request).
 
 ```
 extension=php_openssl.dll
@@ -16,7 +16,7 @@ extension=php_openssl.dll
 
 4 Download zftool.phar https://packages.zendframework.com/zftool.phar
 
-5 Download and install http://getcomposer.org/Composer-Setup.exe to fix the windows path environment (I think this exe file fix all php .phar files)
+5 Download and install http://getcomposer.org/Composer-Setup.exe to fix the windows path environment (I think this exe file fix all your php.phar files)
 
 6 Follow the instruction (the only one thing requested @ the installation is to match correctly the wamp directory of php.exe like wamp > bin > php > php version > php.exe)
 
@@ -29,7 +29,7 @@ cd c:/wamp/www
 php .\composer.phar self-update
 ```
 
-7 Put composer.phar and zftool.phar to the www directory of wamp
+7 After downloading, put composer.phar and zftool.phar to the www directory of wamp
 
 8 Download and install the github/shell @ http://windows.github.com/ or start your shell
 
@@ -91,7 +91,7 @@ php composer.phar install
 
 14 Restart your computer (mendatory)
 
-15 Start now your wamp server, visite zf2.localhost
+15 Start now your wamp server, visit zf2.localhost
 
 
-**Now it's a few step to start any project with zf2, just create the project with the step 10 (just choose another folder name) and also step 12 + 13 (just add a virtual host but just choose another folder path name and another domain.localhost name)**
+**From now, it's a few step to start any project with zf2, just create the project with the step 10 (just choose another folder name) and also step 12 + 13 (just add a virtual host but just choose another folderpath name and another domain.localhost name)**
