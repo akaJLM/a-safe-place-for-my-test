@@ -32,7 +32,7 @@ php .\composer.phar self-update
 
 7 Put composer.phar and zftool.phar to the www directory of wamp
 
-8 Download the github/shell @ http://windows.github.com/
+8 Download and install the github/shell @ http://windows.github.com/ or start your shell
 
 9 Go to > wamp > bin > apache > apache version > conf folder, open the file httpd.conf and uncomment the line
 
@@ -41,7 +41,7 @@ Include conf/extra/httpd-vhosts.conf
 
 ```
 
-10 Start your Git shell
+10 Start your Git shell or your shell
 
 11 command line now...
 
@@ -90,11 +90,14 @@ php composer.phar install
 13 Open as administrator (right click) your text editor and open the file > windows > system32 > Drivers > etc > hosts and add the line
 
 ```
+127.0.0.1	localhost
 127.0.0.1	zf2.localhost localhost
 
 ```
 
-14 Restart your computer, restart your wamp server, visite zf2.localhost
+14 Restart your computer (mendatory)
+
+15 Start now your wamp server, visite zf2.localhost
 
 
-Now it's really a few step to start any project with zf2, just create the project with the step 10 (just choose another folder name) and also step 12 + 13 (just add a virtual host but just choose another folder path name and another domain.localhost name)
+Now it's a few step to start any project with zf2, just create the project with the step 10 (just choose another folder name) and also step 12 + 13 (just add a virtual host but just choose another folder path name and another domain.localhost name)
