@@ -6,15 +6,15 @@ For all step will assume you have installed your wamp server in C:/wamp
 
 **Legend**
 
-- installation folder as "wamp"
+- wamp installation folder as "wamp"
 - any version in use as "version"
 - windows dir as "windows dir"
 
 ##WAMP - Fix localhost
 
-###First step "fix localhost"
+###First step to "fix localhost"...
 
-####Create a php virtual host for localhost
+####...Create a php virtual host for localhost
 
 Go to wamp > bin > apache > apache version > conf > extra, open the file named httpd-vhosts.conf
 
@@ -35,39 +35,40 @@ Go to wamp > bin > apache > apache version > conf > extra, open the file named h
 
 ```
 
-- then save and close this file.
+then save and close this file.
 
 - Go to wamp > bin > apache > apache version > conf, open the file named httpd.conf
 
-- uncomment this line:
+uncomment this line:
 
 ```
 LoadModule rewrite_module modules/mod_rewrite.so
 ```
-- and uncomment this line: 
+
+and uncomment this line: 
 
 ```
 Include conf/extra/httpd-vhosts.conf
 ```
 
-- then save and close this file.
+then save and close this file.
 
 
-###Second step "fix localhost"
+###Second step to "fix localhost"...
 
-####redirect 127.0.0.1 to localhost
+####...redirect 127.0.0.1 to localhost
 
-Open your favorite text editor (or the default win) by right click > administrator.
+- Open your favorite text editor (or the default win) by right click > administrator.
 
-Go to files > open in this text editor and search/goto > windows dir > system32 > Drivers > etc, open the file named hosts
+- Go to files > open in this text editor and search/goto > windows dir > system32 > Drivers > etc, open the file named hosts
 
-- and add this line:
+add this line:
 
 ```
 127.0.0.1	localhost
 ```
 
-- then save and close this file > restart your computer.
+then save and close this file > restart your computer.
 
 Now you can use localhost in place of 127.0.0.1 and this tech fix the "localhost" in the wamp button in the task bar. Now, you can work with each project directly placed in different folder in wamp > www dir.
 
@@ -76,13 +77,13 @@ remark: if something goes wrong, put wamp online, after offline, then restart wa
 
 ##WAMP - add a virstual host for each project
 
-###First step "add virtual host"
+###First step to "add virtual host"...
 
-####create a php virtual host for your project
+####...create a php virtual host for your project
 
-Go to wamp > bin > apache > apache version > conf > extra, open the file named httpd-vhosts.conf
+- Go to wamp > bin > apache > apache version > conf > extra, open the file named httpd-vhosts.conf
 
-- after this line
+after these lines
 
 ```
 <VirtualHost *:80>
@@ -98,14 +99,14 @@ Go to wamp > bin > apache > apache version > conf > extra, open the file named h
 </VirtualHost>
 ```
 
-- add this kind of lines:
+add these kind of lines:
 
 ```
 <VirtualHost *:80>
     ServerName projectname.localhost
-    DocumentRoot C:/wamp/www/project-name
+    DocumentRoot C:/wamp/www/project-name-folder
     SetEnv APPLICATION_ENV "development"
-    <Directory C:/wamp/www/project-name>
+    <Directory C:/wamp/www/project-name-folder>
         DirectoryIndex index.php
         AllowOverride All
         Order allow,deny
@@ -114,24 +115,26 @@ Go to wamp > bin > apache > apache version > conf > extra, open the file named h
 </VirtualHost>
 ```
 
-- then save and close this file.
+then save and close this file.
+
+remark: to adapt to your convenience: "projectname" as the url name of your choice to access to the project and "project-name-folder" must match "your project name folder".
 
 
-###First step "add virtual host"
+###Second step to "add virtual host"...
 
-####add a mapping ?? rule for your project
+####...add a domain mapping for your project
 
-Open your favorite text editor (or the default win) by right click > administrator.
+- Open your favorite text editor (or the default win) by right click > administrator.
 
-Go to files > open in this text editor and search/goto > windows dir > system32 > Drivers > etc, open the file named hosts
+- Go to files > open in this text editor and search/goto > windows dir > system32 > Drivers > etc, open the file named hosts
 
-- and add this line:
+and add this line:
 
 ```
-127.0.0.1	zf2-tutorial.localhost localhost
+127.0.0.1	projectname.localhost localhost
 ```
 
-- then save and close this file > restart your computer.
+then save and close this file > restart your computer.
 
 
-Now you can use projectname.localhost as transparent rule for the main project folder placed in wamp > www dir.
+Now you can use projectname.localhost as transparent url access for your project folder system placed in wamp > www dir.
