@@ -1,9 +1,8 @@
 #WAMP
-=====
 
 **WAMP + phpunit + latest version php + zendframework + fix localhost**
 
-For alls tep will assume you have installed your wamp server in C:/wamp 
+For all step will assume you have installed your wamp server in C:/wamp 
 
 **Legend**
 
@@ -12,9 +11,10 @@ For alls tep will assume you have installed your wamp server in C:/wamp
 - windows dir as "windows dir"
 
 ##WAMP - Fix localhost
------
 
-**First step, create a php virtual host for localhost**
+###First step "fix localhost"
+
+####Create a php virtual host for localhost
 
 Go to wamp > bin > apache > apache version > conf > extra, open the file named httpd-vhosts.conf
 
@@ -37,7 +37,6 @@ Go to wamp > bin > apache > apache version > conf > extra, open the file named h
 
 - then save and close this file.
 
-
 - Go to wamp > bin > apache > apache version > conf, open the file named httpd.conf
 
 - uncomment this line:
@@ -54,9 +53,9 @@ Include conf/extra/httpd-vhosts.conf
 - then save and close this file.
 
 
+###Second step "fix localhost"
 
-**Second step, redirect 127.0.0.1 to localhost**
-
+####redirect 127.0.0.1 to localhost
 
 Open your favorite text editor (or the default win) by right click > administrator.
 
@@ -75,10 +74,11 @@ Now you can use localhost in place of 127.0.0.1 and this tech fix the "localhost
 remark: if something goes wrong, put wamp online, after offline, then restart wamp.
 
 
-##WAMP - add a virstual host for each project.
------
+##WAMP - add a virstual host for each project
 
-**First step, create a php virtual host for your project**
+###First step "add virtual host"
+
+####create a php virtual host for your project
 
 Go to wamp > bin > apache > apache version > conf > extra, open the file named httpd-vhosts.conf
 
@@ -117,8 +117,9 @@ Go to wamp > bin > apache > apache version > conf > extra, open the file named h
 - then save and close this file.
 
 
-**Second step, add a mapping rule for projectname.localhost**
+###First step "add virtual host"
 
+####add a mapping ?? rule for your project
 
 Open your favorite text editor (or the default win) by right click > administrator.
 
