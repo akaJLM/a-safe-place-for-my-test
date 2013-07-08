@@ -18,7 +18,7 @@ For all step will assume you have installed your wamp server in C:/wamp
 
 Go to wamp > bin > apache > apache version > conf > extra, open the file named httpd-vhosts.conf
 
-- add this lines:
+add this lines:
 
 ```
 <VirtualHost *:80>
@@ -37,7 +37,7 @@ Go to wamp > bin > apache > apache version > conf > extra, open the file named h
 
 then save and close this file.
 
-- Go to wamp > bin > apache > apache version > conf, open the file named httpd.conf
+Go to wamp > bin > apache > apache version > conf, open the file named httpd.conf
 
 uncomment this line:
 
@@ -58,9 +58,9 @@ then save and close this file.
 
 ####...redirect 127.0.0.1 to localhost
 
-- Open your favorite text editor (or the default win) by right click > administrator.
+Open your favorite text editor (or the default win) by right click > administrator.
 
-- Go to files > open in this text editor and search/goto > windows dir > system32 > Drivers > etc, open the file named hosts
+Go to files > open in this text editor and search/goto > windows dir > system32 > Drivers > etc, open the file named hosts
 
 add this line:
 
@@ -69,6 +69,7 @@ add this line:
 ```
 
 then save and close this file > restart your computer.
+
 
 Now you can use localhost in place of 127.0.0.1 and this tech fix the "localhost" in the wamp button in the task bar. Now, you can work with each project directly placed in different folder in wamp > www dir.
 
@@ -81,7 +82,7 @@ remark: if something goes wrong, put wamp online, after offline, then restart wa
 
 ####...create a php virtual host for your project
 
-- Go to wamp > bin > apache > apache version > conf > extra, open the file named httpd-vhosts.conf
+Go to wamp > bin > apache > apache version > conf > extra, open the file named httpd-vhosts.conf
 
 after these lines
 
@@ -117,16 +118,17 @@ add these kind of lines:
 
 then save and close this file.
 
-remark: to adapt to your convenience: "projectname" as the url name of your choice to access to the project and "project-name-folder" must match "your project name folder".
+
+remark: to adapt: "projectname" as the url name of your choice to access to the project and "project-name-folder" must match "your project name folder".
 
 
 ###Second step to "add virtual host"...
 
 ####...add a domain mapping for your project
 
-- Open your favorite text editor (or the default win) by right click > administrator.
+Open your favorite text editor (or the default win) by right click > administrator.
 
-- Go to files > open in this text editor and search/goto > windows dir > system32 > Drivers > etc, open the file named hosts
+Go to files > open in this text editor and search/goto > windows dir > system32 > Drivers > etc, open the file named hosts
 
 and add this line:
 
