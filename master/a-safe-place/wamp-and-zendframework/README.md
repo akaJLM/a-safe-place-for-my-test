@@ -1,9 +1,14 @@
 #wamp and Zend Framework 2
 
+## configure environment wamp
+
 Resume
-------
+---
 
 **A good way (not a break tutorial) for zend framework 2 installation, using wamp**
+
+Step
+---
 
 1 Install wamp, only the x86 version because the latest version of php is already most recent on x86 with wamp (usefull or mendatory to use PHPUnit). After installation, activate rewrite_module @ wamp icon in the task bar > apache > modules
 
@@ -91,7 +96,7 @@ php composer.phar install
 
 14 Restart your computer (mendatory)
 
-15 Start now your wamp server, open your browser and visit `zf2.localhost`
+15 Start now your wamp server, open your browser and visit `zf2.localhost` - Welcome to Zend Framework coders !
 
 
 **From now, it's a few step to start any project with zf2, just create the project with the step 10 (just choose another folder name) and also step 12 + 13 (just add a virtual host but just choose another folderpath name and another domain.localhost name)**
