@@ -1,4 +1,4 @@
-#wamp and Zend Framework 2
+#WampServer and Zend Framework 2
 
 ## configure environment wamp
 
