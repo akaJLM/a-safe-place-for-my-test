@@ -5,7 +5,7 @@ Resume
 
 **A good way (not a break tutorial) for zend framework 2 installation, using wamp**
 
-1 Install wamp, only the x86 version because the latest version of php is already most recent on x86 with wamp (usefull or mendatory to use PHPUnit)
+1 Install wamp, only the x86 version because the latest version of php is already most recent on x86 with wamp (usefull or mendatory to use PHPUnit). After installation, activate rewrite_module @ wamp icon in the task bar > apache > modules
 
 2 Go to wamp > bin > php > php version folder, open the file php.ini and uncomment one line, usefull for the command line with composer.phar and others .phar (don't use the icon wamp in the task bar, it's not the same effect, one is for php as module of the http server, this other php.ini is for php as php application, only this change work for cli request).
 
