@@ -3,7 +3,7 @@
 Resume
 ------
 
-**THe best way for zend framework 2 installation, using wamp**
+**A good way (not a break tutorial) for zend framework 2 installation, using wamp**
 
 1 Install wamp, only the x86 version because the latest version of php is already most recent on x86 with wamp (usefull or mendatory to use PHPUnit)
 
