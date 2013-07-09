@@ -5,7 +5,7 @@
 Resume
 ---
 
-**A good way (not a break tutorial) for zend framework 2 installation, using wamp**
+**A good way for zend framework 2 installation, using wamp**
 
 Step
 ---
