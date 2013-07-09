@@ -36,13 +36,13 @@ php .\composer.phar self-update
 
 7 After downloading, put composer.phar and zftool.phar to the www directory of wamp
 
-8 Download and install the github/shell @ http://windows.github.com/ (or another shell)
-
-9 Go to > wamp > bin > apache > apache version > conf folder, open the file httpd.conf and uncomment the line
+8 Go to > wamp > bin > apache > apache version > conf folder, open the file httpd.conf and uncomment the line
 
 ```
 Include conf/extra/httpd-vhosts.conf
 ```
+
+9 Download and install the github/shell @ http://windows.github.com/ (or another shell)
 
 10 Start your Git shell or your shell
 
