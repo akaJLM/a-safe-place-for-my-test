@@ -96,7 +96,7 @@ php composer.phar install
 
 14 Restart your computer (mendatory)
 
-15 Start now your wamp server, open your browser and visit `zf2.localhost` - Welcome to Zend Framework coders !
+15 Start now your wamp server, open your browser and visit `zf2.localhost` - Welcome to Zend Framework 2 coders !
 
 
 **From now, it's a few step to start any project with zf2, just create the project with the step 11 (just choose another folder name) and also step 12 + 13 (just add a virtual host but just choose another folderpath name and another domain.localhost name)**
