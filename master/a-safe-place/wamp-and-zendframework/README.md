@@ -94,7 +94,7 @@ php composer.phar install
 127.0.0.1	zf2.localhost localhost
 ```
 
-14 Restart your computer (mendatory)
+14 Mendatory: Restart your computer OR console: ipconfig /flushdns + restart wamp
 
 15 Start now your wamp server, open your browser and visit `zf2.localhost` - Welcome to Zend Framework 2 coders !
 
