@@ -28,6 +28,7 @@
 	$option['gpa_exc_functions']        = array('#^gz([a-z]++)#', '#^zlib\_#', '#^array\_#', '#^ldap\_#', '#^mysqli\_#', '__halt_compiler', 'array', 'key', 'echo', 'empty', 'eval', 'exit', 'isset', 'list', 'print', 'unset'); // You can use regular expression with delimiters (only # for delimiters)
 	$option['gpa_inc_these_versions']   = array(); // You can use regular expression with delimiters (only # for delimiters)
 	$option['gpa_exc_these_versions']   = array('#^PECL#'); // You can use regular expression with delimiters (only # for delimiters)
+	$option['gpa_deprecated']   		= '#O?o?bsolète|D?d?eprecated#'; // deprecated in your language - You can use also regular expression with delimiters
 
 /////////////// Nothing to edit after ////////////////////////
 

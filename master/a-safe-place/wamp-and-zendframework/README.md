@@ -21,9 +21,9 @@ extension=php_openssl.dll
 
 4 Download zftool.phar https://packages.zendframework.com/zftool.phar
 
-5 Download and install http://getcomposer.org/Composer-Setup.exe to fix the windows path environment (I think this exe file fix all your php.phar files)
+5 Download and install http://getcomposer.org/Composer-Setup.exe to fix the windows path environment OR you can add yourself, type variable path in the windows search, hit "...system...", click "Environment variables" in the (just opened) window, search "path" in the list, select, then click modify, and add @the end of the line: ;C:\wamp\bin\php\php5.4.16 (change the values for your good version and path).
 
-6 Follow the instruction (the only one thing requested @ the installation is to match correctly the wamp directory of php.exe like wamp > bin > php > php version > php.exe)
+6 Follow the instruction if you use the executable (the only one thing requested @ the installation is to match correctly the wamp directory of php.exe like wamp > bin > php > php version > php.exe)
 
 remark: if you don't need extra install, you can define the variable path yourself or use all phar command in your shell with .\ before the.phar, and the command line run correctly
 

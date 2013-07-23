@@ -8,6 +8,7 @@ $functions_excluded     = $option['gpa_exc_functions'];
 $include_these_versions = $option['gpa_inc_these_versions'];
 $exclude_these_versions = $option['gpa_exc_these_versions'];
 $for                    = $option['gpa_traduc_doc_for'];
+$deprecated				= $option['gpa_deprecated'];
 
 $phpdoc = json_decode(file_get_contents(SYSPATH . 'doc/php/'.$lang.'/database.json'), true);
 //var_dump($phpdoc);
@@ -23,7 +24,7 @@ foreach ($phpdoc as $key => $value)
 
 	if($exclude_obsolescence == true)
 	{
-		$inc_obs = isset($value['desc']) ? !preg_match('/O?o?bsolète/', $value['desc']) : false;
+		$inc_obs = isset($value['desc']) ? !preg_match($deprecated, $value['desc']) : false;
 	}
 
 	$inc_func = true;
